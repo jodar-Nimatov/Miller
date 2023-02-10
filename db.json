@@ -420,6 +420,12 @@
             "subtitle":"Гранулированный кофе",
             "price": "250 ₽",
             "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },  {
+            "id":20,
+            "title":"Наименование товара",
+            "subtitle":"Гранулированный кофе",
+            "price": "250 ₽",
+            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         }
     ]
 }
