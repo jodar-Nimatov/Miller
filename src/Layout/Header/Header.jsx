@@ -1,6 +1,6 @@
 import React from "react";
 import '../Header/Header.scss'
-import millerLogo from "../../assets/image 25.png"
+import millerLogo from "../../assets/image 25.svg"
 import searchlogo from "../../assets/Vector.svg"
 import basketlogo from "../../assets/Vector (1).svg"
 import userlogo from "../../assets/Vector (2).svg"
@@ -8,16 +8,16 @@ import userlogo from "../../assets/Vector (2).svg"
 const Header = () => {
   return (
     <div className="header">
-      <div className="header-container">
+      <div className="container">
         <div className="header-inner">
           <div className="header-logo">
-            <img src={millerLogo} alt="" />
+            <img src={millerLogo} alt=""/>
           </div>
           <div className="header-menu">
             <ul>
-              <li>Каталог товаров</li>
-              <li>Блог</li>
-              <li>Контакты</li>
+              <li><a href="#">Каталог товаров</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
           </div>
           <div className="header-icons">

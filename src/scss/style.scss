@@ -1,1 +1,12 @@
-@import '../Layout//Header/Header.scss'
+@import '../Layout//Header/Header.scss';
+
+.wrapper{
+    width: 1904px;
+}
+.container{
+    width: 1660px;
+    margin: 0 auto;
+    @media screen and (max-width: 1110px){
+        width: 960px;
+    }
+}
