@@ -1,9 +1,9 @@
 import React from "react";
 import '../Header/Header.scss'
-import millerLogo from "../../assets/image 25.svg"
-import searchlogo from "../../assets/Vector.svg"
-import basketlogo from "../../assets/Vector (1).svg"
-import userlogo from "../../assets/Vector (2).svg"
+import millerLogo from "../../assets/millerLofo.svg"
+import searchlogo from "../../assets/search.svg"
+import basketlogo from "../../assets/basket.svg"
+import userlogo from "../../assets/user.svg"
 
 const Header = () => {
   // const getSearcher = () => {
@@ -17,27 +17,29 @@ const Header = () => {
   return (
     <div className="header">
       <div className="container">
-        <div className="header-inner">
-          <div className="header-logo">
-            <img src={millerLogo} width='260px' height='116px' alt="" />
+        <div className="header__inner">
+          <div className="header__left">
+            <a href="#">
+              <img src={millerLogo} width='179px' height='80px' alt="header logo" />
+            </a>
           </div>
-          <div className="header-menu">
-            <ul>
-              <li><a href="#">Каталог товаров</a></li>
-              <li><a href="#">Блог</a></li>
-              <li><a href="#">Контакты</a></li>
+          <div className="header__center">
+            <ul className="header__list">
+              <li className="header__item"><a href="#">Каталог товаров</a></li>
+              <li className="header__item"><a href="#">Блог</a></li>
+              <li className="header__item"><a href="#">Контакты</a></li>
             </ul>
           </div>
-          <div className="header-icons">
-            <div className="search-icon">
-              <img src={searchlogo} alt="" className='header-searchIcon header-icon' />
-            </div>
-            <div className="basket-icon">
-              <img src={basketlogo} alt="" className='header-basketIcon header-icon'/>
-            </div>
-            <div className="user-icon">
-              <img src={userlogo} alt="" className='header-userIcon header-icon'/>
-            </div>
+          <div className="header__right">
+            <a href="#">
+              <img className="header-search" src={searchlogo} alt="header search" />
+            </a>
+            <a href="#">
+              <img className="header-basket" src={basketlogo} alt="header basket" />
+            </a>
+            <a href="#">
+              <img className="header-user" src={userlogo} alt="header user" />
+            </a>
           </div>
         </div>
       </div>

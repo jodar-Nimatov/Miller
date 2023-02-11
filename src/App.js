@@ -1,10 +1,18 @@
-import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
 import './scss/style.scss'
+import Layout from './Layout/Layout';
+import Catalog from './pages/Katalog/Katalog';
 
 function App() {
   return (
   <>
-  <Home/>
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+        <Route path='' element={<Home/>}/>
+        <Route path='/katalog' element={<Catalog/>}/>
+      </Route>
+    </Routes>
   </>
   );
 }

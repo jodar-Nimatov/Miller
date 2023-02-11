@@ -1,41 +1,38 @@
 .header {
-  min-width: 100%;
-  height: 160px;
-  background: #ffffff;
-  box-shadow: 0px 5px 20px rgba(157, 157, 157, 0.25);
-  &-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &-logo{
-    margin-right: 20px;
-    cursor: pointer;
-  }
-  &-menu > ul > li > a:active{
+  font-family: sans-serif;
+  height: 113px;
+  a:active{
     cursor: default;
   }
-  &-menu > ul > li > a{
-    text-decoration: none;
-    color: black;
-    font-family: '';
-  }
-  &-input{
-    transform: translateX(-900px);
-  }
-  &-menu > ul {
-    font-size: 20px;
+  a{
     list-style: none;
-    display: flex;
-    gap: 50px;
+    color: black;
+    text-decoration: none;
   }
-  &-icons > &-icon{
-    cursor: pointer;
+  &__right > img{
+    max-width: 22px;
+    max-height: 22px;
   }
-  &-icons { 
+  &__inner, &__center, &__right, &__left, &__center > ul{
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 40px;
-    transform: translateX(-100px);
+    align-items: center;
+  }
+  &__right > a > img{
+    max-width: 22px;
+    max-height: 22px;
+  }
+  &__right{
+    max-width: 146px;
+    gap: 40px;
+  }
+  &__center > ul{
+    list-style: none;
+    gap: 60px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__inner{
+    justify-content: space-between;
   }
 }
