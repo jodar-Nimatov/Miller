@@ -1,1 +1,10 @@
-@import '../Layout//Header/Header.scss'
+@import '../Layout//Header/Header.scss';
+@import '../scss/Main.scss';
+@import '../Layout/Footer/Footer.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}

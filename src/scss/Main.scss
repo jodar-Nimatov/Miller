@@ -1,0 +1,151 @@
+.wrapper{
+    width: 1720px;
+    height: 1200px;
+
+    .fresh-coffe{
+        max-width: 100%;
+        height: 600px;
+        background-color: aqua;
+        padding: 70px 20px 0 70px;
+    }
+    .fresh-coffe-inner{
+        
+    }
+    .fresh-coffe-container{
+        margin-top: 40px;
+    }
+    .fresh-coffe-left > h1 {
+        font-size: 50px;
+        font-weight: 900;
+    }
+    .fresh-coffe-left > p{
+        width: 347px;
+        line-height: 32px;
+        padding-top: 40px;
+    }
+    .fresh-coffe-left > span{
+        line-height: 100px;
+    }
+    .fresh-coffe-left > span > b{
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .fresh-coffe-left > button{
+        width: 200px;
+        height: 45px;
+        background-color: #F9B300;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+    }
+
+}
+
+.catalog-products{
+    max-width: 100%;
+    height: 400px;
+}
+
+.sale-items{
+    max-width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+    .sale-items-inner{
+        padding-top: 40px;
+        margin-left: 600px;    
+    }
+    .sale-items-inner > h1{
+        position: absolute;
+        text-align: right;
+        left: 1430px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .sale-items-inner > p {
+        width: 1107px;
+        height: 64px;
+        left: 604px;
+        top: 800px;
+        
+        font-family: 'Gilroy';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        
+        transform: translateY(80px);
+        text-align: right;
+        color: #000000;
+    }
+}
+
+.advantages{
+    max-width: 100%;
+    height: 100vh;
+    background-color: #FFF7E1;
+    .advantages-inner{
+        padding-top: 200px;
+        display: flex;
+    }
+    .advantages-left{
+        display: flex;
+        position: relative;
+    }
+    .advantages-left > .img2{
+        position: absolute;
+        left: 125px;
+
+        max-width: 600px;
+        max-height: 400px;
+    }
+    .advantages-left > .img1{
+        position: absolute;
+        z-index: 100;
+        left: 188px;
+        top: 105px;
+
+        max-width: 400px;
+        max-height: 300px;
+    }
+    .advantages-right{
+        transform: translateX(1000px);
+    }
+    .advantages-right > h2{
+        font-weight: bold;
+        font-size: 35px;
+        width: 404px;
+        transform: translateY(-65px);
+    }
+    .advent-imgs{
+        transform: translateX(-110px);
+    }
+    .advantages-block > .ad-block-content{
+        transform: translateY(-90px);
+    }
+    .ad-block-content > h3{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: bolder;
+        font-size: 21px;
+        line-height: 55px;
+    }
+    .ad-block-content > p{
+        width: 334px;
+    }
+
+}
+
+
+.roast-coffe{
+    max-width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    .roast-coffe-inner{
+        padding-top: 100px;
+    }
+}
+

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Layout = () => {
+const Slider = () => {
   return (
     <div>
-      
+        
     </div>
   )
 }
 
-export default Layout
+export default Slider

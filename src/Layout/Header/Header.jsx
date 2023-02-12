@@ -21,9 +21,9 @@ const Header = () => {
             </ul>
           </div>
           <div className="header-icons">
-            <img src={searchlogo} alt="" />
-            <img src={basketlogo} alt="" />
-            <img src={userlogo} alt="" />
+            <img className="head-icon" src={searchlogo} alt="" />
+            <img className="head-icon" src={basketlogo} alt="" />
+            <img className="head-icon" src={userlogo} alt="" />
           </div>
         </div>
       </div>
