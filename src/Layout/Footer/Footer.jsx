@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import millerLogo from '../../assets/image 25.png'
-import coffeImg from '../../assets/footerImg.png'
-import coffeBackImg from '../../assets/footerImgB.png'
+import millerLogo from '../../assets/Images/image 25.png'
+import coffeImg from '../../assets/Images/footerImg.png'
+import coffeBackImg from '../../assets/Images/footerImgB.png'
 
 const Footer = () => {
 
