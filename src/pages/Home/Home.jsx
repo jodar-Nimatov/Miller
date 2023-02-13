@@ -1,6 +1,7 @@
 import React from 'react'
-import Catalog from '../Catalog/Items/Catalog';
-import Filters from './../Catalog/Filters/Filters';
+import Catalog from '../Catalog/Coffee-Items/Coffee-Items';
+import Filters from '../Catalog/Coffee-Filters/Coffee-Filters';
+import { useState } from 'react';
 
 const Home = () => {
   return (
