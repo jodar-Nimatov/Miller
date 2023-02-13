@@ -1,11 +1,12 @@
 .header {
-  height: 113px;
-  min-width: 100%;
-  background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   &__right > img{
     max-width: 22px;
     max-height: 22px;
+  }
+  &__left{
+    margin-top: 20px;
+    margin-bottom: 13px;
   }
   &__inner, &__center, &__right, &__left, &__center > ul{
     display: flex;
@@ -27,10 +28,14 @@
     line-height: 21px;
   }
   &__inner{
-    background-color: white;
-    position: fixed;
-    z-index: 140;
     gap: 246px;
     justify-content: space-between;
   }
+  &__wrapper{
+    width: 100%;
+  }
+  z-index: 100;
+  min-width: 100%;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
 }

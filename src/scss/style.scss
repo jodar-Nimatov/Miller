@@ -1,6 +1,7 @@
 @import '../Layout/Header/Header.scss';
 @import '../Layout/Footer/Footer.scss';
-@import '../pages/Catalog/Catalog.scss';
+@import '../pages/Catalog/Items/Catalog.scss';
+@import '../pages/Catalog/Filters/Filters.scss';
 *{
     padding: 0;
     margin: 0;
@@ -30,5 +31,6 @@ html, body{
 }
 .wrapper{
     min-height: 100%;
+    min-width: 100%;
     position: relative;
 }

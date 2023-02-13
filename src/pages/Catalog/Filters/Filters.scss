@@ -1,0 +1,18 @@
+.filters{
+    padding-top: 113px;
+    height: 331px;
+    background: #F9B300;
+    background-image: url('../../../assets/footer-coffee.png');
+    background-repeat: no-repeat;
+    &__bottom::before{
+        position: absolute;
+        z-index: -1;
+        transform: rotate(30deg);
+    }
+    &__bottom{
+        min-height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: -4px;
+    }
+}
