@@ -1,14 +1,15 @@
 import React from 'react'
-import Catalog from '../Catalog/Coffee-Items/Coffee-Items';
-import Filters from '../Catalog/Coffee-Filters/Coffee-Filters';
-import { useState } from 'react';
+import Filters from './../Catalog/Coffee-Filters/Coffee-Filters';
+import Catalog from './../Catalog/Coffee-Items/Coffee-Items';
 
 const Home = () => {
   return (
     <>
       <div className="wrapper">
-        <Filters/>
-        <Catalog/>
+        <div className="content">
+          <Filters/>
+          <Catalog/>
+        </div>
       </div>
     </>
   )
