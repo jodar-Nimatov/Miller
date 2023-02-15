@@ -1,12 +1,12 @@
 import React from 'react'
-import cupCoffe from '../assets/Images/cup.png'
-import beancoffe from '../assets/Images/beancoffe.png'
-import cofeIcon from '../assets/Images/icon1a.png'
-import priceIcon from '../assets/Images/icon2a.png'
-import comunIcon from '../assets/Images/icon3a.png'
-import Footer from '../Layout/Footer/Footer'
-import Slider from '../Components/UI/Slider/Slider'
-import News from '../Components/News/News'
+import cupCoffe from '../../assets/Images/cup.png'
+import beancoffe from '../../assets/Images/beancoffe.png'
+import cofeIcon from '../../assets/Images/icon1a.png'
+import priceIcon from '../../assets/Images/icon2a.png'
+import comunIcon from '../../assets/Images/icon3a.png'
+import Footer from '../../Layout/Footer/Footer'
+import Slider from '../../Components/UI/Slider/Slider'
+import News from '../../Components/News/News'
 
 const Main = () => {
   return (
