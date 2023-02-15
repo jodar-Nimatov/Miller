@@ -7,6 +7,10 @@ import comunIcon from '../assets/Images/icon3a.png'
 import Footer from '../Layout/Footer/Footer'
 import Slider from '../Components/UI/Slider/Slider'
 import News from '../Components/News/News'
+import CoffeImg from '../assets/Images/CatalogCoffe.png'
+import CatalogTea from '../assets/Images/CatalogTea.png'
+import CoffeMachine from '../assets/Images/CoffeMachine.png'
+import CatalogKasha from '../assets/Images/CatalogKasha.png'
 
 const Main = () => {
   return (
@@ -40,7 +44,54 @@ const Main = () => {
             <div className="catalog-inner">
                 <h2>Каталоги нашей продукции</h2>
                 <div className="catalog-items">
-
+                    <div className="catalog-card">
+                        <div className="catalog-card_img">
+                            <img src={CoffeImg} alt="" />
+                        </div>
+                        <div className="catalog-card_title">
+                            <p>Свежеобжаренный кофе</p>
+                        </div>
+                        <br />
+                        <button className="catalog-card_button">
+                            Купить
+                        </button>
+                    </div>
+                    <div className="catalog-card">
+                        <div className="catalog-card_img">
+                            <img className='ct-tea-img' src={CatalogTea} alt="" />
+                        </div>
+                        <div className="catalog-card_title">
+                            <p>Чай и кофейные напитки</p>
+                        </div>
+                        <br />
+                        <button className="catalog-card_button">
+                            Купить
+                        </button>
+                    </div>
+                    <div className="catalog-card">
+                        <div className="catalog-card_img">
+                            <img  src={CoffeMachine} alt="" />
+                        </div>
+                        <div className="catalog-card_title">
+                            <p>Продукция для вендинга</p>
+                        </div>
+                        <br />
+                        <button className="catalog-card_button">
+                            Купить
+                        </button>
+                    </div>
+                    <div className="catalog-card">
+                        <div className="catalog-card_img">
+                            <img  src={CatalogKasha} alt="" />
+                        </div>
+                        <div className="catalog-card_title">
+                            <p>Здоровое питание</p>
+                        </div>
+                        <br />
+                        <button className="catalog-card_button">
+                            Купить
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
