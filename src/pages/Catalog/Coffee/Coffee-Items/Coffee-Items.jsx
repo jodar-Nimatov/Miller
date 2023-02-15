@@ -1,10 +1,11 @@
 import React from 'react'
+import CoffeeFilters from '../Coffee-Filters/Coffee-Filters'
 
 const CoffeeItems = () => {
   return (
-    <div className='catalog'>
-      Catalog
-    </div>
+    <>
+     <CoffeeFilters/> 
+    </>
   )
 }
 

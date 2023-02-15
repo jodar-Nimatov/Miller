@@ -1,7 +1,7 @@
 import React from 'react'
-import CoffeeDot from '../../../assets/coffeeDot.svg'
+import CoffeeDot from '../../../../assets/coffeeDot.svg'
 
-const Filters = () => {
+const CoffeeFilters = () => {
   // Функция для того чтобы выбирать желтые круглишки.
   return (
     <>
@@ -76,4 +76,4 @@ const Filters = () => {
   )
 }
 
-export default Filters
+export default CoffeeFilters

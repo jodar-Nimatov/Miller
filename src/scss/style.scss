@@ -1,39 +1,48 @@
-@import '../Layout/Header/Header.scss';
-@import '../pages/Home/Home.scss';
-@import '../Layout/Footer/Footer.scss';
-@import '../pages/Catalog/Coffee-Items/Coffee-Items.scss';
-@import '../pages/Catalog/Coffee-Filters/Coffee-Filters.scss';
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import "../Layout/Header/Header.scss";
+@import "../pages/Home/Home.scss";
+@import "../Layout/Footer/Footer.scss";
+@import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
+@import "../pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.container{
-    width: 1210px;
-    padding: 0 30px;
-    margin: 0 auto;
+.container {
+  width: 1210px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
-a:active, button:active{
+a:active,
+button:active {
   cursor: default;
 }
-a{
+a {
   list-style: none;
   color: black;
   text-decoration: none;
 }
-h1,h2,h3,h4,h5,h6{
-    letter-spacing: 0.5px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.5px;
 }
-ul, li, a{
-    list-style: none;
-    color: black;
-    text-decoration: none;
+ul,
+li,
+a {
+  list-style: none;
+  color: black;
+  text-decoration: none;
 }
-html, body{
- // Пока-что такой
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    min-height: 100%;
+html,
+body {
+  // Пока-что такой
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  min-height: 100%;
 }
-.wrapper{
-    min-height: 100%;
+.wrapper {
+  min-height: 100%;
 }

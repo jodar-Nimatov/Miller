@@ -1,6 +1,6 @@
 .filters{
     background-repeat: no-repeat;
-    background-image: url('../../../assets/filters-back.svg');
+    background-image: url('../../../../assets/filters-back.svg');
     background-position-y: 326px;
     background-color: linear-gradient(to bottom, #F9B300 331px, transparent 331px);
     background-size: 300vh;
@@ -18,7 +18,7 @@
      }   
     }
     &-coffee{
-        background-image: url('../../../assets/footer-coffeee.png');
+        background-image: url('../../../../assets/footer-coffee.png');
         height: 478px;
         position: absolute;
         width: 300px;
@@ -33,7 +33,7 @@
         width: 500px;   
         right: 0;
         z-index: 1;
-        background-image: url('../../../assets/footer-cup.png');
+        background-image: url('../../../../assets/footer-cup.png');
         background-repeat: no-repeat;
         height: 322px;
         margin-left: auto;
