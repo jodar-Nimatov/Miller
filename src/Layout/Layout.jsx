@@ -1,11 +1,12 @@
 import React from 'react'
+import Footer from './Footer/Footer'
+import Header from './Header/Header'
 
 const Layout = () => {
   return (
-    <div>Layout
-      <h1>
-        ya krasavech
-      </h1>
+    <div>
+      <Header/>
+      <Footer/>
     </div>
   )
 }

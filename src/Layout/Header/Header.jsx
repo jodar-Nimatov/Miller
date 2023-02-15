@@ -1,9 +1,9 @@
 import React from "react";
 import '../Header/Header.scss'
-import millerLogo from "../../assets/image 25.png"
-import searchlogo from "../../assets/Vector.svg"
-import basketlogo from "../../assets/Vector (1).svg"
-import userlogo from "../../assets/Vector (2).svg"
+import millerLogo from "../../assets/Images/image 25.png"
+import searchlogo from "../../assets/Images/Vector.svg"
+import basketlogo from "../../assets/Images/Vector (1).svg"
+import userlogo from "../../assets/Images/Vector (2).svg"
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
       <div className="header-container">
         <div className="header-inner">
           <div className="header-logo">
-            <img src={millerLogo} alt="" />
+            <img className="mainLogo" src={millerLogo} alt="" />
           </div>
           <div className="header-menu">
             <ul>
@@ -21,9 +21,9 @@ const Header = () => {
             </ul>
           </div>
           <div className="header-icons">
-            <img src={searchlogo} alt="" />
-            <img src={basketlogo} alt="" />
-            <img src={userlogo} alt="" />
+            <img className="head-icon" src={searchlogo} alt="" />
+            <img className="head-icon" src={basketlogo} alt="" />
+            <img className="head-icon" src={userlogo} alt="" />
           </div>
         </div>
       </div>

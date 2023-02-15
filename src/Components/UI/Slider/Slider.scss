@@ -1,0 +1,26 @@
+.fresh-right{
+    margin-left: 500px;
+}
+
+.slider{
+    max-width: 705px;   
+    margin: 0 auto;  
+}
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slideshowSlider {
+    margin: 0 auto;
+    white-space: nowrap;
+    transition: ease 2000ms;
+}
+
+.slide {
+  display: inline-block;
+  background-image: url(../../../assets/Images/SliderCupCoffe.png);
+  height: 600px;
+  background-repeat: no-repeat;
+  width: 1440px;
+  text-align: right;
+}

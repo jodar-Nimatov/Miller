@@ -1,1 +1,12 @@
-@import '../Layout//Header/Header.scss'
+@import '../Layout//Header/Header.scss';
+@import '../scss/Main.scss';
+@import '../Layout/Footer/Footer.scss';
+@import '../Components/UI/Slider/Slider.scss';
+@import '../scss/News.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}

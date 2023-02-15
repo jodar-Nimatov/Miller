@@ -1,0 +1,73 @@
+.footer{
+    max-width: 100%;
+    height: 600px;
+    .footer-inner{
+        padding-top: 100px;
+        padding-left: 84px;
+    }
+    .footer-left-content{
+        line-height: 100px;
+    }
+    .footer-left-content > h2{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 35px;
+    }
+    .footer-left-content > p{
+        width: 536px;
+        height: 45px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+    }
+    .footer-left-content > input{
+        position: relative;
+        width: 779px;
+        height: 56px;
+        padding: 20px;
+        background: #F3F3F3;
+        border-radius: 28px;
+        border: none;
+    }
+    .footer-left-content > button{
+        transform: translateX(-180px);
+        width: 179px;
+        height: 57px; 
+        background: #F9B300;
+        border-radius: 28.3403px;
+        border: none;
+        color: white;
+        font-size: 18px;
+    }
+    .footer-coffe-img1{
+        position: absolute;
+        z-index: 1;
+        max-width: 450px;
+        max-width: 450px;
+        left: 1278px;
+        transform: translateY(-320px);
+    }
+    .footer-coffe-img2{
+        position: absolute;
+        left: 1230px;
+        transform: translateY(-390px);
+        max-width: 500px;
+        max-width: 500px;
+    }
+    .footer-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 200px 80px 40px 70px;
+    }
+    .footer-bottom-menu > ul{
+        list-style: none;
+        font-size: 18px ;
+        display: flex;
+        gap: 50px;
+    }
+
+}
