@@ -24,7 +24,7 @@
     display: none;
   }
   .block{
-    display: block;
+    display: flex;
   }
   span:hover {
     background-color: beige;
@@ -36,6 +36,7 @@
     height: 0px;
   }
   &__inner,
+  &__list ,
   &__center,
   &__right,
   &__left,
@@ -66,6 +67,26 @@
     font-size: 18px;
     width: 401px;
     justify-content: space-between;
+  }
+  &__input.block{
+    transition: 1000ms;
+    display: none;
+  }
+  &__input.none{
+    transition: 1000ms;
+    display: block;
+  }
+  &__input{
+    transition: 1000ms;
+    &-button.block{
+      display: none;
+    }
+    &-button.none{
+      display: block;
+    }
+    &-button{
+
+    }
   }
   &__inner {
     justify-content: space-between;

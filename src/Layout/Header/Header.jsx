@@ -8,14 +8,19 @@ import { Link } from "react-router-dom";
 import arrow from "../../assets/arrow.svg";
 
 const Header = () => {
+  const [tum, setTum] = useState(false);
   const [show, setShow] = useState(false);
   const [title, setTitle] = useState('Каталог товаров')
+  const [display, setDisplay] = useState('block')
+  const handleInput = () => {
+      setDisplay('none')
+  }
   const handleshow = () => {
     setShow(!show)
   }
-  const handleopen = (v) => {
+  const handleopen = (catalog) => {
     setShow(!show);
-    setTitle(v)
+    setTitle(catalog)
   }
   return (
     <>
@@ -27,6 +32,7 @@ const Header = () => {
               <Link to="/">
                 <img
                   src={millerLogo}
+                  onClick={()=>setTitle('Каталог Товаров')}
                   width="179px"
                   height="80px"
                   alt="header logo"
@@ -34,7 +40,7 @@ const Header = () => {
               </Link>
             </div>
             <div className="header__center">
-              <ul className="header__list">
+              <ul className={`header__list ${display}`}>
                 <div className="accordion">
                   <li className="header__item1">
                     <div
@@ -89,9 +95,11 @@ const Header = () => {
                 </li>
               </ul>
             </div>
+              <input type="search" className={`header__input ${display}`} /><button className={`header__input-button ${display}`} onClick={()=>setDisplay('block')}>close</button>
             <div className="header__right">
               <a href="#">
                 <img
+                  onClick={handleInput}
                   className="header-search"
                   src={searchlogo}
                   alt="header search"
