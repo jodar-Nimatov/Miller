@@ -1,38 +1,47 @@
-.wrapper{
-    width: 1730px;
-    height: 1200px;
-    .fresh-coffe{
-        width: 1903px;
+
+// Надо поскорее исправить верстку и сделать адаптивку.
+// Самый легкий вариант сделать адаптивку - использовать flex-box !
+// Жоодарбек, попробуй поменять все width на max-width
+.fresh-coffe{
         height: 600px;
         background-color: aqua;
-        padding: 70px 20px 0 70px;
+        // padding: 70px 20px 0 70px;
     }
+    // -------------------------------------------------------------------- //
+    @media (max-width: 900px){     
+        // Жоодарбек смотри, пишешь здесь стили которые должны быть при этой ширине екрана.
+    }
+    // -------------------------------------------------------------------- //
     .fresh-coffe-inner{
         display: flex;
+        max-width: 900px;
         padding-top: 30px;
     }
     .fresh-coffe-container{
         margin-top: 40px;
     }
-    .fresh-coffe-left > h1 {
+    .fresh-coffe-left > .container > h1 {
         width: 960px;
         height: 100px;
         left: 60px;
         top: 156px;
-        
         font-size: 80px;
         line-height: 100px;
+        @media (max-width: 960px){
+            font-size: 40px;
+            width: auto;
+        }
     }
-    .fresh-coffe-left > p{
+    .fresh-coffe-left > .container > p{
         width: 400px;
         line-height: 24px;
         padding-top: 40px;
     }
-    .fresh-coffe-left > span > b{
+    .fresh-coffe-left > .container  > span > b{
         font-weight: 700;
         font-size: 18px;
     }
-    .fresh-coffe-left > button{
+    .fresh-coffe-left > .container > button{
         margin-top: 50px;
         width: 200px;
         height: 45px;
@@ -47,8 +56,7 @@
 
 
 .catalog-products{
-    width: 1903px;
-    height: 700px;
+    max-height: 2000px;
     .catalog-inner{
         padding: 40px;
 
@@ -62,6 +70,11 @@
         justify-content: center;
         padding-top: 80px;
         gap: 20px;
+    }
+    @media (max-width: 1500px){
+        .catalog-items{
+            flex-wrap: wrap;
+        }
     }
     .catalog-card{
         position: relative;
@@ -105,13 +118,11 @@
     background-color: aquamarine;
     .sale-items-inner{
         padding-top: 40px;
-        margin-left: 600px;    
+        margin-left: auto;
     }
     .sale-items-inner > h1{
         position: absolute;
         text-align: right;
-        left: 1430px;
-
         font-family: 'Gilroy';
         font-style: normal;
         font-weight: 700;
@@ -120,13 +131,10 @@
     .sale-items-inner > p {
         width: 1107px;
         height: 64px;
-        left: 604px;
         top: 800px;
-        
         font-weight: 500;
         font-size: 20px;
         line-height: 130%;
-        
         transform: translateY(80px);
         text-align: right;
         color: #000000;
@@ -145,24 +153,33 @@
         display: flex;
         position: relative;
     }
+    @media (max-width: 1880px){
+        .img1{
+            z-index: -2;
+        }
+    }
     .advantages-left > .img2{
         position: absolute;
+        @media (max-width: 960px){
+            display: none;
+        }
         left: 125px;
-
         max-width: 600px;
         max-height: 400px;
     }
     .advantages-left > .img1{
+        @media (max-width: 960px){
+            display: none;
+        }
         position: absolute;
         z-index: 100;
         left: 188px;
         top: 105px;
-
         max-width: 400px;
         max-height: 300px;
     }
     .advantages-right{
-        transform: translateX(1000px);
+        margin-left: auto;
     }
     .advantages-right > h2{
         font-weight: bold;
@@ -193,7 +210,6 @@
     height: 700px;
     background: url('../../assets/Images/roastCoffe.png');
     .roast-coffe-inner{
-        padding: 70px;
         color: white;
     }
     .roast-coffe-inner > h2{
@@ -201,11 +217,9 @@
         font-style: normal;
         font-weight: 900;
         font-size: 35px;
-        line-height: 150px;
     }
     .roast-coffe-inner > p{
-        width: 776px;
-        line-height: 20px;
+        max-width: 776px;
         padding-bottom: 20px;
     }
     .roast-coffe-inner > button{
@@ -219,6 +233,4 @@
         cursor: pointer;
         border-radius: 5px;
     }
-}
-
 }

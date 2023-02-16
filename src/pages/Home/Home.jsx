@@ -17,6 +17,8 @@ const Main = () => {
                 <div className="fresh-coffe-container">
                     <div className="fresh-coffe-inner">
                         <div className="fresh-coffe-left">
+                            <div className="container">
+
                             <h1>
                                 Свежеобжаренный кофе
                             </h1>
@@ -31,6 +33,7 @@ const Main = () => {
                             <button>
                                 Посмотреть каталог
                             </button>
+                            </div>
                         </div>
                         <div className="fresh-right">
                             <Slider />

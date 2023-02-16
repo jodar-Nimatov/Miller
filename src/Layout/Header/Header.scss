@@ -1,5 +1,9 @@
 .header {
-  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @media (max-width: 700px){
+    .header__center > ul{
+      display: none;
+    }
+  }
   &__item2 {
     transform: translateX(-20px);
   }
@@ -133,7 +137,8 @@
   background-color: rgb(255, 255, 255);
 }
 .white {
+  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   z-index: 7;
   height: 22px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
