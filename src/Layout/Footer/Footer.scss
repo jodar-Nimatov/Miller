@@ -45,18 +45,25 @@
         padding: 17px 500px 16px 40px;
         background: #F3F3F3;
         border-radius: 28px;
+        @media (max-width: 800px){
+            padding: 17px 200px 16px 40px;
+            border-radius: 14px;
+        }
         border: none;
         position: absolute;
     }
     &-button{
-        position: relative;
         margin-left: 550px;
+        position: relative;
         cursor: pointer;
         padding: 17px 33px 16px 40px;
         border-radius: 28.3403px;
         background: #F9B300;
         color: white;
         border: none;
+        @media (max-width: 800px){
+            margin-left: 300px;
+        }
     }
     @media (min-width: 1700px){
         background-size: cover;
@@ -106,7 +113,8 @@
         width: 50%;
     }
     &__container{
-        max-width: 1180px;
+        max-width: 1210px;
+        padding: 0 15px;
         margin: 0 auto;
     }
 }
