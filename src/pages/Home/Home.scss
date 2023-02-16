@@ -1,8 +1,5 @@
-.wrapper{
-    width: 1730px;
-    height: 1200px;
-    .fresh-coffe{
-        width: 1903px;
+
+.fresh-coffe{
         height: 600px;
         background-color: aqua;
         padding: 70px 20px 0 70px;
@@ -47,7 +44,6 @@
 
 
 .catalog-products{
-    width: 1903px;
     height: 700px;
     .catalog-inner{
         padding: 40px;
@@ -67,7 +63,6 @@
         position: relative;
         width: 335px;
         height: 410px;
-
         background: #FFFFFF;
         box-shadow: 0px 0px 30px rgba(146, 146, 146, 0.2);
         border-radius: 20px;
@@ -100,15 +95,13 @@
 }
 
 .sale-items{
-    width: 1903px;
-    height: 100vh;
+    height: max-content;
     background-color: aquamarine;
     .sale-items-inner{
         padding-top: 40px;
         margin-left: 600px;    
     }
     .sale-items-inner > h1{
-        position: absolute;
         text-align: right;
         left: 1430px;
 
@@ -118,7 +111,6 @@
         font-size: 30px;
     }
     .sale-items-inner > p {
-        width: 1107px;
         height: 64px;
         left: 604px;
         top: 800px;
@@ -134,7 +126,6 @@
 }
 
 .advantages{
-    width: 1903px;
     height: 900px;
     background-color: #FFF7E1;
     .advantages-inner{
@@ -189,7 +180,7 @@
 
 
 .roast-coffe{
-    width: 1903px;
+    // width: 1903px;
     height: 700px;
     background: url('../../assets/Images/roastCoffe.png');
     .roast-coffe-inner{
@@ -219,6 +210,4 @@
         cursor: pointer;
         border-radius: 5px;
     }
-}
-
 }

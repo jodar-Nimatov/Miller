@@ -14,7 +14,7 @@ const Main = () => {
     return (
         <div className='wrapper'>
             <div className="fresh-coffe">
-                <div className="fresh-coffe-container">
+                <div className="container">
                     <div className="fresh-coffe-inner">
                         <div className="fresh-coffe-left">
                             <h1>
@@ -39,6 +39,8 @@ const Main = () => {
                 </div>
             </div>
             <div className="catalog-products">
+                <div className="container">
+
                 <div className="catalog-inner">
                     <h2>Каталоги нашей продукции</h2>
                     <div className="catalog-items">
@@ -90,25 +92,28 @@ const Main = () => {
                                 Купить
                             </button>
                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className="sale-items">
-                <div className="sale-items-inner">
-                    <h1>
-                        Товары со скидкой
-                    </h1>
-                    <p>
-                        Наша компания предлагает покупать товар со скидкой не только в дни распродаж
-                        или в течение действия ограниченных предложений, но и пользоваться скидками постоянно!
-                    </p>
-                    <div className="sale-items-slider">
+                <div className="container">
+                    <div className="sale-items-inner">
+                        <h1>
+                            Товары со скидкой
+                        </h1>
+                        <p>
+                            Наша компания предлагает покупать товар со скидкой не только в дни распродаж
+                            или в течение действия ограниченных предложений, но и пользоваться скидками постоянно!
+                        </p>
+                        <div className="sale-items-slider">
 
+                        </div>
                     </div>
                 </div>
             </div>
             <div className="advantages">
-                <div className="advantages-container">
+                <div className="container">
                     <div className="advantages-inner">
                         <div className="advantages-left">
                             <img className='img2' src={beancoffe} alt="" />
@@ -146,7 +151,7 @@ const Main = () => {
                 </div>
             </div>
             <div className="roast-coffe">
-                <div className="roast-coffe-container">
+                <div className="container">
                     <div className="roast-coffe-inner">
                         <h2>Как мы обжариваем наш кофе:</h2>
                         <p>
