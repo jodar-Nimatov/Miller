@@ -9,9 +9,14 @@ import arrow from "../../assets/arrow.svg";
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  const handleopen = () => {
+  const [title, setTitle] = useState('Каталог товаров')
+  const handleshow = () => {
+    setShow(!show)
+  }
+  const handleopen = (v) => {
     setShow(!show);
-  };
+    setTitle(v)
+  }
   return (
     <>
       <div className="white"></div>
@@ -33,15 +38,14 @@ const Header = () => {
                 <div className="accordion">
                   <li className="header__item1">
                     <div
-                      style={{transition: '500ms'}}
                       className="header-accordion-title"
-                      onClick={handleopen}
-                    >
-                      Каталог товаров
+                      onClick={handleshow}
+                      >
+                      {title}
                     </div>
                     <div className="si">
                       <img
-                        onClick={() => setShow(!show)}
+                        onClick={handleshow}
                         src={arrow}
                         className={show ? "arrowdown" : "arrowup"}
                         height="10px"
@@ -52,25 +56,25 @@ const Header = () => {
                   {show && (
                     <div className="header-accordion">
                       <Link to="/coffee">
-                        <span onClick={() => setShow(!show)}>
+                        <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Свежеобжаренный кофе
                         </span>
                       </Link>
                       <br />
                       <Link to="/tea">
-                        <span onClick={() => setShow(!show)}>
+                        <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Чай и кофейные напитки
                         </span>
                       </Link>
                       <br />
                       <Link to="/wending">
-                        <span onClick={() => setShow(!show)}>
+                        <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Продукция для вендинга
                         </span>
                       </Link>
                       <br />
                       <Link to="/healthy">
-                        <span onClick={() => setShow(!show)}>
+                        <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Здоровое питание
                         </span>
                       </Link>
