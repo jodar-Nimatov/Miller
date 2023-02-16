@@ -2,7 +2,7 @@
     width: 1730px;
     height: 1200px;
     .fresh-coffe{
-        max-width: 100%;
+        width: 1903px;
         height: 600px;
         background-color: aqua;
         padding: 70px 20px 0 70px;
@@ -15,7 +15,6 @@
         margin-top: 40px;
     }
     .fresh-coffe-left > h1 {
-        position: absolute;
         width: 960px;
         height: 100px;
         left: 60px;
@@ -48,7 +47,7 @@
 
 
 .catalog-products{
-    max-width: 100%;
+    width: 1903px;
     height: 700px;
     .catalog-inner{
         padding: 40px;
@@ -101,7 +100,7 @@
 }
 
 .sale-items{
-    max-width: 100%;
+    width: 1903px;
     height: 100vh;
     background-color: aquamarine;
     .sale-items-inner{
@@ -135,7 +134,7 @@
 }
 
 .advantages{
-    max-width: 100%;
+    width: 1903px;
     height: 900px;
     background-color: #FFF7E1;
     .advantages-inner{
@@ -190,9 +189,9 @@
 
 
 .roast-coffe{
-    max-width: 100%;
+    width: 1903px;
     height: 700px;
-    background: url('../assets/Images/roastCoffe.png');
+    background: url('../../assets/Images/roastCoffe.png');
     .roast-coffe-inner{
         padding: 70px;
         color: white;
