@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Header/Header.scss";
 import millerLogo from "../../assets/millerLofo.svg";
 import searchlogo from "../../assets/search.svg";
@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 import arrow from "../../assets/arrow.svg";
 
 const Header = () => {
-  const [tum, setTum] = useState(false);
   const [show, setShow] = useState(false);
+  const [text, setText] = useState('')
   const [title, setTitle] = useState('Каталог товаров')
   const [display, setDisplay] = useState('block')
   const handleInput = () => {
@@ -22,6 +22,9 @@ const Header = () => {
     setShow(!show);
     setTitle(catalog)
   }
+  useEffect(()=>{
+    document.body.children[1].childNodes[3].addEventListener('click', ()=>setDisplay('block'))
+  }, [])
   return (
     <>
       <div className="white"></div>
@@ -95,12 +98,14 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-              <input type="search" className={`header__input ${display}`} /><button className={`header__input-button ${display}`} onClick={()=>setDisplay('block')}>close</button>
+              <div className={`header__input-block ${display}`}>
+                <input value={text} onChange={e => setText(e.target.value)} type="search" placeholder="Поиск по товарам" className={`header__input ${display}`} />
+              </div>
             <div className="header__right">
               <a href="#">
                 <img
                   onClick={handleInput}
-                  className="header-search"
+                  className={`header-search ${display}`}
                   src={searchlogo}
                   alt="header search"
                 />
