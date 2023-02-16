@@ -7,7 +7,7 @@ const News = () => {
             <div className="news-inner">
                 <h2>Новости компании</h2>
                 <div className="news-posts">
-                    
+                  
                 </div>
             </div>
         </div>
@@ -16,3 +16,4 @@ const News = () => {
 }
 
 export default News
+
