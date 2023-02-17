@@ -1,213 +1,208 @@
 .filters{
-    background-repeat: no-repeat;
-    background-image: url('../../../../assets/filters-back.svg');
-    background-position-y: 326px;
-    background-color: linear-gradient(to bottom, #F9B300 331px, transparent 331px);
-    background-size: 300vh;
-    max-height: 777px;
-    display: flex;
+  background-repeat: no-repeat;
+  background-image: url('../../../../assets/filters-back.svg');
+  background-position-y: 326px;
+  background-color: linear-gradient(to bottom, #F9B300 331px, transparent 331px);
+  background-size: 300vh;
+  max-height: 777px;
+  display: flex;
+  &__inner{
+      display: flex;
   }
-  &-back {
-    background: linear-gradient(to bottom, #f9b300 331px, transparent 331px);
+  &-title{
+      min-width: 100%;
   }
-  @media (max-width: 1340px) {
-    &-coffee {
+  &-back{
+      background: linear-gradient(to bottom, #F9B300 331px, transparent 331px);
+  }
+  &-bottom{
+      &-blocks{
+          &-item:hover{
+              opacity: 0.7;
+          }
+          &-item:active{
+              cursor: default;
+          }
+          &-item{
+              cursor: pointer;
+              background: #FFFFFF;
+              box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
+              border-radius: 14px;
+              align-items: center;
+              width: 134px;
+              height: 134px;
+              display: flex;
+              &-inner > p{
+                  padding: 20px 0 15px;
+              }
+              &-inner{
+                  min-height: 100%;
+                  min-width: 100%;
+                  text-align: center;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  align-content: space-between;
+              }
+          }
+          display: flex;
+          margin-top: 15px;
+          justify-content: space-between;
+      }
+  }
+  @media (max-width: 1340px){
+   &-coffee{
       z-index: -1;
-    }
-    &-title{
-        min-width: 100%;
-    }
-    &-back{
-        background: linear-gradient(to bottom, #F9B300 331px, transparent 331px);
-    }
-    &-bottom{
-        &-blocks{
-            &-item:hover{
-                opacity: 0.7;
-            }
-            &-item:active{
-                cursor: default;
-            }
-            &-item{
-                cursor: pointer;
-                background: #FFFFFF;
-                box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
-                border-radius: 14px;
-                align-items: center;
-                width: 134px;
-                height: 134px;
-                display: flex;
-                &-inner > p{
-                    padding: 20px 0 15px;
-                }
-                &-inner{
-                    min-height: 100%;
-                    min-width: 100%;
-                    text-align: center;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    align-content: space-between;
-                }
-            }
-            display: flex;
-            margin-top: 15px;
-            justify-content: space-between;
-        }
-    }
-    @media (max-width: 1340px){
-     &-coffee{
-        z-index: -1;
-     }   
-    }
-    &-coffee{
-        background-image: url('../../../../assets/footer-coffee.png');
-        height: 478px;
-        position: absolute;
-        width: 300px;
-        right: 0;
-        background-position-x: 50px;
-        background-position-y: 15px;
-        background-repeat: no-repeat;
-    }
-    &-cup{
-        background-position-y: -30px;
-        position: absolute;
-        width: 500px;   
-        right: 0;
-        z-index: 1;
-        background-image: url('../../../../assets/footer-cup.png');
-        background-repeat: no-repeat;
-        height: 322px;
-        margin-left: auto;
-    }
-    &__left{
-        z-index: 3;
-    }
-    &__left > h1{
-        margin-top: 100px;
-        font-weight: 900;
-        font-size: 50px;
-        line-height: 62px;
-        color: #FFFFFF;
-    }
-    &-nav-first{
-        font-size: 12px;
-        color: white;
-    }
-    &-nav-item:hover{
-        color: #f2f2f2;
-    }
-    &-nav-item{
-        color: white;
-        font-size: 12px;
-    }
-    &-nav{
-        margin-top: 30px;
-        width: 277px;
-        justify-content: space-between;
-        display: flex;
-        color: white;
-    }
-    &-functions{
-        display: flex;
-        margin-top: 95px;
-        z-index: 4000;
-    }
-    &-function-left-sec>h3{ 
-        margin: 30px 35px 30px 30px;
-        font-weight: 700;
-        font-size: 22px;
-        width: 185px;
-    }
-    &-function-left{
-        display: flex;
-        width: 280px;
-        border-radius: 14.1702px;
-        height: 373px;
-        background-color: white;
-        margin-right: 20px;
-        box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
-        &-line{
-            height: 308px;
-            width: 10px;
-            background-color: #F9B300;
-            border-radius: 7px;
-            margin: 32px 0 0 20px;
-        }
-    }
-    &-functions-right{
-        background-color: white;
-        box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
-        height: 373px;
-        border-radius: 14.1702px;
-        max-width: 880px; 
-        max-height: 373px;
-        &-line{
-            height: 10px;
-            width: 770px;
-            background-color: #F9B300;
-            border-radius: 7px;
-            margin-top: 25px;
-            margin-left: 60px;
-            margin-right: 50px;
-        }
-        &-bottom{
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: 66px;
-            margin-top: 21px;
-            max-width: 712px;
-            justify-content: space-between;
-        }
-        &-column{
-            &-options{
-                margin-top: 20px;
-                font-weight: 500;
-                font-size: 14px;
-                &-item{
-                    display: flex;
-                    gap: 15px;
-                    padding-bottom: 15px;
-                }
-            }
-        }
-        .processing-method > h3{
-            line-break: anywhere;
-            width: 93px;
-        }
-    }
-    // Вот и вся функция .
-    .white-circle.clicked{
-        background-color: #F9B300;
-    }
-    .white-circle:active{
-        cursor: default;
-    }
-    .white-circle{
-        cursor: pointer;
-        width: 17px;
-        height: 17px;
-        background-color: #E4E4E4;
-        border-radius: 50%;
-    }
-    .yellow-circle{
-        cursor: pointer;
-        width: 17px;
-        height: 17px;
-        background-color:#F9B300;
-        border-radius: 50%;
-    }
-    .fiveCoffees{
-        display: flex;
-        margin-left: 30px;
-        margin-bottom: 30px;
-        gap: 20px;
-    }
-    .fiveCoffees > div > img{
-        max-width: 17px;
-    }
-    .fiveCoffees > div {
-        gap: 7px;
-        display: flex;
-    }
+   }   
+  }
+  &-coffee{
+      background-image: url('../../../../assets/footer-coffee.png');
+      height: 478px;
+      position: absolute;
+      width: 300px;
+      right: 0;
+      background-position-x: 50px;
+      background-position-y: 15px;
+      background-repeat: no-repeat;
+  }
+  &-cup{
+      background-position-y: -30px;
+      position: absolute;
+      width: 500px;   
+      right: 0;
+      z-index: 1;
+      background-image: url('../../../../assets/footer-cup.png');
+      background-repeat: no-repeat;
+      height: 322px;
+      margin-left: auto;
+  }
+  &__left{
+      z-index: 3;
+  }
+  &__left > h1{
+      margin-top: 100px;
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 62px;
+      color: #FFFFFF;
+  }
+  &-nav-first{
+      font-size: 12px;
+      color: white;
+  }
+  &-nav-item:hover{
+      color: #f2f2f2;
+  }
+  &-nav-item{
+      color: white;
+      font-size: 12px;
+  }
+  &-nav{
+      margin-top: 30px;
+      width: 277px;
+      justify-content: space-between;
+      display: flex;
+      color: white;
+  }
+  &-functions{
+      display: flex;
+      margin-top: 95px;
+      z-index: 4000;
+  }
+  &-function-left-sec>h3{ 
+      margin: 30px 35px 30px 30px;
+      font-weight: 700;
+      font-size: 22px;
+      width: 185px;
+  }
+  &-function-left{
+      display: flex;
+      width: 280px;
+      border-radius: 14.1702px;
+      height: 373px;
+      background-color: white;
+      margin-right: 20px;
+      box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
+      &-line{
+          height: 308px;
+          width: 10px;
+          background-color: #F9B300;
+          border-radius: 7px;
+          margin: 32px 0 0 20px;
+      }
+  }
+  &-functions-right{
+      background-color: white;
+      box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
+      height: 373px;
+      border-radius: 14.1702px;
+      max-width: 880px; 
+      max-height: 373px;
+      &-line{
+          height: 10px;
+          width: 770px;
+          background-color: #F9B300;
+          border-radius: 7px;
+          margin-top: 25px;
+          margin-left: 60px;
+          margin-right: 50px;
+      }
+      &-bottom{
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 66px;
+          margin-top: 21px;
+          max-width: 712px;
+          justify-content: space-between;
+      }
+      &-column{
+          &-options{
+              margin-top: 20px;
+              font-weight: 500;
+              font-size: 14px;
+              &-item{
+                  display: flex;
+                  gap: 15px;
+                  padding-bottom: 15px;
+              }
+          }
+      }
+      .processing-method > h3{
+          line-break: anywhere;
+          width: 93px;
+      }
+  }
+  // Вот и вся функция .
+  .white-circle.clicked{
+      background-color: #F9B300;
+  }
+  .white-circle:active{
+      cursor: default;
+  }
+  .white-circle{
+      cursor: pointer;
+      width: 17px;
+      height: 17px;
+      background-color: #E4E4E4;
+      border-radius: 50%;
+  }
+  .yellow-circle{
+      cursor: pointer;
+      width: 17px;
+      height: 17px;
+      background-color:#F9B300;
+      border-radius: 50%;
+  }
+  .fiveCoffees{
+      display: flex;
+      margin-left: 30px;
+      margin-bottom: 30px;
+      gap: 20px;
+  }
+  .fiveCoffees > div > img{
+      max-width: 17px;
+  }
+  .fiveCoffees > div {
+      gap: 7px;
+      display: flex;
+  }
 }

@@ -34,39 +34,38 @@ const CoffeeFilters = () => {
                     <img src={CoffeeDot} alt="" />
                     <img src={CoffeeDot} alt="" />
                   </div>
-                  <div className="fiveCoffees">
-                    <div className="white-circle"></div>
-                    <div className="imgagesOfCoffee">
-                      <img src={CoffeeDot} alt="" />
-                      <img src={CoffeeDot} alt="" />
-                      <img src={CoffeeDot} alt="" />
-                      <img src={CoffeeDot} alt="" />
-                    </div>
+                </div>
+                <div className="fiveCoffees">
+                  <div className="white-circle"></div>
+                  <div className="imgagesOfCoffee">
+                    <img src={CoffeeDot} alt="" />
+                    <img src={CoffeeDot} alt="" />
+                    <img src={CoffeeDot} alt="" />
+                    <img src={CoffeeDot} alt="" />
                   </div>
-                  <div className="fiveCoffees">
-                    <div className="white-circle"></div>
-                    <div className="imgagesOfCoffee">
-                      <img src={CoffeeDot} alt="" />
-                      <img src={CoffeeDot} alt="" />
-                      <img src={CoffeeDot} alt="" />
-                    </div>
+                </div>
+                <div className="fiveCoffees">
+                  <div className="white-circle"></div>
+                  <div className="imgagesOfCoffee">
+                    <img src={CoffeeDot} alt="" />
+                    <img src={CoffeeDot} alt="" />
+                    <img src={CoffeeDot} alt="" />
                   </div>
-                  <div className="fiveCoffees">
-                    <div className="white-circle"></div>
-                    <div className="imgagesOfCoffee">
-                      <img src={CoffeeDot} alt="" />
-                      <img src={CoffeeDot} alt="" />
-                    </div>
+                </div>
+                <div className="fiveCoffees">
+                  <div className="white-circle"></div>
+                  <div className="imgagesOfCoffee">
+                    <img src={CoffeeDot} alt="" />
+                    <img src={CoffeeDot} alt="" />
                   </div>
-                  <div className="fiveCoffees">
-                    <div className="white-circle"></div>
-                    <div className="imgagesOfCoffee">
-                      <img src={CoffeeDot} alt="" />
-                    </div>
+                </div>
+                <div className="fiveCoffees">
+                  <div className="white-circle"></div>
+                  <div className="imgagesOfCoffee">
+                    <img src={CoffeeDot} alt="" />
                   </div>
                 </div>
               </div>
-              <div className="filters-function-right"></div>
             </div>
             <div className="filters-functions-right">
               <div className="filters-functions-right-line"></div>
