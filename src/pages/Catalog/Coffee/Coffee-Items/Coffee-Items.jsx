@@ -1,12 +1,12 @@
-import React from 'react'
-import CoffeeFilters from '../Coffee-Filters/Coffee-Filters'
+import React from "react";
+import CoffeeFilters from "../Coffee-Filters/Coffee-Filters";
 
 const CoffeeItems = () => {
   return (
     <>
-     <CoffeeFilters/> 
+      <CoffeeFilters />
     </>
-  )
-}
+  );
+};
 
-export default CoffeeItems
+export default CoffeeItems;

@@ -4,7 +4,6 @@ import footerImg1 from "../../assets/footer-coffee.png";
 import footerImg2 from "../../assets/footer-cup.png";
 
 const Footer = () => {
-
   // const [email, setEmail] = useState('')
 
   return (
