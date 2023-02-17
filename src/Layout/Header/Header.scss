@@ -1,7 +1,12 @@
 .header {
-  @media (max-width: 700px) {
-    .header__center > ul {
+  @media (max-width: 900px){
+    .header__center > ul{
       display: none;
+    }
+    &{
+      height: 90px;
+      transform: translateY(-30px);
+      align-items:first baseline;
     }
   }
   &__item2 {
@@ -12,17 +17,20 @@
     max-width: fit-content;
   }
   .arrowdown {
-    margin-left: 4px;
     transform: rotate(-180deg);
     transition: 500ms;
     cursor: pointer;
+    position: relative;
+  }
+  .si{
+    margin-right: 100%;
   }
   .arrowup {
-    margin-left: 4px;
     cursor: pointer;
     width: 10px;
     height: 10px;
     transition: 500ms;
+    position: relative;
   }
   .none {
     display: none;
@@ -31,13 +39,29 @@
     display: flex;
   }
   span:hover {
-    background-color: beige;
+    border: 1px solid black;
+    opacity: 0.7;
+  }
+  .accordion{
+    position: relative;
   }
   &-accordion {
+    position: absolute;
     &-title {
+      white-space: nowrap;
+      padding-left: 10px;
+      width: 220px;
+      display: flex;
+      max-height: 0;
       cursor: pointer;
     }
-    height: 0px;
+    width: 230px;
+    line-height: 23px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color: #FFFFFF;
+    background: rgba(219, 218, 218, 0.7);
+    background-size: cover;
   }
   &__inner,
   &__list,
@@ -52,15 +76,6 @@
   &__right > a > img {
     max-width: 22px;
     max-height: 22px;
-  }
-  select {
-    border: none;
-    text-align: right;
-    cursor: pointer;
-    width: 222px;
-    font-weight: 500;
-    font-size: 18px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
   &__right {
     max-width: 146px;

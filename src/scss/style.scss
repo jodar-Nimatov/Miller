@@ -9,8 +9,11 @@
   box-sizing: border-box;
 }
 .container {
-  max-width: 1210px;
-  padding: 0 30px;
+  width: 1210px;
+  @media (max-width: 578px){
+    padding: 0;
+  }
+  padding: 0 15px;
   margin: 0 auto;
 }
 a:active,
@@ -45,4 +48,5 @@ body {
 }
 .wrapper {
   min-height: 100%;
+  // font-family: Gilroy ;
 }
