@@ -24,7 +24,7 @@ const Header = () => {
   }
   useEffect(()=>{
     document.body.children[1].childNodes[3].addEventListener('click', ()=>setDisplay('block'))
-  }, [])
+  }, [display])
   return (
     <>
       <div className="white"></div>
@@ -64,25 +64,25 @@ const Header = () => {
                   </li>
                   {show && (
                     <div className="header-accordion">
-                      <Link to="/coffee">
+                      <Link to="/catalog/coffee">
                         <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Свежеобжаренный кофе
                         </span>
                       </Link>
                       <br />
-                      <Link to="/tea">
+                      <Link to="/catalog/tea">
                         <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Чай и кофейные напитки
                         </span>
                       </Link>
                       <br />
-                      <Link to="/wending">
+                      <Link to="/catalog/wanding">
                         <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Продукция для вендинга
                         </span>
                       </Link>
                       <br />
-                      <Link to="/healthy">
+                      <Link to="/catalog/healthy">
                         <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Здоровое питание
                         </span>
@@ -91,7 +91,7 @@ const Header = () => {
                   )}
                 </div>
                 <li className="header__item2">
-                  <Link to="/blog">Блог</Link>
+                  <Link className="blog" to="/blog">Блог</Link>
                 </li>
                 <li className="header__item">
                   <Link to="/contacts">Контакты</Link>

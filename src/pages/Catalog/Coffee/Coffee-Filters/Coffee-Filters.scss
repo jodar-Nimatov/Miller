@@ -4,13 +4,50 @@
     background-position-y: 326px;
     background-color: linear-gradient(to bottom, #F9B300 331px, transparent 331px);
     background-size: 300vh;
-    height: 1000px;
+    max-height: 777px;
     display: flex;
     &__inner{
         display: flex;
     }
+    &-title{
+        min-width: 100%;
+    }
     &-back{
         background: linear-gradient(to bottom, #F9B300 331px, transparent 331px);
+    }
+    &-bottom{
+        &-blocks{
+            &-item:hover{
+                opacity: 0.7;
+            }
+            &-item:active{
+                cursor: default;
+            }
+            &-item{
+                cursor: pointer;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
+                border-radius: 14px;
+                align-items: center;
+                width: 134px;
+                height: 134px;
+                display: flex;
+                &-inner > p{
+                    padding: 20px 0 15px;
+                }
+                &-inner{
+                    min-height: 100%;
+                    min-width: 100%;
+                    text-align: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                }
+            }
+            display: flex;
+            margin-top: 15px;
+            justify-content: space-between;
+        }
     }
     @media (max-width: 1340px){
      &-coffee{
@@ -71,9 +108,6 @@
         margin-top: 95px;
         z-index: 4000;
     }
-    &-function-right{
-        display: inline-block;
-    }
     &-function-left-sec>h3{ 
         margin: 30px 35px 30px 30px;
         font-weight: 700;
@@ -96,12 +130,53 @@
             margin: 32px 0 0 20px;
         }
     }
-    &-function-right{
+    &-functions-right{
         background-color: white;
         box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
         height: 373px;
         border-radius: 14.1702px;
-        width: 100%;
+        max-width: 880px; 
+        max-height: 373px;
+        &-line{
+            height: 10px;
+            width: 770px;
+            background-color: #F9B300;
+            border-radius: 7px;
+            margin-top: 25px;
+            margin-left: 60px;
+            margin-right: 50px;
+        }
+        &-bottom{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 66px;
+            margin-top: 21px;
+            max-width: 712px;
+            justify-content: space-between;
+        }
+        &-column{
+            &-options{
+                margin-top: 20px;
+                font-weight: 500;
+                font-size: 14px;
+                &-item{
+                    display: flex;
+                    gap: 15px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+        .processing-method > h3{
+            line-break: anywhere;
+            width: 93px;
+        }
+    }
+    // Вот и вся функция .
+    .white-circle.clicked{
+        background-color: #F9B300;
+    }
+    .white-circle:active{
+        cursor: default;
     }
     .white-circle{
         cursor: pointer;
