@@ -4,7 +4,7 @@ import CoffeeDot from '../../../../assets/coffeeDot.svg'
 const CoffeeFilters = () => {
   // Функция для того чтобы выбирать желтые круглишки.
   return (
-    <>
+    <div className='wrapper'>
     <div className="filters-back">
       <div className='filters'>
         <div className="container">
@@ -72,7 +72,7 @@ const CoffeeFilters = () => {
         </div>
       </div>
     </div>
-    </>
+    </div>
   )
 }
 

@@ -3,9 +3,7 @@ import CoffeeFilters from '../Coffee-Filters/Coffee-Filters'
 
 const CoffeeItems = () => {
   return (
-    <>
-     <CoffeeFilters/> 
-    </>
+    <CoffeeFilters/>
   )
 }
 

@@ -31,9 +31,11 @@
     display: flex;
   }
   span:hover {
-    background-color: beige;
+    opacity: 0.7;
   }
   &-accordion {
+    background-color: #C4C4C4;
+    background-size: 1000vh;
     &-title {
       cursor: pointer;
     }
