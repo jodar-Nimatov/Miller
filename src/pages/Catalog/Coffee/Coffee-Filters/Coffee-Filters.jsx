@@ -1,5 +1,5 @@
-import React from 'react';
-import CoffeeDot from '../../../../assets/Catalog/Coffee/Filters/coffeeDot.svg';
+import React from 'react'
+import CoffeeDot from '../../../../assets/Catalog/Coffee/Filters/coffeeDot.svg'
 import images from './FilterImages';
 
 const CoffeeFilters = () => {
