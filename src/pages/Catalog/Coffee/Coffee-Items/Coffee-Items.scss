@@ -2,4 +2,14 @@
     min-height: 1844px;
     background-color: #F5F5F5;
     padding-top: 96px;
+    &-inner{
+        &-row{
+            display: flex;
+            flex-wrap: wrap;
+            &-card{
+                width: 280px;
+                height: 461px;
+            }
+        }
+    }
 }
