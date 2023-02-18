@@ -8,9 +8,12 @@ import CoffeeItems from "./pages/Catalog/Coffee/Coffee-Items/Coffee-Items";
 import TeaItems from './pages/Catalog/Tea/Tea-Items/Tea-Items';
 import Contacts from './pages/Contacts/Contacts';
 import Blog from './pages/Blog/Blog';
+import Profile from './pages/Profile/Profile'
 import ClipLoader from 'react-spinners/ClipLoader'
+
 import './scss/style.scss'
 import Layolog from './pages/Catalog/Layolog';
+
 
 
 function App() {
@@ -25,6 +28,7 @@ function App() {
         <Route path='' element={<Home/>}/>
         <Route path='/blog' element={<Blog/>}/>
         <Route path='/contacts' element={<Contacts/>}/>
+        <Route path='/Profile' element={<Profile  />}/>
         <Route path='/catalog' element={<Layolog/>}/>
         {/* Каталог товаров */}
         <Route path='/catalog/coffee' element={<CoffeeItems/>}/>
