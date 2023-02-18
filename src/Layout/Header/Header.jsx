@@ -93,13 +93,13 @@ const Header = () => {
                   alt="header search"
                 />
               </a>
-              <a href="#">
+              <Link to="/Profile">
                 <img
                   className="header-basket"
                   src={basketlogo}
                   alt="header basket"
                 />
-              </a>
+              </Link>
               <a href="#">
                 <img className="header-user" src={userlogo} alt="header user" />
               </a>
