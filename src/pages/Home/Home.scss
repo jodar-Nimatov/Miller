@@ -3,9 +3,9 @@
 // Самый легкий вариант сделать адаптивку - использовать flex-box !
 // Жоодарбек, попробуй поменять все width на max-width
 .fresh-coffe{
-        height: 600px;
+        height: 700px;
         background-color: aqua;
-        // padding: 70px 20px 0 70px;
+        padding-left: 30px;
     }
     // -------------------------------------------------------------------- //
     @media (max-width: 900px){     
@@ -15,7 +15,7 @@
     .fresh-coffe-inner{
         display: flex;
         max-width: 900px;
-        padding-top: 30px;
+        padding-top: 90px;
     }
     .fresh-coffe-container{
         margin-top: 40px;
@@ -34,6 +34,7 @@
     }
     .fresh-coffe-left > .container > p{
         width: 400px;
+        font-size: 18px;
         line-height: 24px;
         padding-top: 40px;
     }
@@ -63,7 +64,6 @@
     }
     .catalog-inner > h2{
         font-size: 50px;
-        padding-left: 116px;
     }
     .catalog-items{
         display: flex;
@@ -112,7 +112,7 @@
 }
 
 .sale-items{
-    height: max-content;
+    height: 600px;
     background-color: aquamarine;
     .sale-items-inner{
         padding-top: 40px;
@@ -120,15 +120,13 @@
     }
     .sale-items-inner > h1{
         text-align: right;
-        font-family: 'Gilroy';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
+        font-weight: 900;
+        font-size: 35px;
     }
     .sale-items-inner > p {
-        height: 64px;
-        top: 800px;
-        font-weight: 500;
+        position: absolute;
+        left: 940px;
+        width: 764px;
         font-size: 20px;
         line-height: 130%;
         transform: translateY(80px);
@@ -159,8 +157,8 @@
             display: none;
         }
         left: 125px;
-        max-width: 600px;
-        max-height: 400px;
+        max-width: 700px;
+        max-height: 500px;
     }
     .advantages-left > .img1{
         @media (max-width: 960px){
@@ -168,10 +166,10 @@
         }
         position: absolute;
         z-index: 100;
-        left: 188px;
-        top: 105px;
-        max-width: 400px;
-        max-height: 300px;
+        left: 172px;
+        top: 130px;
+        max-width: 500px;
+        max-height: 400px;
     }
     .advantages-right{
         margin-left: auto;
@@ -205,6 +203,7 @@
     height: 700px;
     background: url('../../assets/Images/roastCoffe.png');
     .roast-coffe-inner{
+        padding-top: 70px;
         color: white;
     }
     .roast-coffe-inner > h2{
@@ -212,8 +211,10 @@
         font-style: normal;
         font-weight: 900;
         font-size: 35px;
+        padding-bottom: 70px;
     }
     .roast-coffe-inner > p{
+        font-size: 18px;
         max-width: 776px;
         padding-bottom: 20px;
     }
