@@ -19,7 +19,7 @@
         top: 156px;
         font-size: 80px;
         line-height: 100px;
-        @media (max-width: 960px){
+        @media (max-width: 1070px){
             font-size: 40px;
             width: auto;
         }
@@ -44,9 +44,6 @@
         border: none;
         cursor: pointer;
     }
-
-
-
 .catalog-products{
     max-height: 2000px;
     .catalog-inner{

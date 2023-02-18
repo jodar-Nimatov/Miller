@@ -1,11 +1,9 @@
 import React from "react";
-import './Profile.scss'
 import coffee from '../../assets/Profile/coffeeProfile.png'
 import joodar from '../../assets/Profile/Joodar.png'
 
 const Profile = () => {
   return (
-
     <div className="profile">
         <div className="container">
             <div className="profile__inner">
@@ -13,7 +11,6 @@ const Profile = () => {
                     <li>Главная</li>
                     <li>Личный кабинет</li>
                 </ul>
-
                 <div className="profile__cart">
                     <div className="profile__name">
                         <div className="profile__joodar">

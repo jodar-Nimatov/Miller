@@ -11,6 +11,7 @@ import Blog from './pages/Blog/Blog';
 import ClipLoader from 'react-spinners/ClipLoader'
 import './scss/style.scss'
 import Layolog from './pages/Catalog/Layolog';
+import Profile from './pages/Profile/Profile';
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
         <Route path='/catalog/wanding' element={<VendingItems/>}/>
         <Route path='/catalog/healthy' element={<HealthyEatingItems/>}/>
         {/* Каталог товаров */}
+        {/* Профиль пользователя */}
+        <Route path='/profile' element={<Profile/>}/>
+        {/* Профиль пользователя */}
       </Route>
     </Routes>
   }

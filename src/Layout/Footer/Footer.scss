@@ -16,15 +16,27 @@
       margin-top: 80px;
       &-subTitle {
         margin: 40px 0 39px;
-        width: 500px;
+        max-width: 500px;
         height: 45px;
         font-weight: 500;
         font-size: 18px;
+        @media (max-width: 542px){
+          width: 442px;
+        }
+        @media (max-width: 442px){
+          width: 342px;
+        }
       }
       &-title {
         font-weight: 900;
         font-size: 35px;
-        width: 560px;
+        max-width: 560px;
+        @media (max-width: 542px){
+          width: 442px;
+        }
+        @media (max-width: 442px){
+          width: 342px;
+        }
         height: 43px;
         line-height: 44px;
       }
@@ -35,7 +47,7 @@
   }
   .subForm > p {
     margin-top: 15px;
-    width: 526px;
+    max-width: 526px;
     height: 14px;
     font-weight: 500;
     font-size: 12px;
@@ -46,6 +58,10 @@
     background: #f3f3f3;
     border-radius: 28px;
     @media (max-width: 800px) {
+      padding: 17px 200px 16px 40px;
+      border-radius: 14px;
+    }
+    @media (max-width: 430px) {
       padding: 17px 200px 16px 40px;
       border-radius: 14px;
     }
@@ -64,6 +80,9 @@
     @media (max-width: 800px) {
       margin-left: 300px;
     }
+    @media (max-width: 500px) {
+      margin-left: 270px;
+    }
   }
   @media (min-width: 1700px) {
     background-size: cover;
@@ -71,7 +90,7 @@
       background-size: cover;
     }
   }
-  background-image: url("../../assets/footer-background.svg");
+  background-image: url("../../assets/Footer/footer-background.svg");
   background-repeat: no-repeat;
   background-attachment: local;
   background-size: auto;
@@ -81,7 +100,7 @@
     background-size: auto;
     min-width: 100%;
     max-height: 300px;
-    background-image: url("../../assets/footer-back.svg");
+    background-image: url("../../assets/Footer/footer-back.svg");
     background-repeat: no-repeat;
     background-position-y: -13px;
     &-top {
