@@ -1,15 +1,7 @@
-
-// Надо поскорее исправить верстку и сделать адаптивку.
-// Самый легкий вариант сделать адаптивку - использовать flex-box !
-// Жоодарбек, попробуй поменять все width на max-width
 .fresh-coffe{
         height: 600px;
         background-color: aqua;
         // padding: 70px 20px 0 70px;
-    }
-    // -------------------------------------------------------------------- //
-    @media (max-width: 900px){     
-        // Жоодарбек смотри, пишешь здесь стили которые должны быть при этой ширине екрана.
     }
     // -------------------------------------------------------------------- //
     .fresh-coffe-inner{
@@ -63,7 +55,7 @@
     }
     .catalog-inner > h2{
         font-size: 50px;
-        padding-left: 116px;
+        max-width: 512px;
     }
     .catalog-items{
         display: flex;
@@ -111,33 +103,72 @@
     }
 }
 
-.sale-items{
-    height: max-content;
-    background-color: aquamarine;
-    .sale-items-inner{
-        padding-top: 40px;
-        margin-left: auto;
+.catalog-products {
+  max-height: 2000px;
+  .catalog-inner {
+    padding: 40px;
+  }
+  .catalog-inner > h2 {
+    font-size: 50px;
+    padding-left: 116px;
+  }
+  .catalog-items {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    gap: 20px;
+  }
+  @media (max-width: 1500px) {
+    .catalog-items {
+      flex-wrap: wrap;
     }
-    .sale-items-inner > h1{
-        text-align: right;
-        font-family: 'Gilroy';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
-    }
-    .sale-items-inner > p {
-        height: 64px;
-        top: 800px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 130%;
-        transform: translateY(80px);
-        text-align: right;
-        color: #000000;
-    }
+  }
+  .catalog-card {
+    position: relative;
+    width: 335px;
+    height: 410px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(146, 146, 146, 0.2);
+    border-radius: 20px;
+  }
+  .catalog-card_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ct-tea-img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .catalog-card_title {
+    text-align: center;
+    padding-top: 28px;
+  }
+  .catalog-card_button {
+    position: absolute;
+    left: 57px;
+    width: 230px;
+    height: 45px;
+    background-color: #f9b300;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 }
 
 .advantages{
+    &-block{
+        transform: translateX(730px);
+        @media (max-width: 1173px){
+            transform: translateX(630px);
+        }
+        @media (max-width: 1060px){
+            transform: translateX(130px);
+            color: rgb(49, 49, 49);
+        }
+    }
     height: 900px;
     background-color: #FFF7E1;
     .advantages-inner{
@@ -147,6 +178,9 @@
     .advantages-left{
         display: flex;
         position: relative;
+    }
+    &-inner{
+        max-width: fit-content;
     }
     @media (max-width: 1880px){
         .img1{
@@ -162,8 +196,8 @@
         max-width: 600px;
         max-height: 400px;
     }
-    .advantages-left > .img1{
-        @media (max-width: 960px){
+    .advantages-left > .img1, .advantages-left > .img2{
+        @media (max-width: 1060px){
             display: none;
         }
         position: absolute;
@@ -199,33 +233,93 @@
 
 }
 
+.advantages {
+  height: 900px;
+  background-color: #fff7e1;
+  .advantages-inner {
+    padding-top: 200px;
+    display: flex;
+  }
+  .advantages-left {
+    display: flex;
+    position: relative;
+  }
+  @media (max-width: 1880px) {
+    .img1 {
+      z-index: -2;
+    }
+  }
+  .advantages-left > .img2 {
+    position: absolute;
+    @media (max-width: 960px) {
+      display: none;
+    }
+    left: 125px;
+    max-width: 600px;
+    max-height: 400px;
+  }
+  .advantages-left > .img1 {
+    @media (max-width: 960px) {
+      display: none;
+    }
+    position: absolute;
+    z-index: 100;
+    left: 188px;
+    top: 105px;
+    max-width: 400px;
+    max-height: 300px;
+  }
+  .advantages-right {
+    margin-left: auto;
+  }
+  .advantages-right > h2 {
+    font-weight: bold;
+    font-size: 35px;
+    width: 404px;
+    transform: translateY(-65px);
+  }
+  .advent-imgs {
+    transform: translateX(-110px);
+  }
+  .advantages-block > .ad-block-content {
+    transform: translateY(-90px);
+  }
+  .ad-block-content > h3 {
+    font-weight: bolder;
+    font-size: 21px;
+    line-height: 55px;
+  }
+  .ad-block-content > p {
+    width: 334px;
+  }
+}
 
-.roast-coffe{
-    // width: 1903px;
-    height: 700px;
-    background: url('../../assets/Images/roastCoffe.png');
-    .roast-coffe-inner{
-        color: white;
-    }
-    .roast-coffe-inner > h2{
-        font-family: 'Gilroy';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 35px;
-    }
-    .roast-coffe-inner > p{
-        max-width: 776px;
-        padding-bottom: 20px;
-    }
-    .roast-coffe-inner > button{
-        margin-top: 80px;
-        width: 230px;
-        height: 45px;
-        background-color: #F9B300;
-        color: #fff;
-        font-size: 15px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-    }
+.roast-coffe {
+  // width: 1903px;
+  height: 700px;
+  background: url("../../assets/Images/roastCoffe.png");
+  .roast-coffe-inner {
+    color: white;
+  }
+  .roast-coffe-inner > h2 {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+  }
+  .roast-coffe-inner > p {
+    max-width: 776px;
+    padding-bottom: 20px;
+  }
+  .roast-coffe-inner > button {
+    margin-top: 80px;
+    width: 230px;
+    height: 45px;
+    background-color: #f9b300;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 }
