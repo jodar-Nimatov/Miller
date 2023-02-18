@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Header/Header.scss";
 import millerLogo from "../../assets/millerLofo.svg";
 import searchlogo from "../../assets/search.svg";
@@ -9,9 +9,22 @@ import arrow from "../../assets/arrow.svg";
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  const handleopen = () => {
+  const [text, setText] = useState('')
+  const [title, setTitle] = useState('Каталог товаров')
+  const [display, setDisplay] = useState('block')
+  const handleInput = () => {
+      setDisplay('none')
+  }
+  const handleshow = () => {
+    setShow(!show)
+  }
+  const handleopen = (catalog) => {
     setShow(!show);
-  };
+    setTitle(catalog)
+  }
+  useEffect(()=>{
+    document.body.children[1].childNodes[3].addEventListener('click', ()=>setDisplay('block'))
+  }, [])
   return (
     <>
       <div className="white"></div>
@@ -22,6 +35,7 @@ const Header = () => {
               <Link to="/">
                 <img
                   src={millerLogo}
+                  onClick={()=>setTitle('Каталог Товаров')}
                   width="179px"
                   height="80px"
                   alt="header logo"
@@ -29,19 +43,18 @@ const Header = () => {
               </Link>
             </div>
             <div className="header__center">
-              <ul className="header__list">
+              <ul className={`header__list ${display}`}>
                 <div className="accordion">
                   <li className="header__item1">
                     <div
-                      style={{transition: '500ms'}}
                       className="header-accordion-title"
-                      onClick={handleopen}
-                    >
-                      Каталог товаров
+                      onClick={handleshow}
+                      >
+                      {title}
                     </div>
                     <div className="si">
                       <img
-                        onClick={() => setShow(!show)}
+                        onClick={handleshow}
                         src={arrow}
                         className={show ? "arrowdown" : "arrowup"}
                         height="10px"
@@ -52,25 +65,25 @@ const Header = () => {
                   {show && (
                     <div className="header-accordion">
                       <Link to="/coffee">
-                        <span onClick={() => setShow(!show)}>
+                        <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Свежеобжаренный кофе
                         </span>
                       </Link>
                       <br />
                       <Link to="/tea">
-                        <span onClick={() => setShow(!show)}>
+                        <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Чай и кофейные напитки
                         </span>
                       </Link>
                       <br />
                       <Link to="/wending">
-                        <span onClick={() => setShow(!show)}>
+                        <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Продукция для вендинга
                         </span>
                       </Link>
                       <br />
                       <Link to="/healthy">
-                        <span onClick={() => setShow(!show)}>
+                        <span onClick={(e)=>handleopen(e.target.innerText)}>
                           Здоровое питание
                         </span>
                       </Link>
@@ -85,10 +98,14 @@ const Header = () => {
                 </li>
               </ul>
             </div>
+              <div className={`header__input-block ${display}`}>
+                <input value={text} onChange={e => setText(e.target.value)} type="search" placeholder="Поиск по товарам" className={`header__input ${display}`} />
+              </div>
             <div className="header__right">
               <a href="#">
                 <img
-                  className="header-search"
+                  onClick={handleInput}
+                  className={`header-search ${display}`}
                   src={searchlogo}
                   alt="header search"
                 />

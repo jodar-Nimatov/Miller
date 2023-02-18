@@ -10,7 +10,6 @@ import Contacts from './pages/Contacts/Contacts';
 import Blog from './pages/Blog/Blog';
 import Profile from './pages/Profile/Profile'
 import ClipLoader from 'react-spinners/ClipLoader'
-import './scss/style.scss'
 
 function App() {
   const [loading, setLoading] = useState(false)
@@ -23,12 +22,12 @@ function App() {
       <Route path='/' element={<Layout/>}>
         <Route path='' element={<Home/>}/>
         <Route path='/coffee' element={<CoffeeItems/>}/>
-        <Route path='/blog' element={<Blog/>}/>
         <Route path='/tea' element={<TeaItems/>}/>
+        <Route path='/blog' element={<Blog/>}/>
         <Route path='/wending' element={<VendingItems/>}/>
         <Route path='/healthy' element={<HealthyEatingItems/>}/>
         <Route path='/contacts' element={<Contacts/>}/>
-        <Route path='/Profile' element={<Profile />}/>
+        <Route path='/Profile' element={<Profile  />}/>
       </Route>
     </Routes>
   }
