@@ -46,4 +46,4 @@ const CoffeeItems = () => {
   );
 };
 
-export default CoffeeItems;
+export default CoffeeItems; 
