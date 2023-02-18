@@ -28,7 +28,7 @@ function App() {
         <Route path='/wending' element={<VendingItems/>}/>
         <Route path='/healthy' element={<HealthyEatingItems/>}/>
         <Route path='/contacts' element={<Contacts/>}/>
-        <Route path='/Profile' element={<Profile/>}/>
+        <Route path='/Profile' element={<Profile />}/>
       </Route>
     </Routes>
   }
