@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Layout from './Layout/Layout';
@@ -14,25 +14,25 @@ import './scss/style.scss'
 
 function App() {
   const [loading, setLoading] = useState(false)
-  document.addEventListener('DOMContentLoaded', ()=>setLoading(true))
+  document.addEventListener('DOMContentLoaded', () => setLoading(true))
   return (
-  <>
-  {
-    loading ? <ClipLoader color={'#123abc'} loading={loading} size={64}/> :
-    <Routes>
-      <Route path='/' element={<Layout/>}>
-        <Route path='' element={<Home/>}/>
-        <Route path='/coffee' element={<CoffeeItems/>}/>
-        <Route path='/blog' element={<Blog/>}/>
-        <Route path='/tea' element={<TeaItems/>}/>
-        <Route path='/wending' element={<VendingItems/>}/>
-        <Route path='/healthy' element={<HealthyEatingItems/>}/>
-        <Route path='/contacts' element={<Contacts/>}/>
-        <Route path='/Profile' element={<Profile />}/>
-      </Route>
-    </Routes>
-  }
-  </>
+    <>
+      {
+        loading ? <ClipLoader color={'#123abc'} loading={loading} size={64} /> :
+          <Routes>
+            <Route path='/' element={<Layout />}>
+              <Route path='' element={<Home />} />
+              <Route path='/coffee' element={<CoffeeItems />} />
+              <Route path='/blog' element={<Blog />} />
+              <Route path='/tea' element={<TeaItems />} />
+              <Route path='/wending' element={<VendingItems />} />
+              <Route path='/healthy' element={<HealthyEatingItems />} />
+              <Route path='/contacts' element={<Contacts />} />
+              <Route path='/Profile' element={<Profile />} />
+            </Route>
+          </Routes>
+      }
+    </>
   );
 }
 
