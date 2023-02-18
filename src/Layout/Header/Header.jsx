@@ -24,6 +24,7 @@ const Header = () => {
   }
   useEffect(()=>{
     document.body.children[1].childNodes[3].addEventListener('click', ()=>setDisplay('block'))
+    document.body.children[1].childNodes[5].addEventListener('click', ()=>setDisplay('block'))
   }, [display])
   return (
     <>
