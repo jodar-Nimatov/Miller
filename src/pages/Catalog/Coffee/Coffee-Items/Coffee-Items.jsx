@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import CoffeeFilters from "../Coffee-Filters/Coffee-Filters";
 import filcategory from '../../../../assets/Catalog/Coffee/Cards/Group 76.svg'
 import raiting from '../../../../assets/Catalog/Coffee/Cards/Group 78.svg'
+import discount from '../../../../assets/Catalog/Coffee/Cards/Ellipse 6.svg'
 import { useState } from "react";
 import axios from "axios";
 
@@ -29,7 +30,7 @@ const CoffeeItems = () => {
                   <div key={item.id} className="coffee__cards-inner-row-card">
                   <div className="coffee__cards-inner-row-card-top">
                     <div className="coffee__cards-inner-row-card-top-left">
-                      {item.catagory.map(cy => <p key={cy.length}>{cy}</p>)}
+                      {item.category.map(cy => <p key={cy.length}>{cy == 'Скидки' ? <><div className="discount">%</div>{cy}</> : cy}</p>)}
                     </div>
                     <div className="coffee__cards-inner-row-card-top-right">
                       <select>
