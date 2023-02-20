@@ -116,16 +116,16 @@ const Header = () => {
                   alt="header search"
                 />
               </a>
-              <Link to="/Profile">
+              <Link to="">
                 <img
                   className="header-basket"
                   src={basketlogo}
                   alt="header basket"
                 />
               </Link>
-              <a href="#">
+              <Link to="/Profile">
                 <img className="header-user" src={userlogo} alt="header user" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

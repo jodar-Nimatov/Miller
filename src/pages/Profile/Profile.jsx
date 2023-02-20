@@ -2,16 +2,28 @@ import React from "react";
 import './Profile.scss'
 import coffee from '../../assets/Profile/coffeeProfile.png'
 import joodar from '../../assets/Profile/Joodar.png'
+import { Link } from "react-router-dom";
 
 const Profile = () => {
+
+    
+
+
     return (
 
         <div className="profile">
             <div className="container">
                 <div className="profile__inner">
                     <ul className="home">
-                        <li>Главная</li>
-                        <li>Личный кабинет</li>
+                     <Link to="/">
+                     <li>Главная</li>
+                     </Link>
+                     
+                     <Link to="/Profile">
+                     <li>Личный кабинет</li>
+                     </Link>
+                        
+
                     </ul>
 
                     <div className="profile__cart">
@@ -33,7 +45,10 @@ const Profile = () => {
                             <div className="discount__inner">
                                 <div className="discount__button">
                                     <h1>Ваша скидка: 10%</h1>
-                                    <button className="discount__btn">?</button>
+                                    <Link to="#">
+                                     <button className="discount__btn">?</button>
+                                    </Link>
+                                   
                                 </div>
 
                                 <li>Сумма заказов: 5675 ₽*</li>
