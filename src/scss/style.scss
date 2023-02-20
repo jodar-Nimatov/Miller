@@ -1,16 +1,20 @@
 @import "../Layout/Header/Header.scss";
+@import "../pages/Profile/Profile.scss";
 @import "../pages/Home/Home.scss";
 @import "../Layout/Footer/Footer.scss";
 @import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
 @import "../pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters.scss";
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 .container {
-  width: 1210px;
-  padding: 0 30px;
+  max-width: 1210px;
+  @media (max-width: 578px){
+    padding: 0;
+  }
+  padding: 0 15px; 
   margin: 0 auto;
 }
 a:active,
@@ -27,7 +31,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6 { 
   letter-spacing: 0.5px;
 }
 ul,
@@ -39,10 +43,11 @@ a {
 }
 html,
 body {
-  // Пока-что такой
+  // Байгелди: У меня не работает 'Gilroy'
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   min-height: 100%;
 }
 .wrapper {
   min-height: 100%;
+  // font-family: Gilroy ;
 }
