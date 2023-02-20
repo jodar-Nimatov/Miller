@@ -22,11 +22,11 @@ const TeaItems = () => {
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">
-            <h4>Сортировка</h4>
+            <h4 className='cortirovka'>Сортировка</h4>
             <div className="coffee__cards-inner-row">
               {
                 cards.map(item => (
-                  <div className="coffee__cards-inner-row-card">
+                  <div key={item.id} className="coffee__cards-inner-row-card">
                   <div className="coffee__cards-inner-row-card-top">
                     <div className="coffee__cards-inner-row-card-top-right">
                       <div className="coffee__cards-inner-row-card-center-right-rating">
@@ -35,7 +35,8 @@ const TeaItems = () => {
                         <img src={raiting} alt="" />
                       </div>
                       <select>
-                        <option value="250g">250г</option>
+                        <option value="100g">100г</option>
+                        <option value="300g">300г</option>
                         <option value="500g">500г</option>
                         <option value="1000g">1000г</option>
                       </select>
@@ -44,25 +45,6 @@ const TeaItems = () => {
                   <div className="coffee__cards-inner-row-card-center">
                     <div className="coffee__cards-inner-row-card-center-left">
                       <img src={item.image} width='120px' alt="" />
-                    </div>
-                    <div className="coffee__cards-inner-row-card-center-right">
-                      <div className="coffee__cards-inner-row-card-center-right-roasting">
-                        {/* В будушем сделаю 1 блок с 5-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
-                      </div>
-                      <div className="coffee__cards-inner-row-card-center-right-filters">
-                        <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                          <p>Кислинка</p>
-                          <div className="kislinka"><img src={filcategory} alt="" /></div>
-                        </div>
-                        <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                          <p>Горчинка</p>
-                          <div className="kislinka"><img src={filcategory} alt="" /></div>
-                        </div>
-                        <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                          <p>Носыщенность</p>
-                          <div className="kislinka"><img src={filcategory} alt="" /></div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
