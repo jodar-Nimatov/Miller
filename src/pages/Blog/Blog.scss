@@ -6,6 +6,10 @@
 .container {
   width: 1349px;
 }
+// .blog {
+//   width: 100%;
+//   border-bottom: 1px solid #b3b3b3;
+// }
 .blog_ul {
   display: flex;
 }
@@ -81,4 +85,51 @@
 }
 .coffe_logo_blog3 {
   margin-top: 60px;
+}
+.news_bottom {
+  width: 100%;
+  border: 2px;
+}
+.button_tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.button_numb {
+  width: 180px;
+  height: 31px;
+  background: #fff7e1;
+  border: 0.709034px solid #f9b300;
+  border-radius: 4px;
+  color: #f9b300;
+}
+.button_numbtwo {
+  width: 180px;
+  height: 31px;
+  background: #f7f7f7;
+  border: 0.709034px solid #c9c9c9;
+  border-radius: 4px;
+}
+.button_numbtag3 {
+  width: 180px;
+  height: 31px;
+  background: #f7f7f7;
+  border: 0.709034px solid #c9c9c9;
+  border-radius: 4px;
+}
+.button_numbtag4 {
+  width: 180px;
+  height: 31px;
+  background: #f7f7f7;
+  border: 0.709034px solid #c9c9c9;
+  border-radius: 4px;
+}
+.button_numbtag5 {
+  width: 180px;
+  height: 31px;
+  background: #f7f7f7;
+  border: 0.709034px solid #c9c9c9;
+  border-radius: 4px;
 }
