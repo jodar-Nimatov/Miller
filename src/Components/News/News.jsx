@@ -40,8 +40,9 @@ const News = () => {
                 </div>
             </div>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default News
+export default News;

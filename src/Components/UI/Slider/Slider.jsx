@@ -1,9 +1,12 @@
-import React, {useState, useRef, useEffect} from 'react'
-const colors = ['../../../assets/Images/SliderCupCoffe.png', '../../../assets/Images/SliderCupCoffe.png', '../../../assets/Images/SliderCupCoffe.png'];
+import React, { useState, useRef, useEffect } from "react";
+const colors = [
+  "../../../assets/Images/SliderCupCoffe.png",
+  "../../../assets/Images/SliderCupCoffe.png",
+  "../../../assets/Images/SliderCupCoffe.png",
+];
 const delay = 2500;
 
 const Slider = () => {
-
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
 
@@ -14,44 +17,44 @@ const Slider = () => {
   }
 
   useEffect(() => {
-    resetTimeout()
-    timeoutRef.current = setTimeout(() =>
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
         setIndex((prevIndex) =>
-            prevIndex === colors.length - 1 ? 0 : prevIndex + 1
-        ),delay
-    )
+          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
     return () => {
-        resetTimeout();
-        }
-    }, [index]);
+      resetTimeout();
+    };
+  }, [index]);
 
   return (
-  <div className='slider'>
-                <div className="slideshow">
-                    <div className="slideshowSlider"style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-                        {colors.map((backgroundImage, index) => {
-                        return(
-                            <div
-                                className="slide"
-                                key={index}
-                                >
-                            </div>
-                        )})}
-                    </div>
-                    <div className="slideshowDots">
-                        {colors.map((_, idx) => (
-                        <div
-                            key={idx}
-                            className={`slideshowDot${index === idx ? " active" : ""}`}
-                            onClick={() => {
-                                setIndex(idx)
-                            }}
-                        ></div>
-                        ))}
-                    </div>
-                </div>
+    <div className="slider">
+      <div className="slideshow">
+        <div
+          className="slideshowSlider"
+          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+        >
+          {colors.map((backgroundImage, index) => {
+            return <div className="slide" key={index}></div>;
+          })}
         </div>
-  )
-}
+        <div className="slideshowDots">
+          {colors.map((_, idx) => (
+            <div
+              key={idx}
+              className={`slideshowDot${index === idx ? " active" : ""}`}
+              onClick={() => {
+                setIndex(idx);
+              }}
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Slider
+export default Slider;

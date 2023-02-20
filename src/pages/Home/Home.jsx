@@ -9,7 +9,6 @@ import CoffeImg from '../../assets/Images/CatalogCoffe.png'
 import CatalogTea from '../../assets/Images/CatalogTea.png'
 import CoffeMachine from '../../assets/Images/CoffeMachine.png'
 import CatalogKasha from '../../assets/Images/CatalogKasha.png'
-import News from '../../Components/News/News'
 
 const Main = () => {
     return (
@@ -18,8 +17,6 @@ const Main = () => {
                 <div className="container">
                     <div className="fresh-coffe-inner">
                         <div className="fresh-coffe-left">
-                            <div className="container">
-
                             <h1>
                                 Свежеобжаренный кофе
                             </h1>
@@ -34,7 +31,6 @@ const Main = () => {
                             <button>
                                 Посмотреть каталог
                             </button>
-                            </div>
                         </div>
                         <div className="fresh-right">
                             <Slider />
@@ -176,7 +172,6 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <News/>
         </div>
     )
 }

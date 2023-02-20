@@ -1,15 +1,7 @@
-
-// Надо поскорее исправить верстку и сделать адаптивку.
-// Самый легкий вариант сделать адаптивку - использовать flex-box !
-// Жоодарбек, попробуй поменять все width на max-width
 .fresh-coffe{
         height: 700px;
         background-color: aqua;
         padding-left: 30px;
-    }
-    // -------------------------------------------------------------------- //
-    @media (max-width: 900px){     
-        // Жоодарбек смотри, пишешь здесь стили которые должны быть при этой ширине екрана.
     }
     // -------------------------------------------------------------------- //
     .fresh-coffe-inner{
@@ -27,7 +19,7 @@
         top: 156px;
         font-size: 80px;
         line-height: 100px;
-        @media (max-width: 960px){
+        @media (max-width: 1070px){
             font-size: 40px;
             width: auto;
         }
@@ -53,9 +45,6 @@
         border: none;
         cursor: pointer;
     }
-
-
-
 .catalog-products{
     max-height: 2000px;
     .catalog-inner{
@@ -133,9 +122,53 @@
         text-align: right;
         color: #000000;
     }
+  }
+  .catalog-card {
+    position: relative;
+    width: 335px;
+    height: 410px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(146, 146, 146, 0.2);
+    border-radius: 20px;
+  }
+  .catalog-card_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ct-tea-img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .catalog-card_title {
+    text-align: center;
+    padding-top: 28px;
+  }
+  .catalog-card_button {
+    position: absolute;
+    left: 57px;
+    width: 230px;
+    height: 45px;
+    background-color: #f9b300;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 }
 
 .advantages{
+    &-block{
+        transform: translateX(730px);
+        @media (max-width: 1173px){
+            transform: translateX(630px);
+        }
+        @media (max-width: 1060px){
+            transform: translateX(130px);
+            color: rgb(49, 49, 49);
+        }
+    }
     height: 900px;
     background-color: #FFF7E1;
     .advantages-inner{
@@ -145,6 +178,9 @@
     .advantages-left{
         display: flex;
         position: relative;
+    }
+    &-inner{
+        max-width: fit-content;
     }
     @media (max-width: 1880px){
         .img1{
@@ -160,8 +196,8 @@
         max-width: 700px;
         max-height: 500px;
     }
-    .advantages-left > .img1{
-        @media (max-width: 960px){
+    .advantages-left > .img1, .advantages-left > .img2{
+        @media (max-width: 1060px){
             display: none;
         }
         position: absolute;
@@ -197,6 +233,66 @@
 
 }
 
+.advantages {
+  height: 900px;
+  background-color: #fff7e1;
+  .advantages-inner {
+    padding-top: 200px;
+    display: flex;
+  }
+  .advantages-left {
+    display: flex;
+    position: relative;
+  }
+  @media (max-width: 1880px) {
+    .img1 {
+      z-index: -2;
+    }
+  }
+  .advantages-left > .img2 {
+    position: absolute;
+    @media (max-width: 960px) {
+      display: none;
+    }
+    left: 125px;
+    max-width: 600px;
+    max-height: 400px;
+  }
+  .advantages-left > .img1 {
+    @media (max-width: 960px) {
+      display: none;
+    }
+    position: absolute;
+    z-index: 100;
+    left: 188px;
+    top: 105px;
+    max-width: 400px;
+    max-height: 300px;
+  }
+  .advantages-right {
+    margin-left: auto;
+  }
+  .advantages-right > h2 {
+    font-weight: bold;
+    font-size: 35px;
+    width: 404px;
+    transform: translateY(-65px);
+  }
+  .advent-imgs {
+    transform: translateX(-110px);
+  }
+  .advantages-block > .ad-block-content {
+    transform: translateY(-90px);
+  }
+  .ad-block-content > h3 {
+    font-weight: bolder;
+    font-size: 21px;
+    line-height: 55px;
+  }
+  .ad-block-content > p {
+    width: 334px;
+  }
+}
 
 .roast-coffe{
     // width: 1903px;

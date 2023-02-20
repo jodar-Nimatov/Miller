@@ -1,4 +1,5 @@
 @import "../Layout/Header/Header.scss";
+@import "../pages/Profile/Profile.scss";
 @import "../pages/Home/Home.scss";
 @import "../Layout/Footer/Footer.scss";
 @import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
@@ -31,7 +32,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6 { 
   letter-spacing: 0.5px;
 }
 ul,
@@ -43,10 +44,11 @@ a {
 }
 html,
 body {
-  // Пока-что такой
+  // Байгелди: У меня не работает 'Gilroy'
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   min-height: 100%;
 }
 .wrapper {
   min-height: 100%;
+  // font-family: Gilroy ;
 }
