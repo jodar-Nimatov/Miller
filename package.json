@@ -13,10 +13,13 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-spinners": "^0.13.8",
+
+    "react-yandex-map": "^4.6.0",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
+
     "sass": "^1.58.0",
     "scss": "^0.2.4",
     "scss-loader": "^0.0.1",
