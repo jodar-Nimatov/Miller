@@ -1,431 +1,586 @@
 {
-    "catalog":[
+    "catalog": [
         {
-            "id":1,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 1,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":2,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 2,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":3,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 3,
+            "title": "Colombia Supremo",
+            "category": ["", "Скидки"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":4,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 4,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":5,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 5,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":6,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 6,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":7,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 7,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":8,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 8,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":9,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 9,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":10,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 10,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":11,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 11,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         },
         {
-            "id":12,
-            "title":"Colombia Supremo",
-            "subtitle":"Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "id": 12,
+            "title": "Colombia Supremo",
+            "category": ["Популярное", "Новый урожай"],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
             "price": "250 ₽",
-            "imgage": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "rating": "4.0",
+            "review": "32",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
         }
     ],
     "coffe-drinks": [
         {
-            "id":1,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 1,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":2,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 2,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":3,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 3,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":4,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 4,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":5,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 5,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":6,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 6,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":7,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 7,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":8,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 8,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":9,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 9,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":10,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 10,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":11,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 11,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         },
         {
-            "id":12,
-            "title":"Наименование товара",
-            "subtitle":"Черный чай",
-            "price":"250 ₽",
-            "imgage":"https://tea.ru/upload/blog/0920/14/1.jpg"
+            "id": 12,
+            "title": "Наименование товара",
+            "subtitle": "Черный чай",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
         }
     ],
     "Products-for-vending": [
         {
-            "id":1,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 1,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":2,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 2,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":3,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 3,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":4,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 4,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":5,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 5,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":6,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 6,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":7,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 7,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":8,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 8,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":9,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 9,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":10,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 10,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":11,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 11,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":12,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 12,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":13,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 13,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":14,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 14,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":15,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 15,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":16,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 16,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":17,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 17,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":18,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 18,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":19,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "id": 19,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "rating": "4.0",
+            "review": "32",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         }
     ],
-    "healthy-eating":[
+    "healthy-eating": [
         {
-            "id":1,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":2,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":3,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":4,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":5,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":6,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
+            "id": 1,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
             "price": "250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":7,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
+            "id": 2,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
             "price": "250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":8,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":9,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":10,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":11,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":12,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":13,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":14,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":15,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":16,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
+            "id": 3,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
             "price": "250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         },
         {
-            "id":17,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":18,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
-            "price":"250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },
-        {
-            "id":19,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
+            "id": 4,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
             "price": "250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
-        },  {
-            "id":20,
-            "title":"Наименование товара",
-            "subtitle":"Гранулированный кофе",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 5,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
             "price": "250 ₽",
-            "image":"https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 6,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 7,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 8,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 9,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 10,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 11,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 12,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 13,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 14,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 15,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 16,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 17,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 18,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 19,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
+        },
+        {
+            "id": 20,
+            "title": "Наименование товара",
+            "subtitle": "Гранулированный кофе",
+            "price": "250 ₽",
+            "rating": "4.0",
+            "image": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/96186/Y8VQBBqwXq76JCeG5UDg.jpg?s=daksf"
         }
     ]
 }

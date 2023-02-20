@@ -11,7 +11,6 @@ import Blog from './pages/Blog/Blog';
 import ClipLoader from 'react-spinners/ClipLoader'
 import './scss/style.scss'
 
-
 function App() {
   const [loading, setLoading] = useState(false)
   document.addEventListener('DOMContentLoaded', ()=>setLoading(true))
@@ -22,12 +21,17 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout/>}>
         <Route path='' element={<Home/>}/>
-        <Route path='/coffee' element={<CoffeeItems/>}/>
-        <Route path='/tea' element={<TeaItems/>}/>
-        <Route path='/blog' element={<Blog/>}/>
-        <Route path='/wending' element={<VendingItems/>}/>
-        <Route path='/healthy' element={<HealthyEatingItems/>}/>
         <Route path='/contacts' element={<Contacts/>}/>
+        <Route path='/catalog' element={<Layolog/>}/>
+        {/* Каталог товаров */}
+        <Route path='/catalog/coffee' element={<CoffeeItems/>}/>
+        <Route path='/catalog/tea' element={<TeaItems/>}/>
+        <Route path='/catalog/wanding' element={<VendingItems/>}/>
+        <Route path='/catalog/healthy' element={<HealthyEatingItems/>}/>
+        {/* Каталог товаров */}
+        {/* Профиль пользователя */}
+        <Route path='/profile' element={<Profile/>}/>
+        {/* Профиль пользователя */}
       </Route>
     </Routes>
   }
