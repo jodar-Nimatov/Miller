@@ -168,10 +168,12 @@
   color: #000000;
 }
 .aga {
-  display: flex;
-  justify-content: right;
-  //   margin-top: -405px;
-  transform: translateY(-331px);
+    position: relative;
+    transform: translate(499px, -336px);
+
 }
-.maps {
+
+.map{
+    margin-top: -76px;
 }
+
