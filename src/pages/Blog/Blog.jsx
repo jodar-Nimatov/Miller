@@ -1,14 +1,15 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import images from "./FilterIMages";
 import coffeblog from "../../assets/blog/6VhPY27jdps.svg";
 import img2 from "../../assets/blog/pnmRtTHWqDM.svg";
 import img3 from "../../assets/blog/pnmRtTHWqDM.svg";
+import axios from "axios";
 
 const Blog = () => {
   const [news, setNews] = useState({ data: [] });
 
   useEffect(() => {
-    fetch(`http://localhost:3333/news-posts`)
+    axios(`http://localhost:3333/news-posts`)
       .then((res) => res.json())
       .then((res) => console.log(res))
       .then((res) => {
