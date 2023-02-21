@@ -9,6 +9,7 @@ import CoffeImg from '../../assets/Images/CatalogCoffe.png'
 import CatalogTea from '../../assets/Images/CatalogTea.png'
 import CoffeMachine from '../../assets/Images/CoffeMachine.png'
 import CatalogKasha from '../../assets/Images/CatalogKasha.png'
+import News from '../../Components/News/News'
 
 const Main = () => {
     return (
@@ -172,6 +173,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+            <News/>
         </div>
     )
 }
