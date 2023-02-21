@@ -5,13 +5,11 @@
 @import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
 @import "../pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters.scss";
 
+@import "../pages/Contacts/Contact.scss";
 @import "../pages/Blog/Blog.scss";
-
 @import "../Components/News/News.scss";
 
-
 * {
-
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -36,7 +34,7 @@ h2,
 h3,
 h4,
 h5,
-h6 { 
+h6 {
   letter-spacing: 0.5px;
 }
 ul,
