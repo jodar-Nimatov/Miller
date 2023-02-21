@@ -1,24 +1,24 @@
 .header {
-  @media (min-width: 900px){
-    // 
+  @media (min-width: 900px) {
+    //
   }
-  @media (max-width: 900px){
+  @media (max-width: 900px) {
     .header__center,
-    .header__center > ul{
+    .header__center > ul {
       display: none;
     }
-    .header-burger-menu{
+    .header-burger-menu {
       cursor: pointer;
       display: block;
       width: 29px;
     }
-    &{
+    & {
       height: 95px;
       transform: translateY(-30px);
-      align-items:first baseline;
+      align-items: first baseline;
     }
   }
-  &-burger-menu{
+  &-burger-menu {
     cursor: pointer;
     display: none;
   }
@@ -35,7 +35,7 @@
     cursor: pointer;
     position: relative;
   }
-  .si{
+  .si {
     margin-right: 100%;
   }
   .arrowup {
@@ -55,7 +55,7 @@
     border: 1px solid black;
     opacity: 0.7;
   }
-  .accordion{
+  .accordion {
     position: relative;
   }
   &-accordion {
@@ -72,7 +72,7 @@
     line-height: 23px;
     border-radius: 10px;
     padding: 10px 10px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     background: rgba(219, 218, 218, 0.7);
     background-size: cover;
   }
@@ -84,7 +84,7 @@
   &__center > ul {
     display: flex;
     align-items: center;
-    padding: 10px
+    padding: 10px;
   }
   &__right > a > img {
     max-width: 22px;
@@ -143,22 +143,22 @@
     display: flex;
     align-items: center;
     width: 660px;
-    @media (max-width: 1077px){
-      width: 560px
+    @media (max-width: 1077px) {
+      width: 560px;
     }
-    @media (max-width: 1007px){
-      width: 460px
+    @media (max-width: 1007px) {
+      width: 460px;
     }
-    @media (max-width: 883px){
-      width: 360px
+    @media (max-width: 883px) {
+      width: 360px;
     }
-    @media (max-width: 780px){
-      width: 260px
+    @media (max-width: 780px) {
+      width: 260px;
     }
-    @media (max-width: 677px){
-      width: 160px
+    @media (max-width: 677px) {
+      width: 160px;
     }
-    @media (max-width: 575px){
+    @media (max-width: 575px) {
       display: none;
     }
     height: 42px;
