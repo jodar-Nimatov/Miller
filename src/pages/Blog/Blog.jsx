@@ -1,23 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import images from "./FilterIMages";
 import coffeblog from "../../assets/blog/6VhPY27jdps.svg";
 import img2 from "../../assets/blog/pnmRtTHWqDM.svg";
 import img3 from "../../assets/blog/pnmRtTHWqDM.svg";
 
 const Blog = () => {
-  const [news, setNews] = useState({ data: [] });
-
-  useEffect(() => {
-    fetch(`http://localhost:3333/news-posts`)
-      .then((res) => res.json())
-      .then((res) => console.log(res))
-      .then((res) => {
-        setNews({ data: res });
-      });
-  }, []);
-
-  let posts = news.data;
-
   return (
     <div className="blog">
       <div className="container">
@@ -118,19 +105,16 @@ const Blog = () => {
             </div>
             <div className="coffe_logoblog">
               <img className="coffe_logo_blog3" src={img3} alt="" />
-            </div>
-            <div className="news-posts-row">
-              {posts.map((item) => (
-                <div className="post-item">
-                  <div className="post-item-left">
-                    <img className="post-img" src={item.image} alt="" />
-                  </div>
-                  <div className="post-right">
-                    <h1 className="post-title">{item.title}</h1>
-                    <p className="post-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+            </div>{" "}
+            <div className="coffe_news">
+              <h1 style={{ marginTop: "30px" }}>Новости:</h1>
+              <div className="button_tag">
+                <button className="button_numb">Тег №1</button>
+                <button className="button_numbtwo">Тег №2</button>
+                <button className="button_numbtag3">Тег №3</button>
+                <button className="button_numbtag4">Тег №4</button>
+                <button className="button_numbtag5">Тег №5</button>
+              </div>
             </div>
           </div>
         </div>
