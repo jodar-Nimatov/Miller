@@ -12,7 +12,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import "./scss/style.scss";
 import Layolog from "./pages/Catalog/Layolog";
 import Profile from "./pages/Profile/Profile";
-
+import Store from './pages/Contacts/Store';
 function App() {
   const [loading, setLoading] = useState(false);
   document.addEventListener("DOMContentLoaded", () => setLoading(true));
@@ -26,6 +26,7 @@ function App() {
             <Route path="" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contacts" element={<Contacts />} />
+            <Route path="/store" element={<Store />} />
             <Route path="/catalog" element={<Layolog />} />
             {/* Каталог товаров */}
             <Route path="/catalog/coffee" element={<CoffeeItems />} />
