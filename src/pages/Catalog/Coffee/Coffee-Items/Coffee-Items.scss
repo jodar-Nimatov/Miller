@@ -1,12 +1,19 @@
 .coffee__cards{
-    min-height: 1844px;
+    min-height: 100%;
+    overflow: hidden;
     background-color: #F5F5F5;
     padding-top: 96px;
     &-inner{
         &-row{
-            display: flex;
+            // display: inline;
+            max-width: f;
             flex-wrap: wrap;
+            gap: 20px;
             &-card{
+                text-align: left;
+                align-items: center;
+                padding: 15px 25px 37px;
+                background-color: white;
                 width: 280px;
                 height: 461px;
                 .discount{

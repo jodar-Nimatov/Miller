@@ -42,7 +42,7 @@ const CoffeeItems = () => {
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
                     <div className="coffee__cards-inner-row-card-center-left">
-                      <img src={item.image} width='120px' alt="" />
+                      <img src={item.image} width='120px' className="card-image" alt="" />
                     </div>
                     <div className="coffee__cards-inner-row-card-center-right">
                       <div className="coffee__cards-inner-row-card-center-right-rating">
