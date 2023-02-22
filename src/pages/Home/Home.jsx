@@ -9,11 +9,15 @@ import CoffeImg from "../../assets/Images/CatalogCoffe.png";
 import CatalogTea from "../../assets/Images/CatalogTea.png";
 import CoffeMachine from "../../assets/Images/CoffeMachine.png";
 import CatalogKasha from "../../assets/Images/CatalogKasha.png";
+import rightVector from '../../assets/Images/Vector.png'
+import leftVector from '../../assets/Images/vectorLeft.png'
+import leftVectorCoffe from '../../assets/Images/leftVectorCoffe.png'
 import News from '../../Components/News/News'
 
 const Main = () => {
   return (
     <div className="wrapper">
+      <div className="fresh-coffe-back">
       <div className="fresh-coffe">
         <div className="container">
           <div className="fresh-coffe-inner">
@@ -33,13 +37,22 @@ const Main = () => {
             <div className="fresh-right">
               <Slider/>
             </div>
+            <div >
+              <img className="yellow-gradient-right" src={rightVector} alt="" />
+            </div>
           </div>
         </div>
       </div>
+    </div>
       <div className="catalog-products">
         <div className="container">
           <div className="catalog-inner">
             <h2>Каталоги нашей продукции</h2>
+            <div className="catalog-content">
+              <div>
+                <img className="yellow-gradient-left" src={leftVector} alt="" />
+                <img className="gradient-coffe-img" src={leftVectorCoffe} alt="" />
+              </div>
             <div className="catalog-items">
               <div className="catalog-card">
                 <div className="catalog-card_img">
@@ -82,6 +95,7 @@ const Main = () => {
                 <button className="catalog-card_button">Купить</button>
               </div>
             </div>
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +108,9 @@ const Main = () => {
               распродаж или в течение действия ограниченных предложений, но и
               пользоваться скидками постоянно!
             </p>
-            <div className="sale-items-slider"></div>
+            <div className="sale-items-slider">
+              
+            </div>
           </div>
         </div>
       </div>
