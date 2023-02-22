@@ -156,6 +156,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+            <News/>
         </div>
     )
 }

@@ -41,8 +41,7 @@
 .catalog-products {
   height: 700px;
   .catalog-inner {
-    padding-top: 40px;
-    transform: translateX(-80px);
+    padding: 40px 0 0 70px;
   }
   .catalog-inner > h2 {
     font-size: 35px;
@@ -131,7 +130,7 @@
   .advantages-left {
     display: flex;
     position: relative;
-    transform: translateX(-240px);
+    transform: translateX(-140px);
   }
   .advantages-left > .img2 {
     position: absolute;
@@ -150,7 +149,7 @@
     max-height: 400px;
   }
   .advantages-right {
-    transform: translateX(700px);
+    transform: translateX(805px);
   }
   .advantages-right > h2 {
     font-weight: bold;
@@ -192,6 +191,7 @@
   .roast-coffe-inner > p {
     width: 776px;
     line-height: 20px;
+    font-size: 18px;
     padding-bottom: 20px;
   }
   .roast-coffe-inner > button {
