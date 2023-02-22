@@ -126,7 +126,7 @@ const Header = () => {
                   alt="header search"
                 />
               </a>
-              <Link to="">
+              <Link to="/Cart">
                 <img
                   className="header-basket"
                   src={basketlogo}
