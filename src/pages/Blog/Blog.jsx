@@ -1,22 +1,16 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import images from "./FilterIMages";
 import coffeblog from "../../assets/blog/6VhPY27jdps.svg";
 import img2 from "../../assets/blog/pnmRtTHWqDM.svg";
 import img3 from "../../assets/blog/pnmRtTHWqDM.svg";
-
+import newscoffe from "../../assets/blog/image 6.png";
 const Blog = () => {
-  const [news, setNews] = useState({ data: [] });
-
-  useEffect(() => {
-    fetch(`http://localhost:3333/news-posts`)
-      .then((res) => res.json())
-      .then((res) => console.log(res))
-      .then((res) => {
-        setNews({ data: res });
-      });
-  }, []);
-
-  let posts = news.data;
+  // const liStyle = {
+  //   width: "574px",
+  //   height: "23px",
+  //   fontStyle: "normal",
+  //   fontSize: "18px",
+  // };
 
   return (
     <div className="blog">
@@ -118,19 +112,38 @@ const Blog = () => {
             </div>
             <div className="coffe_logoblog">
               <img className="coffe_logo_blog3" src={img3} alt="" />
-            </div>
-            <div className="news-posts-row">
-              {posts.map((item) => (
-                <div className="post-item">
-                  <div className="post-item-left">
-                    <img className="post-img" src={item.image} alt="" />
-                  </div>
-                  <div className="post-right">
-                    <h1 className="post-title">{item.title}</h1>
-                    <p className="post-desc">{item.desc}</p>
-                  </div>
+            </div>{" "}
+            <div className="coffe_news">
+              <h1 style={{ marginTop: "30px" }}>Новости:</h1>
+              <div className="button_tag">
+                <button className="button_numb">Тег №1</button>
+                <button className="button_numbtwo">Тег №2</button>
+                <button className="button_numbtag3">Тег №3</button>
+                <button className="button_numbtag4">Тег №4</button>
+                <button className="button_numbtag5">Тег №5</button>
+              </div>
+              <div className="card_news">
+                <img
+                  style={{ width: "280px", height: "283px", marginTop: "45px" }}
+                  src={newscoffe}
+                  alt=""
+                />
+                <div className="text_news">
+                  <ul className="ul_linews">
+                    <li>
+                      Танзанийский кофе. Откуда он взялся и почему мы его так
+                      любим?
+                    </li>
+                    <li>
+                      Танзания – красивая африканская страна. Именно здесь
+                      расположены легендарные географические объекты – вулкан
+                      Килиманджаро и озеро Виктория. Но наш интерес вызван не
+                      столько природными красотами, сколько кофе...
+                    </li>
+                    <li>Автор статьи: Иван Иванов</li>
+                  </ul>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
