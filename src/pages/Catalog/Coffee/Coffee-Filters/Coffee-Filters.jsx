@@ -110,15 +110,15 @@ const CoffeeFilters = () => {
                     <div className="filters-functions-right-column-options">
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Йемен</p>
+                        <p>Низкая</p>
                       </div>
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Уганда</p>
+                        <p>Средняя</p>
                       </div>
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Эфиопия</p>
+                        <p>Высокая</p>
                       </div>
                     </div>
                   </div>
@@ -128,15 +128,15 @@ const CoffeeFilters = () => {
                       <div className="filters-functions-right-column-options">
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Йемен</p>
+                          <p>Сухая</p>
                         </div>
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Уганда</p>
+                          <p>Мытая</p>
                         </div>
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Эфиопия</p>
+                          <p>Прочее</p>
                         </div>
                       </div>
                   </div>

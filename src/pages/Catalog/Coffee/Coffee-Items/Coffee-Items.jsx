@@ -3,6 +3,7 @@ import CoffeeFilters from "../Coffee-Filters/Coffee-Filters";
 import filcategory from '../../../../assets/Catalog/Coffee/Cards/Group 76.svg'
 import raiting from '../../../../assets/Catalog/Coffee/Cards/Group 78.svg'
 import { useState } from "react";
+import CoffeeDot from '../../../../assets/Catalog/Coffee/Filters/coffeeDot.svg'
 import axios from "axios";
 
 const CoffeeItems = () => {
@@ -45,11 +46,21 @@ const CoffeeItems = () => {
                     </div>
                     <div className="coffee__cards-inner-row-card-center-right">
                       <div className="coffee__cards-inner-row-card-center-right-rating">
-                        {/* В будушем сделаю 1 блок с 5-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
-                        <h5>{}</h5>
-                        <img src={raiting} alt="" />
+                        {/* В будушем сделаю 1 блок с 50-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
+                        <div className="rating" style={{ width: '94px'}}>
+                          <div className="div" style={{background: '#F9B300', height: '10px', width: `${item.rating[0] + 7}px`}}></div>
+                        </div>
+                        <h4>{item.rating}</h4>
+                        <small className="coffee__cards-inner-row-card-center-right-rating-review">({item.review} отзыва)</small>
                       </div>
                       <div className="coffee__cards-inner-row-card-center-right-roasting">
+                        <div className="imagesOfCoffee">
+                          <img src={CoffeeDot} alt="" />
+                          <img src={CoffeeDot} alt="" />
+                          <img src={CoffeeDot} alt="" />
+                          <img src={CoffeeDot} alt="" />
+                          <img src={CoffeeDot} alt="" />
+                        </div>
                         {/* В будушем сделаю 1 блок с 5-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
                       </div>
                       <div className="coffee__cards-inner-row-card-center-right-filters">
