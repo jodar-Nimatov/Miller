@@ -1,6 +1,10 @@
 import React from 'react'
-import CoffeeDot from '../../../../assets/Catalog/Coffee/Filters/coffeeDot.svg'
 import images from './FilterImages';
+import roast5 from '../../../../assets/Catalog/Coffee/Filters/roast5.svg'
+import roast4 from '../../../../assets/Catalog/Coffee/Filters/roast4.svg'
+import roast3 from '../../../../assets/Catalog/Coffee/Filters/roast3.svg'
+import roast2 from '../../../../assets/Catalog/Coffee/Filters/roast2.svg'
+import roast1 from '../../../../assets/Catalog/Coffee/Filters/roast1.svg'
 import { Link } from 'react-router-dom';
 
 const CoffeeFilters = () => {
@@ -28,43 +32,23 @@ const CoffeeFilters = () => {
                 <h3>Степень обжарки</h3>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast5} alt="" />
                 </div>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast4} alt="" />
                 </div>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast3} alt="" />
                 </div>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast2} alt="" />
                 </div>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast1} alt="" />
                 </div>
               </div>
             </div>
