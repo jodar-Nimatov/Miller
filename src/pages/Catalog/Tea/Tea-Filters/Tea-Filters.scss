@@ -1,1 +1,28 @@
-// tea filters styles
+.tea-filters{
+    &-blocks{
+        // display: flex;
+        &-top{
+            display: flex;
+            // width: 1190px;
+            // flex-wrap: wrap;
+        }
+        &-bottom{
+            display: flex;
+            // flex-wrap: wrap;
+        }
+        &-item{
+            width: 280px;
+            height: 227px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
+            border-radius: 14.1702px;
+        }
+    }
+    &-right{
+        &-kettle{
+            background-image: url('../../../../assets/Catalog/Tea/Filters/filters-back.png');
+            min-height: 300px;
+            background-repeat: no-repeat;
+        }
+    }
+}

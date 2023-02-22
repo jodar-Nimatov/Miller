@@ -1,13 +1,16 @@
 .fresh-right {
-  margin-left: 500px;
+  margin-left: 128px;
 }
 
 .slider {
-  max-width: 705px;
+  max-width: 210px;
   margin: 0 auto;
 }
 .slideshow {
+  position: absolute;
   margin: 0 auto;
+  width: 600px;
+  left: 1300px;
   overflow: hidden;
 }
 .slideshowSlider {
@@ -21,6 +24,6 @@
   background-image: url(../../../assets/Images/SliderCupCoffe.png);
   height: 600px;
   background-repeat: no-repeat;
-  width: 1440px;
+  width: 1100px;
   text-align: right;
 }

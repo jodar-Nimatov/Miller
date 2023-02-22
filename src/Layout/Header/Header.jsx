@@ -37,7 +37,7 @@ const Header = () => {
     <>
       <div className="white"></div>
       <div className="header">
-        <div className="container">
+        {/* <div className="container"> */}
           <div className="header__inner">
             <div className="header__left">
               <div className="header-burger-menu">
@@ -45,13 +45,12 @@ const Header = () => {
               </div>
               <Link to="/">
                 <img
+                className="millerLogo"
                   src={millerLogo}
                   onClick={() => {
                     setTitle("Каталог Товаров");
                     setDisplay("block");
                   }}
-                  width="179px"
-                  height="80px"
                   alt="header logo"
                 />
               </Link>
@@ -127,24 +126,24 @@ const Header = () => {
               <a href="#">
                 <img
                   onClick={handleInput}
-                  className={`header-search ${display}`}
+                  className={`header-right-icon header-search ${display}`}
                   src={searchlogo}
                   alt="header search"
                 />
               </a>
               <Link to="">
                 <img
-                  className="header-basket"
+                  className="header-right-icon header-basket"
                   src={basketlogo}
                   alt="header basket"
                 />
               </Link>
               <Link to="/Profile">
-                <img className="header-user" src={userlogo} alt="header user" />
+                <img className="header-right-icon header-user" src={userlogo} alt="header user" />
               </Link>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
       <div className="white"></div>
     </>
