@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import CoffeeFilters from "../Coffee-Filters/Coffee-Filters";
 import filcategory from '../../../../assets/Catalog/Coffee/Cards/Group 76.svg'
 import raiting from '../../../../assets/Catalog/Coffee/Cards/Group 78.svg'
-import discount from '../../../../assets/Catalog/Coffee/Cards/Ellipse 6.svg'
 import { useState } from "react";
+import CoffeeDot from '../../../../assets/Catalog/Coffee/Filters/coffeeDot.svg'
 import axios from "axios";
 
 const CoffeeItems = () => {
@@ -18,16 +18,16 @@ const CoffeeItems = () => {
     })
   }, [])  
   return (
-    <> 
+    <>
       <CoffeeFilters/>
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">
-            <h4>Сортировка</h4>
+            <h4 className="cortirovka">Сортировка</h4>
             <div className="coffee__cards-inner-row">
               {
                 cards.map(item => (
-                  <div key={item.id} className="coffee__cards-inner-row-card">
+                <div key={item.id} className="coffee__cards-inner-row-card">
                   <div className="coffee__cards-inner-row-card-top">
                     <div className="coffee__cards-inner-row-card-top-left">
                       {item.category.map(cy => <p key={cy.length}>{cy == 'Скидки' ? <><div className="discount">%</div>{cy}</> : cy}</p>)}
@@ -42,15 +42,25 @@ const CoffeeItems = () => {
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
                     <div className="coffee__cards-inner-row-card-center-left">
-                      <img src={item.image} width='120px' alt="" />
+                      <img src={item.image} width='120px' className="card-image" alt="" />
                     </div>
                     <div className="coffee__cards-inner-row-card-center-right">
                       <div className="coffee__cards-inner-row-card-center-right-rating">
-                        {/* В будушем сделаю 1 блок с 5-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
-                        <h5>{}</h5>
-                        <img src={raiting} alt="" />
+                        {/* В будушем сделаю 1 блок с 50-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
+                        <div className="rating" style={{ width: '94px'}}>
+                          <div className="div" style={{background: '#F9B300', height: '10px', width: `${item.rating[0] + 7}px`}}></div>
+                        </div>
+                        <h4>{item.rating}</h4>
+                        <small className="coffee__cards-inner-row-card-center-right-rating-review">({item.review} отзыва)</small>
                       </div>
                       <div className="coffee__cards-inner-row-card-center-right-roasting">
+                        <div className="imagesOfCoffee">
+                          <img src={CoffeeDot} alt="" />
+                          <img src={CoffeeDot} alt="" />
+                          <img src={CoffeeDot} alt="" />
+                          <img src={CoffeeDot} alt="" />
+                          <img src={CoffeeDot} alt="" />
+                        </div>
                         {/* В будушем сделаю 1 блок с 5-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
                       </div>
                       <div className="coffee__cards-inner-row-card-center-right-filters">
@@ -70,10 +80,10 @@ const CoffeeItems = () => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
-                    <h4>{}</h4>
-                    <p>{}</p>
+                    <h4>{item.title}</h4>
+                    <p>{item.subitle}</p>
                     <div className="coffee__cards-inner-row-card-bottom-bottom">
-                      <h3>{}</h3>
+                      <h3>{item.price}</h3>
                       <button>В корзину</button>
                     </div>
                   </div>
@@ -84,6 +94,7 @@ const CoffeeItems = () => {
           </div> 
         </div>
       </div>
+      <div className="grey"></div>
     </>
   );
 };

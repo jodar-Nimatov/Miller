@@ -1,6 +1,7 @@
 import React from 'react'
 import CoffeeDot from '../../../../assets/Catalog/Coffee/Filters/coffeeDot.svg'
 import images from './FilterImages';
+import { Link } from 'react-router-dom';
 
 const CoffeeFilters = () => {
   // Функция для того чтобы выбирать желтые круглишки.
@@ -11,8 +12,8 @@ const CoffeeFilters = () => {
             <div className="filters__inner">
               <div className="filters__left">
                 <ul className="filters-nav">
-                  <li><a className='filters-nav-first'href="#">Главная</a></li>
-                  <li><a className='filters-nav-item' href="#">&#x2022;Каталог товаров</a></li>
+                  <li><Link className='filters-nav-first'to="/">Главная</Link></li>
+                  <li><Link className='filters-nav-item' to="/">&#x2022;Каталог товаров</Link></li>
                   <li><a className='filters-nav-item' href="#">&#x2022;Свежеобжаренный кофе</a></li>
                 </ul>
                 <h1 className='filters__title'>Свежеобжаренный кофе</h1>
@@ -109,15 +110,15 @@ const CoffeeFilters = () => {
                     <div className="filters-functions-right-column-options">
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Йемен</p>
+                        <p>Низкая</p>
                       </div>
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Уганда</p>
+                        <p>Средняя</p>
                       </div>
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Эфиопия</p>
+                        <p>Высокая</p>
                       </div>
                     </div>
                   </div>
@@ -127,15 +128,15 @@ const CoffeeFilters = () => {
                       <div className="filters-functions-right-column-options">
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Йемен</p>
+                          <p>Сухая</p>
                         </div>
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Уганда</p>
+                          <p>Мытая</p>
                         </div>
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Эфиопия</p>
+                          <p>Прочее</p>
                         </div>
                       </div>
                   </div>
