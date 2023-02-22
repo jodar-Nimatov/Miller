@@ -1,12 +1,33 @@
 .coffee__cards{
-    min-height: 1844px;
+    min-height: 100%;
+    transform: translateY(-50px);
+    z-index: -3;
+    overflow: hidden;
     background-color: #F5F5F5;
     padding-top: 96px;
     &-inner{
+        & .cortirovka{
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration: underline;
+            margin-bottom: 48px;
+            @media (min-width: 1400px) {
+                margin-left: 30px;
+            }
+        }
         &-row{
             display: flex;
             flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+            justify-content: center;
             &-card{
+                box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
+                border-radius: 14px;
+                text-align: left;
+                align-items: center;
+                padding: 15px 25px 37px;
+                background-color: white;
                 width: 280px;
                 height: 461px;
                 .discount{
@@ -22,9 +43,25 @@
                     font-weight: 700;
                     font-size: 24.7978px;
                     position: absolute;
-                    transform: translateY(-30px);
+                    transform: translateY(-67px);
+                }
+                &-center{
+                    display: flex;
+                    &-left{
+                        width: 120;
+                        height: 218px;
+                        overflow: auto;
+                    }
+                }
+                &-top{
+                    justify-content: space-between;
+                    display: flex;
                 }
             }
+        }
+        .grey{
+            background-color: #F5F5F5;
+            height: 100%;
         }
     }
 }

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import CoffeeFilters from "../Coffee-Filters/Coffee-Filters";
 import filcategory from '../../../../assets/Catalog/Coffee/Cards/Group 76.svg'
 import raiting from '../../../../assets/Catalog/Coffee/Cards/Group 78.svg'
-import discount from '../../../../assets/Catalog/Coffee/Cards/Ellipse 6.svg'
 import { useState } from "react";
 import axios from "axios";
 
@@ -18,16 +17,16 @@ const CoffeeItems = () => {
     })
   }, [])  
   return (
-    <> 
+    <>
       <CoffeeFilters/>
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">
-            <h4>Сортировка</h4>
+            <h4 className="cortirovka">Сортировка</h4>
             <div className="coffee__cards-inner-row">
               {
                 cards.map(item => (
-                  <div key={item.id} className="coffee__cards-inner-row-card">
+                <div key={item.id} className="coffee__cards-inner-row-card">
                   <div className="coffee__cards-inner-row-card-top">
                     <div className="coffee__cards-inner-row-card-top-left">
                       {item.category.map(cy => <p key={cy.length}>{cy == 'Скидки' ? <><div className="discount">%</div>{cy}</> : cy}</p>)}
@@ -42,7 +41,7 @@ const CoffeeItems = () => {
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
                     <div className="coffee__cards-inner-row-card-center-left">
-                      <img src={item.image} width='120px' alt="" />
+                      <img src={item.image} width='120px' className="card-image" alt="" />
                     </div>
                     <div className="coffee__cards-inner-row-card-center-right">
                       <div className="coffee__cards-inner-row-card-center-right-rating">
@@ -70,10 +69,10 @@ const CoffeeItems = () => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
-                    <h4>{}</h4>
-                    <p>{}</p>
+                    <h4>{item.title}</h4>
+                    <p>{item.subitle}</p>
                     <div className="coffee__cards-inner-row-card-bottom-bottom">
-                      <h3>{}</h3>
+                      <h3>{item.price}</h3>
                       <button>В корзину</button>
                     </div>
                   </div>
@@ -84,6 +83,7 @@ const CoffeeItems = () => {
           </div> 
         </div>
       </div>
+      <div className="grey"></div>
     </>
   );
 };

@@ -1,6 +1,11 @@
 .header {
-  @media (min-width: 900px) {
-    //
+  .millerLogo {
+    max-width: 179px;
+    max-height: 80px;
+    @media (max-width: 500px) {
+      max-width: 110px;
+      max-height: 50px;
+    }
   }
   @media (max-width: 900px) {
     .header__center,
@@ -93,6 +98,9 @@
   &__right {
     max-width: 146px;
     gap: 40px;
+    @media (max-width: 770px) {
+      gap: 20px;
+    }
   }
   &__center > ul {
     list-style: none;
@@ -185,10 +193,27 @@
   position: sticky;
   top: 0;
   background-color: rgb(255, 255, 255);
+  @media (max-width: 500px) {
+    max-height: 70px;
+    padding-top: 6px;
+  }
+  .header-right-icon {
+    @media (max-width: 550px) {
+      max-width: 12px;
+      max-height: 12px;
+    }
+    @media (max-width: 400px) {
+      max-width: 9px;
+      max-height: 9px;
+    }
+  }
 }
 .white {
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   z-index: 7;
   height: 22px;
+  @media (max-width: 500px) {
+    display: none;
+  }
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

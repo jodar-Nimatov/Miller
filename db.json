@@ -2,270 +2,1631 @@
     "catalog": [
         {
             "id": 1,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "title": "Colombia Supremo (250g)",
+            "geography": "Африка",
+            "category": [
+                "Кофе",
+                "Новый урожай"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Популярное",
+            "price": "900 ₽",
+            "Roast degree": "4",
+            "kislinka": "Низкая",
             "rating": "4.0",
             "review": "32",
+            "processing method": "Сухая",
+            "type of coffee": "Арабика",
+            "cooking method": "Френч-пресс",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://cdn.rf.market/356997/conversions/efiopiya-kozel-600x600-cropped.jpg"
         },
         {
             "id": 2,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "title": "Espresso Blend  (250g)",
+            "geography": "Азия",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Новый урожай",
+            "price": "700 ₽",
+            "Roast degree": "2",
             "rating": "4.0",
+            "kislinka": "Средняя",
             "review": "32",
+            "processing method": "Мытая",
+            "type of coffee": "Робуста",
+            "cooking method": "Мока",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://images.prom.ua/3534980504_w640_h640_kofe-v-zernah.jpg"
         },
         {
             "id": 3,
-            "title": "Colombia Supremo",
-            "category": ["", "Скидки"],
+            "title": "Арабика Бразилия Моджиана 1 кг",
+            "geography": "Уганда",
+            "category": [
+                "скидки",
+                "Скидки"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Ваш выбор",
+            "price": "2120 ₽",
+            "Roast degree": "3",
             "rating": "4.0",
             "review": "32",
+            "kislinka": "Высокая",
+            "processing method": "Мытая",
+            "type of coffee": "Смесь арабика/робуста",
+            "cooking method": "Эспрессо",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://millor-shop.ru/wp-content/uploads/2020/06/Ethiopia-scaled.jpg"
         },
         {
             "id": 4,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "title": "Trevi Арабика Бразилия Моджиана, 1кг",
+            "geography": "Йемен",
+            "category": [
+                "Крфе",
+                "Новый урожай"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Новый урожай",
+            "price": "700 ₽",
+            "Roast degree": "5",
             "rating": "4.0",
             "review": "32",
+            "kislinka": "Низкая",
+            "processing method": "Прочие",
+            "type of coffee": "Смесь арабик",
+            "cooking method": "Турка",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://images.prom.ua/4268853654_w640_h640_kofe-v-zernah.jpg"
         },
         {
             "id": 5,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "title": " Royal-Life Арабика Бразилия Черрадо (Серрадо), 1 к",
+            "geography": "Азия",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Микролот",
+            "price": "421 ₽",
+            "Roast degree": "2",
             "rating": "4.0",
             "review": "32",
+            "kislinka": "Высокая",
+            "processing method": "Прочие",
+            "type of coffee": "Смесь арабика/робуста",
+            "cooking method": "Аэропресс",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://images.prom.ua/4228830136_w640_h640_kofe-v-zernah.jpg"
         },
         {
             "id": 6,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "title": " Royal-Life Арабика Колумбия Супремо Меделин 18, 1 к",
+            "geography": "Центр. Америка",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Сорт недели",
+            "price": "590 ₽",
+            "Roast degree": "4",
             "rating": "4.0",
             "review": "32",
+            "kislinka": "Средняя",
+            "processing method": "Мытая",
+            "type of coffee": "Арабика",
+            "cooking method": "Автомат",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://images.prom.ua/4189956633_w640_h640_kofe-v-zernah.jpg"
         },
         {
             "id": 7,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "title": "Royal-Life Арабика Бурунди А, 1 кг",
+            "geography": "Лат. Америка",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Новый урожай",
+            "price": "1131 ₽",
+            "Roast degree": "3",
             "rating": "4.0",
             "review": "32",
+            "kislinka": "Низкая",
+            "processing method": "Сухая",
+            "type of coffee": "Робуста",
+            "cooking method": "Чашка",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://images.prom.ua/4225926930_w640_h640_kofe-v-zernah.jpg"
         },
         {
             "id": 8,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "title": "Trisa coffee",
+            "geography": "Азия",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Скидки",
+            "price": "399 ₽",
+            "Roast degree": "3",
             "rating": "4.0",
             "review": "32",
+            "kislinka": "Высокая",
+            "processing method": "Мытая",
+            "type of coffee": "Арабика",
+            "cooking method": "Воронка",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://static.tildacdn.com/tild3830-3334-4132-b566-663562363337/b5a850bb412ca48c1d48.png"
         },
         {
             "id": 9,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "title": "Cacao trissa (500g)",
+            "geography": "Уганда",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Новинка",
+            "price": "1890 ₽",
+            "Roast degree": "4",
             "rating": "4.0",
             "review": "32",
+            "kislinka": "низкая",
+            "processing method": "Прочие",
+            "type of coffee": "Смесь арабик",
+            "cooking method": "Турка",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/101/MTA-7731848/exprezzo_coffee_exprezzo_kopi_arabika_lintong_roasted_-1_kg-_full01_jp1y9vh8.jpg"
         },
         {
             "id": 10,
-            "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
-            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "title": "Buonna sera (830g)",
+            "geography": "Африка",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
+            "subtitle": "Свежеобжаренный кофе - Итальянгская обжарка",
+            "special": "Популярное",
+            "price": "1990 ₽",
+            "Roast degree": "1",
             "rating": "4.0",
             "review": "32",
-            "Кислинка": "7",
-            "Горчинка": "7",
-            "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "kislinka": "Средняя",
+            "processing method": "Сухая",
+            "type of coffee": "Смесь арабика/робуста",
+            "cooking method": "Автомат",
+            "Кислинка": "4",
+            "Горчинка": "9",
+            "Насыщенность": "10",
+            "image": "https://avatars.mds.yandex.net/get-mpic/5068955/img_id2494032664360119258.jpeg/orig"
         },
         {
             "id": 11,
             "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "geography": "Йемен",
+            "category": [
+                "Популярное",
+                "Скидки"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
+            "special": "Новый урожай",
+            "price": "600 ₽",
+            "Roast degree": "4",
+            "rating": "5.0",
+            "review": "12",
+            "kislinka": "Средняя",
+            "processing method": "Сухая",
+            "type of coffee": "Арабика",
+            "cooking method": "Френч-пресс",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://avatars.mds.yandex.net/get-mpic/5234126/img_id2322291214915335377.jpeg/orig"
         },
         {
             "id": 12,
             "title": "Colombia Supremo",
-            "category": ["Популярное", "Новый урожай"],
+            "geography": "Уганда",
+            "category": [
+                "Кофе",
+                "Скидки"
+            ],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
-            "price": "250 ₽",
+            "special": "Популярное",
+            "price": "233 ₽",
+            "Roast degree": "4",
             "rating": "4.0",
             "review": "32",
+            "kislinka": "Высокая",
+            "processing method": "Мытая",
+            "type of coffee": "Смесь арабик",
+            "cooking method": "Эспрессо",
             "Кислинка": "7",
             "Горчинка": "7",
             "Насыщенность": "7",
-            "image": "https://your-best-store.com.ua/image/catalog/coffee/Sort/Colombia-Supremo-Narino-sort.jpg"
+            "image": "https://nsk.lecafeier.ru/upload/iblock/a3f/a3fa18d7359923b78f7176879092b41b.jpg"
+        },
+        {
+            "id": 13,
+            "title": "Cacao trissa (500g)",
+            "geography": "Центр. Америка",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "special": "Новинка",
+            "price": "1890 ₽",
+            "Roast degree": "5",
+            "rating": "4.0",
+            "review": "32",
+            "kislinka": "Средняя",
+            "processing method": "Прочие",
+            "type of coffee": "Смесь арабика/робуста",
+            "cooking method": "Мока",
+            "Кислинка": "7",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/101/MTA-7731848/exprezzo_coffee_exprezzo_kopi_arabika_lintong_roasted_-1_kg-_full01_jp1y9vh8.jpg"
+        },
+        {
+            "id": 14,
+            "title": "Buonna sera (830g)",
+            "geography": "Эфиопия",
+            "category": [
+                "Популярное",
+                "Новый урожай"
+            ],
+            "subtitle": "Свежеобжаренный кофе - Итальянгская обжарка",
+            "special": "Скидки",
+            "price": "1990 ₽",
+            "Roast degree": "3",
+            "rating": "4.0",
+            "review": "32",
+            "kislinka": "Низкая",
+            "processing method": "Сухая",
+            "type of coffee": "Робуста",
+            "Кислинка": "4",
+            "cooking method": "Аэропресс",
+            "Горчинка": "9",
+            "Насыщенность": "10",
+            "image": "https://avatars.mds.yandex.net/get-mpic/5068955/img_id2494032664360119258.jpeg/orig"
+        },
+        {
+            "id": 15,
+            "title": "Colombia Supremo",
+            "geography": "Лат. Америка",
+            "category": [
+                "Популярное",
+                "Скидки"
+            ],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "special": "Ваш выбор",
+            "price": "600 ₽",
+            "rating": "5.0",
+            "Roast degree": "2",
+            "review": "12",
+            "kislinka": "Высокая",
+            "Кислинка": "7",
+            "processing method": "Сухая",
+            "type of coffee": "Смесь арабика/робуста",
+            "cooking method": "Турка",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://avatars.mds.yandex.net/get-mpic/5234126/img_id2322291214915335377.jpeg/orig"
+        },
+        {
+            "id": 16,
+            "title": "Colombia Supremo",
+            "geography": "Центр. Америка",
+            "category": [
+                "Кофе",
+                "Скидки"
+            ],
+            "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+            "special": "Сорт недели",
+            "price": "233 ₽",
+            "Roast degree": "5",
+            "rating": "4.0",
+            "review": "32",
+            "kislinka": "Низкая",
+            "Кислинка": "7",
+            "processing method": "Прочие",
+            "type of coffee": "Арабика",
+            "cooking method": "Френч-пресс",
+            "Горчинка": "7",
+            "Насыщенность": "7",
+            "image": "https://nsk.lecafeier.ru/upload/iblock/a3f/a3fa18d7359923b78f7176879092b41b.jpg"
         }
     ],
     "coffe-drinks": [
-        {
-            "id": 1,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 2,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 3,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 4,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 5,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 6,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 7,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 8,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 9,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 10,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 11,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        },
-        {
-            "id": 12,
-            "title": "Наименование товара",
-            "subtitle": "Черный чай",
-            "price": "250 ₽",
-            "rating": "4.0",
-            "review": "32",
-            "image": "https://tea.ru/upload/blog/0920/14/1.jpg"
-        }
+        [
+            {
+                "id": 1,
+                "title": "",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://yandex-images.clstorage.net/ntA4t9248/2222fblFW_gY/V3aS7_Uza0dWGfNU0XltkB91JOo7lG_lvxG0rD0ZiDSkZHR3SgMGcrSdgOz6K700TMIbDvthhnUjPqp9kZ6JKBMiVpvk9r4z93yz1OEpTEXLRDUvm9G-QZrU4IytyQ1kpZEBs1-GEuaBePN6nWnqcqshKYnMtuewQ7vfPDVKyCu1woHfgJNbVBJb43QTia2Gz3Q0PKpzXwTb11F4Tl_LYaKiA4A6xoN3lh8Du5_JuJG6Uts4LyT283HrzyzR-OtpZaRT7iLiGybTWHJUccuM1pyFR39poc_H6CUiif6-KNDDYzNAGpVzBMXOkgs_2avwGNMbmP12puHCGv3sIsv4eyTmsY1hgPokU-rjNTHIHIZvFNdtm7Adh4n2Yyusf4hB8sJyIPkHIkXkTqDpDfl5UmkTeAr-x2ZxMCrsb8A6SnkG94C-U0OLF1JLMsQTeX8nzBcGPPhRL4XKFSCbrf25A7FDIyAbZuEl561yGQ-a6xGY0rmJXTQ0AJEZXP4jOkuqdKZSr_NheYbBqqAG8AssZD6GBj_bwv_32qZDyzyPepKxwTJhWgTS90XN8QsOGSlzueN6S0x3JxDw-d7ME8rISHdE0EzhgPukoXrABJB5zyQMNjT-WBD_J6inEMuebIjj06GRoKukA7UVnNLZvHm4EDlw23vsZEbycMgOXxDIqlkXVEMckQF4FfFbUXWxu45k7hfH3VlBj0UrVvLbTTy5IPKwIzDLJVJGxo0hms5pSXPYQtoJXMakcDA4Df4Qu0m5N7UivtFQ6HSASCIEI6v_F59WR8_Z4D-E2tUhCZ_MCjPCkIIhaWShJqQMg6oOeaqzepC6CrzEloJDGuxvgyuIepSkou1TwfslIpkwBqELvITetRc-6mO_J9m2wUmOb0hSspKBggqXcwdWDbBKz0sZUtlyeAiOpDewgXls7BAJiijXd7Ft4yKqFBG5YEaTmQ8kXPW3LLiA7lSqVaELc"
+            },
+            {
+                "id": 2,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://avatars.mds.yandex.net/i?id=2cc56a0fda1b01f4ecd1379fbd1af39d93ff1a74-5236906-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 3,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://avatars.mds.yandex.net/i?id=673e9d6068fbc684646655511a01047657ec01f1-6249527-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 4,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://avatars.mds.yandex.net/i?id=097e0e2214f75dbdea948d55355f4b0c7f6d1137-4566480-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 5,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://avatars.mds.yandex.net/i?id=097e0e2214f75dbdea948d55355f4b0c7f6d1137-4566480-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 6,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://paper66.ru/image/product_foto/image/products_images_2/goods/621031/5148b71250761852e1ffebf7b6cb55cc_xl.jpg"
+            },
+            {
+                "id": 7,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Скидки"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://avatars.mds.yandex.net/i?id=0f541b7354cf957738c78119b6e1017d-4575531-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 8,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://www.4istoshop.com/image/cache/catalog/000/nero9-800x800.jpg"
+            },
+            {
+                "id": 9,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://avatars.mds.yandex.net/i?id=0fb2e37005869ddedc4677d81f841d5b-6907564-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 10,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "330 ₽",
+                "rating": "3.1",
+                "review": "32",
+                "image": "https://static.insales-cdn.com/images/products/1/2761/514419401/huehuetenango.jpg"
+            },
+            {
+                "id": 11,
+                "title": "BlackWood (1000g)",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "430 ₽",
+                "rating": "4.0",
+                "review": "30",
+                "image": "https://static.insales-cdn.com/images/products/1/2944/514419584/jinotega.jpg"
+            },
+            {
+                "id": 12,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://static.insales-cdn.com/images/products/1/4231/558215303/cuba-serrano-dark-1_kg-700.jpg"
+            },
+            {
+                "id": 13,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://avatars.mds.yandex.net/i?id=0fb2e37005869ddedc4677d81f841d5b-6907564-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 14,
+                "title": "Kaif tea blackLine",
+                "subtitle": "Чисто по кайфу жи ест",
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://static.insales-cdn.com/images/products/1/2761/514419401/huehuetenango.jpg"
+            },
+            {
+                "id": 15,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают Blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://static.insales-cdn.com/images/products/1/2944/514419584/jinotega.jpg"
+            },
+            {
+                "id": 16,
+                "title": "Наименование товара",
+                "subtitle": "Самый популярный вариант самого популярного чая, доступная цена и отличный вкус делают blackwood неповторимым",
+                "category": [
+                    "",
+                    "Black tea"
+                ],
+                "price": "250 ₽",
+                "rating": "4.0",
+                "review": "32",
+                "image": "https://static.insales-cdn.com/images/products/1/4231/558215303/cuba-serrano-dark-1_kg-700.jpg"
+            }
+        ],
+        [
+            {
+                "id": 1,
+                "title": "Грин ти жи ест",
+                "subtitle": "Зеленый чай",
+                "price": "550 ₽",
+                "rating": "2.9",
+                "category": [
+                    "Новый урожай",
+                    "Зеленый чай"
+                ],
+                "review": "8",
+                "image": "https://лето-шоп.рф/upload/iblock/37d/37d8189983c2f6eb58cbf6c252847b87.jpg"
+            },
+            {
+                "id": 2,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "250 ₽",
+                "rating": "4.9",
+                "category": [
+                    "Популярное",
+                    "Зеленый чай"
+                ],
+                "review": "12",
+                "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2020/11/5/62b7f94a-ba53-46b5-a02b-3b337d2507bd.jpg?ect=4g"
+            },
+            {
+                "id": 3,
+                "title": "TikPad (green) 500g",
+                "subtitle": "Зеленый чай",
+                "price": "500 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Популярное",
+                    "Зеленый чай"
+                ],
+                "review": "4",
+                "image": "http://www.zdorowie.lov-life.ru/wp-content/uploads/2016/07/162.jpg"
+            },
+            {
+                "id": 4,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "500 ₽",
+                "rating": "1.3",
+                "category": [
+                    "Новый урожай",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://cdn1.ozone.ru/s3/multimedia-l/6038726985.jpg"
+            },
+            {
+                "id": 5,
+                "title": "TikPad (green) 500g",
+                "subtitle": "Зеленый чай очень полезен для здоровья",
+                "price": "320 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Популярное",
+                    "Зеленый чай"
+                ],
+                "review": "33",
+                "image": "https://ssbu.ru/image/cache/catalog/demo/product/FOODS/KAKAO/TRB/tb_mjata200g-1219x1219.jpg"
+            },
+            {
+                "id": 6,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Популярное",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://vova.ua/wp-content/uploads/2020/02/011109-salat-iz-marinovannyh-vodoroslej-chuka-vakame-nobo-1kg.jpg"
+            },
+            {
+                "id": 7,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "830 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Травяной чай",
+                    "Скидки"
+                ],
+                "review": "14",
+                "image": "https://zyorna.ru/uploads/catalog/travyanoy-chay-sila-prirody-100-g--96152/travyanoy-chay-sila-prirody-100-g--96152-474696.JPG"
+            },
+            {
+                "id": 8,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Новый урожай",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://www.leto-shop.ru/upload/good_d2_1241.jpg"
+            },
+            {
+                "id": 9,
+                "title": "TikPad (green) 1000g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Популярное",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://gruenstadt.ru/wp-content/uploads/9/c/3/9c3dbf8bb193e8356a4f58eda5ff2b5b.png"
+            },
+            {
+                "id": 10,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Популярное",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://cf.shopee.co.id/file/6614a16b374761bb977a0578e6f475c8"
+            },
+            {
+                "id": 11,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Новый урожай",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=d88fea789540ad8c0cdde24b0cd8506f74829a06-7766812-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 12,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Новый урожай",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=ada538bcd7483eb06036b1f70dbd44de-4302648-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 13,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Новый урожай",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=72a335d14b122c28376a3a007dc884fa58c863f4-4705461-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 14,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Новый урожай",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://static.insales-cdn.com/images/products/1/2761/514419401/huehuetenango.jpg"
+            },
+            {
+                "id": 15,
+                "title": "TikPad (green) 500g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Новый урожай",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://yandex-images.clstorage.net/ntA4t9248/2222fblFW_gY/V3aS7_Uza0dWGfNU0XltkB91JOo7lG_lvxGk3FisuFQU1BQyP6ZjR7E44KwqS91EbMcua44UJhUDPs94lC68LVNCVkv0lq4jB5yz1OEpTEXLRDUvm9G-QZrU4IytyQ1kpZEBs1-GEuaBePN6nWnqcqshKYnMtuewQ7vfPDVKyCu1woHfgJNbVBJb43QTia2Gz3Q0PKpzXwTb11F4Tl_LYaKiA4A6xoN3lh8Du5_JuJG6Uts4LyT283HrzyzR-OtpZaRT7iLiGybTWHJUccuM1pyFR39poc_H6CUiif6-KNDDYzNAGpVzBMXOkgs_2avwGNMbmP12puHCGv3sIsv4eyTmsY1hgPokU-rjNTHIHIZvFNdtm7Adh4n2Yyusf4hB8sJyIPkHIkXkTqDpDfl5UmkTeAr-x2ZxMCrsb8A6SnkG94C-U0OLF1JLMsQTeX8nzBcGPPhRL4XKFSCbrf25A7FDIyAbZuEl561yGQ-a6xGY0rmJXTQ0AJEZXP4jOkuqdKZSr_NheYbBqqAG8AssZD6GBj_bwv_32qZDyzyPepKxwTJhWgTS90XN8QsOGSlzueN6S0x3JxDw-d7ME8rISHdE0EzhgPukoXrABJB5zyQMNjT-WBD_J6inEMuebIjj06GRoKukA7UVnNLZvHm4EDlw23vsZEbycMgOXxDIqlkXVEMckQF4FfFbUXWxu45k7hfH3VlBj0UrVvLbTTy5IPKwIzDLJVJGxo0hms5pSXPYQtoJXMakcDA4Df4Qu0m5N7UivtFQ6HSASCIEI6v_F59WR8_Z4D-E2tUhCZ_MCjPCkIIhaWShJqQMg6oOeaqzepC6CrzEloJDGuxvgyuIepSkou1TwfslIpkwBqELvITetRc-6mO_J9m2wUmOb0hSspKBggqXcwdWDbBKz0sZUtlyeAiOpDewgXls7BAJiijXd7Ft4yKqFBG5YEaTmQ8kXPW3LLiA7lSqVaELc"
+            },
+            {
+                "id": 16,
+                "title": "TikPad (green) 250g",
+                "subtitle": "Зеленый чай",
+                "price": "290 ₽",
+                "rating": "3.9",
+                "category": [
+                    "Популярное",
+                    "Зеленый чай"
+                ],
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/get-mpic/4866352/img_id4698875914516743375.jpeg/orig"
+            }
+        ],
+        [
+            {
+                "id": 1,
+                "title": "Молочный улунг MOГU (500g)",
+                "subtitle": "Молочный улунг - очень страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "Популярное",
+                    "матча"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=ae3a1fb1cf49ca02a4db24c0d48f10b7-3780431-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 2,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "матча",
+                    "Скидки"
+                ],
+                "rating": "2.9",
+                "review": "1",
+                "image": "https://avatars.mds.yandex.net/i?id=9419058a599ce6a4e2f389d69b6b96007af99ca9-5208259-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 3,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "Новый урожай",
+                    "матча"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=62c46e81a268e155442f0ef0e048a027-5222726-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 4,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "Новый урожай",
+                    "матча"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=5f6765d5931cf417ee176a2dafcb04c6-5221613-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 5,
+                "title": "Молочный улунг MOU (1000g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "матча",
+                    "Скидки"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=9548fb8205f9bbc90b43b13127ccbc5f5a285517-8341266-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 6,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "Популярное",
+                    "матча"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://yandex-images.clstorage.net/ntA4t9248/2222fblFW_gY/V3aS7_Uza0dWGfNU0XltkB91JOo7lG_lvxFByQ1pjfTRpGQXP0MmUqTIoOzqXphkbOebDrtxJjB2H0o49I6cfdNiU14Rw8tXVikjxWHpHSCfhaSre-RKYM6kIVgYnInwlCQCkagkUUR2XsIbHekZwUkyS0o6xSdzoK-dfPDrCSo2lQP-42MqlFIZItZQS_xl3oYVX5hyjGXJlyNrfdwYYYND8lCqhAOnZy0wqv57CIJ7Ylta3ncEMXDJT01SmklY95aS3oEhC8QB6FGVk5lspu10Zq4ok2_UqFYTq12P6BLQkmPgCpQQxsWs8AosKViQyJNpmi1EFyMxi60uEfioWnckA7_BIpuU8nnBh2GIvuaMpycMelLPRZn3Usu-HblT8RJRAji0wmS0bJOYL5iYADqjeBnPtaUhE5qcHSM72Wl2hdJO45P4NVF6ENYCaYzkz0RkvHvQ_gfadgPLXHx6M_Lxg_I611AnRa1SG4xrynGbkMiILLWk8mHLTgyDGSv45WRAjADhq3aj6xDVIfpclt_3B-zqoj2W2vQSih0eSeFQkQDgO1SSRWSckdmdKNlh-nBKuhxFJxBiKczvkfip2oW0II5gk0g2kVsiFKIoXEat9lTsSEHP57iUsUvsvpijAMAjMok0AybkDzDpPTu4g3pBmikfR0UBAjlfv-F5KmvVlbH_QVEJdnN60TejeSwkLge2_JsR_iSZhQPbjD_JUNPR0HH7JPJFBT0xm42ZWgE6sZmIHzSm4SLYPh2hKLoKpIbCjtNBeAUCO1ElI9ic5d-EZS5J4U03qaWiyi5-OjCxUHJBOzQRhafvUZhtm2jzSZN4GYykZyKByb5OI7mpWwZX0IxR4TuWQ9gB1BBbHEbc54VuWEIPVtmnoWlNjegRQ1FBofoGomQEDZOaX_vJwYvw-JofhmVwwhqtzpNa-Go1d4DMY3OINsGYocZCuE01rwTlLKgRr1c4VSFoQ"
+            },
+            {
+                "id": 7,
+                "title": "Молочный улунг MOU (500g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "Популярное",
+                    "Скидки"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=76888e57c0f4163dfccdd179fadd2204b78c0786-8209733-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 8,
+                "title": "Молочный улунг MOU (500g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "Still broken",
+                    "матча"
+                ],
+                "rating": "1.9",
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=2730b5795ff82245be5ef3a063849c1f52206acf-7994142-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 9,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "299 ₽",
+                "category": [
+                    "Still broken",
+                    "матча"
+                ],
+                "rating": "2.1",
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=69510259cefcc68175018f43b5a1591aeafb961f-7120298-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 10,
+                "title": "Молочный улунг MOU (500g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "813 ₽",
+                "category": [
+                    "Still broken",
+                    "матча"
+                ],
+                "rating": "4.9",
+                "review": "34",
+                "image": "https://avatars.mds.yandex.net/i?id=8c95db81d2e7582cbec62e65772d9c46-6424941-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 11,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "405 ₽",
+                "category": [
+                    "Still broken",
+                    "Скидки"
+                ],
+                "rating": "4.9",
+                "review": "19",
+                "image": "https://avatars.mds.yandex.net/i?id=e7ca29a1e13b74a6cf4f1c81aafe695e-5217189-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 12,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "290 ₽",
+                "category": [
+                    "Still broken",
+                    "матча"
+                ],
+                "rating": "3.9",
+                "review": "4",
+                "image": "https://avatars.mds.yandex.net/i?id=76b72cda75dedab6c9af073d541caf41-5346809-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 13,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "111 ₽",
+                "category": [
+                    "Still broken",
+                    "матча"
+                ],
+                "rating": "4.0",
+                "review": "1",
+                "image": "https://avatars.mds.yandex.net/i?id=cba7552d3aa458856b238f246bb00080f7b03164-5233733-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 14,
+                "title": "Молочный улунг MOU (1000g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "800 ₽",
+                "category": [
+                    "Still broken",
+                    "матча"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://static.insales-cdn.com/images/products/1/2761/514419401/huehuetenango.jpg"
+            },
+            {
+                "id": 15,
+                "title": "Молочный улунг MOU (250g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "280 ₽",
+                "category": [
+                    "Still broken",
+                    "матча"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://avatars.mds.yandex.net/i?id=fc24738774f1e312aa46983fb517ed4993a8e59d-6235060-images-thumbs&n=13&exp=1"
+            },
+            {
+                "id": 16,
+                "title": "Молочный улунг MOU (500g)",
+                "subtitle": "Молочный улунг - страннное название",
+                "price": "1302 ₽",
+                "category": [
+                    "Still broken",
+                    "матча"
+                ],
+                "rating": "3.9",
+                "review": "14",
+                "image": "https://yandex-images.clstorage.net/ntA4t9248/2222fblFW_gY/V3aS7_Uza0dWGfNU0XltkB91JOo7lG_lvxFUqVi8iDTE8URnGnPGR6EtoLkvHn1UTLIebrsRk6UDDqro0Z6JXWYSVkuUlj6TF4yz1OEpTEXLRDUvm9G-QZrU4IytyQ1kpZEBs1-GEuaBePN6nWnqcqshKYnMtuewQ7vfPDVKyCu1woHfgJNbVBJb43QTia2Gz3Q0PKpzXwTb11F4Tl_LYaKiA4A6xoN3lh8Du5_JuJG6Uts4LyT283HrzyzR-OtpZaRT7iLiGybTWHJUccuM1pyFR39poc_H6CUiif6-KNDDYzNAGpVzBMXOkgs_2avwGNMbmP12puHCGv3sIsv4eyTmsY1hgPokU-rjNTHIHIZvFNdtm7Adh4n2Yyusf4hB8sJyIPkHIkXkTqDpDfl5UmkTeAr-x2ZxMCrsb8A6SnkG94C-U0OLF1JLMsQTeX8nzBcGPPhRL4XKFSCbrf25A7FDIyAbZuEl561yGQ-a6xGY0rmJXTQ0AJEZXP4jOkuqdKZSr_NheYbBqqAG8AssZD6GBj_bwv_32qZDyzyPepKxwTJhWgTS90XN8QsOGSlzueN6S0x3JxDw-d7ME8rISHdE0EzhgPukoXrABJB5zyQMNjT-WBD_J6inEMuebIjj06GRoKukA7UVnNLZvHm4EDlw23vsZEbycMgOXxDIqlkXVEMckQF4FfFbUXWxu45k7hfH3VlBj0UrVvLbTTy5IPKwIzDLJVJGxo0hms5pSXPYQtoJXMakcDA4Df4Qu0m5N7UivtFQ6HSASCIEI6v_F59WR8_Z4D-E2tUhCZ_MCjPCkIIhaWShJqQMg6oOeaqzepC6CrzEloJDGuxvgyuIepSkou1TwfslIpkwBqELvITetRc-6mO_J9m2wUmOb0hSspKBggqXcwdWDbBKz0sZUtlyeAiOpDewgXls7BAJiijXd7Ft4yKqFBG5YEaTmQ8kXPW3LLiA7lSqVaELc"
+            }
+        ],
+        [
+            {
+                "id": 1,
+                "title": "Травяной чай типо",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.8",
+                "review": "8",
+                "image": "https://belgorod.apiora.ru/wa-data/public/shop/products/52/34/3452/images/5420/mochegonnyy-chay-sbor-trav-ctsk.970.jpg"
+            },
+            {
+                "id": 2,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "516 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "2.4",
+                "review": "13",
+                "image": "https://images.satu.kz/39953209_w640_h640_chaj-travyanoj-uspokaivayuschij.jpg"
+            },
+            {
+                "id": 3,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "880 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "4.5",
+                "review": "16",
+                "image": "https://kn95.ecoorganica.ru/wa-data/public/shop/products/87/64/36487/images/28157/28157.750x0.jpg"
+            },
+            {
+                "id": 4,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Новый урожай",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/32/58/35832/images/27502/27502.970.jpg"
+            },
+            {
+                "id": 5,
+                "title": "Чай из крапивы",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://kn95.ecoorganica.ru/wa-data/public/shop/products/92/64/36492/images/28162/28162.970.jpg"
+            },
+            {
+                "id": 6,
+                "title": "Чай из травы 'дүнк'",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "2411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://fitolekar.ru/userfiles/shop/shop_product_1000x10/653_sbor-trav-pri-vitiligo.jpg"
+            },
+            {
+                "id": 7,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/56/56/35656/images/27326/27326.970.jpg"
+            },
+            {
+                "id": 8,
+                "title": "Чай баха братана",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важен его авторитет",
+                "price": "0 Р",
+                "category": [
+                    "Травяной чай",
+                    "Скидки"
+                ],
+                "rating": "2.5",
+                "review": "2",
+                "image": "https://kn95.ecoorganica.ru/wa-data/public/shop/products/07/56/35607/images/27277/27277.970.jpg"
+            },
+            {
+                "id": 9,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/33/57/35733/images/27403/27403.970.jpg"
+            },
+            {
+                "id": 10,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://pepperandsalt.kz/wp-content/uploads/2020/03/39952729_w640_h640_chaj-travyanoj-vitaminnyj.jpg"
+            },
+            {
+                "id": 11,
+                "title": "Дедушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Травяной чай",
+                    "Скидки"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/17/61/36117/images/27787/27787.970.jpg"
+            },
+            {
+                "id": 12,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Травяной чай",
+                    "Скидки"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://pepperandsalt.kz/wp-content/uploads/2020/04/54730df1355251.jpg"
+            },
+            {
+                "id": 13,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://images.satu.kz/39950444_w640_h640_sbor--1.jpg"
+            },
+            {
+                "id": 14,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://avatars.mds.yandex.net/i?id=52232bd5213f5fdb78b8a97669b50df877fba1a1-4353469-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 15,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://kn95.ecoorganica.ru/wa-data/public/shop/products/98/60/36098/images/27768/27768.970.jpg"
+            },
+            {
+                "id": 16,
+                "title": "Бабаушкин чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "411 ₽",
+                "category": [
+                    "Популярное",
+                    "Травяной чай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://avatars.mds.yandex.net/i?id=aadece4945232896875eeb0ac29d59563a7c44ac-5887026-images-thumbs&ref=rim&n=33&w=225&h=225"
+            }
+        ],
+        [
+            {
+                "id": 1,
+                "title": "Моча крч",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Скидки"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://belgorod.apiora.ru/wa-data/public/shop/products/52/34/3452/images/5420/mochegonnyy-chay-sbor-trav-ctsk.970.jpg"
+            },
+            {
+                "id": 2,
+                "title": "TMOM Matcha (300g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://images.satu.kz/39953209_w640_h640_chaj-travyanoj-uspokaivayuschij.jpg"
+            },
+            {
+                "id": 3,
+                "title": "TMOM Matcha (250)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://kn95.ecoorganica.ru/wa-data/public/shop/products/87/64/36487/images/28157/28157.750x0.jpg"
+            },
+            {
+                "id": 4,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/32/58/35832/images/27502/27502.970.jpg"
+            },
+            {
+                "id": 5,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://kn95.ecoorganica.ru/wa-data/public/shop/products/92/64/36492/images/28162/28162.970.jpg"
+            },
+            {
+                "id": 6,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://fitolekar.ru/userfiles/shop/shop_product_1000x10/653_sbor-trav-pri-vitiligo.jpg"
+            },
+            {
+                "id": 7,
+                "title": "TMOM Matcha (1000g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/56/56/35656/images/27326/27326.970.jpg"
+            },
+            {
+                "id": 8,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://kn95.ecoorganica.ru/wa-data/public/shop/products/07/56/35607/images/27277/27277.970.jpg"
+            },
+            {
+                "id": 9,
+                "title": "TMOM Matcha (500g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/33/57/35733/images/27403/27403.970.jpg"
+            },
+            {
+                "id": 10,
+                "title": "TMOM Matcha (300g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://pepperandsalt.kz/wp-content/uploads/2020/03/39952729_w640_h640_chaj-travyanoj-vitaminnyj.jpg"
+            },
+            {
+                "id": 11,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/17/61/36117/images/27787/27787.970.jpg"
+            },
+            {
+                "id": 12,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://pepperandsalt.kz/wp-content/uploads/2020/04/54730df1355251.jpg"
+            },
+            {
+                "id": 13,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://images.satu.kz/39950444_w640_h640_sbor--1.jpg"
+            },
+            {
+                "id": 14,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://avatars.mds.yandex.net/i?id=52232bd5213f5fdb78b8a97669b50df877fba1a1-4353469-images-thumbs&ref=rim&n=33&w=225&h=225"
+            },
+            {
+                "id": 15,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://kn95.ecoorganica.ru/wa-data/public/shop/products/98/60/36098/images/27768/27768.970.jpg"
+            },
+            {
+                "id": 16,
+                "title": "TMOM Matcha (250g)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://avatars.mds.yandex.net/i?id=aadece4945232896875eeb0ac29d59563a7c44ac-5887026-images-thumbs&ref=rim&n=33&w=225&h=225"
+            }
+        ],
+        [
+            {
+                "id": 1,
+                "title": "Чай Улун Да Хун Пао (Da Hong Pao), 100 г",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "738 ₽",
+                "category": [
+                    "Матча",
+                    "Скидки"
+                ],
+                "rating": "3.1",
+                "review": "10",
+                "image": "https://zbm-group.com/images-ct/1372/1-kitayskiy-chay-lapsang-sushong-ju-tian-he.webp"
+            },
+            {
+                "id": 2,
+                "title": "Зеленый чай Улун Весна TieGuanYin 1725 галстук Гуань Инь чай для похудениz 125g",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "920 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "5.0",
+                "review": "9",
+                "image": "https://images.satu.kz/180789799_w640_h640_chaj-ulun-da.jpg"
+            },
+            {
+                "id": 3,
+                "title": "Дянь Хун черный чай 2022 Юньнань премиум органическая Юньнань здравоохранения красный чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://i.ebayimg.com/images/g/Vt8AAOSwaFlfomiK/s-l400.jpg"
+            },
+            {
+                "id": 4,
+                "title": "Chinese Dian Hong Black Tea Yunnan Premium Dianhong Tea Health Care Red Tea",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://i.ebayimg.com/images/g/djgAAOSws7ljZ9RM/s-l1600.jpg"
+            },
+            {
+                "id": 5,
+                "title": "Dian Hong Black Tea Yunnan Premium Dianhong Health Care Red Tea",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://i.ebayimg.com/images/g/9QoAAOSw4KdjZ9KB/s-l1600.jpg"
+            },
+            {
+                "id": 6,
+                "title": "Китай Dahongpao Big Red Robe Улун чай оригинальная Зеленая пища Wuyi Rougui Чай Для Здравоохранения Похудеть",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "548 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "2.2",
+                "review": "15",
+                "image": "https://ueeshop.ly200-cdn.com/u_file/UPAF/UPAF329/1910/products/29/b4f9d0fd66.jpg.640x640.jpg?x-oss-process=image/format,webp"
+            },
+            {
+                "id": 7,
+                "title": "Китай чай галстук гуань инь чай Anxi органические высокие усы Tieguanyin чай большая продажа высокие узы улун чай",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "1450 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "2.1",
+                "review": "7",
+                "image": "https://ueeshop.ly200-cdn.com/u_file/UPAF/UPAF329/2302/products/09/796436a6c8.jpg.640x640.jpg?x-oss-process=image/format,webp"
+            },
+            {
+                "id": 8,
+                "title": "Органический зеленый улун Чай для похудания 250 г",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ueeshop.ly200-cdn.com/u_file/UPAF/UPAF329/2107/products/01/4c8abc8134.jpg.640x640.jpg?x-oss-process=image/format,webp"
+            },
+            {
+                "id": 9,
+                "title": "Запечённый Те Гуань Инь, (1725). 250 гр.)",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://ueeshop.ly200-cdn.com/u_file/UPAE/UPAE831/2011/products/03/a5de5b94bf.jpg.640x640.jpg?x-oss-process=image/format,webp"
+            },
+            {
+                "id": 10,
+                "title": "Китайский чай Женьшень Улун, 250 грамм.",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "338 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "4.3",
+                "review": "11",
+                "image": "https://ueeshop.ly200-cdn.com/u_file/UPAE/UPAE831/1807/products/19/7e31d0c43f.jpg.640x640.jpg?x-oss-process=image/format,webp"
+            },
+            {
+                "id": 11,
+                "title": "Китайский улун Те Гуань Инь 1725 «Золотая корица», 250 грамм.",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "2150 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "4.4",
+                "review": "5",
+                "image": "https://ueeshop.ly200-cdn.com/u_file/UPAE/UPAE831/2109/products/14/e3c19ed752.jpg.640x640.jpg?x-oss-process=image/format,webp"
+            },
+            {
+                "id": 12,
+                "title": "Гун Тин пуэр кирпич 250 г (фаб. Юнфа, Юньнань Юндэ),",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "732 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "5.0",
+                "review": "15",
+                "image": "https://othertea.ru/image/cache/catalog/products/tea/Chinatea/Puer/GunTinpuerkirpich_250_(fab.YUnfa,YUnnanYUnde),2018god-800x800.webp"
+            },
+            {
+                "id": 13,
+                "title": "Чай Шен Пуэр Лао Тун Чжи Старый Товарищ 918 (2014 г.) - 200 гр",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "1884 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://www.zakaz-coffee.ru/wa-data/public/shop/products/35/17/1735/images/12602/12602.970x0.png"
+            },
+            {
+                "id": 14,
+                "title": "Шу Пуэр в подарочной упаковке: Мэн Хай Гун Тин (Шу) - 357гр",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "1600 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "4.4",
+                "review": "11",
+                "image": "https://www.zakaz-coffee.ru/wa-data/public/shop/products/49/18/1849/images/3422/3422.970x0.jpg"
+            },
+            {
+                "id": 15,
+                "title": "Чай Шен Пуэр Лао Тун Чжи 9968 (2017 г.) - 250 гр",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "1875 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "13",
+                "image": "https://www.zakaz-coffee.ru/wa-data/public/shop/products/42/17/1742/images/3365/3365.970x0.jpg"
+            },
+            {
+                "id": 16,
+                "title": "Чай шу пуэр Лао Тун Чжи 9978 ( 2019 г.) - 357гр",
+                "subtitle": "Очень полезный и доступный по цене чай, отличный вариант для тех кому важно его здоровье",
+                "price": "1424 ₽",
+                "category": [
+                    "Матча",
+                    "Новый урожай"
+                ],
+                "rating": "3.4",
+                "review": "23",
+                "image": "https://www.zakaz-coffee.ru/wa-data/public/shop/products/36/17/1736/images/2546/2546.970x0.jpg"
+            }
+        ],
+        []
     ],
     "Products-for-vending": [
         {
@@ -278,7 +1639,7 @@
         },
         {
             "id": 2,
-            "title": "Наименование товара",
+            "title250g": "Наименование товара",
             "subtitle": "Гранулированный кофе",
             "rating": "4.0",
             "review": "32",
