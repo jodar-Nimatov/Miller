@@ -134,10 +134,6 @@ const CoffeeFilters = () => {
                     </div>
                     <div className="filters-functions-right-column-options-item">
                       <div className="white-circle"></div>
-                      <p>Популярное</p>
-                    </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
                       <p>Новый урожай</p>
                     </div>
                     <div className="filters-functions-right-column-options-item">

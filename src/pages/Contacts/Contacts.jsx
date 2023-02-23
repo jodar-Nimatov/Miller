@@ -14,11 +14,11 @@ const Contacts = () => {
             <div className="btn-switch-text">
               <div className="switch-click">
                 <button className="switch-contact">Контакты</button>
-                <button className="switcр-stores">
                   <Link to="/store" className="switch_contacts">
+                <button className="switcр-stores">
                     Наши Магазины
-                  </Link>
                 </button>
+                  </Link>
               </div>
               <h1 className="header-text">Связаться с нами:</h1>
               <p className="number-contact">+7 (401) 237 53 43</p>

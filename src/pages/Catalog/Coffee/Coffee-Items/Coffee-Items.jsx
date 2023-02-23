@@ -11,6 +11,7 @@ import roast3 from '../../../../assets/Catalog/Coffee/Filters/roast3.svg'
 import roast2 from '../../../../assets/Catalog/Coffee/Filters/roast2.svg'
 import roast1 from '../../../../assets/Catalog/Coffee/Filters/roast1.svg'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const CoffeeItems = () => {
   const [cards, setCards] = useState([])
@@ -49,7 +50,9 @@ const CoffeeItems = () => {
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
                     <div className="coffee__cards-inner-row-card-center-left">
-                      <img src={item.image} width='120px' className="card-image" alt="" />
+                      <Link to="">
+                        <img src={item.image} width='120px' className="card-image" alt="" />
+                      </Link>
                     </div>
                     <div className="coffee__cards-inner-row-card-center-right">
                       <div className="coffee__cards-inner-row-card-center-right-rating">
@@ -79,8 +82,10 @@ const CoffeeItems = () => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
+                    <small>{item.geography}</small>
                     <h4>{item.title}</h4>
                     <p>{item.subtitle}</p>
+                    <Link to='' className="treedots">Больше</Link><>...</>
                     <div className="coffee__cards-inner-row-card-bottom-bottom">
                       <h3>{item.price}</h3>
                       <button>В корзину</button>
