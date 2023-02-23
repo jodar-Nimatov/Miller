@@ -23,12 +23,12 @@
         @media (max-width: 542px){
           max-width: 442px;
         }
-        @media (max-width: 470px){
+        @media (max-width: 470px) {
           max-width: 342px;
           margin: 0;
           margin-top: 50px;
         }
-        @media (max-width: 442px){
+        @media (max-width: 442px) {
           width: 302px;
         }
       }
@@ -161,7 +161,7 @@
     }
     @media (max-width: 497px) {
       width: 160px;
-      & li{
+      & li {
         border-right: 1px solid black;
       }
     }

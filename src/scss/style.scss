@@ -9,7 +9,6 @@
 @import "../pages/Contacts/Contact.scss";
 @import "../pages/Blog/Blog.scss";
 @import "../Components/News/News.scss";
-
 * {
   padding: 0;
   margin: 0;
@@ -20,10 +19,10 @@
   max-width: 1210px;
   padding: 0 15px;
   margin: 0 auto;
-  @media (max-width: 470px){
+  @media (max-width: 470px) {
     padding: 0;
   }
-  @media (min-width: 1556px){
+  @media (min-width: 1556px) {
     max-width: 1556px;
   }
 }
