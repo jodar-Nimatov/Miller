@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 1349px;
+}
+.blog_ul {
+  display: flex;
+}
+.switch_btn {
+  margin: 30px 0 65px;
+}
+.button_switch {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.btn_switch {
+  width: 380px;
+  height: 41px;
+  background: #fff7e1;
+  border: 0.705321px solid #f9b300;
+  border-radius: 4px;
+  color: #f9b300;
+  cursor: pointer;
+}
+.btn_switchnews {
+  width: 380px;
+  height: 41px;
+  border: 0.709034px solid #c9c9c9;
+  border-radius: 4px;
+  color: #f9b300;
+  cursor: pointer;
+}
+.btn_switchches {
+  width: 380px;
+  height: 41px;
+  background: #f6f6f6;
+  border: 0.709034px solid #c9c9c9;
+  border-radius: 4px;
+  color: #f9b300;
+  cursor: pointer;
+}
+.text_centerh1 {
+  width: 559px;
+  height: 35px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 35px;
+  color: #000000;
+  margin: 60px 705px 30px 0px;
+}
+.text_infoh1 {
+  width: 349px;
+  height: 35px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 35px;
+  color: #000000;
+  margin: 80px 915px 40px 0px;
+}
+.text_infop {
+  width: 978px;
+  height: 272px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: #222222;
+  margin: 50px 286px 0px 0px;
+}
+.coffe_logo_blog {
+  margin-top: 50px;
+}
+.coffe_logo_blog3 {
+  margin-top: 60px;
+}

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../Header/Header.scss";
-import millerLogo from "../../assets/millerLofo.svg";
-import searchlogo from "../../assets/search.svg";
-import basketlogo from "../../assets/basket.svg";
-import userlogo from "../../assets/user.svg";
+import millerLogo from "../../assets/Header/millerLofo.svg";
+import searchlogo from "../../assets/Header/search.svg";
+import basketlogo from "../../assets/Header/basket.svg";
+import userlogo from "../../assets/Header/user.svg";
+import burger from "../../assets/Header/Group 165.svg"
 import { Link } from "react-router-dom";
-import arrow from "../../assets/arrow.svg";
+import arrow from "../../assets/Header/arrow.svg";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -15,6 +15,10 @@ const Header = () => {
   const handleInput = () => {
     setDisplay("none");
   };
+  const handleInputClose = () => {
+    document.body.children[1].childNodes[5].addEventListener('click', ()=>setDisplay('block'))
+    document.body.children[1].childNodes[3].addEventListener('click', ()=>setDisplay('block'))
+  };
   const handleshow = () => {
     setShow(!show);
   };
@@ -23,7 +27,7 @@ const Header = () => {
     setTitle(catalog)
   }
   useEffect(()=>{
-    document.body.children[1].childNodes[3].addEventListener('click', ()=>setDisplay('block'))
+    handleInputClose()
   }, [display])
   return (
     <>
@@ -32,10 +36,16 @@ const Header = () => {
         <div className="container">
           <div className="header__inner">
             <div className="header__left">
+            <div className="header-burger-menu">
+                <img src={burger} alt="" />
+            </div>
               <Link to="/">
                 <img
                   src={millerLogo}
-                  onClick={() => setTitle("Каталог Товаров")}
+                  onClick={() => {
+                    setTitle("Каталог Товаров")
+                    setDisplay('block')
+                  }}
                   width="179px"
                   height="80px"
                   alt="header logo"

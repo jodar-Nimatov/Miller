@@ -2,4 +2,29 @@
     min-height: 1844px;
     background-color: #F5F5F5;
     padding-top: 96px;
+    &-inner{
+        &-row{
+            display: flex;
+            flex-wrap: wrap;
+            &-card{
+                width: 280px;
+                height: 461px;
+                .discount{
+                    display: flex;
+                    align-items: center;
+                    text-align: center; 
+                    width: 50px;
+                    justify-content: center;
+                    height: 50px;
+                    background: #F9B300;
+                    color: black;
+                    border-radius: 50%;
+                    font-weight: 700;
+                    font-size: 24.7978px;
+                    position: absolute;
+                    transform: translateY(-30px);
+                }
+            }
+        }
+    }
 }

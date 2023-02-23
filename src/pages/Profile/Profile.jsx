@@ -1,5 +1,4 @@
 import React from "react";
-import './Profile.scss'
 import coffee from '../../assets/Profile/coffeeProfile.png'
 import joodar from '../../assets/Profile/Joodar.png'
 import { Link } from "react-router-dom";
