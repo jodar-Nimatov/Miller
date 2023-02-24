@@ -4,18 +4,18 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const HealthyItems = () => {
+const HealthyItems = ({type}) => {
   const [cards, setCards] = useState([])
   useEffect(()=>{
     axios
     .get('http://localhost:3333/healthy-eatings')
     .then(resp => {
-      setCards(resp.data[0])
+      setCards(resp.data[type])
     })
-  }, [])
+  }, [type])
   return (
     <> 
-      <div className="coffee__cards">
+      <div className="coffee__cards healthy-items-back">
         <div className="container">
           <div className="coffee__cards-inner">
             <h4 className='cortirovka'>Сортировка</h4>
@@ -38,8 +38,8 @@ const HealthyItems = () => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
-                    <Link to=''>
-                      <img src={item.image} height='221px' alt="" />
+                    <Link to='' className='tea-img-block'>
+                      <img src={item.image} className='card-image' height='221px' alt="" />
                     </Link>
                     {/* {item.category.map(cy => <p key={cy.length}>{cy === 'Скидки' ? <><div className="discount">%</div></> : null}</p>)} */}
                   </div>

@@ -38,8 +38,8 @@ const TeaItems = ({type}) => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
-                    <Link to=''>
-                      <img src={item.image} height='221px' alt="" />
+                    <Link to='' className='tea-img-block'>
+                      <img src={item.image} className="card-image" height='221px' alt="" />
                     </Link>
                     {/* {item.category.map(cy => <p key={cy.length}>{cy === 'Скидки' ? <><div className="discount">%</div></> : null}</p>)} */}
                   </div>

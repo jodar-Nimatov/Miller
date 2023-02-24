@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Layout from "./Layout/Layout";
 import Contacts from "./pages/Contacts/Contacts";
 import Blog from "./pages/Blog/Blog";
-import ClipLoader from "react-spinners/ClipLoader";
+// import ClipLoader from "react-spinners/ClipLoader";
 import "./scss/style.scss";
 import Layolog from "./pages/Catalog/Layolog";
 import Profile from "./pages/Profile/Profile";
@@ -13,13 +13,26 @@ import CoffeeFilters from './pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters'
 import TeaFilters from "./pages/Catalog/Tea/Tea-Filters/Tea-Fiters";
 import VendingFilters from './pages/Catalog/Vending/Vending-Filters/Vending-Filters';
 import HealthyFilters from './pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters';
+import "./scss/style.scss";
+import Cards from "./pages/Cards/Cards";
 function App() {
   const [loading, setLoading] = useState(false);
-  document.addEventListener("DOMContentLoaded", () => setLoading(true));
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1200);
+  }, []);
+
   return (
     <>
       {loading ? (
-        <ClipLoader color={"#123abc"} loading={loading} size={64} />
+        <div class="loader">
+          <div class="inner one"></div>
+          <div class="inner two"></div>
+          <div class="inner three"></div>
+        </div>
       ) : (
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -33,6 +46,7 @@ function App() {
             <Route path="/catalog/tea" element={<TeaFilters />} />
             <Route path="/catalog/wanding" element={<VendingFilters />} />
             <Route path="/catalog/healthy" element={<HealthyFilters />} />
+            <Route path="/cards" element={<Cards/>}/>
             {/* Каталог товаров */}
             {/* Профиль пользователя */}
             <Route path="/profile" element={<Profile />} />

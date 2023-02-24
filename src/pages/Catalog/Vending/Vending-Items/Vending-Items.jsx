@@ -3,20 +3,18 @@ import rating from '../../../../assets/Catalog/Coffee/Filters/rating.svg'
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import VendingFilters from './../Vending-Filters/Vending-Filters';
 
-const WandingItems = () => {
+const VendingItems = ({type}) => {
   const [cards, setCards] = useState([])
   useEffect(()=>{
     axios
     .get('http://localhost:3333/Products-for-vending')
     .then(resp => {
-      setCards(resp.data[1])
+      setCards(resp.data[type])
     })
-  }, [])
+  }, [type])
   return (
-    <> 
-      <VendingFilters />
+    <>
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">
@@ -32,16 +30,16 @@ const WandingItems = () => {
                         <h4>{item.rating}</h4>
                       </div>
                       <select>
-                        <option value="100g">100г</option>
-                        <option value="300g">300г</option>
-                        <option value="500g">500г</option>
-                        <option value="1000g">1000г</option>
+                        <option value="10kg">10кг</option>
+                        <option value="15kg">15кг</option>
+                        <option value="20kg">20кг</option>
+                        <option value="30kg">30кг</option>
                       </select>
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
-                    <Link to=''>
-                      <img src={item.image} height='221px' alt="" />
+                    <Link to='' className='tea-img-block'>
+                      <img src={item.image} className='card-image' height='177px' alt="" />
                     </Link>
                     {/* {item.category.map(cy => <p key={cy.length}>{cy === 'Скидки' ? <><div className="discount">%</div></> : null}</p>)} */}
                   </div>
@@ -50,8 +48,7 @@ const WandingItems = () => {
                     <p>{item.subtitle}</p>
                     <Link to='' className="treedots">Больше</Link><>...</>
                     <div className="coffee__cards-inner-row-card-bottom-bottom">
-                      <h3>{item.price}</h3>
-                      <button>В корзину</button>
+                      <button>Оставить заявку</button>
                     </div>
                   </div>
                 </div>
@@ -65,4 +62,4 @@ const WandingItems = () => {
   );
 }
 
-export default WandingItems
+export default VendingItems
