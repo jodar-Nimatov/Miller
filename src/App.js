@@ -8,18 +8,30 @@ import CoffeeItems from "./pages/Catalog/Coffee/Coffee-Items/Coffee-Items";
 import TeaItems from "./pages/Catalog/Tea/Tea-Items/Tea-Items";
 import Contacts from "./pages/Contacts/Contacts";
 import Blog from "./pages/Blog/Blog";
-import ClipLoader from "react-spinners/ClipLoader";
+// import ClipLoader from "react-spinners/ClipLoader";
 import "./scss/style.scss";
 import Layolog from "./pages/Catalog/Layolog";
 import Profile from "./pages/Profile/Profile";
-import Store from './pages/Contacts/Store';
+import Store from "./pages/Contacts/Store";
+import "./scss/style.scss";
 function App() {
   const [loading, setLoading] = useState(false);
-  document.addEventListener("DOMContentLoaded", () => setLoading(true));
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
   return (
     <>
       {loading ? (
-        <ClipLoader color={"#123abc"} loading={loading} size={64} />
+        <div class="loader">
+          <div class="inner one"></div>
+          <div class="inner two"></div>
+          <div class="inner three"></div>
+        </div>
       ) : (
         <Routes>
           <Route path="/" element={<Layout />}>
