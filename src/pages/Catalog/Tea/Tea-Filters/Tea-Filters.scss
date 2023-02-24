@@ -63,9 +63,9 @@
     background-position-y: -30px;
     position: absolute;
     width: 650px;
-    // @media (max-width: 1200px) {
-    //   display: none;
-    // }
+    @media (max-width: 1043px) {
+      display: none;
+    }
     transform: translateY(-120px);
     background-size: 630px;
     // mix-blend-mode:darken;

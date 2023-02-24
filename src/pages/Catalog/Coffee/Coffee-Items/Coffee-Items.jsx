@@ -26,7 +26,6 @@ const CoffeeItems = () => {
   }, [])  
   return (
     <>
-      <CoffeeFilters/>
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">
@@ -62,7 +61,10 @@ const CoffeeItems = () => {
                       </div>
                       <div className="coffee__cards-inner-row-card-center-right-roasting">
                         {
-                          item.roast === 5 ? <img height='13px' src={roast5} alt=""/> : item.roast === 4 ? <img height='13px' src={roast4} alt=''/> : item.roast === 3 ? <img height='13px' src={roast3} alt=''/> : item.roast === 2 ? <img height='13px' src={roast2} alt=''/> : item.roast === 1 ? <img height='13px' src={roast1} alt=''/> : null 
+                          console.log(item.roast)
+                        }
+                        {
+                          item.roast == 5 ? <img height='13px' src={roast5} alt=""/> : item.roast == 4 ? <img height='13px' src={roast4} alt=''/> : item.roast == 3 ? <img height='13px' src={roast3} alt=''/> : item.roast == 2 ? <img height='13px' src={roast2} alt=''/> : item.roast == 1 ? <img height='13px' src={roast1} alt=''/> : null
                         }
                       </div>
                       <div className="coffee__cards-inner-row-card-center-right-filters">

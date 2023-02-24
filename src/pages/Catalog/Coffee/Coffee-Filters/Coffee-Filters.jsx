@@ -6,10 +6,12 @@ import roast3 from '../../../../assets/Catalog/Coffee/Filters/roast3.svg'
 import roast2 from '../../../../assets/Catalog/Coffee/Filters/roast2.svg'
 import roast1 from '../../../../assets/Catalog/Coffee/Filters/roast1.svg'
 import { Link } from 'react-router-dom';
+import CoffeeItems from './../Coffee-Items/Coffee-Items';
 
 const CoffeeFilters = () => {
   // Функция для того чтобы выбирать желтые круглишки.
   return (
+    <>
       <div className="filters-back">
         <div className='filters'>
           <div className="container">
@@ -18,7 +20,7 @@ const CoffeeFilters = () => {
                 <ul className="filters-nav">
                   <li><Link className='filters-nav-first'to="/">Главная</Link></li>
                   <li><Link className='filters-nav-item' to="/">&#x2022;Каталог товаров</Link></li>
-                  <li><a className='filters-nav-item' href="#">&#x2022;Свежеобжаренный кофе</a></li>
+                  <li><Link className='filters-nav-item' to="/catalog/coffee">&#x2022;Свежеобжаренный кофе</Link></li>
                 </ul>
                 <h1 className='filters__title'>Свежеобжаренный кофе</h1>
               </div>
@@ -197,6 +199,8 @@ const CoffeeFilters = () => {
         </div>
       </div>
     </div>
+    <CoffeeItems/>
+    </>
   )
 }
 

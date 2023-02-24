@@ -1,22 +1,20 @@
 import React, { useEffect } from 'react'
-import TeaFilters from './../Tea-Filters/Tea-Fiters';
 import rating from '../../../../assets/Catalog/Coffee/Filters/rating.svg'
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const TeaItems = () => {
+const TeaItems = ({type}) => {
   const [cards, setCards] = useState([])
   useEffect(()=>{
     axios
     .get('http://localhost:3333/coffe-drinks')
     .then(resp => {
-      setCards(resp.data[0])
+      setCards(resp.data[type])
     })
-  }, [])
+  }, [type])
   return (
     <> 
-      <TeaFilters />
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">

@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import blackTea from '../../../../assets/Catalog/Tea/Filters/image 22.png'
 import greenTea from '../../../../assets/Catalog/Tea/Filters/image 16.png'
 import oolongMilk from '../../../../assets/Catalog/Tea/Filters/image 27.png'
+import TeaItems from '../Tea-Items/Tea-Items';
+import { useRef } from 'react';
 
 const TeaFilters = () => {
+  const [types, setTypes] = useState({type: 0})
+  const ref = useRef(null);
+
+  const handleSrcoll = () => {
+    ref.current?.scrollIntoView({behavor: 'smooth'})
+  }
   return (
+    <>
     <div className="filters-back">
       <div className='filters'>
         <div className="container">
@@ -22,33 +31,47 @@ const TeaFilters = () => {
           <div className="tea-filters-kettle"></div>
           <div className="tea-filters-blocks">
             <div className="tea-filters-blocks-top">
-              <div className="tea-filters-blocks-item balck-tea">
-                <img src={blackTea} width='101px' height='141px' alt="" />
+              <div onClick={()=>{
+                handleSrcoll()
+                setTypes({type: 0})}} className="tea-filters-blocks-item balck-tea">
+                <img width='101px' src={blackTea}  height='141px' alt="" />
                 <p>Черный чай</p>
               </div>
-              <div className="tea-filters-blocks-item green-tea">
-                <img src={greenTea} width='101px' height='141px' alt="" />
+              <div onClick={()=>{
+                handleSrcoll()
+                setTypes({type: 1})}} className="tea-filters-blocks-item green-tea">
+                <img width='101px' src={greenTea}  height='141px' alt="" />
                 <p>Зеленый чай</p>
               </div>
-              <div className="tea-filters-blocks-item oolong-milk">
-                <img src={oolongMilk}width='101px' height='141px'   alt="" />
+              <div onClick={()=>{
+                handleSrcoll()
+                setTypes({type: 2})}} className="tea-filters-blocks-item oolong-milk">
+                <img width='101px' src={oolongMilk} height='141px'   alt="" />
                 <p>Молочный улунг</p>
               </div>
             </div>
             <div className="tea-filters-blocks-bottom">
-              <div className="tea-filters-blocks-item balck-tea">
+              <div onClick={()=>{
+                handleSrcoll()
+                setTypes({type: 3})}} className="tea-filters-blocks-item balck-tea">
                 <img src='https://avatars.mds.yandex.net/i?id=673e9d6068fbc684646655511a01047657ec01f1-6249527-images-thumbs&ref=rim&n=33&w=225&h=225'  height='141px' alt="" />
                 <p>Травяной чай</p>
               </div>
-              <div className="tea-filters-blocks-item green-tea">
+              <div onClick={()=>{
+                handleSrcoll()
+                setTypes({type: 4})}} className="tea-filters-blocks-item green-tea">
                 <img src='https://kn95.ecoorganica.ru/wa-data/public/shop/products/98/60/36098/images/27768/27768.970.jpg'  height='141px' alt="" />
                 <p>Матча</p>
               </div>
-              <div className="tea-filters-blocks-item oolong-milk">
+              <div onClick={()=>{
+                handleSrcoll()
+                setTypes({type: 5})}} className="tea-filters-blocks-item oolong-milk">
                 <img src='https://othertea.ru/image/cache/catalog/products/tea/Chinatea/Puer/GunTinpuerkirpich_250_(fab.YUnfa,YUnnanYUnde),2018god-800x800.webp'  height='141px'   alt="" />
                 <p>Пуэр</p>
               </div>
-              <div className="tea-filters-blocks-item green-tea">
+              <div onClick={()=>{
+                handleSrcoll()
+                setTypes({type: 6})}} className="tea-filters-blocks-item green-tea">
                 <img src='https://avatars.mds.yandex.net/get-mpic/4575382/img_id4727551693313545040.jpeg/orig' alt="" height='141px'  />
                 <p>Кофейные напитки</p>
               </div>
@@ -57,6 +80,9 @@ const TeaFilters = () => {
         </div>
       </div>
     </div>
+    <div ref={ref}></div>
+    <TeaItems type={types.type}/>
+    </>
 )
 }
 

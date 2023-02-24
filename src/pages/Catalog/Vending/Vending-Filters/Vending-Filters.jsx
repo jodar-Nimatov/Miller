@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import greenTea from '../../../../assets/Catalog/Tea/Filters/image 16.png'
 // import oolongMilk from '../../../../assets/Catalog/Tea/Filters/image 27.png'
 
-const TeaFilters = () => {
+const VendingFilters = () => {
   return (
     <div className="filters-back">
       <div className='filters'>
@@ -14,10 +14,9 @@ const TeaFilters = () => {
               <ul className="filters-nav">
                 <li><Link className='filters-nav-first'to="/">Главная</Link></li>
                 <li><Link className='filters-nav-item' to="/">&#x2022;Каталог товаров</Link></li>
-                <li><Link className='filters-nav-item' to="/catalog/tea">&#x2022;Продукция для вендинга</Link></li>
+                <li><Link className='filters-nav-item' to="/catalog/wanding">&#x2022;Продукция для вендинга</Link></li>
               </ul>
-              <h1 className='filters__title'>Продукция для вендинга</h1>
-              {/* Короче поставлю медиа запрос. */}
+              <h1 className='filters__title vending'>Продукция для вендинга</h1>
             </div>
           </div>
           <div className="tea-filters-machine"></div>
@@ -61,4 +60,4 @@ const TeaFilters = () => {
 )
 }
 
-export default TeaFilters
+export default VendingFilters
