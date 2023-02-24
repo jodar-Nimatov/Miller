@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {BsArrowRightShort} from 'react-icons/bs'
 import postImg from '../../assets/Images/postImg.png'
 
 const News = () => {
@@ -21,14 +22,14 @@ const News = () => {
                 <h2>Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h2>
                 <p className='post-p'>Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.</p>
                 <p>Но наш интерес вызван не столько природными красотами, сколько кофе...</p>
-                <Link to=''><span>Подробнее</span></Link>
+                <Link to=''><span>Подробнее <div className='arrow-right'><BsArrowRightShort/></div></span></Link>
               </div>
             </div>
             <div className="post-card">
               <div className="post-second">
                 <h2>Африканский кофе Кения АА</h2>
                 <p>Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики.</p>
-                <Link to=''><span>Подробнее</span></Link>
+                <Link to=''><span>Подробнее <div className='arrow-right'><BsArrowRightShort/></div></span></Link>
               </div>
             </div>
             </div>
@@ -37,7 +38,7 @@ const News = () => {
               <div className="post-second">
                 <h2>Африканский кофе Кения АА</h2>
                 <p>Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики.</p>
-                <Link to=''><span>Подробнее</span></Link>
+                <Link to=''><span>Подробнее <div className='arrow-right'><BsArrowRightShort/></div></span></Link>
               </div>
             </div>
             <div className="post-card">
@@ -50,7 +51,7 @@ const News = () => {
                 <h2>Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h2>
                 <p className='post-p'>Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.</p>
                 <p>Но наш интерес вызван не столько природными красотами, сколько кофе...</p>
-                <Link to=''><span>Подробнее</span></Link>
+                <Link to=''><span>Подробнее <div className='arrow-right'><BsArrowRightShort/></div></span></Link>
               </div>
             </div>
             </div>
