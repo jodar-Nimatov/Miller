@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import CoffeeFilters from "../Coffee-Filters/Coffee-Filters";
 import kislinkaHigh from '../../../../assets/Catalog/kislinkH.svg'
 import kislinkaLow from '../../../../assets/Catalog/kislinkL.svg'
 import kislinkaMedium from '../../../../assets/Catalog/kislinkM.svg'
