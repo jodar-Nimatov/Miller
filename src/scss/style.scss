@@ -4,8 +4,11 @@
 @import "../Layout/Footer/Footer.scss";
 @import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
 @import "../pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters.scss";
+@import "../pages/Catalog/Tea/Tea-Filters/Tea-Filters.scss";
+@import "../pages/Catalog/Tea/Tea-Items/Tea-Items.scss";
 @import "../pages/Contacts/Contact.scss";
 @import "../pages/Blog/Blog.scss";
+@import "../pages/Cards/Cards.scss";
 @import "../Components/News/News.scss";
 * {
   padding: 0;
@@ -21,7 +24,7 @@
     padding: 0;
   }
   @media (min-width: 1556px) {
-    max-width: 1556px;
+    min-width: 1510px;
   }
 }
 a:active,

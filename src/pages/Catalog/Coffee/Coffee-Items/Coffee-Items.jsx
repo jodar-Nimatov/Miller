@@ -1,9 +1,17 @@
 import React, { useEffect } from "react";
 import CoffeeFilters from "../Coffee-Filters/Coffee-Filters";
-import filcategory from '../../../../assets/Catalog/Coffee/Cards/Group 76.svg'
-import raiting from '../../../../assets/Catalog/Coffee/Cards/Group 78.svg'
+import kislinkaHigh from '../../../../assets/Catalog/kislinkH.svg'
+import kislinkaLow from '../../../../assets/Catalog/kislinkL.svg'
+import kislinkaMedium from '../../../../assets/Catalog/kislinkM.svg'
+import rating from '../../../../assets/Catalog/Coffee/Filters/rating.svg'
 import { useState } from "react";
+import roast5 from '../../../../assets/Catalog/Coffee/Filters/roast5.svg'
+import roast4 from '../../../../assets/Catalog/Coffee/Filters/roast4.svg'
+import roast3 from '../../../../assets/Catalog/Coffee/Filters/roast3.svg'
+import roast2 from '../../../../assets/Catalog/Coffee/Filters/roast2.svg'
+import roast1 from '../../../../assets/Catalog/Coffee/Filters/roast1.svg'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const CoffeeItems = () => {
   const [cards, setCards] = useState([])
@@ -24,6 +32,7 @@ const CoffeeItems = () => {
           <div className="coffee__cards-inner">
             <h4 className="cortirovka">Сортировка</h4>
             <div className="coffee__cards-inner-row">
+              {/* <BsStar/> */}
               {
                 cards.map(item => (
                 <div key={item.id} className="coffee__cards-inner-row-card">
@@ -41,36 +50,42 @@ const CoffeeItems = () => {
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
                     <div className="coffee__cards-inner-row-card-center-left">
-                      <img src={item.image} width='120px' className="card-image" alt="" />
+                      <Link to="/cards">
+                        <img src={item.image} width='120px' className="card-image" alt="" />
+                      </Link>
                     </div>
                     <div className="coffee__cards-inner-row-card-center-right">
                       <div className="coffee__cards-inner-row-card-center-right-rating">
-                        {/* В будушем сделаю 1 блок с 5-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
-                        <h5>{}</h5>
-                        <img src={raiting} alt="" />
+                        <div className="rating" style={{backgroundImage: `url(${rating})`, height: '12px', width: `${(Math.floor(item.rating[0]) + item.rating[2])}px`, backgroundSize: '50px', backgroundRepeat: 'no-repeat', position: 'relative'}}></div>
+                        <h4>{item.rating}</h4>
+                        <small className="coffee__cards-inner-row-card-center-right-rating-review">({item.review} отзыва)</small>
                       </div>
                       <div className="coffee__cards-inner-row-card-center-right-roasting">
-                        {/* В будушем сделаю 1 блок с 5-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
+                        {
+                          item.roast === 5 ? <img height='13px' src={roast5} alt=""/> : item.roast === 4 ? <img height='13px' src={roast4} alt=''/> : item.roast === 3 ? <img height='13px' src={roast3} alt=''/> : item.roast === 2 ? <img height='13px' src={roast2} alt=''/> : item.roast === 1 ? <img height='13px' src={roast1} alt=''/> : null 
+                        }
                       </div>
                       <div className="coffee__cards-inner-row-card-center-right-filters">
                         <div className="coffee__cards-inner-row-card-center-right-filters-item">
                           <p>Кислинка</p>
-                          <div className="kislinka"><img src={filcategory} alt="" /></div>
+                          <div className="kislinka"><img src={item.kislinka > 7 ? kislinkaHigh : item.kislinka > 3 ? kislinkaMedium : item.kislinka > 0 ? kislinkaLow : null } alt="" /></div>
                         </div>
                         <div className="coffee__cards-inner-row-card-center-right-filters-item">
                           <p>Горчинка</p>
-                          <div className="kislinka"><img src={filcategory} alt="" /></div>
+                          <div className="kislinka"><img src={item.gorchinka > 7 ? kislinkaHigh : item.gorchinka > 3 ? kislinkaMedium : item.gorchinka > 0 ? kislinkaLow : null  } alt="" /></div>
                         </div>
                         <div className="coffee__cards-inner-row-card-center-right-filters-item">
                           <p>Носыщенность</p>
-                          <div className="kislinka"><img src={filcategory} alt="" /></div>
+                          <div className="kislinka"><img src={item.nasyshennost > 7 ? kislinkaHigh : item.nasyshennost > 3 ? kislinkaMedium : item.nasyshennost > 0 ? kislinkaLow : null  } alt="" /></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
+                    <small>{item.geography}</small>
                     <h4>{item.title}</h4>
-                    <p>{item.subitle}</p>
+                    <p>{item.subtitle}</p>
+                    <Link to='' className="treedots">Больше</Link><>...</>
                     <div className="coffee__cards-inner-row-card-bottom-bottom">
                       <h3>{item.price}</h3>
                       <button>В корзину</button>

@@ -14,6 +14,7 @@ import Layolog from "./pages/Catalog/Layolog";
 import Profile from "./pages/Profile/Profile";
 import Store from "./pages/Contacts/Store";
 import "./scss/style.scss";
+import Cards from "./pages/Cards/Cards";
 function App() {
   const [loading, setLoading] = useState(false);
 
@@ -21,7 +22,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 1200);
   }, []);
 
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path="/catalog/tea" element={<TeaItems />} />
             <Route path="/catalog/wanding" element={<VendingItems />} />
             <Route path="/catalog/healthy" element={<HealthyEatingItems />} />
+            <Route path="/cards" element={<Cards />} />
             {/* Каталог товаров */}
             {/* Профиль пользователя */}
             <Route path="/profile" element={<Profile />} />
