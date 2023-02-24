@@ -11,7 +11,7 @@ const WandingItems = () => {
     axios
     .get('http://localhost:3333/Products-for-vending')
     .then(resp => {
-      setCards(resp.data[0])
+      setCards(resp.data[1])
     })
   }, [])
   return (
