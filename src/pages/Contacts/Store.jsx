@@ -10,12 +10,13 @@ const Contacts = () => {
           <div className="contacts-left">
             <li className="home-cont">Главная</li>
             <li className="cont-blog">Контакты</li>
-
             <div className="btn-switch-text">
               <div className="switch-click">
+                    <Link to="/contacts">
                 <button className="switch-contact">
-                  <Link to="/contacts">Контакты</Link>
+                    Контакты
                 </button>
+                    </Link>
                 <button className="switcр-stores">
                   <Link to="/contacts" className="switch_contacts">
                     Наши Магазины

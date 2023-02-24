@@ -1,19 +1,26 @@
 import React from 'react'
-import CoffeeDot from '../../../../assets/Catalog/Coffee/Filters/coffeeDot.svg'
 import images from './FilterImages';
+import roast5 from '../../../../assets/Catalog/Coffee/Filters/roast5.svg'
+import roast4 from '../../../../assets/Catalog/Coffee/Filters/roast4.svg'
+import roast3 from '../../../../assets/Catalog/Coffee/Filters/roast3.svg'
+import roast2 from '../../../../assets/Catalog/Coffee/Filters/roast2.svg'
+import roast1 from '../../../../assets/Catalog/Coffee/Filters/roast1.svg'
+import { Link } from 'react-router-dom';
+import CoffeeItems from './../Coffee-Items/Coffee-Items';
 
 const CoffeeFilters = () => {
   // Функция для того чтобы выбирать желтые круглишки.
   return (
+    <>
       <div className="filters-back">
         <div className='filters'>
           <div className="container">
             <div className="filters__inner">
               <div className="filters__left">
                 <ul className="filters-nav">
-                  <li><a className='filters-nav-first'href="#">Главная</a></li>
-                  <li><a className='filters-nav-item' href="#">&#x2022;Каталог товаров</a></li>
-                  <li><a className='filters-nav-item' href="#">&#x2022;Свежеобжаренный кофе</a></li>
+                  <li><Link className='filters-nav-first'to="/">Главная</Link></li>
+                  <li><Link className='filters-nav-item' to="/">&#x2022;Каталог товаров</Link></li>
+                  <li><Link className='filters-nav-item' to="/catalog/coffee">&#x2022;Свежеобжаренный кофе</Link></li>
                 </ul>
                 <h1 className='filters__title'>Свежеобжаренный кофе</h1>
               </div>
@@ -27,43 +34,23 @@ const CoffeeFilters = () => {
                 <h3>Степень обжарки</h3>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast5} alt="" />
                 </div>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast4} alt="" />
                 </div>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast3} alt="" />
                 </div>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast2} alt="" />
                 </div>
                 <div className="fiveCoffees">
                   <div className="white-circle"></div>
-                  <div className="imgagesOfCoffee">
-                    <img src={CoffeeDot} alt="" />
-                  </div>
+                  <img src={roast1} alt="" />
                 </div>
               </div>
             </div>
@@ -109,15 +96,15 @@ const CoffeeFilters = () => {
                     <div className="filters-functions-right-column-options">
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Йемен</p>
+                        <p>Низкая</p>
                       </div>
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Уганда</p>
+                        <p>Средняя</p>
                       </div>
                       <div className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
-                        <p>Эфиопия</p>
+                        <p>Высокая</p>
                       </div>
                     </div>
                   </div>
@@ -127,15 +114,15 @@ const CoffeeFilters = () => {
                       <div className="filters-functions-right-column-options">
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Йемен</p>
+                          <p>Сухая</p>
                         </div>
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Уганда</p>
+                          <p>Мытая</p>
                         </div>
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Эфиопия</p>
+                          <p>Прочее</p>
                         </div>
                       </div>
                   </div>
@@ -143,10 +130,6 @@ const CoffeeFilters = () => {
                 <div className="filters-functions-right-column special">
                   <h3>Особые</h3>
                   <div className="filters-functions-right-column-options">
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
-                      <p>Популярное</p>
-                    </div>
                     <div className="filters-functions-right-column-options-item">
                       <div className="white-circle"></div>
                       <p>Популярное</p>
@@ -216,6 +199,8 @@ const CoffeeFilters = () => {
         </div>
       </div>
     </div>
+    <CoffeeItems/>
+    </>
   )
 }
 
