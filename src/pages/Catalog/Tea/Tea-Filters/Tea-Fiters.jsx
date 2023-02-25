@@ -46,7 +46,7 @@ const TeaFilters = () => {
               <div onClick={()=>{
                 handleSrcoll()
                 setTypes({type: 2})}} className="tea-filters-blocks-item oolong-milk">
-                <img width='101px' src={oolongMilk} height='141px' alt="" />
+                <img width='101px' src={oolongMilk} height='141px'   alt="" />
                 <p>Молочный улунг</p>
               </div>
             </div>

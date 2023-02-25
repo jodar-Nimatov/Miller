@@ -54,6 +54,7 @@ const Header = () => {
                 alt="header logo"
               />
             </Link>
+            
           </div>
           <div className="header__center">
             <ul className={`header__list ${display}`}>

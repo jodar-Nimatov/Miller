@@ -13,11 +13,9 @@ import CoffeeFilters from './pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters'
 import TeaFilters from "./pages/Catalog/Tea/Tea-Filters/Tea-Fiters";
 import VendingFilters from './pages/Catalog/Vending/Vending-Filters/Vending-Filters';
 import HealthyFilters from './pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters';
-import "./scss/style.scss";
-import Cards from "./pages/Cards/Cards";
+import Cards from './pages/Cards/Cards';
 function App() {
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -28,10 +26,10 @@ function App() {
   return (
     <>
       {loading ? (
-        <div class="loader">
-          <div class="inner one"></div>
-          <div class="inner two"></div>
-          <div class="inner three"></div>
+        <div className="loader">
+          <div className="inner one"></div>
+          <div className="inner two"></div>
+          <div className="inner three"></div>
         </div>
       ) : (
         <Routes>
