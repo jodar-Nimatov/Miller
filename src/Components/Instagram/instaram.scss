@@ -1,0 +1,27 @@
+.instagram{
+    height: 900px;
+    // background-color: #F9B300;
+    .instagram-inner{
+        padding: 70px;
+    }
+    .insta-title{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    .instagram-left{
+        display: flex;
+    }
+    .instagram-left > img{
+        max-width: 100%;
+        height: 100%;
+    }
+    .instagram-left > .iphone1{
+        
+    }
+    .instagram-left > .iphone2{
+        transform: translate(-690px, 105px);
+    }
+    
+}
