@@ -9,7 +9,10 @@ const News = () => {
     <div className="news">
       <div className="news-container">
         <div className="news-inner">
-          <h2>Новости компании</h2>
+          <div className="news-title">
+            <h2>Новости компании</h2>
+            <Link to=''>Читать все</Link>
+          </div>
           <div className="news-posts-row">
             <div className="posts-above">
             <div className="post-card">

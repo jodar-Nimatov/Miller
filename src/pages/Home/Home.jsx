@@ -13,7 +13,7 @@ import rightVector from '../../assets/Images/Vector.png'
 import leftVector from '../../assets/Images/vectorLeft.png'
 import leftVectorCoffe from '../../assets/Images/leftVectorCoffe.png'
 import News from '../../Components/News/News'
-import Instagram from "./../../Components/Instagram/Instagram";
+import Instagram from './../../Components/Instagram/instagram';
 
 const Main = () => {
   return (

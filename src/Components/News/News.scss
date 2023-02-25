@@ -9,9 +9,17 @@
   .news-inner {
     padding: 60px;
   }
-  .news-inner > h2 {
+  .news-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .news-title > h2 {
     font-size: 34px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
+  }
+  .news-title > a{
+    text-decoration: underline;
   }
   .post-card{
     display: flex;
