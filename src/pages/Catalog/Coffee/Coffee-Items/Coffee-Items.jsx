@@ -15,7 +15,7 @@ const CoffeeItems = () => {
   const [cards, setCards] = useState([])
   useEffect(()=>{ 
     axios
-    .get('http://localhost:3333/catalog')
+    .get(`http://localhost:3333/catalog`)
     // .then(resp => resp.json())
     .then(resp => {
       setCards(resp.data)
@@ -47,7 +47,7 @@ const CoffeeItems = () => {
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
                     <div className="coffee__cards-inner-row-card-center-left">
-                      <Link to="">
+                      <Link to="/cards">
                         <img src={item.image} width='120px' className="card-image" alt="" />
                       </Link>
                     </div>
@@ -82,7 +82,7 @@ const CoffeeItems = () => {
                     <small>{item.geography}</small>
                     <h4>{item.title}</h4>
                     <p>{item.subtitle}</p>
-                    <Link to='' className="treedots">Больше</Link><>...</>
+                    <Link to='/cards' className="treedots">Больше</Link><>...</>
                     <div className="coffee__cards-inner-row-card-bottom-bottom">
                       <h3>{item.price}</h3>
                       <button>В корзину</button>
