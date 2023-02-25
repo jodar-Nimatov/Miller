@@ -17,7 +17,6 @@ import "./scss/style.scss";
 import Cards from "./pages/Cards/Cards";
 function App() {
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -28,10 +27,10 @@ function App() {
   return (
     <>
       {loading ? (
-        <div class="loader">
-          <div class="inner one"></div>
-          <div class="inner two"></div>
-          <div class="inner three"></div>
+        <div className="loader">
+          <div className="inner one"></div>
+          <div className="inner two"></div>
+          <div className="inner three"></div>
         </div>
       ) : (
         <Routes>
