@@ -1,12 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import coffee from '../../assets/Profile/coffeeProfile.png'
 import joodar from '../../assets/Profile/Joodar.png'
 import { Link } from "react-router-dom";
 
 const Profile = () => {
+    // let add = document.getElementById('#discount')
+    // let h1 = document.getElementById('#discount_h1')
 
     
 
+    // function myFunction() {
+    //     document.getElementById('discount')
+
+    //     document.getElementById('discount').style = `
+    //     text-align: left;
+    //     background: #F9B300;
+    //     font-weight: 500;
+    //     font-size: 12px;
+    //     line-height: 14px
+    //     border-radius: 14px;
+    //     align-items: center;
+    //     width: 400px;  
+    //     height: 168px;
+    //     `;
+
+    //     document.getElementById('discount_h1').innerHTML = `
+    //     <h1>До скидки 15% не хватает покупок на сумму: 1255 ₽  </h1>
+    //     `
+
+    //     document.getElementById('discount_h1').style = `
+    //     font-family: 'Gilroy';
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     font-size: 6px;
+    //     line-height: 15px;
+    //     `
+
+    // }
 
     return (
 
@@ -40,13 +70,13 @@ const Profile = () => {
                             </ul>
 
                         </div>
+
                         <div className="discount">
                             <div className="discount__inner">
                                 <div className="discount__button">
                                     <h1>Ваша скидка: 10%</h1>
-                                    <Link to="#">
                                      <button className="discount__btn">?</button>
-                                    </Link>
+                                  
                                    
                                 </div>
 
@@ -67,7 +97,7 @@ const Profile = () => {
                                 <p>01.08.2021 12:24:00 - оплачено</p>
                                 <p>Дата доставки: 03.08.2021</p>
 
-                            </div>
+                                 </div>
 
 
                         </div>
