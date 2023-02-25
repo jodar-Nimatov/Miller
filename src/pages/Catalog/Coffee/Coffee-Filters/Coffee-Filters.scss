@@ -1,4 +1,4 @@
-.filters {
+.filters{
   background-repeat: no-repeat;
   background-image: url("../../../../assets/Catalog/filters-back.svg");
   background-position-y: 326px;
@@ -14,18 +14,28 @@
     display: flex;
   }
 
-  &-title {
-    max-width: 100%;
+  .filters__title{
+    @media (max-width: 443px){
+      font-size: 30px;
+    }
+    @media (max-width: 360px){
+      font-size: 30px;
+    }
   }
 
   &-back {
     background: linear-gradient(to bottom, #f9b300 331px, transparent 331px);
   }
+  &-back-healthy{
+    background: linear-gradient(to bottom, #f9b300 229px, transparent 229px);
+  }
 
   &-bottom {
     &-blocks {
+      z-index: 4;
+      position: relative;
       flex-wrap: wrap;
-      @media (min-width: 1211px) {
+      @media (min-width: 1210px) {
         display: flex;
       }
 
@@ -96,10 +106,7 @@
     margin-top: 100px;
     font-weight: 900;
     font-size: 50px;
-    line-height: 62px;
-    @media (max-width: 542px) {
-      width: 442px;
-    }
+    line-height: 62px;  
     color: #ffffff;
   }
   &-nav-first {
@@ -115,8 +122,6 @@
   }
   &-nav {
     margin-top: 30px;
-    width: 277px;
-    justify-content: space-between;
     display: flex;
     color: white;
   }
@@ -151,6 +156,7 @@
     }
   }
   &-functions-right {
+    z-index: 100;
     background-color: white;
     box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
     min-height: 373px;
@@ -163,6 +169,15 @@
     &-line {
       height: 10px;
       width: 770px;
+      @media (max-width: 1210px) {
+        width: 670px;
+      }
+      @media (max-width: 1110px) {
+        width: 570px;
+      }
+      @media (max-width: 1010px) {
+        width: 470px;
+      }
       @media (max-width: 911px) {
         width: 670px;
       }
@@ -176,6 +191,7 @@
         width: 370px;
       }
       @media (max-width: 475px) {
+        margin-left: 10px;
         width: 270px;
       }
       background-color: #f9b300;
@@ -188,8 +204,11 @@
       display: flex;
       flex-wrap: wrap;
       margin-left: 66px;
+      @media (max-width: 470px) {
+        margin-left: 10px;
+      }
       margin-top: 21px;
-      max-width: 880px;
+      max-width: 712px;
       justify-content: space-between;
     }
     &-column {
