@@ -133,11 +133,18 @@
   }
 }
 
+.Advantage-back-top{
+  width: 1903px;
+  height: 203px;
+  transform: translateY(10px);
+}
+
 .advantages {
-  height: 900px;
+  height: 700px;
   background-color: #fff7e1;
+  margin:  0 auto;
   .advantages-inner {
-    padding-top: 200px;
+    padding-top: -18px;
     display: flex;
     gap: 140px;
   }
@@ -169,7 +176,7 @@
     font-weight: bold;
     font-size: 35px;
     width: 404px;
-    transform: translateY(-65px);
+    transform: translate(-108px, -65px);
   }
   .advent-imgs {
     transform: translateX(-110px);
@@ -187,9 +194,17 @@
   }
 }
 
+.advantages-back-bottom{
+  position: absolute;
+  width: 1903px;
+  height: 200px;
+  z-index: 100;
+}
+
 .roast-coffe {
-  height: 700px;
-  background: url("../../assets/Images/roastCoffe.png");
+  height: 800px;
+  background: url("../../assets/Images/roastCoffe.png") no-repeat, center;
+  transform: translateY(12px);
   .roast-coffe-inner {
     padding: 70px;
     color: white;
@@ -216,6 +231,12 @@
     font-size: 15px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 5px;  
   }
+}
+
+.roactCoffebottom{
+  width: 1903px;
+  height: 280px;
+  transform: translateY(-260px);
 }

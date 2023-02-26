@@ -12,6 +12,9 @@ import CatalogKasha from "../../assets/Images/CatalogKasha.png";
 import rightVector from '../../assets/Images/Vector.png'
 import leftVector from '../../assets/Images/vectorLeft.png'
 import leftVectorCoffe from '../../assets/Images/leftVectorCoffe.png'
+import AdBackTop from '../../assets/Images/AdBackTop.png'
+import adAboveImg from '../../assets/Images/adAboveImg.png'
+import roactCoffebottom from '../../assets/Images/roastCoffeBottom.png'
 import News from '../../Components/News/News'
 import Instagram from './../../Components/Instagram/instagram';
 
@@ -115,7 +118,8 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="advantages">
+      <img className="Advantage-back-top" src={AdBackTop} alt="" />
+      <div className="advantages"> 
         <div className="container">
           <div className="advantages-inner">
             <div className="advantages-left">
@@ -151,6 +155,9 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+            <div>
+              <img className="advantages-back-bottom" src={adAboveImg} alt="" />
+            </div>
             <div className="roast-coffe">
                 <div className="container">
                     <div className="roast-coffe-inner">
@@ -173,6 +180,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+              <img className="roactCoffebottom" src={roactCoffebottom} alt="" />
             <News/>
             <Instagram/>
         </div>
