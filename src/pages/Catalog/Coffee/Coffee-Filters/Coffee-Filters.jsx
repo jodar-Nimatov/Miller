@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import CoffeeItems from './../Coffee-Items/Coffee-Items';
 
 const CoffeeFilters = () => {
-  // Функция для того чтобы выбирать желтые круглишки.
   return (
     <>
       <div className="filters-back">

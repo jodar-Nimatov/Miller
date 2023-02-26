@@ -7,16 +7,77 @@
     background-color: #F5F5F5;
     padding-top: 96px;
     &-inner{
+        & .cortirovka.siuu.showC{
+            display: none;
+        }
+        & .cortirovka.siuu.closeC{
+            display: block;
+            opacity: 0;
+        }
         & .cortirovka{
             cursor: pointer;
             font-weight: 500;
             font-size: 14px;
             max-width: fit-content;
-            text-decoration: underline;
+            border-bottom: 1px solid black; 
             margin-bottom: 48px;
             @media (min-width: 1400px) {
                 margin-left: 30px;
             }
+            @media (max-width: 490px){
+                margin-left: 40px;
+            }
+            &.closeC{
+                display: none;
+            }
+            &.showC{
+                display: block;
+            }
+        }
+        .c-sorting-modal-window.closeC{
+            z-index: 4;
+            display: block;
+            transform: translateY(-50px);
+            width: 200px;
+            height: 175px;
+            font-weight: 500;
+            font-size: 15px;
+            background-color: white;
+            .sorting-title{
+                align-items:center;
+                padding: 12px 0 12px 20px;
+                border-bottom: 1px solid #E9E9E9;
+                color: #F9B300;
+                display: flex;
+                justify-content: space-between;
+            }
+            .sorting-item:hover{
+                opacity: 0.6;
+            }
+            position: absolute;
+            .sorting-item{
+                cursor: pointer;
+                margin-left: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        .old-price{
+            text-decoration:line-through;
+        }
+        l:hover{
+            opacity: 0.7;
+        }
+        l{
+            width: 12px;
+            font-size: x-large;
+            margin-right: 10px;
+            align-items: center;
+            height: 12px;
+            color: black;
+            cursor: pointer;
+        }
+        .c-sorting-modal-window.showC{
+            display: none;
         }
         &-row{
             display: flex;
@@ -56,7 +117,7 @@
                         line-height: 23px;
                     }
                     &-right > select > option{
-                        font-size: larger;
+                        font-size: medium;
                     }
                     &-right > select{
                         background: #FFF7E1;
@@ -114,6 +175,10 @@
                 color: #4057cd;
             }
             .tea-img-block{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
                 overflow: hidden;
             }
         }

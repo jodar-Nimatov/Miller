@@ -25,33 +25,32 @@ function App() {
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <div className="loader">
           <div className="inner one"></div>
           <div className="inner two"></div>
           <div className="inner three"></div>
         </div>
-      ) : (
+      ) : 
+      ( */}
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/store" element={<Store />} />
-            <Route path="/catalog" element={<Layolog />} />
             {/* Каталог товаров */}
-            <Route path="/catalog/coffee" element={<CoffeeFilters />} />
+            <Route path="/catalog" element={<Layolog />} />
+            <Route path="/catalog/coffee" element={<CoffeeFilters/>} />
             <Route path="/catalog/tea" element={<TeaFilters />} />
             <Route path="/catalog/wanding" element={<VendingFilters />} />
             <Route path="/catalog/healthy" element={<HealthyFilters />} />
             <Route path="/cards" element={<Cards/>}/>
             {/* Каталог товаров */}
-            {/* Профиль пользователя */}
             <Route path="/profile" element={<Profile />} />
-            {/* Профиль пользователя */}
           </Route>
         </Routes>
-      )}
+      {/* )} */}
     </>
   );
 }
