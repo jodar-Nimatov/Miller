@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import images from './FilterImages';
 import roast5 from '../../../../assets/Catalog/Coffee/Filters/roast5.svg'
 import roast4 from '../../../../assets/Catalog/Coffee/Filters/roast4.svg'
@@ -9,12 +9,18 @@ import { Link } from 'react-router-dom';
 import CoffeeItems from './../Coffee-Items/Coffee-Items';
 
 const CoffeeFilters = () => {
+  const [filters, setFilters] = useState({roastlevel: [], coffeefrom: [], kislinka: [], pmethod: [], special: [], coffeetype: []})
+  const handleGeography = (e) => {
+    // Не пушиться ! Проблема в этом.
+    setFilters(filters.coffeefrom.push(e.target.innerText))
+  }
+  console.log(filters.coffeefrom)
   return (
     <>
       <div className="filters-back">
         <div className='filters'>
           <div className="container">
-            <div className="filters__inner">
+            <div className="filters__inner"> 
               <div className="filters__left">
                 <ul className="filters-nav">
                   <li><Link className='filters-nav-first'to="/">Главная</Link></li>
@@ -59,7 +65,7 @@ const CoffeeFilters = () => {
                 <div className="filters-functions-right-column geography">
                   <h3>География</h3>
                     <div className="filters-functions-right-column-options">
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Африка</p>
                       </div>
@@ -121,7 +127,7 @@ const CoffeeFilters = () => {
                         </div>
                         <div className="filters-functions-right-column-options-item">
                           <div className="white-circle"></div>
-                          <p>Прочее</p>
+                          <p>Прочие</p>
                         </div>
                       </div>
                   </div>
@@ -188,10 +194,7 @@ const CoffeeFilters = () => {
             images.map(item => (
               <div key={item.id} className="filters-bottom-blocks-item">
                 <div className="filters-bottom-blocks-item-inner">
-                  <div className='filters-bottom-blocks-item-inner-top forDF'>
                   <p>{item.text}</p>
-                  <span>&#10003;</span>
-                  </div>
                   <img src={item.image} alt="" />
                 </div>
               </div>
@@ -201,7 +204,7 @@ const CoffeeFilters = () => {
         </div>
       </div>
     </div>
-    <CoffeeItems/>
+    <CoffeeItems filters={filters}/>
     </>
   )
 }
