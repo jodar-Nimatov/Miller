@@ -188,7 +188,10 @@ const CoffeeFilters = () => {
             images.map(item => (
               <div key={item.id} className="filters-bottom-blocks-item">
                 <div className="filters-bottom-blocks-item-inner">
+                  <div className='filters-bottom-blocks-item-inner-top forDF'>
                   <p>{item.text}</p>
+                  <span>&#10003;</span>
+                  </div>
                   <img src={item.image} alt="" />
                 </div>
               </div>

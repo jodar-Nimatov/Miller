@@ -35,7 +35,7 @@ const CoffeeItems = () => {
        <div className="coffee__cards">
          <div className="container">
            <div className="coffee__cards-inner">
-             <h4 className={`cortirovka siuu ${modal}`}>Хош кофе с пеной?</h4>
+             <h4 className={`cortirovka siuu ${modal}`}>Тебе с пенкой?</h4>
              <h4 className={`cortirovka ${modal}`} onClick={closeSorting}>{sorting}</h4>
               <div className={`c-sorting-modal-window ${modal}`}>
                 <ul>
@@ -57,9 +57,9 @@ const CoffeeItems = () => {
                      </div>
                      <div className="coffee__cards-inner-row-card-top-right">
                        <select>
-                         <option value="250g">250г</option>
-                         <option value="500g">500г</option>
-                         <option value="1000g">1000г</option>
+                         <option value="250g">250 г.</option>
+                         <option value="500g">500 г.</option>
+                         <option value="1000g">1000 г.</option>
                        </select>
                      </div>
                    </div>
