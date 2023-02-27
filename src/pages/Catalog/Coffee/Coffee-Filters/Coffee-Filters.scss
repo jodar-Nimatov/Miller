@@ -44,9 +44,11 @@
       }
       
       &-item:hover {
-        opacity: 0.7;
+        // opacity: 0.7;
+        box-shadow: 0px 0px 21.2553px rgba(23, 23, 23, 0.25);
       }
       &-item:active {
+        box-shadow: 0px 0px 21.2553px rgba(147, 147, 147, 0.25);
         cursor: default;
       }
 

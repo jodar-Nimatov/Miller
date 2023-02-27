@@ -11,12 +11,17 @@ import CoffeeItems from './../Coffee-Items/Coffee-Items';
 const CoffeeFilters = () => {
   const [filters, setFilters] = useState({roastlevel: [], coffeefrom: [], kislinka: [], pmethod: [], special: [], coffeetype: []})
   const handleGeography = (e) => {
-    // Не пушиться ! Проблема в этом.
-    setFilters(filters.coffeefrom.push(e.target.innerText))
+    if(filters.coffeefrom.includes(e.target.innerText) === false){
+      filters.coffeefrom = [...filters.coffeefrom,  e.target.innerText !== '' ? e.target.innerText : e.target.nextSibling.innerText]
+    }
   }
-  console.log(filters.coffeefrom)
+  const handleKislinka = (e) => {
+    if(filters.kislinka.includes(e.target.innerText) === false){
+      filters.kislinka = [...filters.kislinka, e.target.innerText !== '' ? e.target.innerText : e.target.nextSibling.innerText]
+    }
+  }
   return (
-    <>
+    <> 
       <div className="filters-back">
         <div className='filters'>
           <div className="container">
@@ -70,26 +75,26 @@ const CoffeeFilters = () => {
                         <p>Африка</p>
                       </div>
                       <div className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                        <div onClick={(e)=>handleGeography(e)} className="white-circle"></div>
                         <p>Йемен</p>
                       </div>
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Уганда</p>
                       </div>
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Эфиопия</p>
                       </div>
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Азия</p>
                       </div>
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Центр. Америка</p>
                       </div>
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleGeography(e)}  className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Лат. Америка</p>
                       </div>
@@ -99,18 +104,18 @@ const CoffeeFilters = () => {
                   <div className="filters-functions-right-column kislinka">
                     <h3>Кислинка</h3>
                     <div className="filters-functions-right-column-options">
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleKislinka(e)} className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Низкая</p>
                       </div>
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleKislinka(e)}  className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Средняя</p>
                       </div>
-                      <div className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>handleKislinka(e)}  className="filters-functions-right-column-options-item">
                         <div className="white-circle"></div>
                         <p>Высокая</p>
-                      </div>
+                      </div> 
                     </div>
                   </div>
                   <div className="filters-functions-right-column processing-method">

@@ -17,20 +17,35 @@ const CoffeeItems = ({ filters }) => {
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
   let url = 'http://localhost:3333/catalog?'
-  let k = ''
-  const forkrch = () => {
-    if(filters.coffeefrom !== []){
-      for(let i = 0; i < filters.coffeefrom.length; i++){
-        k += `geography=${filters.coffeefrom[i]}&`
+  let geographyFilter = ''
+  let kislinkaFilter = ''
+  const filtering = () => {
+    if(filters.coffeefrom !== []){ 
+      for(let i = 0; i < filters.coffeefrom.length; i++){ 
+        geographyFilter += `geography=${filters.coffeefrom[i]}&`
       }
-    }else {
+    }else { 
+      console.log('')
+    }  
+    if(filters.kislinka !== []){
+      for(let i = 0; i < filters.kislinka.length; i++){
+        if(i === 'Низкая'){  
+          i = 3
+        }else if(i === 'Средняя'){
+          i = 4
+        }else if(i === 'Высокая'){
+          i = 8
+        }
+        kislinkaFilter += `kislinka=${filters.kislinka[i]}&`
+      }
+    }else{  
       console.log('')
     }
   }
-  forkrch()
+  filtering()
   useEffect(() => {
-    axios
-    .get(
+    axios 
+    .get( 
       url +
           `${
             sorting == "По убыванию цены"
@@ -41,19 +56,19 @@ const CoffeeItems = ({ filters }) => {
               ? "_sort=rating&_order=desc"
               : sorting == "По кислотности"
               ? "_sort=kislinka&_order=desc"
-              : "&"
-            }` + k
-            )
+              : ""
+            }` + '&' + geographyFilter + kislinkaFilter  
+            ) 
             .then((resp) => {
               setCards(resp.data);
             });
   }, [sorting, filters])
   const closeSorting = () => {
-    document.body.children[1].childNodes[4].addEventListener(
-      "click",
+    document.body.children[1].childNodes[4].addEventListener( 
+      "click", 
       showSorting
     );
-    setModal("closeC");
+    setModal("closeC");  
   };
   const showSorting = () => {
     setModal("showC");
