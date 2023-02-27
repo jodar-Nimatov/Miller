@@ -19,6 +19,7 @@ const CoffeeItems = ({ filters }) => {
   let url = 'http://localhost:3333/catalog?'
   let geographyFilter = ''
   let kislinkaFilter = ''
+  let lowkis = [1,2,3]
   const filtering = () => {
     if(filters.coffeefrom !== []){ 
       for(let i = 0; i < filters.coffeefrom.length; i++){ 
@@ -26,23 +27,27 @@ const CoffeeItems = ({ filters }) => {
       }
     }else { 
       console.log('')
-    }  
+    }
     if(filters.kislinka !== []){
       for(let i = 0; i < filters.kislinka.length; i++){
-        if(i === 'Низкая'){  
-          i = 3
-        }else if(i === 'Средняя'){
-          i = 4
-        }else if(i === 'Высокая'){
-          i = 8
+        if(filters.kislinka[i] === 'Низкая'){
+          for(let j =1; j < lowkis.length; j++){ 
+            filters.kislinka[i] = filters.kislinka[j]
+          }
+        }
+        if(filters.kislinka[i] === 'Средняя'){
+          filters.kislinka[i] = 7
+        } 
+        if(filters.kislinka[i] === 'Высокая'){   
+          filters.kislinka[i] = 9 
         }
         kislinkaFilter += `kislinka=${filters.kislinka[i]}&`
       }
-    }else{  
+    }else{ 
       console.log('')
-    }
+    } 
   }
-  filtering()
+  filtering() 
   useEffect(() => {
     axios 
     .get( 
@@ -57,13 +62,13 @@ const CoffeeItems = ({ filters }) => {
               : sorting == "По кислотности"
               ? "_sort=kislinka&_order=desc"
               : ""
-            }` + '&' + geographyFilter + kislinkaFilter  
-            ) 
+            }` + '&' + geographyFilter + kislinkaFilter
+            )  
             .then((resp) => {
               setCards(resp.data);
             });
   }, [sorting, filters])
-  const closeSorting = () => {
+  const closeSorting = () => {    
     document.body.children[1].childNodes[4].addEventListener( 
       "click", 
       showSorting
@@ -82,6 +87,7 @@ const CoffeeItems = ({ filters }) => {
             <h4 className={`cortirovka ${modal}`} onClick={closeSorting}>
               {sorting}
             </h4>
+            <button onClick={()=>console.log('fjskl')}>rerender</button>
             <div className={`c-sorting-modal-window ${modal}`}>
               <ul>
                 <div className="sorting-title">
