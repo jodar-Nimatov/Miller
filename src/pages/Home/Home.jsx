@@ -17,6 +17,7 @@ import adAboveImg from '../../assets/Images/adAboveImg.png'
 import roactCoffebottom from '../../assets/Images/roastCoffeBottom.png'
 import News from '../../Components/News/News'
 import Instagram from './../../Components/Instagram/instagram';
+import SliderItems from "../../Components/UI/SliderItems/SliderItems";
 
 const Main = () => {
   return (
@@ -113,7 +114,7 @@ const Main = () => {
               пользоваться скидками постоянно!
             </p>
             <div className="sale-items-slider">
-              
+              <SliderItems/>
             </div>
           </div>
         </div>

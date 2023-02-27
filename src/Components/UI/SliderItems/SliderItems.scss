@@ -1,0 +1,63 @@
+.Slider{
+    width: 900px;
+    height: 560px;
+    // background-color: aquamarine;
+    margin-top: 115px;
+    position: relative;
+    &__show{
+        position: absolute;
+        width: 890px;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        gap: 18px;
+    }
+    .item-card{
+        margin-top: 60px;
+        min-width: 320px;
+        height: 370px;
+        background-color: aqua;
+    }
+    &__button_prev{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        left: -50px;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        border: 1px solid blue;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    .slider-card{
+        transform: translateY(55px);
+        z-index: 5;
+    }
+    &__button_next{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        right: -50px;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        border: 1px solid blue;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
