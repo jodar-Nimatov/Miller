@@ -3,40 +3,10 @@ import coffee from '../../assets/Profile/coffeeProfile.png'
 import joodar from '../../assets/Profile/Joodar.png'
 import { Link } from "react-router-dom";
 
+
+
 const Profile = () => {
-    // let add = document.getElementById('#discount')
-    // let h1 = document.getElementById('#discount_h1')
-
-    
-
-    // function myFunction() {
-    //     document.getElementById('discount')
-
-    //     document.getElementById('discount').style = `
-    //     text-align: left;
-    //     background: #F9B300;
-    //     font-weight: 500;
-    //     font-size: 12px;
-    //     line-height: 14px
-    //     border-radius: 14px;
-    //     align-items: center;
-    //     width: 400px;  
-    //     height: 168px;
-    //     `;
-
-    //     document.getElementById('discount_h1').innerHTML = `
-    //     <h1>До скидки 15% не хватает покупок на сумму: 1255 ₽  </h1>
-    //     `
-
-    //     document.getElementById('discount_h1').style = `
-    //     font-family: 'Gilroy';
-    //     font-style: normal;
-    //     font-weight: 700;
-    //     font-size: 6px;
-    //     line-height: 15px;
-    //     `
-
-    // }
+    const [show, setShow] = useState(true)
 
     return (
 
@@ -73,15 +43,21 @@ const Profile = () => {
 
                         <div className="discount">
                             <div className="discount__inner">
-                                <div className="discount__button">
-                                    <h1>Ваша скидка: 10%</h1>
-                                     <button className="discount__btn">?</button>
-                                  
+                                    <button className="discount__btn" onClick={()=>setShow(!show)}>?</button> 
+                                <div className={`discount-block ${show ? 'block' : 'none'}`}>
+                                    <h1 className="discount_1">Ваша скидка: 10%</h1>
+                                    <li>Сумма заказов: 5675 ₽*</li>
+                                    <p>*До скидки 15% не хватает покупок на сумму: 1255 ₽</p> 
                                    
+                                </div> 
+                                       
+                                <div className={`discount-block ${show ? 'none' : 'block'}`}>
+                                    <h1 className="discount_2">До скидки 15% не хватает покупок на сумму: 1255 ₽</h1>
+                                    <p>Скидка 10% - сумма покупок 5000 ₽ </p>
+                                    <p>Скидка 15% - сумма покупок 7000 ₽ </p>
+                                    <p>Скидка 20% - сумма покупок 10000 ₽ </p>
                                 </div>
-
-                                <li>Сумма заказов: 5675 ₽*</li>
-                                <p>*До скидки 15% не хватает покупок на сумму: 1255 ₽</p>
+                       
                             </div>
                         </div>
                     </div>
