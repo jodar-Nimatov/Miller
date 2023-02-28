@@ -80,7 +80,7 @@
       }
       display: flex;
       margin-top: 15px;
-      gap: 11px;
+      gap: 15px;
     }
   }
   &-coffee {
@@ -277,4 +277,10 @@
     gap: 7px;
     display: flex;
   }
+}
+.useFilter-btns{
+  display: flex;
+  text-align: right;
+  padding-right: 50px;
+  justify-content: right;
 }

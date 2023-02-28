@@ -5,11 +5,13 @@ import roast4 from '../../../../assets/Catalog/Coffee/Filters/roast4.svg'
 import roast3 from '../../../../assets/Catalog/Coffee/Filters/roast3.svg'
 import roast2 from '../../../../assets/Catalog/Coffee/Filters/roast2.svg'
 import roast1 from '../../../../assets/Catalog/Coffee/Filters/roast1.svg'
+import searchicon from "../../../../assets/Header/search.svg";
 import { Link } from 'react-router-dom';
 import CoffeeItems from './../Coffee-Items/Coffee-Items';
 
 const CoffeeFilters = () => {
   const [filters, setFilters] = useState({roastlevel: [], coffeefrom: [], kislinka: [], pmethod: [], special: [], coffeetype: []})
+  const [key, setKey] = useState(0)
   const handleGeography = (e) => {
     if(filters.coffeefrom.includes(e.target.innerText) === false){
       filters.coffeefrom = [...filters.coffeefrom,  e.target.innerText !== '' ? e.target.innerText : e.target.nextSibling.innerText]
@@ -192,6 +194,10 @@ const CoffeeFilters = () => {
                   </div>
                 </div>
               </div>
+              <div className="useFilter-btns">
+                <button className='useFilters-btn' onClick={()=>window.location.reload()}>Очистить филтры</button>
+                <button className='useFilters-btn' onClick={()=>setKey(key + 1)}>Искать <img src={searchicon} height='10px' alt="" /></button>
+              </div>
             </div>
           </div>
           <div className="filters-bottom-blocks">
@@ -209,7 +215,7 @@ const CoffeeFilters = () => {
         </div>
       </div>
     </div>
-    <CoffeeItems filters={filters}/>
+    <CoffeeItems filters={filters} key={key}/>
     </>
   )
 }

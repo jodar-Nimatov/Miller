@@ -19,28 +19,16 @@ const CoffeeItems = ({ filters }) => {
   let url = 'http://localhost:3333/catalog?'
   let geographyFilter = ''
   let kislinkaFilter = ''
-  let lowkis = [1,2,3]
   const filtering = () => {
     if(filters.coffeefrom !== []){ 
       for(let i = 0; i < filters.coffeefrom.length; i++){ 
         geographyFilter += `geography=${filters.coffeefrom[i]}&`
-      }
+      } 
     }else { 
       console.log('')
     }
     if(filters.kislinka !== []){
       for(let i = 0; i < filters.kislinka.length; i++){
-        if(filters.kislinka[i] === 'Низкая'){
-          for(let j =1; j < lowkis.length; j++){ 
-            filters.kislinka[i] = filters.kislinka[j]
-          }
-        }
-        if(filters.kislinka[i] === 'Средняя'){
-          filters.kislinka[i] = 7
-        } 
-        if(filters.kislinka[i] === 'Высокая'){   
-          filters.kislinka[i] = 9 
-        }
         kislinkaFilter += `kislinka=${filters.kislinka[i]}&`
       }
     }else{ 
@@ -84,10 +72,9 @@ const CoffeeItems = ({ filters }) => {
         <div className="container">
           <div className="coffee__cards-inner">
             <h4 className={`cortirovka siuu ${modal}`}>Тебе с пенкой?</h4>
-            <h4 className={`cortirovka ${modal}`} onClick={closeSorting}>
-              {sorting}
-            </h4>
-            <button onClick={()=>console.log('fjskl')}>rerender</button>
+              <h4 className={`cortirovka ${modal}`} onClick={closeSorting}>
+                {sorting}
+              </h4>
             <div className={`c-sorting-modal-window ${modal}`}>
               <ul>
                 <div className="sorting-title">
@@ -196,11 +183,11 @@ const CoffeeItems = ({ filters }) => {
                           <div className="kislinka">
                             <img
                               src={
-                                item.kislinka > 7
+                                item.kislinka == 'Высокая'
                                   ? kislinkaHigh
-                                  : item.kislinka > 3
+                                  : item.kislinka == 'Средняя'
                                   ? kislinkaMedium
-                                  : item.kislinka > 0
+                                  : item.kislinka == 'Низкая'
                                   ? kislinkaLow
                                   : null
                               }
