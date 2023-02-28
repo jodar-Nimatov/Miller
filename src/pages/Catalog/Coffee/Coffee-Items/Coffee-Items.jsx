@@ -19,21 +19,35 @@ const CoffeeItems = ({ filters }) => {
   let url = 'http://localhost:3333/catalog?'
   let geographyFilter = ''
   let kislinkaFilter = ''
+  let pmethodFilter = ''
+  let specialFilter = ''
+  let coftypeFilter = ''
   const filtering = () => {
     if(filters.coffeefrom !== []){ 
       for(let i = 0; i < filters.coffeefrom.length; i++){ 
         geographyFilter += `geography=${filters.coffeefrom[i]}&`
       } 
-    }else { 
-      console.log('')
     }
     if(filters.kislinka !== []){
       for(let i = 0; i < filters.kislinka.length; i++){
         kislinkaFilter += `kislinka=${filters.kislinka[i]}&`
       }
-    }else{ 
-      console.log('')
-    } 
+    }
+    if(filters.pmethod !== []){
+      for(let i = 0; i < filters.pmethod.length; i++){
+        pmethodFilter += `processing method=${filters.pmethod[i]}&`
+      }
+    }
+    if(filters.special !== []){
+      for(let i = 0; i < filters.special.length; i++){
+        specialFilter += `special=${filters.special[i]}&`
+      }
+    }
+    if(filters.coffeetype !== []){
+      for(let i = 0; i < filters.coffeetype.length; i++){
+        coftypeFilter += `type of coffee=${filters.coffeetype[i]}&`
+      }
+    }
   }
   filtering() 
   useEffect(() => {
@@ -50,7 +64,7 @@ const CoffeeItems = ({ filters }) => {
               : sorting == "По кислотности"
               ? "_sort=kislinka&_order=desc"
               : ""
-            }` + '&' + geographyFilter + kislinkaFilter
+            }` + '&' + geographyFilter + kislinkaFilter + coftypeFilter + pmethodFilter + specialFilter
             )  
             .then((resp) => {
               setCards(resp.data);

@@ -10,17 +10,43 @@ import { Link } from 'react-router-dom';
 import CoffeeItems from './../Coffee-Items/Coffee-Items';
 
 const CoffeeFilters = () => {
-  const [filters, setFilters] = useState({roastlevel: [], coffeefrom: [], kislinka: [], pmethod: [], special: [], coffeetype: []})
+  const [filters, setFilters] = useState({roastlevel: [], coffeefrom: [], kislinka: [], pmethod: [], special: [], coffeetype: [], cmethod: []})
   const [key, setKey] = useState(0)
-  const handleGeography = (e) => {
-    if(filters.coffeefrom.includes(e.target.innerText) === false){
-      filters.coffeefrom = [...filters.coffeefrom,  e.target.innerText !== '' ? e.target.innerText : e.target.nextSibling.innerText]
+  const [tum, setTum] = useState(false)
+  const oBack = tum ? '#f9b300' : '#e4e4e4'
+  const filterFun = (e, filt)=>{
+    let eventInner = e.target.localName == 'span' ? e.target : e.target.localName == 'p' ? e.target.previousElementSibling : e.target.firstChild 
+    if(e.target.classList[0] == 'white-circle'){
+      setTum(!tum)
+      e.target.style.background = oBack
+    }else if(e.target.localName == 'p'){
+      setTum(!tum)
+      e.target.previousElementSibling.style.background = oBack
+    }
+    if(filters[filt].includes(e.target.innerText) === false){
+      filters[filt] = [...filters[filt], e.target.innerText !== '' ? e.target.innerText : e.target.nextSibling.innerText]
+    }
+    if(eventInner.style.background == 'rgb(228, 228, 228)'){
+      filters[filt] = filters[filt].filter(item => item == item.id)
     }
   }
+  const handleGeography = (e) => {
+    filterFun(e, 'coffeefrom')
+  }
   const handleKislinka = (e) => {
-    if(filters.kislinka.includes(e.target.innerText) === false){
-      filters.kislinka = [...filters.kislinka, e.target.innerText !== '' ? e.target.innerText : e.target.nextSibling.innerText]
-    }
+    filterFun(e, 'kislinka')
+  }
+  const handlePmethod = (e) => {
+    filterFun(e, 'pmethod')
+  }
+  const handleSpecial = (e) => {
+    filterFun(e, 'special')
+  }
+  const handleCoftype = (e) => {
+    filterFun(e, 'coffeetype')
+  }
+  const handleCmethod = (e) => {
+    // Здесь нужно написать отдельную функцию для метода приготовления.
   }
   return (
     <> 
@@ -45,23 +71,23 @@ const CoffeeFilters = () => {
               <div className="filters-function-left-sec">
                 <h3>Степень обжарки</h3>
                 <div className="fiveCoffees">
-                  <div className="white-circle"></div>
+                  <span className="white-circle"></span>
                   <img src={roast5} alt="" />
                 </div>
                 <div className="fiveCoffees">
-                  <div className="white-circle"></div>
+                  <span className="white-circle"></span>
                   <img src={roast4} alt="" />
                 </div>
                 <div className="fiveCoffees">
-                  <div className="white-circle"></div>
+                  <span className="white-circle"></span>
                   <img src={roast3} alt="" />
                 </div>
                 <div className="fiveCoffees">
-                  <div className="white-circle"></div>
+                  <span className="white-circle"></span>
                   <img src={roast2} alt="" />
                 </div>
                 <div className="fiveCoffees">
-                  <div className="white-circle"></div>
+                  <span className="white-circle"></span>
                   <img src={roast1} alt="" />
                 </div>
               </div>
@@ -73,7 +99,7 @@ const CoffeeFilters = () => {
                   <h3>География</h3>
                     <div className="filters-functions-right-column-options">
                       <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                        <span className="white-circle"></span>
                         <p>Африка</p>
                       </div>
                       <div className="filters-functions-right-column-options-item">
@@ -81,23 +107,23 @@ const CoffeeFilters = () => {
                         <p>Йемен</p>
                       </div>
                       <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                        <span className="white-circle"></span>
                         <p>Уганда</p>
                       </div>
                       <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                        <span className="white-circle"></span>
                         <p>Эфиопия</p>
                       </div>
                       <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                        <span className="white-circle"></span>
                         <p>Азия</p>
                       </div>
                       <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                        <span className="white-circle"></span>
                         <p>Центр. Америка</p>
                       </div>
                       <div onClick={(e)=>handleGeography(e)}  className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                        <span className="white-circle"></span>
                         <p>Лат. Америка</p>
                       </div>
                     </div>
@@ -107,15 +133,15 @@ const CoffeeFilters = () => {
                     <h3>Кислинка</h3>
                     <div className="filters-functions-right-column-options">
                       <div onClick={(e)=>handleKislinka(e)} className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                        <span className="white-circle"></span>
                         <p>Низкая</p>
                       </div>
-                      <div onClick={(e)=>handleKislinka(e)}  className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                      <div onClick={(e)=>handleKislinka(e)} className="filters-functions-right-column-options-item">
+                        <span className="white-circle"></span>
                         <p>Средняя</p>
                       </div>
-                      <div onClick={(e)=>handleKislinka(e)}  className="filters-functions-right-column-options-item">
-                        <div className="white-circle"></div>
+                      <div onClick={(e)=>handleKislinka(e)} className="filters-functions-right-column-options-item">
+                        <span className="white-circle"></span>
                         <p>Высокая</p>
                       </div> 
                     </div>
@@ -124,16 +150,16 @@ const CoffeeFilters = () => {
                     <h3>Способ</h3>
                     <h3>обработки</h3>
                       <div className="filters-functions-right-column-options">
-                        <div className="filters-functions-right-column-options-item">
-                          <div className="white-circle"></div>
+                        <div onClick={(e)=>handlePmethod(e)} className="filters-functions-right-column-options-item">
+                          <span className="white-circle"></span>
                           <p>Сухая</p>
                         </div>
-                        <div className="filters-functions-right-column-options-item">
-                          <div className="white-circle"></div>
+                        <div onClick={(e)=>handlePmethod(e)} className="filters-functions-right-column-options-item">
+                          <span className="white-circle"></span>
                           <p>Мытая</p>
                         </div>
-                        <div className="filters-functions-right-column-options-item">
-                          <div className="white-circle"></div>
+                        <div onClick={(e)=>handlePmethod(e)} className="filters-functions-right-column-options-item">
+                          <span className="white-circle"></span>
                           <p>Прочие</p>
                         </div>
                       </div>
@@ -142,32 +168,32 @@ const CoffeeFilters = () => {
                 <div className="filters-functions-right-column special">
                   <h3>Особые</h3>
                   <div className="filters-functions-right-column-options">
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleSpecial(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Популярное</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleSpecial(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Новый урожай</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleSpecial(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Ваш выбор</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleSpecial(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Микролот</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleSpecial(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Сорт недели</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleSpecial(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Скидки</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleSpecial(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Новинка</p>
                     </div>
                   </div>
@@ -175,20 +201,20 @@ const CoffeeFilters = () => {
                 <div className="filters-functions-right-column typeOfCoffee">
                   <h3>Вид кофе</h3>
                   <div className="filters-functions-right-column-options">
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleCoftype(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Арабика</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleCoftype(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Робуста</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleCoftype(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Смесь арабик</p>
                     </div>
-                    <div className="filters-functions-right-column-options-item">
-                      <div className="white-circle"></div>
+                    <div onClick={(e)=>handleCoftype(e)} className="filters-functions-right-column-options-item">
+                      <span className="white-circle"></span>
                       <p>Смесь арабика/робуста</p>
                     </div>
                   </div>
@@ -204,7 +230,7 @@ const CoffeeFilters = () => {
           {
             images.map(item => (
               <div key={item.id} className="filters-bottom-blocks-item">
-                <div className="filters-bottom-blocks-item-inner">
+                <div onClick={(e)=>handleCmethod(e)} className="filters-bottom-blocks-item-inner">
                   <p>{item.text}</p>
                   <img src={item.image} alt="" />
                 </div>
