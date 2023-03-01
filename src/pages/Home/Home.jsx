@@ -44,10 +44,10 @@ const Main = () => {
               <Slider/>
             </div>
             <div >
-              <img className="yellow-gradient-right" src={rightVector} alt="" />
             </div>
           </div>
         </div>
+        <img className="yellow-gradient-right" src={rightVector} alt="" />
       </div>
     </div>
       <div className="catalog-products">

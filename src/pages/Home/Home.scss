@@ -39,9 +39,10 @@
 
 .yellow-gradient-right{
   max-width: 530px;
+  position: absolute;
+  transform: translateY(-420px);
   max-height: 100%;
-  margin-left: 97px;
-  transform: translateY(-125px);
+  margin-left: 75%;
 }
 .yellow-gradient-left{
   max-width: 400px;
