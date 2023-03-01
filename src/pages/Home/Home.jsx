@@ -18,6 +18,7 @@ import roactCoffebottom from '../../assets/Images/roastCoffeBottom.png'
 import News from '../../Components/News/News'
 import Instagram from './../../Components/Instagram/instagram';
 import SliderItems from "../../Components/UI/SliderItems/SliderItems";
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   return (
@@ -67,7 +68,7 @@ const Main = () => {
                   <p>Свежеобжаренный кофе</p>
                 </div>
                 <br />
-                <button className="catalog-card_button">Купить</button>
+                <button className="catalog-card_button"><Link to='/catalog/coffee'>Купить</Link></button>
               </div>
               <div className="catalog-card">
                 <div className="catalog-card_img">
@@ -77,7 +78,7 @@ const Main = () => {
                   <p>Чай и кофейные напитки</p>
                 </div>
                 <br />
-                <button className="catalog-card_button">Купить</button>
+                <button className="catalog-card_button"><Link to='/catalog/tea'>Купить</Link></button>
               </div>
               <div className="catalog-card">
                 <div className="catalog-card_img">
@@ -87,7 +88,7 @@ const Main = () => {
                   <p>Продукция для вендинга</p>
                 </div>
                 <br />
-                <button className="catalog-card_button">Купить</button>
+                <button className="catalog-card_button"><Link to='/catalog/wanding'>Купить</Link></button>
               </div>
               <div className="catalog-card">
                 <div className="catalog-card_img">
@@ -97,7 +98,7 @@ const Main = () => {
                   <p>Здоровое питание</p>
                 </div>
                 <br />
-                <button className="catalog-card_button">Купить</button>
+                <button className="catalog-card_button"><Link to='/catalog/healthy'>Купить</Link></button>
               </div>
             </div>
             </div>

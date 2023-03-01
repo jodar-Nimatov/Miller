@@ -1,16 +1,25 @@
 .Slider{
-    width: 900px;
+    width: 1000px;
     height: 560px;
-    // background-color: aquamarine;
     margin-top: 115px;
     position: relative;
+    transform: translate(-290px, -14px);
     &__show{
         position: absolute;
-        width: 890px;
+        width: 950px;
         height: 100%;
         display: flex;
         overflow: hidden;
-        gap: 18px;
+        text-align: center;
+        justify-content: center;
+        gap: 40px;
+        place-content: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+    &__inner{
+        max-width: 1900px;
+        display: flex;
     }
     .item-card{
         margin-top: 60px;
@@ -19,20 +28,21 @@
         background-color: aqua;
     }
     &__button_prev{
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
         position: absolute;
-        background-color: white;
+        background: #F9B300;
         border-radius: 50%;
         border: none;
         cursor: pointer;
-        left: -50px;
+        left: -90px;
         top: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 100;
-        border: 1px solid blue;
+        color: white;
+        font-size: 24px;
         &:hover{
             opacity: 0.7;
         }
@@ -42,20 +52,21 @@
         z-index: 5;
     }
     &__button_next{
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
         position: absolute;
-        background-color: white;
+        background: #F9B300;
         border-radius: 50%;
         border: none;
         cursor: pointer;
-        right: -50px;
+        right: -16px;
         top: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 100;
-        border: 1px solid blue;
+        color: white;
+        font-size: 24px;
         &:hover{
             opacity: 0.7;
         }

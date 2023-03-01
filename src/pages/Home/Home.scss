@@ -98,11 +98,13 @@
     width: 230px;
     height: 45px;
     background-color: #f9b300;
-    color: #fff;
     font-size: 15px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+  }
+  .catalog-card_button > a{
+    color: white;
   }
 }
 

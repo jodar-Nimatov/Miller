@@ -41,6 +41,32 @@
         },
         {
             "id": 4,
+            "title": "A Coffee",
+            "category": ["Популярное", "Скидки"],
+            "subtitle": "Свежеобжаренный кофе - описание, вкус, аромат",
+            "price": "430 ₽",
+            "rating": "3.3",
+            "review": "2",
+            "Кислинка": "2",
+            "Горчинка": "4",
+            "Насыщенность": "8",
+            "image": "https://basket-03.wb.ru/vol363/part36323/36323915/images/big/1.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Coffeeу",
+            "category": ["Новый урожай", "Скидки"],
+            "subtitle": "Кофе - описание товара, вкус, аромат",
+            "price": "530 ₽",
+            "rating": "3.9",
+            "review": "4.8",
+            "Кислинка": "7",
+            "Горчинка": "3",
+            "Насыщенность": "3",
+            "image": "https://optobaza.kg/media/sync/images/%D0%A6-0000006732.jpg"
+        },
+        {
+            "id": 6,
             "title": "Colombia Supremo",
             "category": ["Крфе", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -53,7 +79,7 @@
             "image": "https://magnitogorsk.lecafeier.ru/upload/iblock/a81/a8142f2a56ba89e8effa8d1bb1924cbd.jpg"
         },
         {
-            "id": 5,
+            "id": 7,
             "title": "Colombia Supremo",
             "category": ["Популярное", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -66,7 +92,7 @@
             "image": "https://avatars.mds.yandex.net/i?id=bc7521ee1252f22cb09fe5ca1c7d1db4-5639962-images-thumbs&n=13&exp=1"
         },
         {
-            "id": 6,
+            "id": 8,
             "title": "Culla testa (500g)",
             "category": ["Популярное", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -79,7 +105,7 @@
             "image": "https://kopi-luwak.ru/wp-content/uploads/2020/04/for_site-3.jpg"
         },
         {
-            "id": 7,
+            "id": 9,
             "title": "Globo golden (black 1000g)",
             "category": ["Популярное", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -92,7 +118,7 @@
             "image": "https://sun9-19.userapi.com/impf/sUdy_B-BVGtriNPkvM091lUl2ICSIHdNFJb1yg/lE5aIUdw0qQ.jpg?size=316x604&quality=96&sign=797373ed1b4947fea0e61cbf5a39a310&type=album"
         },
         {
-            "id": 8,
+            "id": 10,
             "title": "Trisa coffee",
             "category": ["Популярное", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -105,7 +131,7 @@
             "image": "https://static.tildacdn.com/tild3830-3334-4132-b566-663562363337/b5a850bb412ca48c1d48.png"
         },
         {
-            "id": 9,
+            "id": 11,
             "title": "Cacao trissa (500g)",
             "category": ["Популярное", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -118,7 +144,7 @@
             "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/101/MTA-7731848/exprezzo_coffee_exprezzo_kopi_arabika_lintong_roasted_-1_kg-_full01_jp1y9vh8.jpg"
         },
         {
-            "id": 10,
+            "id": 12,
             "title": "Buonna sera (830g)",
             "category": ["Популярное", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - Итальянгская обжарка",
@@ -131,7 +157,7 @@
             "image": "https://avatars.mds.yandex.net/get-mpic/5068955/img_id2494032664360119258.jpeg/orig"
         },
         {
-            "id": 11,
+            "id": 13,
             "title": "Colombia Supremo",
             "category": ["Популярное", "Скидки"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -144,7 +170,7 @@
             "image": "https://avatars.mds.yandex.net/get-mpic/5234126/img_id2322291214915335377.jpeg/orig"
         },
         {
-            "id": 12,
+            "id": 14,
             "title": "Colombia Supremo",
             "category": ["Кофе", "Скидки"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -157,7 +183,7 @@
             "image": "https://nsk.lecafeier.ru/upload/iblock/a3f/a3fa18d7359923b78f7176879092b41b.jpg"
         },
         {
-            "id": 13,
+            "id": 15,
             "title": "Cacao trissa (500g)",
             "category": ["Популярное", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -170,7 +196,7 @@
             "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/101/MTA-7731848/exprezzo_coffee_exprezzo_kopi_arabika_lintong_roasted_-1_kg-_full01_jp1y9vh8.jpg"
         },
         {
-            "id": 14,
+            "id": 16,
             "title": "Buonna sera (830g)",
             "category": ["Популярное", "Новый урожай"],
             "subtitle": "Свежеобжаренный кофе - Итальянгская обжарка",
@@ -183,7 +209,7 @@
             "image": "https://avatars.mds.yandex.net/get-mpic/5068955/img_id2494032664360119258.jpeg/orig"
         },
         {
-            "id": 15,
+            "id": 17,
             "title": "Colombia Supremo",
             "category": ["Популярное", "Скидки"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -196,7 +222,7 @@
             "image": "https://avatars.mds.yandex.net/get-mpic/5234126/img_id2322291214915335377.jpeg/orig"
         },
         {
-            "id": 16,
+            "id": 18,
             "title": "Colombia Supremo",
             "category": ["Кофе", "Скидки"],
             "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",

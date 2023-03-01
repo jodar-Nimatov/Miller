@@ -6,9 +6,13 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
+const CARD_WIDTH = 280
+
+
 const SliderItems = () => {
 
     const [cards, setCards] = useState([])
+    const [offset, setOffset] = useState(0)
 
     useEffect(()=>{ 
       axios.get('http://localhost:3333/catalog')
@@ -21,19 +25,21 @@ const SliderItems = () => {
 
     
 
-    const nextHandler = () => {
-        console.log('next');
-        cards.style = 'transform: translateX(300px)'
+    const nextHandler = (el) => {
+      el.style.transition = '1000ms'
+      el.style.transform = 'translateX(-420px)'
     }
 
-    const prevHandler = () => {
-        console.log('prev');
+    const prevHandler = (el) => {
+      el.style.transition = '1000ms'
+      el.style.transform = 'translateX(420px)'
     }
 
 
   return (
     <div className='Slider'>
-        <div className="Slider__show">
+        <div className="Slider__show" >
+          <div className="Slider__inner">
             {
                 cards.map(item => {
                     if(item.category.includes('Скидки')){
@@ -57,7 +63,6 @@ const SliderItems = () => {
                         </div>
                         <div className="coffee__cards-inner-row-card-center-right">
                           <div className="coffee__cards-inner-row-card-center-right-rating">
-                            {/* В будушем сделаю 1 блок с 50-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
                             <div className="rating" style={{ width: '94px'}}>
                               <div className="div" style={{background: '#F9B300', height: '10px', width: `${item.rating[0] + 7}px`}}></div>
                             </div>
@@ -72,7 +77,6 @@ const SliderItems = () => {
                               <img src={CoffeeDot} alt="" />
                               <img src={CoffeeDot} alt="" />
                             </div>
-                            {/* В будушем сделаю 1 блок с 5-ю классами и распределю в db.json чтобы была логика. иииуу абу! */}
                           </div>
                           <div className="coffee__cards-inner-row-card-center-right-filters">
                             <div className="coffee__cards-inner-row-card-center-right-filters-item">
@@ -103,9 +107,10 @@ const SliderItems = () => {
                     }
                 })
               }
+          </div>
         </div>
-        <button className='Slider__button_prev' onClick={prevHandler}>{`<`}</button>
-        <button className='Slider__button_next' onClick={nextHandler}>{`>`}</button>
+        <button className='Slider__button_prev' onClick={(e)=>prevHandler(e.target.previousElementSibling.firstChild)}>{`<`}</button>
+        <button className='Slider__button_next' onClick={(e)=>nextHandler(e.target.previousElementSibling.previousElementSibling.firstChild)}>{`>`}</button>
     </div>
   )
 }
