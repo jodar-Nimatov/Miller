@@ -48,7 +48,7 @@
   .Cart-product-mid-right{
     display: flex;
     padding-left: 190px;
-    gap: 60px;
+    gap: 70px;
   }
   .Cart-card{
     width: 980px;
@@ -80,11 +80,27 @@
     display: flex;
     align-items: center;
     padding-left: 85px;
-    gap: 60px;
+    gap: 50px;
     font-size: 18px;
   }
   .Card-click{
     display: flex;
+    width: 170px;
+    height: 50px;
+    align-items: center;
+    background: #F6F6F6;
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+  }
+  .Card-click button {
+    padding: 15px 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .Card-click p {
+    padding: 0 35px 0 35px;
   }
   //карточка доставки
   .Cart-delivery{
@@ -102,14 +118,6 @@
   .Delivery-head{
     padding: 50px 0 35px 0;
   }
-  .Delivery-input{
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(5, 1fr);
-    ::placeholder{
-      color: rgba(196, 196, 196, 1);
-    }
-  }
   .Delivery-input input{
     display: block;
     width: 480px;
@@ -119,6 +127,13 @@
     background: #FCFCFC;
     border: 1px solid #F6F6F6;
     border-radius: 4px;
+  }
+  .Delivery-left{
+    display: inline-block;
+  }
+  .Delivery-right{
+    margin-left: 20px;
+    display: inline-block;
   }
   .Delivery-btn{
     width: 980px;
@@ -174,6 +189,7 @@
     border-radius: 4px;
     color: rgba(249, 179, 0, 1);
   }
+  //карточка итога
   .Cart-total{
     width: 480px;
     height: 317px;
@@ -200,11 +216,19 @@
     padding-bottom: 7px;
   }
   .Dostavka{
-    font-size: 14px;
+    display: block;
   }
-  .btne{
+  .Dostavka-p{
+    display: inline-block;
+  }
+  .Dostavka-vid{
+    display: inline-block;
+  }
+  
+  .Btne{
     border-radius: 100px;
     border: 6px solid rgba(249, 179, 0, 1);
+    cursor: pointer;
   }
   .Total-btn{
     width: 380px;
@@ -225,10 +249,3 @@
     font-size: 10px;
     color: #747474;
   }
-
-  
-
- 
- 
-
-

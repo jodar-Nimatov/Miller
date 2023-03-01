@@ -40,7 +40,7 @@ const Cart = () => {
                                 <img src={CheckPhoto} alt="" />
                                     <div className="columbia">
                                         <h3>Columbia Supremo</h3>
-                                        <p>мытая, натуралья, смесь</p>
+                                        <p>мытая, натуральная, смесь</p>
                                         <p>250 г.</p>
                                     </div>
                             </div>       
@@ -61,14 +61,14 @@ const Cart = () => {
                                 <img src={CheckPhoto} alt="" />
                                     <div className="columbia">
                                         <h3>Columbia Supremo</h3>
-                                        <p>мытая, натуралья, смесь</p>
+                                        <p>мытая, натуральная, смесь</p>
                                         <p>250 г.</p>
                                     </div>
                             </div>       
                             <div className="Card-right">
                                 <p>270 ₽</p>
                                     <div className="Card-click">
-                                        <button>-</button>
+                                        <button>-</button>8
                                         <p>1</p>
                                         <button>+</button>
                                     </div>
@@ -86,16 +86,21 @@ const Cart = () => {
                             <h2>Доставка</h2>
                         </div>
                         <div className="Delivery-input">
-                            <input type='text' placeholder="Имя"></input>
-                            <input type='text' placeholder="Фамилия"></input>
-                            <input type='number'placeholder="Телефон"></input>
-                            <input type='email'placeholder="Email"></input>
-                            <input type='text' placeholder="Название компании"></input>
-                            <input type='text' placeholder="Страна"></input>
-                            <input type='text' placeholder="Город"></input>
-                            <input type='text' placeholder="Улица, дом"></input>
-                            <input type='number' placeholder="Почтовый индекс"></input>
-                            <input type='text' placeholder="Комментарий к заказу (необязательно)"></input>
+                            <div className="Delivery-left">
+                                <input type='text' placeholder="Имя"></input>
+                                <input type='text' placeholder="Фамилия"></input>
+                                <input type='number'placeholder="Телефон"></input>
+                                <input type='email'placeholder="Email"></input>
+                                <input type='text' placeholder="Название компании"></input>
+                            </div>
+                            <div className="Delivery-right">
+                                <input type='text' placeholder="Страна"></input>
+                                <input type='text' placeholder="Город"></input>
+                                <input type='text' placeholder="Улица, дом"></input>
+                                <input type='number' placeholder="Почтовый индекс"></input>
+                                <input type='text' placeholder="Комментарий к заказу (необязательно)"></input>
+                            </div>
+                            
                         </div>
                         <div>
                             <button className="Delivery-btn">Рассчитать доставку</button>
@@ -126,14 +131,19 @@ const Cart = () => {
                                 <p>Подытог: 540 ₽</p>
                                 <p>Скидка: 54 ₽ (10%)</p>
                             </div>
-                            <div>
-                                <p>Доставка:</p>
-                                <div className="Dostavka">
-                                    <button className="btne"/>
+                            <div className="dostavka">
+                                <div className="Dostavka-p">
+                                    <p>Доставка:</p>
+                                </div>
+                                <div className="Dostavka-vid">
+                                    <button className="Btne"/>
                                     <p>СДЭК - до двери 390 ₽</p>
+                                    <button className="Btne"/>
                                     <p>Почта России 300 ₽</p>
+                                    <button className="Btne"/>
                                     <p>DPD - курьер, 3 дн 427 ₽</p>
                                 </div>
+
                             </div>
                             <div className="Total-down">
                                 <button className="Total-btn">Оплатить заказ</button>
