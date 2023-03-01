@@ -5,8 +5,9 @@
 @import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
 @import "../pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters.scss";
 @import "../pages/Catalog/Tea/Tea-Filters/Tea-Filters.scss";
+@import "../pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters.scss";
 @import "../pages/Catalog/Tea/Tea-Items/Tea-Items.scss";
-@import "../Components/UI/Slider/Slider.scss";
+@import "../pages/Contacts/Contact.scss";
 @import "../pages/Blog/Blog.scss";
 @import "../pages/Contacts/Contact.scss";
 @import "../Components/Instagram/instaram.scss";
@@ -24,11 +25,11 @@
   max-width: 1210px;
   padding: 0 15px;
   margin: 0 auto;
-  @media (max-width: 470px){
+  @media (max-width: 470px) {
     padding: 0;
   }
-  @media (min-width: 1556px){
-    max-width: 1556px;
+  @media (min-width: 1556px) {
+    min-width: 1510px;
   }
 }
 a:active,
@@ -64,4 +65,7 @@ body {
 .wrapper {
   min-height: 100%;
   // font-family: Gilroy ;
+}
+.forDF{
+  display: flex;
 }

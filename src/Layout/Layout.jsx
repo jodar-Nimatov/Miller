@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Whatsapp from "../Components/Whatsapp/Whatsapp";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 
@@ -9,6 +10,7 @@ const Layout = () => {
       <Header />
       <Outlet />
       <Footer />
+      <Whatsapp/>
     </>
   );
 };
