@@ -3,8 +3,15 @@ import images from "./FilterIMages";
 import coffeblog from "../../assets/blog/6VhPY27jdps.svg";
 import img2 from "../../assets/blog/pnmRtTHWqDM.svg";
 import img3 from "../../assets/blog/pnmRtTHWqDM.svg";
-
+import newscoffe from "../../assets/blog/image 6.png";
 const Blog = () => {
+  // const liStyle = {
+  //   width: "574px",
+  //   height: "23px",
+  //   fontStyle: "normal",
+  //   fontSize: "18px",
+  // };
+
   return (
     <div className="blog">
       <div className="container">
@@ -114,6 +121,28 @@ const Blog = () => {
                 <button className="button_numbtag3">Тег №3</button>
                 <button className="button_numbtag4">Тег №4</button>
                 <button className="button_numbtag5">Тег №5</button>
+              </div>
+              <div className="card_news">
+                <img
+                  style={{ width: "280px", height: "283px", marginTop: "45px" }}
+                  src={newscoffe}
+                  alt=""
+                />
+                <div className="text_news">
+                  <ul className="ul_linews">
+                    <li>
+                      Танзанийский кофе. Откуда он взялся и почему мы его так
+                      любим?
+                    </li>
+                    <li>
+                      Танзания – красивая африканская страна. Именно здесь
+                      расположены легендарные географические объекты – вулкан
+                      Килиманджаро и озеро Виктория. Но наш интерес вызван не
+                      столько природными красотами, сколько кофе...
+                    </li>
+                    <li>Автор статьи: Иван Иванов</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

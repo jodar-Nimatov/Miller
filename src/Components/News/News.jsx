@@ -15,7 +15,7 @@ const News = () => {
   let posts = news.data
 
   return (
-    <div className='news'>
+    <div className="news">
       <div className="news-container">
         <div className="news-inner">
           <h2>Новости компании</h2>
@@ -38,7 +38,7 @@ const News = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default News;

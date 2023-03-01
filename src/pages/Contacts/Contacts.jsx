@@ -1,5 +1,6 @@
 import React from "react";
-import Yandexmaps from "./YandexMaps";
+import { Link } from "react-router-dom";
+import YandexMaps from "./YandexMap";
 
 const Contacts = () => {
   return (
@@ -13,7 +14,9 @@ const Contacts = () => {
             <div className="btn-switch-text">
               <div className="switch-click">
                 <button className="switch-contact">Контакты</button>
-                <button className="switcр-stores">Наши Магазины</button>
+                <Link to="/store" className="switch_contacts">
+                  <button className="switcр-stores">Наши Магазины</button>
+                </Link>
               </div>
               <h1 className="header-text">Связаться с нами:</h1>
               <p className="number-contact">+7 (401) 237 53 43</p>
@@ -31,20 +34,13 @@ const Contacts = () => {
                 энтузиастов 1
               </p>
               <br />
-              <h4 className="store-t">Наши магазины г. Санкт-Петербург</h4>
-              <p className="adres-c">Гороховая, 53 Московский, 53</p>
-
-              <h5 className="t-t">Наши магазины Калининградская обл.</h5>
-              <p className="adress-store">
-                Советск, Гончарова 2а Черняховск, Пионерская 1 Ульяны-Громовой
-                15 Советский проспект 6а Гурьевск, Каштановая 1г Черняховского
-                15 Панина 2а Ленинский 8Б Аксакова 133 Липовая Аллея 2
-              </p>
             </div>
           </div>
         </div>
+        <div className="map">
+          <YandexMaps />
+        </div>
       </div>
-      <Yandexmaps/>
     </div>
   );
 };
