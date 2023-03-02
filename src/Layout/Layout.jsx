@@ -10,7 +10,7 @@ const Layout = () => {
       <Header />
       <Outlet />
       <Footer />
-      <Whatsapp/>
+      <Whatsapp />
     </>
   );
 };

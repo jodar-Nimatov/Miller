@@ -8,13 +8,14 @@ import CoffeeItems from "./pages/Catalog/Coffee/Coffee-Items/Coffee-Items";
 import TeaItems from "./pages/Catalog/Tea/Tea-Items/Tea-Items";
 import Contacts from "./pages/Contacts/Contacts";
 import Blog from "./pages/Blog/Blog";
-// import ClipLoader from "react-spinners/ClipLoader";
 import "./scss/style.scss";
 import Layolog from "./pages/Catalog/Layolog";
-import Profile from "./pages/Profile/Profile";
 import Store from "./pages/Contacts/Store";
 import "./scss/style.scss";
 import Cards from "./pages/Cards/Cards";
+import SignUp from "./pages/SignUp/SignUp";
+import { UserAuthContextProvider } from "./utils/UserAuthContext";
+
 function App() {
   const [loading, setLoading] = useState(false);
 
@@ -34,25 +35,23 @@ function App() {
           <div className="inner three"></div>
         </div>
       ) : (
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route path="" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contacts" element={<Contacts />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/catalog" element={<Layolog />} />
-            {/* Каталог товаров */}
-            <Route path="/catalog/coffee" element={<CoffeeItems />} />
-            <Route path="/catalog/tea" element={<TeaItems />} />
-            <Route path="/catalog/wanding" element={<VendingItems />} />
-            <Route path="/catalog/healthy" element={<HealthyEatingItems />} />
-            <Route path="/cards" element={<Cards />} />
-            {/* Каталог товаров */}
-            {/* Профиль пользователя */}
-            <Route path="/profile" element={<Profile />} />
-            {/* Профиль пользователя */}
-          </Route>
-        </Routes>
+        <UserAuthContextProvider>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route path="" element={<Home />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/store" element={<Store />} />
+              <Route path="/catalog" element={<Layolog />} />
+              <Route path="/catalog/coffee" element={<CoffeeItems />} />
+              <Route path="/catalog/tea" element={<TeaItems />} />
+              <Route path="/catalog/wanding" element={<VendingItems />} />
+              <Route path="/catalog/healthy" element={<HealthyEatingItems />} />
+              <Route path="/cards" element={<Cards />} />
+              <Route path="/SignUp" element={<SignUp />} />
+            </Route>
+          </Routes>
+        </UserAuthContextProvider>
       )}
     </>
   );

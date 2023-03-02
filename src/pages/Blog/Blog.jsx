@@ -3,15 +3,13 @@ import images from "./FilterIMages";
 import coffeblog from "../../assets/blog/6VhPY27jdps.svg";
 import img2 from "../../assets/blog/pnmRtTHWqDM.svg";
 import img3 from "../../assets/blog/pnmRtTHWqDM.svg";
+import { BsArrowRightShort } from "react-icons/bs";
 import newscoffe from "../../assets/blog/image 6.png";
-const Blog = () => {
-  // const liStyle = {
-  //   width: "574px",
-  //   height: "23px",
-  //   fontStyle: "normal",
-  //   fontSize: "18px",
-  // };
+import { Link } from "react-router-dom";
+import faqimg from "../../assets/blog/coffeFAQ.svg";
+import Accordion from "./Accordion";
 
+const Blog = (props) => {
   return (
     <div className="blog">
       <div className="container">
@@ -122,27 +120,145 @@ const Blog = () => {
                 <button className="button_numbtag4">Тег №4</button>
                 <button className="button_numbtag5">Тег №5</button>
               </div>
-              <div className="card_news">
-                <img
-                  style={{ width: "280px", height: "283px", marginTop: "45px" }}
-                  src={newscoffe}
-                  alt=""
-                />
-                <div className="text_news">
-                  <ul className="ul_linews">
-                    <li>
+              <div className="posts-above">
+                <div className="post-card">
+                  <div className="post-left">
+                    <div className="post-img">
+                      <img
+                        src={newscoffe}
+                        style={{ marginTop: "45px" }}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div className="post-right">
+                    <h2>
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
-                    </li>
-                    <li>
+                    </h2>
+                    <p className="post-p">
                       Танзания – красивая африканская страна. Именно здесь
                       расположены легендарные географические объекты – вулкан
-                      Килиманджаро и озеро Виктория. Но наш интерес вызван не
-                      столько природными красотами, сколько кофе...
-                    </li>
-                    <li>Автор статьи: Иван Иванов</li>
-                  </ul>
+                      Килиманджаро и озеро Виктория.
+                    </p>
+                    <p>
+                      Но наш интерес вызван не столько природными красотами,
+                      сколько кофе...
+                    </p>
+                    <Link to="">
+                      <span>
+                        Подробнее{" "}
+                        <div className="arrow-right">
+                          <BsArrowRightShort />
+                        </div>
+                      </span>
+                    </Link>
+                  </div>
                 </div>
+              </div>
+              <div className="posts-above">
+                <div className="post-card">
+                  <div className="post-left">
+                    <div className="post-img">
+                      <img
+                        src={newscoffe}
+                        style={{ marginTop: "30px" }}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div className="post-right_two">
+                    <h2>
+                      Танзанийский кофе. Откуда он взялся и почему мы его так
+                      любим?
+                    </h2>
+                    <p className="post-p">
+                      Танзания – красивая африканская страна. Именно здесь
+                      расположены легендарные географические объекты – вулкан
+                      Килиманджаро и озеро Виктория.
+                    </p>
+                    <p>
+                      Но наш интерес вызван не столько природными красотами,
+                      сколько кофе...
+                    </p>
+                    <Link to="">
+                      <span>
+                        Подробнее{" "}
+                        <div className="arrow-right_two">
+                          <BsArrowRightShort />
+                        </div>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="posts-above">
+                <div className="post-card">
+                  <div className="post-left">
+                    <div className="post-img">
+                      <img
+                        src={newscoffe}
+                        style={{ marginTop: "30px" }}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div className="post-right_three">
+                    <h2>
+                      Танзанийский кофе. Откуда он взялся и почему мы его так
+                      любим?
+                    </h2>
+                    <p className="post-p">
+                      Танзания – красивая африканская страна. Именно здесь
+                      расположены легендарные географические объекты – вулкан
+                      Килиманджаро и озеро Виктория.
+                    </p>
+                    <p>
+                      Но наш интерес вызван не столько природными красотами,
+                      сколько кофе...
+                    </p>
+                    <Link to="">
+                      <span>
+                        Подробнее{" "}
+                        <div className="arrow-right">
+                          <BsArrowRightShort />
+                        </div>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="full_news">
+                <span>Показать еще</span>
+              </div>
+              <div className="linia_span"></div>
+              <div className="FAQ">
+                <h1 className="faq_ac">Частые вопросы:</h1>
+              </div>
+              <div className="faq_img">
+                <img src={faqimg} alt="" />
+              </div>
+              <div className="accordion_faq">
+                <Accordion
+                  title="Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?"
+                  content="Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития"
+                />
+                <Accordion
+                  title="Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?"
+                  content="Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития"
+                />
+                <Accordion
+                  title="Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?"
+                  content="Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития"
+                />
+                <Accordion
+                  title="Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?"
+                  content="Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития"
+                />
+                <Accordion
+                  title="Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?"
+                  content="Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития"
+                />
               </div>
             </div>
           </div>

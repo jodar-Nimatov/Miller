@@ -221,3 +221,196 @@
   }
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.login {
+  &_left {
+    width: 283px;
+    height: 525px;
+    background: #f9b300;
+    border-radius: 21px 0px 0px 21.271px;
+    & h1 {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-size: 24px;
+      text-align: center;
+      color: white;
+    }
+    & p {
+      text-align: center;
+      font-size: 18px;
+      font-family: "Gilroy";
+      font-style: normal;
+      margin-top: 21px;
+      color: white;
+    }
+    &_button {
+      width: 243px;
+      height: 49px;
+      justify-content: center;
+      margin: 74px 20px 30px 20px;
+      color: white;
+      border: 2px solid #ffffff;
+      border-radius: 5px;
+      background-color: var(--bacground-color);
+    }
+  }
+  &_inner {
+    display: flex;
+  }
+  &_logo {
+    position: relative;
+    width: 460px;
+    height: 306px;
+    margin-top: -30px;
+  }
+  &_right_logo {
+    width: 109px;
+    height: 51px;
+    margin: 30px 293px 30px 292px;
+  }
+  & h2 {
+    width: 325px;
+    height: 35px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    color: #000000;
+    margin: 30px 185px 40px 184px;
+  }
+
+  &_right_inputone {
+    width: 480px;
+    height: 49px;
+    background: #f6f6f6;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin: 40px 97px 15px 117px;
+    padding: 15px;
+  }
+  &_right_inputtwo {
+    width: 480px;
+    height: 49px;
+    background: #f6f6f6;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin: 15px 97px 15px 117px;
+    padding: 15px;
+  }
+  &_right_buttonlog {
+    width: 480px;
+    height: 49px;
+    background: #f9b300;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    margin: 15px 97px 162px 117px;
+    color: #ffffff;
+  }
+  &_right_reset {
+    color: red;
+  }
+}
+.overlow {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgb(20, 20, 20, 0.5);
+}
+.login_right {
+  width: 694px;
+  height: 525px;
+  background: #ffffff;
+}
+.h2registrALo {
+  width: 244px;
+  height: 50px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 50px;
+  color: #000000;
+  align-items: center;
+  text-align: center;
+  margin-top: -30px;
+}
+.text_cnt {
+  transform: translateY(-62px);
+}
+
+.login_right_inputonea {
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border-radius: 4px;
+}
+.fio_inputs {
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px 97px 15px 117px;
+}
+.email_reg {
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px 0px 15px 117px;
+}
+.number_inputss {
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px 97px 15px 117px;
+}
+.input_passwordd {
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px 97px 15px 117px;
+}
+
+.login_right_formik {
+  transform: translateY(-66px);
+}
+.login_right_logoss {
+  width: 109px;
+  height: 51px;
+  margin: 10px 293px 30px 292px;
+}
+.p_textreg {
+  width: 420px;
+  height: 34px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+}
+.loshara {
+  width: 420px;
+  height: 34px;
+  font-family: "Gilroy";
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+  margin: 14px 0px 3px 139px;
+}
