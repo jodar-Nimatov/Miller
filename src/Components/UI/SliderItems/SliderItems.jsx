@@ -27,7 +27,7 @@ const SliderItems = () => {
 
     const nextHandler = (el) => {
       el.style.transition = '1000ms'
-      el.style.transform = 'translateX(-420px)'
+      el.style.transform = 'translateX(-520px)'
     }
 
     const prevHandler = (el) => {

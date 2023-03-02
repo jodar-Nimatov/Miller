@@ -40,14 +40,16 @@ const Main = () => {
               <br />
               <button>Посмотреть каталог</button>
             </div>
-            <div className="fresh-right">
+            <div className="fresh-coffe-right">
               <Slider/>
             </div>
             <div >
             </div>
           </div>
+          <div className="gradient-right">
+            <img className="yellow-gradient-right" src={rightVector} alt="" />  
+          </div>
         </div>
-        <img className="yellow-gradient-right" src={rightVector} alt="" />
       </div>
     </div>
       <div className="catalog-products">

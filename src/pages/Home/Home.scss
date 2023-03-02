@@ -9,6 +9,7 @@
 .fresh-coffe-container {
   margin-top: 40px;
 }
+
 .fresh-coffe-left > h1 {
   width: 960px;
   height: 100px;
@@ -37,11 +38,15 @@
   cursor: pointer;
 }
 
+.gradient-right{
+  margin: 0 auto;
+}
+
 .yellow-gradient-right{
   max-width: 530px;
-  // position: absolute;
+  position: absolute;
   transform: translateY(-420px);
-  margin-left: 1329px;
+  margin-left: 1185px;
 }
 .yellow-gradient-left{
   max-width: 400px;

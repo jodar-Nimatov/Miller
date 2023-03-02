@@ -1,6 +1,6 @@
 .Slider{
     width: 1000px;
-    height: 560px;
+    height: 610px;
     margin-top: 115px;
     position: relative;
     transform: translate(-290px, -14px);
@@ -11,15 +11,13 @@
         display: flex;
         overflow: hidden;
         text-align: center;
-        gap: 40px;
         place-content: center;
         align-items: center;
-        padding: 15px;
     }
     &__inner{
         max-width: 1680px;
         display: flex;
-        gap: 65px;
+        gap: 30px;
     }
     .item-card{
         margin-top: 60px;
