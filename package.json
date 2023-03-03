@@ -32,7 +32,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "userServe" : "json-server -w userstore.json --port 4444",
+    "userServer" : "json-server -w userstore.json --port 4444",
     "server": "json-server -w db.json --port 3333",
     "dev": "concurrently \"npm run start\" \"npm run server\"",
     "start": "react-scripts start",

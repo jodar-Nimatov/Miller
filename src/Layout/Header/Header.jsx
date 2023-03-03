@@ -8,9 +8,6 @@ import millerlogom from "../../assets/modal/image26.svg";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import { Link, useNavigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
-import { auth } from "../../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { useUserAuth } from "../../utils/UserAuthContext";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [text, setText] = useState("");
@@ -22,31 +19,6 @@ const Header = () => {
   const [modalActive, setModalActive] = useState(false);
   const [modallastActive, setModallastActive] = useState(false);
   ////////
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const { logIn, googleSignIn } = useUserAuth();
-  const navigate = useNavigate();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    try {
-      await logIn(email, password);
-      navigate("/");
-    } catch (err) {
-      setError(err.message);
-    }
-  };
-  // const handleGoogleSignIn = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await googleSignIn();
-  //     navigate("/home");
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
 
   const handleInput = () => {
     setDisplay("none");
@@ -205,13 +177,12 @@ const Header = () => {
                           alt=""
                         />
                         <h2>Войти в личный кабинет</h2>
-                        <form className="login_right_forms" onSubmit={handleSubmit}>
+                        <form className="login_right_forms">
                           <input
                             className="login_right_inputone"
                             type="email"
                             placeholder="email"
                             required
-                            onChange={(e) => setEmail(e.target.value)}
                           />
                           <input
                             className="login_right_inputtwo"
@@ -219,7 +190,6 @@ const Header = () => {
                             type="password"
                             placeholder="password"
                             required
-                            onChange={(e) => setPassword(e.target.value)}
                           />
                           <button className="login_right_buttonlog">
                             Войти

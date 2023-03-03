@@ -3,51 +3,30 @@
     {
       "id": 1,
       "name": "rusya",
-      "surname": "buralkiev",
-      "email": "dayasamxz@gmail.com",
-      "password": "212eqwdwdwqe4"
+      "surname": "buralkiev8",
+      "email": "rusya@gmail.com",
+      "password": "2ahbdhrhwehs"
     },
     {
-      "id": 2
+      "id": 2,
+      "name": "rusyaasasdadasdasfdasda",
+      "surname": "buralkiev8",
+      "email": "rusya@gmail.com",
+      "password": "2ahbdhrhwehs"
     },
     {
+      "name": "Maksonovich",
+      "email": "ruslanloh@gmail.com",
+      "password": "0551234994",
+      "number": "RusyaLoh",
       "id": 3
     },
     {
-      "users": [
-        {
-          "id": 1,
-          "name": "rusya",
-          "surname": "buralkiev",
-          "email": "dayasamxz@gmail.com",
-          "password": "212eqwdwdwqe4"
-        }
-      ],
+      "name": "rusya",
+      "email": "maksonovichlox@gmail.com",
+      "password": "05252352",
+      "number": "hdsfbhwbdhwuirfwef",
       "id": 4
-    },
-    {
-      "users": [
-        {
-          "id": 1,
-          "name": "rusyaaaaa",
-          "surname": "buralkiev",
-          "email": "dayasamxz@gmail.com",
-          "password": "212eqwdwdwqe4"
-        }
-      ],
-      "id": 5
-    },
-    {
-      "users": [
-        {
-          "id": 1,
-          "name": "rusyaaaaaasfasfa",
-          "surname": "buralkiev",
-          "email": "dayasamxz@gmail.com",
-          "password": "212eqwdwdwqe4"
-        }
-      ],
-      "id": 6
     }
   ]
 }

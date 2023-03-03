@@ -14,7 +14,6 @@ import Store from "./pages/Contacts/Store";
 import "./scss/style.scss";
 import Cards from "./pages/Cards/Cards";
 import SignUp from "./pages/SignUp/SignUp";
-import { UserAuthContextProvider } from "./utils/UserAuthContext";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -35,7 +34,6 @@ function App() {
           <div className="inner three"></div>
         </div>
       ) : (
-        <UserAuthContextProvider>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route path="" element={<Home />} />
@@ -51,7 +49,6 @@ function App() {
               <Route path="/SignUp" element={<SignUp />} />
             </Route>
           </Routes>
-        </UserAuthContextProvider>
       )}
     </>
   );
