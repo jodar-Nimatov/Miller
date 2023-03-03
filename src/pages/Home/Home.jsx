@@ -122,6 +122,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+      {/* <div className="Advantage-back-top"></div> */}
       <img className="Advantage-back-top" src={AdBackTop} alt="" />
       <div className="advantages"> 
         <div className="container">
@@ -132,7 +133,6 @@ const Main = () => {
             </div>
             <div className="advantages-right">
               <h2>Почему стоит работать именно с нами?</h2>
-
                             <div className="advantages-block">
                                 <img className='advent-imgs' src={cofeIcon} alt="" />
                                 <div className="ad-block-content">

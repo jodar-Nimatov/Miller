@@ -203,6 +203,8 @@
 
 .advantages-back-bottom{
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 1903px;
   height: 200px;
   z-index: 100;
@@ -210,7 +212,8 @@
 
 .roast-coffe {
   height: 800px;
-  background: url("../../assets/Images/roastCoffe.png") no-repeat, center;
+  background: url("../../assets/Images/roastCoffe.png") no-repeat;
+  background-size: cover;
   transform: translateY(12px);
   .roast-coffe-inner {
     padding: 70px;
