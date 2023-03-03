@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "rusya",
+      "surname": "buralkiev",
+      "email": "dayasamxz@gmail.com",
+      "password": "212eqwdwdwqe4"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "users": [
+        {
+          "id": 1,
+          "name": "rusya",
+          "surname": "buralkiev",
+          "email": "dayasamxz@gmail.com",
+          "password": "212eqwdwdwqe4"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "users": [
+        {
+          "id": 1,
+          "name": "rusyaaaaa",
+          "surname": "buralkiev",
+          "email": "dayasamxz@gmail.com",
+          "password": "212eqwdwdwqe4"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "users": [
+        {
+          "id": 1,
+          "name": "rusyaaaaaasfasfa",
+          "surname": "buralkiev",
+          "email": "dayasamxz@gmail.com",
+          "password": "212eqwdwdwqe4"
+        }
+      ],
+      "id": 6
+    }
+  ]
+}

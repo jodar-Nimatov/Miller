@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import millerlogom from "../../assets/modal/image26.svg";
+import axios from "axios";
 
 import { useUserAuth } from "../../utils/UserAuthContext";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
@@ -21,6 +22,41 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const [showOTP, setShowOTP] = useState(false);
   const [user, setUser] = useState(null);
+  const [users, setUsers] = useState([]);
+
+  let url = "http://localhost:4444/users";
+
+  let handleSubmit = async (e) => {
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify({
+        name: e.target[0].value,
+        email: e.target[1].value,
+        password: e.target[2].value,
+        number: e.target[3].value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
+
+  // useEffect(() => {
+  //   axios
+  //     .post("http://localhost:4444/users", {
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         name: "Rusya",
+  //         email: "rusya@gmail.com",
+  //         password: "2qwfas",
+  //         number: "21706670",
+  //       }),
+  //     })
+  //     .then((res) => alert("Данные успешно созданы", res))
+  //     .catch((err) => alert("ошибка при создании", err));
+  // }, []);
 
   // function onCaptchVerify() {
   //   if (!window.recaptchaVerifier) {
@@ -38,25 +74,25 @@ const SignUp = () => {
   //   }
   // }
 
-  function onSignup() {
-    setLoading(true);
+  // function onSignup() {
+  //   setLoading(true);
 
-    // const appVerifier = window.recaptchaVerifier;
+  // const appVerifier = window.recaptchaVerifier;
 
-    const formatPh = "+" + ph;
+  //   const formatPh = "+" + ph;
 
-    signInWithPhoneNumber(auth, formatPh)
-      .then((confirmationResult) => {
-        window.confirmationResult = confirmationResult;
-        setLoading(false);
-        setShowOTP(true);
-        // toast.success("OTP sended successfully!");
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoading(false);
-      });
-  }
+  //   signInWithPhoneNumber(auth, formatPh)
+  //     .then((confirmationResult) => {
+  //       window.confirmationResult = confirmationResult;
+  //       setLoading(false);
+  //       setShowOTP(true);
+  //       // toast.success("OTP sended successfully!");
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       setLoading(false);
+  //     });
+  // }
 
   // function onOTPVerify() {
   //   setLoading(true);
@@ -73,16 +109,16 @@ const SignUp = () => {
   //     });
   // }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    try {
-      await signUp(email, password);
-      navigate("/");
-    } catch (err) {
-      setError(err.message);
-    }
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setError("");
+  //   try {
+  //     await signUp(email, password);
+  //     navigate("/");
+  //   } catch (err) {
+  //     setError(err.message);
+  //   }
+  // };
   return (
     <div>
       <div className="login">
@@ -106,6 +142,7 @@ const SignUp = () => {
 
               <form className="login_right_formik" onSubmit={handleSubmit}>
                 <input
+                  value={name}
                   className="fio_inputs"
                   type="text"
                   placeholder="Имя и фамилия"
@@ -113,6 +150,7 @@ const SignUp = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
                 <input
+                value={email}
                   className="email_reg"
                   type="email"
                   placeholder="email"
@@ -120,6 +158,7 @@ const SignUp = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
+                value={number}
                   className="number_inputss"
                   type="number"
                   placeholder="Телефон"
@@ -127,6 +166,7 @@ const SignUp = () => {
                   onChange={(e) => setNumber(e.target.value)}
                 />
                 <input
+                value={password}
                   className="input_passwordd"
                   type="password"
                   placeholder="Придумайте пароль"
