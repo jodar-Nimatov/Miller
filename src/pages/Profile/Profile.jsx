@@ -7,7 +7,7 @@ const Profile = () => {
   return (
     <div className="profile">
       <div className="container">
-        <div className="profile__inner">
+        <div className="profile__inner"> 
           <ul className="home">
             <Link to="/">
               <li>Главная</li>
