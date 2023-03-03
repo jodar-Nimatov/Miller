@@ -14,21 +14,23 @@ const CoffeeFilters = () => {
   const [key, setKey] = useState(0)
   const [tum, setTum] = useState(false)
   const oBack = tum ? '#f9b300' : '#e4e4e4'
+  let eventInner;
   const filterFun = (e, filt)=>{
-    let eventInner = e.target.localName == 'span' ? e.target : e.target.localName == 'p' ? e.target.previousElementSibling : e.target.firstChild 
+    setTum(!tum)
     if(e.target.classList[0] == 'white-circle'){
-      setTum(!tum)
-      e.target.style.background = oBack
+      eventInner = e.target
     }else if(e.target.localName == 'p'){
-      setTum(!tum)
-      e.target.previousElementSibling.style.background = oBack
+      eventInner = e.target.previousElementSibling
     }
-    if(filters[filt].includes(e.target.innerText) === false){
-      filters[filt] = [...filters[filt], e.target.innerText !== '' ? e.target.innerText : e.target.nextSibling.innerText]
+    if(eventInner.style.background == 'rgb(249, 179, 0)'){
+      //The micro-error is here ! (easy to fix)
+      filters[filt].filter(item => item == item.id)
     }
-    if(eventInner.style.background == 'rgb(228, 228, 228)'){
-      filters[filt] = filters[filt].filter(item => item == item.id)
+    if(filters[filt].includes(eventInner.nextSibling.innerText) === false && eventInner.style.background == 'rgb(228, 228, 228)'){
+      filters[filt] = [...filters[filt], eventInner.nextSibling.innerText]
     }
+    console.log(filters[filt])
+    eventInner.style.background = oBack
   }
   const handleGeography = (e) => {
     filterFun(e, 'coffeefrom')
@@ -98,7 +100,9 @@ const CoffeeFilters = () => {
                 <div className="filters-functions-right-column geography">
                   <h3>География</h3>
                     <div className="filters-functions-right-column-options">
-                      <div onClick={(e)=>handleGeography(e)} className="filters-functions-right-column-options-item">
+                      <div onClick={(e)=>{
+                        handleGeography(e)
+                        }} className="filters-functions-right-column-options-item">
                         <span className="white-circle"></span>
                         <p>Африка</p>
                       </div>

@@ -17,6 +17,7 @@ const CoffeeItems = ({ filters }) => {
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
   let url = 'http://localhost:3333/catalog?'
+  //Nujno upakovat vse peremennye v object!
   let geographyFilter = ''
   let kislinkaFilter = ''
   let pmethodFilter = ''
