@@ -1,3 +1,10 @@
+.contacts{
+  height: max-content;
+.contacts-inner{
+  margin-right: 100px;
+}
+}
+
 .home-cont {
   position: relative;
   width: 45px;
@@ -9,6 +16,7 @@
   font-size: 12px;
   line-height: 14px;
   color: #222222;
+  
 }
 .cont-blog {
   width: 54px;
@@ -31,6 +39,15 @@
   border-radius: 4px;
   cursor: pointer;
 }
+@media  (min-width:175px) {
+.switch-contact{
+  width: 340px;
+  height: 40px;  
+  background: #FFF7E1;
+  border: 1px solid #F9B300;
+  border-radius: 5px;
+}
+}
 .switcр-stores {
   width: 580px;
   height: 42px;
@@ -41,6 +58,16 @@
   border: 1px solid #c9c9c9;
   border-radius: 4px;
   cursor: pointer;
+}
+@media (min-width: 175px) {
+.switcр-stores{
+  width: 340px;
+  height: 40px;
+  margin-top: 10px;
+  background: #FFF7E1;
+  border: 1px solid #F9B300;
+  border-radius: 5px;
+}
 }
 .switcр-stores:focus {
   background: #fff7e1;
@@ -81,7 +108,7 @@
 }
 .header-texts {
   width: 227px;
-  height: 26px;
+  height: 65px;
   margin-top: 50px;
   font-family: "Gilroy";
   font-style: normal;
@@ -169,11 +196,12 @@
 }
 .aga {
     position: relative;
-    transform: translate(499px, -336px);
-
+    // transform: translate(499px, -336px);
+    top: -452px;
+    left:437px
 }
 
 .map{
-    margin-top: -76px;
+//  margin-top: 2px;
 }
 
