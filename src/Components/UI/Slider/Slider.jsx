@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 const colors = [
-  "../../../assets/Images/SliderCupCoffe.png",
-  "../../../assets/Images/SliderCupCoffe.png",
-  "../../../assets/Images/SliderCupCoffe.png",
+  "../../../assets/Images/coffeBgSlid.png",
+  "../../../assets/Images/coffeBgSlid.png",
+  "../../../assets/Images/coffeBgSlid.png",
 ];
+
 const delay = 2500;
 
 const Slider = () => {
