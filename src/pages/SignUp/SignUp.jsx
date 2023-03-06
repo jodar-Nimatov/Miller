@@ -4,6 +4,7 @@ import millerlogom from "../../assets/modal/image26.svg";
 import axios from "axios";
 
 import "./SignUp.scss";
+import { Link } from "react-router-dom";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -81,9 +82,11 @@ const SignUp = () => {
                   required="Придумайте пароль"
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <button className="login_right_buttonlog" type="submit">
-                  Зарегистрироваться
-                </button>
+                <Link to="/profile">
+                  <button className="login_right_buttonlog" type="submit">
+                    Зарегистрироваться
+                  </button>
+                </Link>
                 {/* {error && <alert variant="danger">{error}</alert>} */}
               </form>
             </div>

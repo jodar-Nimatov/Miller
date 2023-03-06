@@ -1,53 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "rusya",
-      "surname": "buralkiev8",
-      "email": "rusya@gmail.com",
-      "password": "2ahbdhrhwehs"
-    },
-    {
-      "id": 2,
-      "name": "rusyaasasdadasdasfdasda",
-      "surname": "buralkiev8",
-      "email": "rusya@gmail.com",
-      "password": "2ahbdhrhwehs"
-    },
-    {
-      "name": "Maksonovich",
-      "email": "ruslanloh@gmail.com",
-      "password": "0551234994",
-      "number": "RusyaLoh",
-      "id": 3
-    },
-    {
-      "name": "rusya",
-      "email": "maksonovichlox@gmail.com",
-      "password": "05252352",
-      "number": "hdsfbhwbdhwuirfwef",
-      "id": 4
-    },
-    {
-      "id": 5,
-      "name": "rusyaasasdadasdasfdasda",
-      "surname": "buralkiev8",
-      "email": "rusya@gmail.com",
-      "password": "2ahbdhrhwehs"
-    },
-    {
-      "id": 6,
-      "name": "rusyaasasdadasdasfdasda",
-      "surname": "buralkiev8",
-      "email": "rusya@gmail.com",
-      "password": "2ahbdhrhwehs"
-    },
-    {
-      "name": "jhgfchjkl",
-      "email": "kmkjnhbgvhbj@gmail.com",
-      "password": "05524234234",
-      "number": "mkjhgvhjklkjh2j34632",
-      "id": 7
+      "id":1,
+      "name": "jodar",
+      "surname": "nimatov",
+      "phonenumber": "+996550520666",
+      "email": "nimatovjoodar@gmail.com",
+      "password": "21706670"
     }
   ]
 }
