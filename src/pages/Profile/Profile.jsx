@@ -7,6 +7,12 @@ import { Link } from "react-router-dom";
 
 const Profile = () => {
     const [show, setShow] = useState(true)
+    // function click() {
+    //     let a = document.querySelector('classInput').value;
+    //     document.querySelector('ClassDiv').innerHTML = a
+    // }
+  
+
 
     return (
 
@@ -25,17 +31,18 @@ const Profile = () => {
 
                     </ul>
 
-                    <div className="profile__cart">
+                    <div className="profile__card">
                         <div className="profile__name">
                             <div className="profile__joodar">
                                 <img className="joodar" src={joodar} alt="" />
-                                <button className="btn__joodar">Изменить</button>
+                                <button className="btn__joodar" type="button" >Изменить</button>   
                             </div>
 
                             <ul>
                                 <li className="name__joodar">Ниматов Жоодар, Здраствуйте!</li>
-                                <li>nimatov.joodar@gmail.com</li>
-                                <li>+996707568734</li>
+                                <li>nimatovjoodar@gmail.com</li>
+                                <li>+996550520666</li>
+                               
                                 <li>Пароль:*********</li>
                             </ul>
 
@@ -45,17 +52,17 @@ const Profile = () => {
                             <div className="discount__inner">
                                     <button className="discount__btn" onClick={()=>setShow(!show)}>?</button> 
                                 <div className={`discount-block ${show ? 'block' : 'none'}`}>
-                                    <h1 className="discount_1">Ваша скидка: 10%</h1>
+                                    <h1 className="discount__text">Ваша скидка: 10%</h1>
                                     <li>Сумма заказов: 5675 ₽*</li>
                                     <p>*До скидки 15% не хватает покупок на сумму: 1255 ₽</p> 
                                    
                                 </div> 
                                        
                                 <div className={`discount-block ${show ? 'none' : 'block'}`}>
-                                    <h1 className="discount_2">До скидки 15% не хватает покупок на сумму: 1255 ₽</h1>
-                                    <p>Скидка 10% - сумма покупок 5000 ₽ </p>
-                                    <p>Скидка 15% - сумма покупок 7000 ₽ </p>
-                                    <p>Скидка 20% - сумма покупок 10000 ₽ </p>
+                                    <h1 className="discount__title">До скидки 15% не хватает покупок на сумму: 1255 ₽</h1>
+                                    <p className="discount__p">Скидка 10% - сумма покупок 5000 ₽ </p>
+                                    <p className="discount__p">Скидка 15% - сумма покупок 7000 ₽ </p>
+                                    <p className="discount__p">Скидка 20% - сумма покупок 10000 ₽ </p>
                                 </div>
                        
                             </div>
@@ -70,8 +77,8 @@ const Profile = () => {
                             <button>Текущие заказы</button>
                             <button>Завершенные</button>
                             <div className="orders__p">
-                                <p>01.08.2021 12:24:00 - оплачено</p>
-                                <p>Дата доставки: 03.08.2021</p>
+                                <p>01.03.2023 18:24:00 - оплачено</p>
+                                <p>Дата доставки: 01.03.2023</p>
 
                                  </div>
 
@@ -118,28 +125,28 @@ const Profile = () => {
                     </div>
 
 
-                    <div className="coffee__title">
-                        <h1>Персональные акции</h1>
-                        <div className="coffee__img">
+                    <div className="slider">
+                        <h1 className="slider__title">Персональные акции</h1>
+                        <div className="slides">
                             <div className="coffee">
                                 <img src={coffee} alt="" />
                                 <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                                <p>Срок акции: до 31.08.2021</p>
+                                <p>Срок акции: до 10.03.2023</p>
                             </div>
                             <div className="coffee">
                                 <img src={coffee} alt="" />
-                                <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                                <p>Срок акции: до 31.08.2021</p>
+                                <h1>Активных покупателей есть большие скидки!</h1>
+                                <p>Срок акции: до 11.03.2023</p>
                             </div>
                             <div className="coffee">
                                 <img src={coffee} alt="" />
-                                <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                                <p>Срок акции: до 31.08.2021</p>
+                                <h1>Только сегодня большие скидки на кофе!</h1>
+                                <p>Срок акции: до 1.03.2023</p>
                             </div>
                             <div className="coffee">
                                 <img src={coffee} alt="" />
-                                <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                                <p>Срок акции: до 31.08.2021</p>
+                                <h1>На 8 марта большие скидки успей купить!</h1>
+                                <p>Срок акции: до 8.03.2023</p>
                             </div>
                         </div>
 
