@@ -175,7 +175,7 @@
   }
 }
 
-.discount {
+.discount-profile {
   text-align: left;
   background: #f9b300;
   border-radius: 14px;
@@ -223,7 +223,7 @@
 }
 
   @media(max-width: 376px) {
-    .discount {
+    .discount-profile {
       width: 374px;
       height: 156px;
       border-radius: 0px 0px 10px 10px;
@@ -235,7 +235,7 @@
   
 
 
-.discount li {
+.discount-profile li {
   color: #ffffff;
   margin-top: 12px;
   font-weight: 700;
@@ -453,9 +453,9 @@
 
 }
 
-.slider {
+.slider__profile {
   font-family: 'Gilroy';
-
+  
   @media(max-width: 376px) {
   width: 100%;
   max-width: 376px;
@@ -466,7 +466,7 @@
   }
 }
 
-.slides {
+.slides__inner {
   display: flex;
   
 
@@ -476,7 +476,7 @@
   }
 }
 
-.slides img {
+.slides__inner img {
   padding-top: 40px;
   padding-right: 20px;
   
@@ -515,7 +515,7 @@ height: 51px;
   }
 }
 
-.slider p {
+.slider__profile p {
   transform: translate(23px, -94px);
   font-weight: 500;
   font-size: 14px;

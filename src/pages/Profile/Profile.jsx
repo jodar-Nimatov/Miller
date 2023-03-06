@@ -48,7 +48,7 @@ const Profile = () => {
 
                         </div>
 
-                        <div className="discount">
+                        <div className="discount-profile">
                             <div className="discount__inner">
                                     <button className="discount__btn" onClick={()=>setShow(!show)}>?</button> 
                                 <div className={`discount-block ${show ? 'block' : 'none'}`}>
@@ -125,9 +125,9 @@ const Profile = () => {
                     </div>
 
 
-                    <div className="slider">
+                    <div className="slider__profile">
                         <h1 className="slider__title">Персональные акции</h1>
-                        <div className="slides">
+                        <div className="slides__inner">
                             <div className="coffee">
                                 <img src={coffee} alt="" />
                                 <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
