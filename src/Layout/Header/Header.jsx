@@ -6,7 +6,7 @@ import userlogo from "../../assets/Header/user.svg";
 import burger from "../../assets/Header/Group 165.svg";
 import millerlogom from "../../assets/modal/image26.svg";
 import coffeelogo from "../../assets/modal/Group 245.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -29,6 +29,9 @@ const Header = () => {
 
   const handleopenmodal1 = () => {
     setIsOpen(!modalIsOpen);
+  };
+  const closemodal = () => {
+    modalIsOpen(!setIsOpen);
   };
 
   const handleshow = () => {
