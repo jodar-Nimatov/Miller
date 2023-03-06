@@ -14,11 +14,6 @@ const Header = () => {
   const [title, setTitle] = useState("Каталог товаров");
   const [display, setDisplay] = useState("block");
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [modalIsOpen2, setIsOpen2] = useState(false);
-  const [modalIsOpen3, setIsOpen3] = useState(false);
-  const [modalActive, setModalActive] = useState(false);
-  const [modallastActive, setModallastActive] = useState(false);
-  ////////
 
   const handleInput = () => {
     setDisplay("none");
@@ -141,7 +136,7 @@ const Header = () => {
                 alt="header search"
               />
             </a>
-            <Link to="">
+            <Link to="/cart">
               <img
                 className="header-right-icon header-basket"
                 src={basketlogo}

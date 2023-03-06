@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Layout from "./Layout/Layout";
@@ -14,6 +14,8 @@ import VendingFilters from "./pages/Catalog/Vending/Vending-Filters/Vending-Filt
 import HealthyFilters from "./pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters";
 import Cards from "./pages/Cards/Cards";
 import SignUp from "./pages/SignUp/SignUp";
+import Cart from './pages/Cart/Cart'
+
 
 function App() {
   return (
@@ -32,7 +34,12 @@ function App() {
         <Route path="/catalog/healthy" element={<HealthyFilters />} />
         <Route path="/cards" element={<Cards />} />
         {/* Каталог товаров */}
-        <Route path="/profile" element={<Profile />} />
+        {/* Корзина */}
+        <Route path='/cart' element={<Cart/>}/>
+        {/* Корзина */}
+        {/* Профиль пользователя */}
+        <Route path='/profile' element={<Profile/>}/>
+        {/* Профиль пользователя */}
       </Route>
     </Routes>
   );
