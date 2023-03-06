@@ -31,7 +31,7 @@ const Main = () => {
               <button>Посмотреть каталог</button>
             </div>
             <div className="fresh-right">
-              <Slider />
+              <Slider/>
             </div>
           </div>
         </div>

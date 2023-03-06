@@ -13,10 +13,8 @@
 .fresh-coffe-left > h1 {
   width: 960px;
   height: 100px;
-  left: 60px;
-  top: 156px;
 
-  font-size: 80px;
+  font-size: 56px;
   line-height: 100px;
 }
 .fresh-coffe-left > p {
@@ -43,17 +41,18 @@
 .catalog-products {
   height: 700px;
   .catalog-inner {
-    padding: 40px;
+    padding-top: 40px;
+    transform: translateX(-80px);
   }
   .catalog-inner > h2 {
-    font-size: 50px;
-    padding-left: 116px;
+    font-size: 35px;
   }
   .catalog-items {
     display: flex;
     justify-content: center;
     padding-top: 80px;
     gap: 20px;
+    width: max-content;
   }
   .catalog-card {
     position: relative;
@@ -91,7 +90,7 @@
 }
 
 .sale-items {
-  height: max-content;
+  height: 600px;
   background-color: aquamarine;
   .sale-items-inner {
     padding-top: 40px;
@@ -127,17 +126,19 @@
   .advantages-inner {
     padding-top: 200px;
     display: flex;
+    gap: 140px;
   }
   .advantages-left {
     display: flex;
     position: relative;
+    transform: translateX(-240px);
   }
   .advantages-left > .img2 {
     position: absolute;
     left: 125px;
 
-    max-width: 600px;
-    max-height: 400px;
+    max-width: 700px;
+    max-height: 500px;
   }
   .advantages-left > .img1 {
     position: absolute;
@@ -145,8 +146,8 @@
     left: 188px;
     top: 105px;
 
-    max-width: 400px;
-    max-height: 300px;
+    max-width: 500px;
+    max-height: 400px;
   }
   .advantages-right {
     transform: translateX(700px);
