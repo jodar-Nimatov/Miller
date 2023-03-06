@@ -29,7 +29,7 @@ const Slider = () => {
             {
               posts.map((item) => {
                 return (
-                  <div className='insta-post-img'>
+                  <div key={item.id} className='insta-post-img'>
                     <img src={item.image} alt="" />
                   </div>
                 )

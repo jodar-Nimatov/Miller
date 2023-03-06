@@ -43,7 +43,8 @@ const Slider = () => {
           })}
         </div>
         <div className="slideshowDots">
-          {colors.map((_, idx) => (
+          {colors.map((_, idx) => {
+            (
             <div
               key={idx}
               className={`slideshowDot${index === idx ? " active" : ""}`}
@@ -51,7 +52,7 @@ const Slider = () => {
                 setIndex(idx);
               }}
             ></div>
-          ))}
+          )})}
         </div>
       </div>
     </div>

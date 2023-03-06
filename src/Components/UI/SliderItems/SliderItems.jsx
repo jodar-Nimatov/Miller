@@ -47,7 +47,7 @@ const SliderItems = () => {
                     <div key={item.id} className="coffee__cards-inner-row-card slider-card">
                       <div className="coffee__cards-inner-row-card-top">
                         <div className="coffee__cards-inner-row-card-top-left">
-                          {item.category.map(cy => <p key={cy.length}>{cy == 'Скидки' ? <><div className="discount">%</div>{cy}</> : cy}</p>)}
+                          {item.category.map(cy => <p key={cy.length}>{cy == 'Скидки' ? <><span className="discount">%</span>{cy}</> : cy}</p>)}
                         </div>
                         <div className="coffee__cards-inner-row-card-top-right">
                           <select>
