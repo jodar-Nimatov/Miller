@@ -4,6 +4,8 @@ import joodar from "../../assets/Profile/Joodar.png";
 import { Link } from "react-router-dom";
 
 const Profile = () => {
+
+  
   return (
     <div className="profile">
       <div className="container">
@@ -12,13 +14,12 @@ const Profile = () => {
             <Link to="/">
               <li>Главная</li>
             </Link>
-
             <Link to="/Profile">
               <li>Личный кабинет</li>
             </Link>
           </ul>
 
-          <div className="profile__cart">
+          <div className="profile__card">
             <div className="profile__name">
               <div className="profile__joodar">
                 <img className="joodar" src={joodar} alt="" />
@@ -32,17 +33,17 @@ const Profile = () => {
                 <li>Пароль:*********</li>
               </ul>
             </div>
-            <div className="discount">
+            <div className="discount__profile">
               <div className="discount__inner">
                 <div className="discount__button">
-                  <h1>Ваша скидка: 10%</h1>
-                  <Link to="#">
+                  <h1 className="discount__text">Ваша скидка: 10%</h1>
+                  <Link to="#"> 
                     <button className="discount__btn">?</button>
                   </Link>
                 </div>
 
                 <li>Сумма заказов: 5675 ₽*</li>
-                <p>*До скидки 15% не хватает покупок на сумму: 1255 ₽</p>
+                <p className="discount__title">*До скидки 15% не хватает покупок на сумму: 1255 ₽</p>
               </div>
             </div>
           </div>
@@ -94,25 +95,25 @@ const Profile = () => {
             </ul>
           </div>
 
-          <div className="coffee__title">
+          <div className="slider__profile">
             <h1>Персональные акции</h1>
-            <div className="coffee__img">
-              <div className="coffee">
+            <div className="slides__inner ">
+              <div className="coffee__profile">
                 <img src={coffee} alt="" />
                 <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
                 <p>Срок акции: до 31.08.2021</p>
               </div>
-              <div className="coffee">
+              <div className="coffee__profile">
                 <img src={coffee} alt="" />
                 <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
                 <p>Срок акции: до 31.08.2021</p>
               </div>
-              <div className="coffee">
+              <div className="coffee__profile">
                 <img src={coffee} alt="" />
                 <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
                 <p>Срок акции: до 31.08.2021</p>
               </div>
-              <div className="coffee">
+              <div className="coffee__profile">
                 <img src={coffee} alt="" />
                 <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
                 <p>Срок акции: до 31.08.2021</p>
