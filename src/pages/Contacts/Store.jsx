@@ -7,21 +7,20 @@ const Contacts = () => {
     <div className="contacts">
       <div className="container">
         <div className="contacts-inner">
-          <div className="contacts-left">
             <li className="home-cont">Главная</li>
             <li className="cont-blog">Контакты</li>
-
-            <div className="btn-switch-text">
               <div className="switch-click">
-                <button className="switch-contact">
-                  <Link to="/contacts">Контакты</Link>
-                </button>
+                <Link to="/contacts">
+                  <button className="switch-contact">Контакты</button>
+                </Link>
                 <button className="switcр-stores">
                   <Link to="/contacts" className="switch_contacts">
                     Наши Магазины
                   </Link>
                 </button>
               </div>
+          <div className="contacts-left forDF">
+            <div className="btn-switch-text">
               <h4 className="store-t">Наши магазины г. Санкт-Петербург</h4>
               <p className="adres-c">Гороховая, 53 Московский, 53</p>
 
@@ -32,10 +31,10 @@ const Contacts = () => {
                 15 Панина 2а Ленинский 8Б Аксакова 133 Липовая Аллея 2
               </p>
             </div>
-          </div>
-        </div>
         <div className="maps">
           <YandexMaps />
+        </div>
+          </div>
         </div>
       </div>
     </div>

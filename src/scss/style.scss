@@ -4,11 +4,19 @@
 @import "../Layout/Footer/Footer.scss";
 @import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
 @import "../pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters.scss";
-
+@import "../pages/Catalog/Tea/Tea-Filters/Tea-Filters.scss";
+@import "../pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters.scss";
+@import "../pages/Catalog/Tea/Tea-Items/Tea-Items.scss";
 @import "../pages/Contacts/Contact.scss";
 @import "../pages/Blog/Blog.scss";
+@import "../pages/Contacts/Contact.scss";
+@import "../Components/Instagram/instaram.scss";
 @import "../Components/News/News.scss";
-
+@import "../Components//UI/SliderItems/SliderItems.scss";
+@import "../Components/UI/Slider/Slider.scss";
+@import "../Components/UI/InstaSlider/Slider.scss";
+@import "../pages/Cart/Cart.scss";
+ 
 * {
   padding: 0;
   margin: 0;
@@ -19,6 +27,12 @@
   max-width: 1210px;
   padding: 0 15px;
   margin: 0 auto;
+  @media (max-width: 470px) {
+    padding: 0;
+  }
+  @media (min-width: 1556px) {
+    min-width: 1556px;
+  }
 }
 a:active,
 button:active {
@@ -53,4 +67,7 @@ body {
 .wrapper {
   min-height: 100%;
   // font-family: Gilroy ;
+}
+.forDF{
+  display: flex;
 }

@@ -151,7 +151,7 @@
   color: #222222;
 }
 .store-t {
-  width: 421px;
+  // width: 421px;
   height: 26px;
   margin-top: 64px;
   font-family: "Gilroy";
@@ -173,7 +173,7 @@
   color: #000000;
 }
 .t-t {
-  width: 444px;
+  // width: 444px;
   height: 27px;
   margin-top: 25px;
   font-family: "Gilroy";
@@ -195,12 +195,16 @@
   color: #000000;
 }
 .aga {
-    position: relative;
+    // position: relative;
     // transform: translate(499px, -336px);
     top: -452px;
     left:437px
 }
-
+.contacts-left.forDF{
+  @media (max-width: 1139px) {
+    display: block;
+  }
+}
 .map{
 //  margin-top: 2px;
 }
