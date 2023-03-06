@@ -4,14 +4,22 @@ import searchlogo from "../../assets/Header/search.svg";
 import basketlogo from "../../assets/Header/basket.svg";
 import userlogo from "../../assets/Header/user.svg";
 import burger from "../../assets/Header/Group 165.svg";
-import { Link } from "react-router-dom";
+import millerlogom from "../../assets/modal/image26.svg";
+import coffeelogo from "../../assets/modal/Group 245.svg";
+import { Link, useNavigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
-
 const Header = () => {
   const [show, setShow] = useState(false);
   const [text, setText] = useState("");
   const [title, setTitle] = useState("Каталог товаров");
   const [display, setDisplay] = useState("block");
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen2, setIsOpen2] = useState(false);
+  const [modalIsOpen3, setIsOpen3] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
+  const [modallastActive, setModallastActive] = useState(false);
+  ////////
+
   const handleInput = () => {
     setDisplay("none");
   };
@@ -23,6 +31,11 @@ const Header = () => {
       setDisplay("block")
     );
   };
+
+  const handleopenmodal1 = () => {
+    setIsOpen(!modalIsOpen);
+  };
+
   const handleshow = () => {
     setShow(!show);
   };
@@ -54,7 +67,6 @@ const Header = () => {
                 alt="header logo"
               />
             </Link>
-            
           </div>
           <div className="header__center">
             <ul className={`header__list ${display}`}>
@@ -136,16 +148,63 @@ const Header = () => {
                 alt="header basket"
               />
             </Link>
-            <Link to="/Profile">
-              <img
-                className="header-right-icon header-user"
-                src={userlogo}
-                alt="header user"
-              />
-            </Link>
+            {/* <Link to="/Profile"> */}
+            <img
+              className="header-right-icon header-user"
+              src={userlogo}
+              alt="header user"
+              onClick={handleopenmodal1}
+            />
+            {modalIsOpen && (
+              <div className="overlow">
+                <div className="login">
+                  <div className="container">
+                    <div className="login_inner">
+                      <div className="login_left">
+                        <img className="login_logo" src={coffeelogo} alt="" />
+                        <h1>Регистрация</h1>
+                        <p>Получайте скидки первыми!?</p>
+                        <Link to="/SignUp">
+                          <button className="login_left_button">
+                            Зарегистрироваться
+                          </button>
+                        </Link>
+                      </div>
+                      <div className="login_right">
+                        <img
+                          className="login_right_logo"
+                          src={millerlogom}
+                          alt=""
+                        />
+                        <h2>Войти в личный кабинет</h2>
+                        <form className="login_right_forms">
+                          <input
+                            className="login_right_inputone"
+                            type="email"
+                            placeholder="email"
+                            required
+                          />
+                          <input
+                            className="login_right_inputtwo"
+                            BsFillEyeFill
+                            type="password"
+                            placeholder="password"
+                            required
+                          />
+                          <button className="login_right_buttonlog">
+                            Войти
+                          </button>
+                          {/* <button className="login_right_reset">Забыли пароль?</button> */}
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {/* </Link> */}
           </div>
         </div>
-        {/* </div> */}
       </div>
       <div className="white"></div>
     </>

@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "rusya",
+      "surname": "buralkiev8",
+      "email": "rusya@gmail.com",
+      "password": "2ahbdhrhwehs"
+    },
+    {
+      "id": 2,
+      "name": "rusyaasasdadasdasfdasda",
+      "surname": "buralkiev8",
+      "email": "rusya@gmail.com",
+      "password": "2ahbdhrhwehs"
+    },
+    {
+      "name": "Maksonovich",
+      "email": "ruslanloh@gmail.com",
+      "password": "0551234994",
+      "number": "RusyaLoh",
+      "id": 3
+    },
+    {
+      "name": "rusya",
+      "email": "maksonovichlox@gmail.com",
+      "password": "05252352",
+      "number": "hdsfbhwbdhwuirfwef",
+      "id": 4
+    }
+  ]
+}
