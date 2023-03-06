@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 const colors = [
-  "../../../assets/Images/SliderCupCoffe.png",
-  "../../../assets/Images/SliderCupCoffe.png",
-  "../../../assets/Images/SliderCupCoffe.png",
+  "../../../assets/Images/coffeBgSlid.png",
+  "../../../assets/Images/coffeBgSlid.png",
+  "../../../assets/Images/coffeBgSlid.png",
 ];
+
 const delay = 2500;
 
 const Slider = () => {
@@ -42,7 +43,8 @@ const Slider = () => {
           })}
         </div>
         <div className="slideshowDots">
-          {colors.map((_, idx) => (
+          {colors.map((_, idx) => {
+            (
             <div
               key={idx}
               className={`slideshowDot${index === idx ? " active" : ""}`}
@@ -50,7 +52,7 @@ const Slider = () => {
                 setIndex(idx);
               }}
             ></div>
-          ))}
+          )})}
         </div>
       </div>
     </div>

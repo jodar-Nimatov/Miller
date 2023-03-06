@@ -9,11 +9,21 @@ import CoffeImg from "../../assets/Images/CatalogCoffe.png";
 import CatalogTea from "../../assets/Images/CatalogTea.png";
 import CoffeMachine from "../../assets/Images/CoffeMachine.png";
 import CatalogKasha from "../../assets/Images/CatalogKasha.png";
+import rightVector from '../../assets/Images/Vector.png'
+import leftVector from '../../assets/Images/vectorLeft.png'
+import leftVectorCoffe from '../../assets/Images/leftVectorCoffe.png'
+import AdBackTop from '../../assets/Images/AdBackTop.png'
+import adAboveImg from '../../assets/Images/adAboveImg.png'
+import roactCoffebottom from '../../assets/Images/roastCoffeBottom.png'
 import News from '../../Components/News/News'
+import Instagram from './../../Components/Instagram/instagram';
+import SliderItems from "../../Components/UI/SliderItems/SliderItems";
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   return (
     <div className="wrapper">
+      <div className="fresh-coffe-back">
       <div className="fresh-coffe">
         <div className="container">
           <div className="fresh-coffe-inner">
@@ -30,16 +40,27 @@ const Main = () => {
               <br />
               <button>Посмотреть каталог</button>
             </div>
-            <div className="fresh-right">
+            <div className="fresh-coffe-right">
               <Slider/>
             </div>
+            <div >
+            </div>
+          </div>
+          <div className="gradient-right">
+            <img className="yellow-gradient-right" src={rightVector} alt="" />  
           </div>
         </div>
       </div>
+    </div>
       <div className="catalog-products">
         <div className="container">
           <div className="catalog-inner">
             <h2>Каталоги нашей продукции</h2>
+            <div className="catalog-content">
+              <div>
+                <img className="yellow-gradient-left" src={leftVector} alt="" />
+                <img className="gradient-coffe-img" src={leftVectorCoffe} alt="" />
+              </div>
             <div className="catalog-items">
               <div className="catalog-card">
                 <div className="catalog-card_img">
@@ -49,7 +70,7 @@ const Main = () => {
                   <p>Свежеобжаренный кофе</p>
                 </div>
                 <br />
-                <button className="catalog-card_button">Купить</button>
+                <button className="catalog-card_button"><Link to='/catalog/coffee'>Купить</Link></button>
               </div>
               <div className="catalog-card">
                 <div className="catalog-card_img">
@@ -59,7 +80,7 @@ const Main = () => {
                   <p>Чай и кофейные напитки</p>
                 </div>
                 <br />
-                <button className="catalog-card_button">Купить</button>
+                <button className="catalog-card_button"><Link to='/catalog/tea'>Купить</Link></button>
               </div>
               <div className="catalog-card">
                 <div className="catalog-card_img">
@@ -69,7 +90,7 @@ const Main = () => {
                   <p>Продукция для вендинга</p>
                 </div>
                 <br />
-                <button className="catalog-card_button">Купить</button>
+                <button className="catalog-card_button"><Link to='/catalog/wanding'>Купить</Link></button>
               </div>
               <div className="catalog-card">
                 <div className="catalog-card_img">
@@ -79,8 +100,9 @@ const Main = () => {
                   <p>Здоровое питание</p>
                 </div>
                 <br />
-                <button className="catalog-card_button">Купить</button>
+                <button className="catalog-card_button"><Link to='/catalog/healthy'>Купить</Link></button>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -94,11 +116,15 @@ const Main = () => {
               распродаж или в течение действия ограниченных предложений, но и
               пользоваться скидками постоянно!
             </p>
-            <div className="sale-items-slider"></div>
+            <div className="sale-items-slider">
+              <SliderItems/>
+            </div>
           </div>
         </div>
       </div>
-      <div className="advantages">
+      {/* <div className="Advantage-back-top"></div> */}
+      <img className="Advantage-back-top" src={AdBackTop} alt="" />
+      <div className="advantages"> 
         <div className="container">
           <div className="advantages-inner">
             <div className="advantages-left">
@@ -107,7 +133,6 @@ const Main = () => {
             </div>
             <div className="advantages-right">
               <h2>Почему стоит работать именно с нами?</h2>
-
                             <div className="advantages-block">
                                 <img className='advent-imgs' src={cofeIcon} alt="" />
                                 <div className="ad-block-content">
@@ -134,6 +159,9 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+            <div>
+              <img className="advantages-back-bottom" src={adAboveImg} alt="" />
+            </div>
             <div className="roast-coffe">
                 <div className="container">
                     <div className="roast-coffe-inner">
@@ -156,6 +184,9 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+              <img className="roactCoffebottom" src={roactCoffebottom} alt="" />
+            <News/>
+            <Instagram/>
         </div>
     )
 }
