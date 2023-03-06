@@ -35,6 +35,7 @@ const Main = () => {
               </p>
               <br />
               <span>
+                {/* Adaptivka mazafaka */}
                 Мы обжариваем кофе <b>каждые выходные</b>.
               </span>
               <br />
