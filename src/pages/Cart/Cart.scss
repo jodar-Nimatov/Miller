@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 1180px;
+  }
+  .Cart{
+    background-color: rgba(255, 247, 225, 1);
+  }
+  .Cart-ul{
+    display: flex;
+  }
+//карточка товара в корзине
+  .Cart-product{
+    width: 1180px;
+    border-radius: 14px;
+    border: 0.708508px solid #E4E4E4;
+    box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+    background-color: white;
+  }
+  .Cart-inside{
+    margin-left: 100px;
+  }
+  .Cart-product-up{
+    display: flex;
+    padding-top: 80px;
+    text-align: center;
+    gap: 619px;
+  }
+  .Product-delete{
+    width: 106px;
+    height: 32px;
+    background: rgba(255, 247, 225, 1);
+    border: 1px solid #F9B300;
+    border-radius: 4px;
+    color: rgba(249, 179, 0, 1);
+  }
+  .Cart-product-middle{
+    display: flex;
+    padding-top: 45px;
+  }
+  .Cart-product-mid-left{
+    display: flex;
+    gap: 60px;
+  }
+  .Cart-product-mid-right{
+    display: flex;
+    padding-left: 190px;
+    gap: 70px;
+  }
+  .Cart-card{
+    width: 980px;
+    height: 122px;
+    margin: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+    background-color: rgba(252, 252, 252, 1);
+    border: 0.708508px solid #F0F0F0;
+    border-radius: 14px;
+    gap: 30px;
+  }
+  .Card-left{
+    display: flex;
+    align-items: center;
+    button{
+      padding-right: 84px;
+    }
+    img{
+      padding-right: 15px;
+    }
+  }
+  .Card-close{
+    border: 0;
+    background: rgba(252, 252, 252, 1);
+    padding-left: 43px;
+  }
+  .Card-right{
+    display: flex;
+    align-items: center;
+    padding-left: 85px;
+    gap: 50px;
+    font-size: 18px;
+  }
+  .Card-click{
+    display: flex;
+    width: 170px;
+    height: 50px;
+    align-items: center;
+    background: #F6F6F6;
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+  }
+  .Card-click button {
+    padding: 15px 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .Card-click p {
+    padding: 0 35px 0 35px;
+  }
+  //карточка доставки
+  .Cart-delivery{
+    width: 1180px;
+    height: 543px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    border: 0.708508px solid #E4E4E4;
+    box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+    border-radius: 14px;
+  }
+  .Delivery-inside{
+    margin-left: 100px;
+  }
+  .Delivery-head{
+    padding: 50px 0 35px 0;
+  }
+  .Delivery-input input{
+    display: block;
+    width: 480px;
+    height: 49px;
+    margin-bottom: 15px;
+    text-indent: 40px;
+    background: #FCFCFC;
+    border: 1px solid #F6F6F6;
+    border-radius: 4px;
+  }
+  .Delivery-left{
+    display: inline-block;
+  }
+  .Delivery-right{
+    margin-left: 20px;
+    display: inline-block;
+  }
+  .Delivery-btn{
+    width: 980px;
+    height: 49px;
+    background: #FFF7E1;
+    border: 0.708508px solid #F9B300;
+    border-radius: 4px;
+    color: #F9B300;
+    font-size: 18px;
+  }
+  //Карточка промокода
+  .Cart-down{
+    margin: 20px 0 150px 0;
+    display: flex;
+  }
+  .Cart-promo{
+    width: 730px;
+    height: 317px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+    border-radius: 14px;
+  }
+  .Promo-inside{
+    margin-left: 100px;
+  }
+  .Promo-head{
+    padding-top: 40px;
+  p{
+    padding: 20px 0 30px 0;
+    width: 380px;
+    font-size: 14px;
+    font-family: Gilroy;
+  }
+  }
+  .Promo-inp{
+    width: 480px;
+    height: 49px;
+    background: #FCFCFC;
+    border: 1px solid #F6F6F6;
+    border-radius: 4px;
+    text-indent: 40px;
+  }
+  .Promo-inp::placeholder{
+    color: rgba(196, 196, 196, 1);
+  }
+  .Promo-btn{
+    width: 480px;
+    height: 49px;
+    margin-top: 25px;
+    background: #FFF7E1;
+    border: 1px solid #F9B300;
+    border-radius: 4px;
+    color: rgba(249, 179, 0, 1);
+  }
+  //карточка итога
+  .Cart-total{
+    width: 480px;
+    height: 317px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+    border-radius: 14px;
+  }
+  .Total-inside{
+    margin-left: 50px;
+  }
+  .Total-head{
+    display: flex;
+    align-items: center;
+    padding: 40px 0 12px 0;
+    h2{
+      padding-right: 142px;
+    }
+  }
+  .Total-skidka{
+    color: #747474;
+    font-size: 14px;
+    padding-bottom: 7px;
+  }
+  .Dostavka{
+    display: block;
+  }
+  .Dostavka-p{
+    display: inline-block;
+  }
+  .Dostavka-vid{
+    display: inline-block;
+  }
+  
+  .Btne{
+    border-radius: 100px;
+    border: 6px solid rgba(249, 179, 0, 1);
+    cursor: pointer;
+  }
+  .Total-btn{
+    width: 380px;
+    height: 49px;
+    margin-top: 21px;
+    background: rgba(249, 179, 0, 1);
+    border: none;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    font-family: 'Gilroy'
+  }
+  .Total-down p {
+    width: 368px;
+    font-family: 'Gilroy';
+    font-size: 10px;
+    color: #747474;
+  }

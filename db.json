@@ -3294,5 +3294,31 @@
             "title": "Африканский кофе Кения АА",
             "desc": "Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики."
         }
+    ],
+    "insta-posts": [
+        {
+            "id": 1,
+            "image": "https://cdn2.static1-sima-land.com/items/6944471/0/700-nw.jpg"
+        },
+        {
+            "id": 2,
+            "image": "https://cdn2.static1-sima-land.com/items/6944471/0/700-nw.jpg"
+        },
+        {
+            "id": 3,
+            "image": "https://cdn2.static1-sima-land.com/items/6944471/0/700-nw.jpg"
+        },
+        {
+            "id": 4,
+            "image": "https://cdn2.static1-sima-land.com/items/6944471/0/700-nw.jpg"
+        },
+        {
+            "id": 5,
+            "image": "https://cdn2.static1-sima-land.com/items/6944471/0/700-nw.jpg"
+        },
+        {
+            "id": 6,
+            "image": "https://cdn2.static1-sima-land.com/items/6944471/0/700-nw.jpg"
+        }
     ]
 }
