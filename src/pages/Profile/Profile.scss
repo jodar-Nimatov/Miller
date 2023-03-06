@@ -10,15 +10,12 @@
 }
 }
 
-
 .home {
   display: flex;
   padding: 20px 0px;
   font-size: 12px;
   list-style: none;
 }
-
-
 
 .home li {
   padding: 5px;
@@ -78,10 +75,6 @@
 .profile__name ul {
   margin-top: 7px;
 }
-
-
-
-
 
 .profile__name {
   display: flex;
@@ -175,7 +168,7 @@
   }
 }
 
-.discount-profile {
+.discount__profile {
   text-align: left;
   background: #f9b300;
   border-radius: 14px;
@@ -188,8 +181,8 @@
 
   .discount__inner {
     margin-top: 35px;
-    display: flex;
-
+    margin-left: 40px;
+    margin-bottom: 0px;
   }
 
    @media(max-width: 376px) {
@@ -208,7 +201,7 @@
     font-weight: 600;
     font-size: 17.7127px;
     line-height: 21px;
-    transform: translate(365px, -29px);
+    transform: translate(327px, -53px);
   }
 
   @media(max-width: 376px) {
@@ -223,7 +216,7 @@
 }
 
   @media(max-width: 376px) {
-    .discount-profile {
+    .discount__profile {
       width: 374px;
       height: 156px;
       border-radius: 0px 0px 10px 10px;
@@ -235,9 +228,8 @@
   
 
 
-.discount-profile li {
+.discount__profile li {
   color: #ffffff;
-  margin-top: 12px;
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
@@ -275,7 +267,7 @@
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 12px;
   line-height: 14px;
   
@@ -291,7 +283,7 @@
 
 
 
-.discount p {
+.discount__profile p {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -468,7 +460,7 @@
 
 .slides__inner {
   display: flex;
-  
+  justify-content: space-between;
 
   @media(max-width: 376px) {
       overflow-x:scroll ;
@@ -495,7 +487,7 @@
 
 }
 
-.coffee h1 {
+.coffee__profile h1 {
   transform: translate(10px, -159px);
   margin: 0px 10px;
   font-weight: 700;
