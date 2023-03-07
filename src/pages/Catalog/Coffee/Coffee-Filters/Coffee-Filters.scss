@@ -22,7 +22,6 @@
       font-size: 30px;
     }
   }
-
   &-back {
     background: linear-gradient(to bottom, #f9b300 331px, transparent 331px);
   }
@@ -274,14 +273,19 @@
   .fiveCoffees > div > img {
     max-width: 17px;
   }
-  .fiveCoffees > div {
-    gap: 7px;
-    display: flex;
-  }
 }
 .useFilter-btns{
   display: flex;
   text-align: right;
   padding-right: 50px;
   justify-content: right;
+}
+.divdn{
+  display: none;
+}
+.divdn.b{
+  margin-left: 14px;
+  display: block;
+  height: 4px;
+  width: 80%;
 }

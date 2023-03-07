@@ -17,37 +17,43 @@ const CoffeeItems = ({ filters }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
-  const {addCart} = useContext(Context)
-  let url = 'http://localhost:3333/catalog?'
-  let geographyFilter = ''
-  let kislinkaFilter = ''
-  let pmethodFilter = ''
-  let specialFilter = ''
-  let coftypeFilter = ''
+  const url = 'http://localhost:3333/catalog?'
+  const filterBase = {geographyFilter: '', kislinkaFilter: '', pmethodFilter: '', specialFilter: '', coftypeFilter: '', coffeelevelFilter: '', cmethodFilter: ''}
+  // Esly budet vremya, poprobuyu sokratit kod !
   const filtering = () => {
     if(filters.coffeefrom !== []){ 
       for(let i = 0; i < filters.coffeefrom.length; i++){ 
-        geographyFilter += `geography=${filters.coffeefrom[i]}&`
+        filterBase.geographyFilter += `geography=${filters.coffeefrom[i]}&`
       } 
     }
     if(filters.kislinka !== []){
       for(let i = 0; i < filters.kislinka.length; i++){
-        kislinkaFilter += `kislinka=${filters.kislinka[i]}&`
+        filterBase.kislinkaFilter += `kislinka=${filters.kislinka[i]}&`
       }
     }
     if(filters.pmethod !== []){
       for(let i = 0; i < filters.pmethod.length; i++){
-        pmethodFilter += `processing method=${filters.pmethod[i]}&`
+        filterBase.pmethodFilter += `processing method=${filters.pmethod[i]}&`
       }
     }
     if(filters.special !== []){
       for(let i = 0; i < filters.special.length; i++){
-        specialFilter += `special=${filters.special[i]}&`
+        filterBase.specialFilter += `special=${filters.special[i]}&`
       }
     }
     if(filters.coffeetype !== []){
       for(let i = 0; i < filters.coffeetype.length; i++){
-        coftypeFilter += `type of coffee=${filters.coffeetype[i]}&`
+        filterBase.coftypeFilter += `type of coffee=${filters.coffeetype[i]}&`
+      }
+    }
+    if(filters.coffeelevel !== []){
+      for(let i = 0; i < filters.coffeelevel.length; i++){
+        filterBase.coffeelevelFilter += `roast=${filters.coffeelevel[i]}&`
+      }
+    }
+    if(filters.cmethod !== []){
+      for(let i = 0; i < filters.cmethod.length; i++){
+        filterBase.cmethodFilter += `cooking method=${filters.cmethod[i]}&`
       }
     }
   }
@@ -66,7 +72,7 @@ const CoffeeItems = ({ filters }) => {
               : sorting == "По кислотности"
               ? "_sort=kislinka&_order=desc"
               : ""
-            }` + '&' + geographyFilter + kislinkaFilter + coftypeFilter + pmethodFilter + specialFilter
+            }` + '&' + filterBase.geographyFilter + filterBase.kislinkaFilter + filterBase.coftypeFilter + filterBase.pmethodFilter + filterBase.specialFilter + filterBase.coffeelevelFilter + filterBase.cmethodFilter
             )  
             .then((resp) => {
               setCards(resp.data);
@@ -96,8 +102,7 @@ const CoffeeItems = ({ filters }) => {
                 <div className="sorting-title">
                   {sorting} <span>&times;</span>
                 </div>
-                <li
-                  className="sorting-item"
+                <li className="sorting-item"
                   onClick={(e) => setSorting(e.target.innerHTML)}
                 >
                   По возрастанию цены
@@ -115,7 +120,7 @@ const CoffeeItems = ({ filters }) => {
                   По рейтингу
                 </li>
                 <li
-                  className="sorting-item"
+                  className="sorting-item" 
                   onClick={(e) => setSorting(e.target.innerHTML)}
                 >
                   По кислотности
@@ -124,7 +129,9 @@ const CoffeeItems = ({ filters }) => {
             </div>
             <div className="coffee__cards-inner-row">
               {/* <BsStar/> */}
-              {cards.map((item) => (
+              {cards.map((item) => {
+                // Nujno propisat nemnogo logiki dlya cartochek.
+                return (
                 <div key={item.id} className="coffee__cards-inner-row-card">
                   <div className="coffee__cards-inner-row-card-top">
                     <div className="coffee__cards-inner-row-card-top-left">
@@ -139,7 +146,7 @@ const CoffeeItems = ({ filters }) => {
                             cy
                           )}
                         </p>
-                      ))}
+                     ))}
                     </div>
                     <div className="coffee__cards-inner-row-card-top-right">
                       <select>
@@ -186,96 +193,96 @@ const CoffeeItems = ({ filters }) => {
                         ) : item.roast == 4 ? (
                           <img height="13px" src={roast4} alt="" />
                         ) : item.roast == 3 ? (
-                          <img height="13px" src={roast3} alt="" />
+                        <img height="13px" src={roast3} alt="" />
                         ) : item.roast == 2 ? (
                           <img height="13px" src={roast2} alt="" />
                         ) : item.roast == 1 ? (
                           <img height="13px" src={roast1} alt="" />
                         ) : null}
                       </div>
-                      <div className="coffee__cards-inner-row-card-center-right-filters">
-                        <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                          <p>Кислинка</p>
-                          <div className="kislinka">
-                            <img
-                              src={
-                                item.kislinka == 'Высокая'
-                                  ? kislinkaHigh
-                                  : item.kislinka == 'Средняя'
-                                  ? kislinkaMedium
-                                  : item.kislinka == 'Низкая'
-                                  ? kislinkaLow
-                                  : null
-                              }
-                              alt=""
-                            />
+                        <div className="coffee__cards-inner-row-card-center-right-filters">
+                          <div className="coffee__cards-inner-row-card-center-right-filters-item">
+                            <p>Кислинка</p>
+                            <div className="kislinka">
+                              <img
+                                src={
+                                  item.kislinka == 'Высокая'
+                                    ? kislinkaHigh
+                                    : item.kislinka == 'Средняя'
+                                    ? kislinkaMedium
+                                    : item.kislinka == 'Низкая'
+                                    ? kislinkaLow
+                                    : null
+                                }
+                                alt=""
+                              />
+                            </div>
                           </div>
-                        </div>
-                        <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                          <p>Горчинка</p>
-                          <div className="kislinka">
-                            <img
-                              src={
-                                item.gorchinka > 7
-                                  ? kislinkaHigh
-                                  : item.gorchinka > 3
-                                  ? kislinkaMedium
-                                  : item.gorchinka > 0
-                                  ? kislinkaLow
-                                  : null
-                              }
-                              alt=""
-                            />
+                          <div className="coffee__cards-inner-row-card-center-right-filters-item">
+                            <p>Горчинка</p>
+                            <div className="kislinka">
+                              <img
+                                src={
+                                  item.gorchinka > 7
+                                    ? kislinkaHigh
+                                    : item.gorchinka > 3
+                                    ? kislinkaMedium
+                                    : item.gorchinka > 0
+                                    ? kislinkaLow
+                                    : null
+                                }
+                                alt=""
+                              />
+                            </div>
                           </div>
-                        </div>
-                        <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                          <p>Носыщенность</p>
-                          <div className="kislinka">
-                            <img
-                              src={
-                                item.nasyshennost > 7
-                                  ? kislinkaHigh
-                                  : item.nasyshennost > 3
-                                  ? kislinkaMedium
-                                  : item.nasyshennost > 0
-                                  ? kislinkaLow
-                                  : null
-                              }
-                              alt=""
-                            />
+                          <div className="coffee__cards-inner-row-card-center-right-filters-item">
+                            <p>Носыщенность</p>
+                            <div className="kislinka">
+                              <img
+                                src={
+                                  item.nasyshennost > 7
+                                    ? kislinkaHigh
+                                    : item.nasyshennost > 3
+                                    ? kislinkaMedium
+                                    : item.nasyshennost > 0
+                                    ? kislinkaLow
+                                    : null
+                                }
+                                alt=""
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="coffee__cards-inner-row-card-bottom">
-                    <small>{item.geography}</small>
-                    <h4>{item.title}</h4>
-                    <p>{item.subtitle}</p>
-                    <Link to="/cards" className="treedots">
-                      Больше
-                    </Link>
-                    <>...</>
-                    <div className="coffee__cards-inner-row-card-bottom-bottom">
-                      {item.category.includes("Скидки") ? (
-                        <div className="old-price">
-                          {Math.floor(item.price + (item.price / 100) * 30)} ₽
-                        </div>
-                      ) : (
-                        <></>
-                      )}
-                      <h3>{item.price} ₽</h3>
-                      <button type="button" onClick={() => addCart(item)}>В корзину</button>
+                    <div className="coffee__cards-inner-row-card-bottom">
+                      <small>{item.geography}</small>
+                      <h4>{item.title}</h4>
+                      <p>{item.subtitle}</p>
+                      <Link to="/cards" className="treedots">
+                        Больше
+                      </Link>
+                      <>...</>
+                      <div className="coffee__cards-inner-row-card-bottom-bottom">
+                        {item.category.includes("Скидки") ? (
+                          <div className="old-price">
+                            {Math.floor(item.price + (item.price / 100) * 30)} ₽
+                          </div>
+                        ) : (
+                          <></>
+                        )}
+                        <h3>{item.price} ₽</h3>
+                        <button>В корзину</button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                )})}
+              </div>
             </div>
           </div>
-        </div>
+        <div className="grey"></div>
       </div>
-      <div className="grey"></div>
     </>
-  );
-};
-export default CoffeeItems;
+    );
+  };
+  export default CoffeeItems;

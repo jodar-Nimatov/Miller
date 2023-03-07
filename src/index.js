@@ -5,15 +5,15 @@ import { BrowserRouter } from "react-router-dom";
 import { Context } from "./pages/Cart/Context";
 import App from "./App";
 import "./scss/style.scss";
-import store from "./store/store";
+// import store from "./store/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
       <Context>
         <App/>
       </Context>
-    </Provider>
+    {/* </Provider> */}
   </BrowserRouter>
 );

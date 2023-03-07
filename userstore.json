@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id":1,
+      "name": "jodar",
+      "surname": "nimatov",
+      "phonenumber": "+996550520666",
+      "email": "nimatovjoodar@gmail.com",
+      "password": "21706670"
+    }
+  ]
+}

@@ -41,7 +41,8 @@ const TeaItems = ({type}) => {
                     <Link to='' className='tea-img-block'>
                       <img src={item.image} className="card-image" height='221px' alt="" />
                     </Link>
-                    {/* {item.category.map(cy => <p key={cy.length}>{cy === 'Скидки' ? <><div className="discount">%</div></> : null}</p>)} */}
+                    {/* Не знаю почему не работает, решу попозже */}
+                    {/* {item.category.map(cy => <div key={cy.length}>{item.category.includes('Скидки') ? <><div className="discount">%</div></> : null}</div>)} */}
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
                     <h4>{item.title}</h4>

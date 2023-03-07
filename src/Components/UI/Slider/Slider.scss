@@ -1,15 +1,18 @@
-.fresh-right {
-  margin-left: 128px;
+.fresh-coffe-right{
+ position: relative;
+ z-index: 1;
 }
 
 .slider {
-  max-width: 210px;
+  position: absolute;
+  max-width: 210px; 
   margin: 0 auto;
+  right: 1175px;
 }
 .slideshow {
   position: absolute;
   margin: 0 auto;
-  width: 600px;
+  width: 564px;
   left: 1300px;
   overflow: hidden;
 }
@@ -21,9 +24,9 @@
 
 .slide {
   display: inline-block;
-  background-image: url(../../../assets/Images/SliderCupCoffe.png);
-  height: 600px;
+  background-image: url(../../../assets/Images/coffeBgSlid.png);
+  height: 700px;
   background-repeat: no-repeat;
-  width: 1100px;
+  width: 1150px;
   text-align: right;
 }
