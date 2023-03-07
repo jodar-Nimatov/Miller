@@ -30,6 +30,9 @@
   &__item2 {
     transform: translateX(-20px);
   }
+  &__item1:hover{
+    background-color: white;
+  }
   &__item1 {
     display: flex;
     max-width: fit-content;
