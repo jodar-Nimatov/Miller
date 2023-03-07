@@ -1,3 +1,9 @@
+.fresh-coffee-catalog-back{
+  background-image: url('../../assets/Images/Vector.png');
+  background-repeat: no-repeat;
+  background-size: 60vh;
+  background-position: right -40px;
+}
 .fresh-coffe {
   height: 600px;
   padding: 70px 20px 0 70px;
@@ -47,12 +53,12 @@
   max-width: 530px;
   position: absolute;
   transform: translateY(-420px);
-  margin-left: 1185px;
+  margin-left: 1011px;
 }
 .yellow-gradient-left{
   max-width: 400px;
   max-height: 100%;
-  margin-left: -262px;
+  margin-left: -364px;
 }
 .gradient-coffe-img{
   // max-width: 300px;
@@ -63,7 +69,7 @@
 .catalog-products {
   height: 700px;
   .catalog-inner {
-    padding: 65px 0 0 70px;
+    // padding: 65px 0 0 70px;
   }
   .catalog-inner > h2 {
     font-size: 35px;
@@ -79,7 +85,8 @@
   }
   .catalog-card {
     position: relative;
-    width: 335px;
+    width: 280px;
+    text-align: center;
     height: 410px;
     background: #ffffff;
     box-shadow: 0px 0px 30px rgba(146, 146, 146, 0.2);
@@ -99,10 +106,9 @@
     padding-top: 28px;
   }
   .catalog-card_button {
-    position: absolute;
-    left: 57px;
+    // position: absolute;
     width: 230px;
-    height: 45px;
+    height: 42px;
     background-color: #f9b300;
     font-size: 15px;
     border: none;
@@ -142,7 +148,7 @@
 }
 
 .Advantage-back-top{
-  width: 1903px;
+  width: 1528px;
   height: 203px;
   transform: translateY(10px);
 }
@@ -178,7 +184,7 @@
     max-height: 400px;
   }
   .advantages-right {
-    transform: translateX(805px);
+    transform: translateX(611px);
   }
   .advantages-right > h2 {
     font-weight: bold;
@@ -206,7 +212,7 @@
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1903px;
+  width: 1523px;
   height: 200px;
   z-index: 100;
 }
