@@ -6,6 +6,7 @@ import Visa from "./Check-photo/Visa.svg"
 
 const Cart = () => {
   return (
+    <div className="back-cart">
     <div className="Cart">
         <div className="container">
             <div className="Cart-inner">
@@ -155,6 +156,7 @@ const Cart = () => {
                 {/* Карточка промокода */}
             </div>
         </div>
+    </div>
     </div>
   )
 }

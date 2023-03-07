@@ -3,11 +3,19 @@
     padding: 0;
     margin: 0;
   }
-  .container {
-    width: 1180px;
+  .back-cart{
+    background: linear-gradient(to bottom, #FFF7E1 475px, transparent 229px);
   }
   .Cart{
-    background-color: rgba(255, 247, 225, 1);
+    background-repeat: no-repeat;
+    background-image: url("../../assets/Catalog/cart-back.svg");
+    background-position-y: 460px;
+    background-color: linear-gradient(
+      to bottom,
+      #FFF7E1 331px,
+      transparent 331px
+    );
+    background-size: 240vh;
   }
   .Cart-ul{
     display: flex;

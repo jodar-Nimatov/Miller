@@ -1,0 +1,30 @@
+.CartEmpty{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(360deg, #211F2080 0%, #44403F80 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    }
+    .CartEmpty-inner{
+        max-width: 450px;
+        width: 100%;
+        padding: 30px 30px;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        background: gray;
+        border-radius: 10px;
+    }
+    .CartEmpty-title{
+        padding-bottom: 25px;
+    }
+    .CartEmpty-close{
+        position: absolute;
+        right: 240px;
+        top: 310px;
+    }
