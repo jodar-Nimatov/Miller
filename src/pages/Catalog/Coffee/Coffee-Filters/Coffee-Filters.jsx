@@ -225,8 +225,8 @@ const CoffeeFilters = () => {
                 </div>
               </div>
               <div className="useFilter-btns">
-                <button className='useFilters-btn' onClick={()=>window.location.reload()}>Очистить филтры</button>
-                <button className='useFilters-btn' onClick={()=>setKey(key + 1)}>Искать <img src={searchicon} height='10px' alt="" /></button>
+                <button className='useFilters-btns-btn two' onClick={()=>setKey(key + 1)}>Искать <img src={searchicon} height='13px' alt="" /></button>
+                <button className='useFilters-btns-btn one' onClick={()=>window.location.reload()}>Очистить филтры</button>
               </div>
             </div>
         </div>
