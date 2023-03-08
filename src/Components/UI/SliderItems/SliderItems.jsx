@@ -15,7 +15,7 @@ const SliderItems = () => {
     const [offset, setOffset] = useState(0)
 
     useEffect(()=>{ 
-      axios.get('http://localhost:3333/catalog')
+      axios.get('http://localhost:3333/catalog?&_limit=16')
       // .then(resp => resp.json())
       .then(resp => {
         setCards(resp.data)
