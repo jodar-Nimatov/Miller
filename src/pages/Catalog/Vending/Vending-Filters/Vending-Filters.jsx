@@ -4,7 +4,7 @@ import VendingItems from '../Vending-Items/Vending-Items';
 import { useRef } from 'react';
 
 const VendingFilters = () => {
-  const [types, setTypes] = useState({type: 0})
+  const [types, setTypes] = useState({type: 'one'})
   const ref = useRef(null);
 
   const handleSrcoll = () => {
@@ -30,19 +30,19 @@ const VendingFilters = () => {
             <div className="tea-filters-blocks-top">
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 0})}} className="tea-filters-blocks-item balck-tea">
+                setTypes({type: 'one'})}} className="tea-filters-blocks-item balck-tea">
                 <img src='https://avatars.mds.yandex.net/get-mpic/5313128/img_id1561179389513617548.jpeg/orig' width='101px' height='141px' alt="" />
                 <p>Гранулированный кофе</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 1})}} className="tea-filters-blocks-item green-tea">
+                setTypes({type: 'two'})}} className="tea-filters-blocks-item green-tea">
                 <img src='https://avatars.mds.yandex.net/get-mpic/4441046/img_id4057321941938745998.jpeg/orig' width='101px' height='141px' alt="" />
                 <p>Гранулированный цикорий</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 2})}} className="tea-filters-blocks-item oolong-milk">
+                setTypes({type: 'three'})}} className="tea-filters-blocks-item oolong-milk">
                 <img src='https://avatars.mds.yandex.net/get-mpic/7650323/img_id2644147707912347235.png/orig' width='101px' height='141px'   alt="" />
                 <p>Зерновой кофе</p>
               </div>
@@ -50,25 +50,25 @@ const VendingFilters = () => {
             <div className="tea-filters-blocks-bottom">
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 3})}} className="tea-filters-blocks-item balck-tea">
+                setTypes({type: 'four'})}} className="tea-filters-blocks-item balck-tea">
                 <img src='https://avatars.mds.yandex.net/get-mpic/4888456/img_id2569588223286459338.jpeg/orig'  height='141px' alt="" />
                 <p>Гранулированный какао</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 4})}} className="tea-filters-blocks-item green-tea">
+                setTypes({type: 'five'})}} className="tea-filters-blocks-item green-tea">
                 <img src='https://avatars.mds.yandex.net/get-mpic/5236177/img_id8468542783010526713.jpeg/orig'  height='141px' alt="" />
                 <p>Гранулированные кофейные напитки</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 5})}} className="tea-filters-blocks-item oolong-milk">
+                setTypes({type: 'six'})}} className="tea-filters-blocks-item oolong-milk">
                 <img src='https://avatars.mds.yandex.net/get-mpic/4012462/img_id7256194758433004023.jpeg/orig'  height='141px'   alt="" />
                 <p>Кофе порошкообразный</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 6})}} className="tea-filters-blocks-item green-tea">
+                setTypes({type: 'seven'})}} className="tea-filters-blocks-item green-tea">
                 <img src='https://avatars.mds.yandex.net/get-mpic/4887676/img_id4967117453283869030.jpeg/orig' alt="" height='141px'  />
                 <p>Сухое молоко гранулированное</p>
               </div>

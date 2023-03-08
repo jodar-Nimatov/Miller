@@ -1,22 +1,3 @@
-@import "../Layout/Header/Header.scss";
-@import "../pages/Profile/Profile.scss";
-@import "../pages/Home/Home.scss";
-@import "../Layout/Footer/Footer.scss";
-@import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
-@import "../pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters.scss";
-@import "../pages/Catalog/Tea/Tea-Filters/Tea-Filters.scss";
-@import "../pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters.scss";
-@import "../pages/Catalog/Tea/Tea-Items/Tea-Items.scss";
-@import "../pages/Contacts/Contact.scss";
-@import "../pages/Blog/Blog.scss";
-@import "../pages/Contacts/Contact.scss";
-@import "../Components/Instagram/instaram.scss";
-@import "../Components/News/News.scss";
-@import "../Components//UI/SliderItems/SliderItems.scss";
-@import "../Components/UI/Slider/Slider.scss";
-@import "../Components/UI/InstaSlider/Slider.scss";
-@import "../pages/Cart/Cart.scss";
- 
 * {
   padding: 0;
   margin: 0;
@@ -32,7 +13,7 @@
     padding: 0;
   }
   // @media (min-width: 1556px) {
-  //   min-width: 1556px;
+    //   min-width: 1556px;
   // }
 }
 a:active,
@@ -61,7 +42,7 @@ a {
 }
 html,
 body {
-  // Байгелди: У меня не работает 'Gilroy'
+  // Нужно скачать шрифты!
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   min-height: 100%;
 }
@@ -72,3 +53,22 @@ body {
 .forDF{
   display: flex;
 }
+
+@import "../Layout/Header/Header.scss";
+@import "../pages/Profile/Profile.scss";
+@import "../pages/Home/Home.scss";
+@import "../Layout/Footer/Footer.scss";
+@import "../pages/Catalog/Coffee/Coffee-Items/Coffee-Items.scss";
+@import "../pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters.scss";
+@import "../pages/Catalog/Tea/Tea-Filters/Tea-Filters.scss";
+@import "../pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters.scss";
+@import "../pages/Catalog/Tea/Tea-Items/Tea-Items.scss";
+@import "../pages/Contacts/Contact.scss";
+@import "../pages/Blog/Blog.scss";
+@import "../pages/Contacts/Contact.scss";
+@import "../Components/Instagram/instaram.scss";
+@import "../Components/News/News.scss";
+@import "../Components//UI/SliderItems/SliderItems.scss";
+@import "../Components/UI/Slider/Slider.scss";
+@import "../Components/UI/InstaSlider/Slider.scss";
+@import "../pages/Cart/Cart.scss";
