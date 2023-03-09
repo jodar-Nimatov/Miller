@@ -66,11 +66,15 @@
   transform: translateY(-70px);
 }
 
+.catalog-sale-items-back{
+  background-image: url('../../assets/Images/vectorLeft.png');
+  background-repeat: no-repeat;
+  background-position: left 40px;
+  background-size: 45vh;
+}
+
 .catalog-products {
   height: 700px;
-  .catalog-inner {
-    // padding: 65px 0 0 70px;
-  }
   .catalog-inner > h2 {
     font-size: 35px;
   }
@@ -148,7 +152,7 @@
 }
 
 .Advantage-back-top{
-  width: 1528px;
+  width: 100%;
   height: 203px;
   transform: translateY(10px);
 }
@@ -184,7 +188,7 @@
     max-height: 400px;
   }
   .advantages-right {
-    transform: translateX(611px);
+    transform: translateX(651px);
   }
   .advantages-right > h2 {
     font-weight: bold;
@@ -209,12 +213,11 @@
 }
 
 .advantages-back-bottom{
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 1523px;
+  position: relative;
+  width: 100%;
   height: 200px;
-  z-index: 100;
+  z-index: 1;
+  transform: translateY(65px);
 }
 
 .roast-coffe {
@@ -252,8 +255,13 @@
   }
 }
 
-.roactCoffebottom{
-  width: 1903px;
-  height: 280px;
-  transform: translateY(-260px);
+
+.roast-coffe-back-bottom{
+  height: 100%;
+  z-index: 300;
+  background-image: url('../../assets/Images/roastCoffeBottom.png');
+  background-repeat: no-repeat;
+  background-size: 300vh;
+  background-position: center bottom;
+  z-index: 1;
 }

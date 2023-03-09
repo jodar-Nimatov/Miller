@@ -1,19 +1,20 @@
 .Insta_Slider{
     position: relative;
     width: 210px; 
-    margin: 0 auto;
+    margin-left: auto;
     right: 530px;
     top: 25px;
 }
 
 .Insta_Slider_show{
     margin: 0 auto;
-    width: 830px;
+    width: 745px;
     height: 100%;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    transform: translateX(65px);
 }
 
 .Insta_Slider__inner{
@@ -31,8 +32,8 @@
     border: none;
     background: transparent;
     cursor: pointer;
-    left: 760px;
-    top: 282px;
+    left: 745px;
+    top: 230px;
     display: flex;
     justify-content: center;
     align-items: center;
