@@ -329,7 +329,7 @@
 
 
 
-  .info {
+  .info-block {
     width: 980px;
     height: 125px;
     background: #fcfcfc;
@@ -450,7 +450,7 @@
 }
 
 
-.info h1 {
+.info-block h1 {
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
@@ -460,7 +460,7 @@
 
 }
 
-.info li {
+.info-block li {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -577,6 +577,10 @@ display: none;
 
 .discount-block {
   margin-bottom: 50px;
+}
+
+.info-block.none {
+  display: none;
 }
 
 

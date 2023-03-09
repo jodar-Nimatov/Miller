@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Profile = () => {
   const [show, setShow] = useState(true)
+  const [info, setInfo] = useState(true)
 
   return (
     <div className="profile">
@@ -59,17 +60,50 @@ const Profile = () => {
             <div className="orders__title">
               <h1>Мои заказы</h1>
               <div className="orders__btn">
-                <button>Текущие заказы</button>
-              <button>Завершенные</button>
-              </div>
-              
-              <div className="orders__p">
-                <p>01.08.2021 12:24:00 - оплачено</p>
-                <p>Дата доставки: 03.08.2021</p>
+                <button onClick={()=>setInfo(true)}>Текущие заказы</button>
+              <button onClick={()=>setInfo(false)}>Завершенные</button>
               </div>
             </div>
-            <div className="info">
-              <div className="info__text">
+            <div >   
+              <p>не оплачено</p>
+                <p>Дат</p>
+              <div className={`info-block ${info ? 'block' : 'none'}`}>
+                <div className="orders__p">
+             
+              </div>
+                <div className="info__text">
+                <h1>Товаров:</h1>
+                <ul className="info__title">
+                  <li>2 х Columbia Supremo, 250 г.</li>
+                  <li>2 х Columbia Supremo, 250 г.</li>
+                </ul>
+              </div>
+              <div>
+                <h1>Сумма заказа  :</h1>
+                <ul>
+                  <li>480 ₽</li>
+                  <li>480 ₽</li>
+                </ul>
+              </div>
+              <div className="info__discount">
+                <h1>Скидка (10%):</h1>
+                <ul>
+                  <li>48 ₽ </li>
+                  <li>48 ₽ </li>
+                </ul>
+              </div>
+              <div className="price__two">
+                <h1>Сумма заказа:</h1>
+                <ul>
+                  <li>432 ₽ </li>
+                  <li>432 ₽ </li>
+                </ul>
+              </div>
+              
+              </div>
+            </div>
+            <div className={`info-block ${info ? 'none' : 'block'}`}>
+            <div className="info__text">
                 <h1>Товаров:</h1>
                 <ul className="info__title">
                   <li>2 х Columbia Supremo, 250 г.</li>
@@ -98,6 +132,7 @@ const Profile = () => {
                 </ul>
               </div>
             </div>
+
             <ul className="price__info">
               <li>Сумма заказа: 864 ₽</li>
               <li>Доставка: 350 ₽ </li>
@@ -110,22 +145,22 @@ const Profile = () => {
               <div className="coffee__profile">
                 <img src={coffee} alt="" />
                 <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                <p>Срок акции: до 31.08.2021</p>
+                <p>Срок акции: до 1.03.2023</p>
               </div>
               <div className="coffee__profile">
                 <img src={coffee} alt="" />
-                <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                <p>Срок акции: до 31.08.2021</p>
+                <h1>На 8 марта большие скидки!</h1>
+                <p>Срок акции: до 8.03.2023</p>
               </div>
               <div className="coffee__profile">
                 <img src={coffee} alt="" />
-                <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                <p>Срок акции: до 31.08.2021</p>
+                <h1>Активным покупателям скидки!</h1>
+                <p>Срок акции: до 23.03.2023</p>
               </div>
               <div className="coffee__profile">
                 <img src={coffee} alt="" />
-                <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                <p>Срок акции: до 31.08.2021</p>
+                <h1>За первую покупку можно получить скидку!</h1>
+                <p>Срок акции: до 31.03.2023</p>
               </div>
             </div>
           </div>
