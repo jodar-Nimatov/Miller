@@ -6,7 +6,7 @@ import userlogo from "../../assets/Header/user.svg";
 import burger from "../../assets/Header/Group 165.svg";
 import millerlogom from "../../assets/modal/image26.svg";
 import coffeelogo from "../../assets/modal/Group 245.svg";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
 import { CustomContext } from "../../pages/Cart/Context";
 import CartEmpty from "../../Components/CartEmpty/CartEmpty";
@@ -18,7 +18,7 @@ const Header = () => {
   const [title, setTitle] = useState("Каталог товаров");
   const [display, setDisplay] = useState("block");
   const {cart} = useContext(CustomContext)
-  const [see, setSee] = useState(true)
+  const [see, setSee] = useState(false)
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const handleInput = () => {
@@ -147,14 +147,22 @@ const Header = () => {
             </a>
             <Link to="/cart">
               <img
+                onClick={() => {
+                  if (cart.length) {
+                    <Link to='/cart'/>
+                  } else {
+                    setSee(true)
+                  }
+                }}
                 className="header-right-icon header-basket"
                 src={basketlogo}
                 alt="header basket"
               />
               <span className="header-right-count header-basket">
                 {cart.length}
-              </span>
+              </span> 
             </Link>
+            <CartEmpty see={see} setSee={setSee}/>
             <Link to="/Profile">
               <img
                 className="header-right-icon header-user"
@@ -217,10 +225,9 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-            )}
+            )}         
             {/* </Link> */}
-</div>
-<CartEmpty see={see} setSee={setSee}/>
+            </div>
           </div>
       <div className="white"></div>
     </>

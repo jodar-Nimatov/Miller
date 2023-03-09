@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import rating from "../../../../assets/Catalog/Coffee/Filters/rating.svg";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { CustomContext } from "../../../Cart/Context";
 
 const HealthyItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
+  const {addCart} = useContext(CustomContext)
   const url = "http://localhost:3333/healthy-eatings?";
   useEffect(() => {
     axios
@@ -120,7 +122,7 @@ const HealthyItems = ({ type }) => {
                     <>...</>
                     <div className="coffee__cards-inner-row-card-bottom-bottom">
                       <h3>{item.price} ₽</h3>
-                      <button>В корзину</button>
+                      <button type="button" onClick={() => addCart(item)}>В корзину</button>
                     </div>
                   </div>
                 </div>

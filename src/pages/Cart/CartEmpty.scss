@@ -11,6 +11,7 @@
     align-items: center;
     }
     .CartEmpty-inner{
+        position: relative;
         max-width: 450px;
         width: 100%;
         padding: 30px 30px;
@@ -25,6 +26,6 @@
     }
     .CartEmpty-close{
         position: absolute;
-        right: 240px;
-        top: 310px;
+        right: 10px;
+        top: 10px;
     }

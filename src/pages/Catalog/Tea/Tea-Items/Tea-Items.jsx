@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import rating from '../../../../assets/Catalog/Coffee/Filters/rating.svg'
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { CustomContext } from '../../../Cart/Context';
 
 const TeaItems = ({type}) => {
+  const {addCart} = useContext(CustomContext)
   const [cards, setCards] = useState([])
   useEffect(()=>{
     axios
@@ -50,7 +52,7 @@ const TeaItems = ({type}) => {
                     <Link to='' className="treedots">Больше</Link><>...</>
                     <div className="coffee__cards-inner-row-card-bottom-bottom">
                       <h3>{item.price}</h3>
-                      <button>В корзину</button>
+                      <button type='button' onClick={() => addCart(item)}>В корзину</button>
                     </div>
                   </div>
                 </div>

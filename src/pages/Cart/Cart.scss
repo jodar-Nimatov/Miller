@@ -79,36 +79,43 @@
       padding-right: 15px;
     }
   }
+  .Cart-description{
+    width: 210px;
+  }
   .Card-close{
     border: 0;
     background: rgba(252, 252, 252, 1);
     padding-left: 43px;
+    cursor: pointer;
   }
   .Card-right{
     display: flex;
     align-items: center;
-    padding-left: 85px;
+    padding-left: 40px;
     gap: 50px;
     font-size: 18px;
   }
   .Card-click{
     display: flex;
-    width: 170px;
-    height: 50px;
+    width: 135px;
+    height: 30px;
     align-items: center;
     background: #F6F6F6;
     border: 1px solid #D6D6D6;
     border-radius: 5px;
   }
   .Card-click button {
-    padding: 15px 15px;
+    padding: 5px 15px;
     background: none;
     border: none;
     font-size: 30px;
     cursor: pointer;
   }
   .Card-click p {
-    padding: 0 35px 0 35px;
+    padding: 0 20px 0 20px;
+  }
+  .Card-count{
+    padding: 0 20px 0 20px;
   }
   //карточка доставки
   .Cart-delivery{
