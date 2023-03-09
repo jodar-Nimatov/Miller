@@ -126,7 +126,7 @@ const CoffeeItems = ({ filters }) => {
                 </li>
               </ul>
             </div>
-            <div className="coffee__cards-inner-row">
+            <div className="coffee__cards-inner-row tocenter">
               {/* <BsStar/> */}
               {cards.map((item) => {
                 // Nujno propisat nemnogo logiki dlya cartochek.
