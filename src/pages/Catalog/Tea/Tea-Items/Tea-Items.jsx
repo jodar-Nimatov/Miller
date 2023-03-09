@@ -87,7 +87,7 @@ const TeaItems = ({ type }) => {
               {cards.map((item) => (
                 <div key={item.id} className="coffee__cards-inner-row-card">
                   <div className="tea__cards-inner-row-card-top">
-                    <div className="tea__cards-inner-row-card-top-right">
+                    <div className="tea__cards-inner-row-card-top-right forDF">
                       <div className="tea__cards-inner-row-card-center-right-rating">
                         <div
                           className="rating"
@@ -102,14 +102,19 @@ const TeaItems = ({ type }) => {
                             position: "relative",
                           }}
                         ></div>
-                        <h4>{item.rating}</h4>
+                        <div className="forDF kkdwe">
+                          <h4>{item.rating}</h4>
+                          <small>({item.review} отзыва)</small>
+                        </div>
                       </div>
+                    <div className="coffee__cards-inner-row-card-top-right">
                       <select>
                         <option value="100g">100г</option>
                         <option value="300g">300г</option>
                         <option value="500g">500г</option>
                         <option value="1000g">1000г</option>
                       </select>
+                      </div>
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
@@ -124,16 +129,19 @@ const TeaItems = ({ type }) => {
                     <p></p>
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
-                    <h4>{item.title}</h4>
-                    <p>{item.subtitle}</p>
+                    <h4 style={{marginTop: '16px'}}>{item.title}</h4>
+                    <p style={{marginTop: '20px'}}>{item.subtitle}</p>
                     <Link to="" className="treedots">
                       Больше
                     </Link>
                     <>...</>
-                    <div className="coffee__cards-inner-row-card-bottom-bottom">
-                      <h3>{item.price} ₽</h3>
-                      <button>В корзину</button>
-                    </div>
+                    <div className="coffee__cards-inner-row-card-bottom-bottom forDF" >
+                        <div className="coffee__cards-inner-row-card-bottom-bottom-price">
+                            <></>
+                          <h3 className="card-title-jiest">{item.price} ₽</h3>
+                        </div>
+                        <button>В корзину</button>
+                      </div>
                   </div>
                 </div>
               ))}

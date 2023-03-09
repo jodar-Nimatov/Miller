@@ -126,7 +126,7 @@ const CoffeeItems = ({ filters }) => {
                 </li>
               </ul>
             </div>
-            <div className="coffee__cards-inner-row">
+            <div className="coffee__cards-inner-row tocenter">
               {/* <BsStar/> */}
               {cards.map((item) => {
                 // Nujno propisat nemnogo logiki dlya cartochek.
@@ -262,15 +262,17 @@ const CoffeeItems = ({ filters }) => {
                         Больше
                       </Link>
                       <>...</>
-                      <div className="coffee__cards-inner-row-card-bottom-bottom">
-                        {item.category.includes("Скидки") ? (
-                          <div className="old-price">
-                            {Math.floor(item.price + (item.price / 100) * 30)} ₽
-                          </div>
-                        ) : (
-                          <></>
-                        )}
-                        <h3>{item.price} ₽</h3>
+                      <div className="coffee__cards-inner-row-card-bottom-bottom forDF" >
+                        <div className="coffee__cards-inner-row-card-bottom-bottom-price">
+                          {item.category.includes("Скидки") ? (
+                            <div className="old-price">
+                              {Math.floor(item.price + (item.price / 100) * 30)} ₽
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                          <h3>{item.price} ₽</h3>
+                        </div>
                         <button>В корзину</button>
                       </div>
                     </div>
