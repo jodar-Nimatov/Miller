@@ -1,4 +1,5 @@
 .profile {
+
   max-width: 100%;
   background: #e5e5e5;
   font-family: "Gilroy";
@@ -6,7 +7,7 @@
   @media(max-width: 376px) {
     background: white;
     max-width: 375px;
-  
+    overflow: hidden;
 }
 }
 
@@ -30,6 +31,7 @@
 
   @media(max-width: 376px) {
     display: inline-block;
+    max-width: 376px;
 
 }
 }
@@ -180,15 +182,17 @@
 
 
   .discount__inner {
-    margin-top: 35px;
-    margin-left: 40px;
+    margin-top: 13px;
+    margin-left: 30px;
     margin-bottom: 0px;
   }
 
+ 
+
    @media(max-width: 376px) {
     .discount__inner {
-      margin-left: 18px;
-      
+      margin-left: 14px;
+      padding-top: 1px;
     }
    }
  
@@ -201,7 +205,7 @@
     font-weight: 600;
     font-size: 17.7127px;
     line-height: 21px;
-    transform: translate(327px, -53px);
+    transform: translate(338px, -4px);
   }
 
   @media(max-width: 376px) {
@@ -209,8 +213,8 @@
       width: 33px;
       position: absolute;
       height: 33px;
-      top: 38px;
-      left: -34px;
+      top: 13px;
+      left: -23px;
     }
   }
 }
@@ -230,6 +234,7 @@
 
 .discount__profile li {
   color: #ffffff;
+  margin-top: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
@@ -313,6 +318,17 @@
   box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
   border-radius: 14px;
 
+.orders__btn {
+  font-family: "Gilroy";
+
+  @media(max-width: 376px) {
+  
+
+  }
+}
+
+
+
   .info {
     width: 980px;
     height: 125px;
@@ -322,7 +338,12 @@
     margin-left: 100px;
     margin-top: 13px;
     display: flex;
+
+    @media(max-width: 376px) {
+    
+    }
   }
+
   .info__text {
     margin-right: 50px;
   }
@@ -342,13 +363,16 @@
 
 @media(max-width: 376px) {
   .orders__cart {
-    margin-top: 138px;
     box-shadow: none;
-    width: 377px;
     border: none;
     border-radius: 0px;
   
   }
+}
+
+.profile__Img {
+  width: 41px;
+  height: 75px;
 }
 
 .orders__title {
@@ -356,7 +380,7 @@
   margin-top: 30px;
   .orders__p {
     display: flex;
-    justify-content: space-between;
+  
   }
 }
 
@@ -403,8 +427,8 @@
   @media(max-width: 376px) {
       width: 340px;
       height: 40px;
-      
-
+      display: block;
+      transform: translate(-78px, 10px);
   }
 }
 
@@ -424,6 +448,7 @@
   margin-right: 105px;
 
 }
+
 
 .info h1 {
   font-weight: 700;
@@ -494,17 +519,26 @@
   font-size: 19px;
   line-height: 24px;
   color: #ffffff;
-  width: 251px;
-height: 51px;
+
 
   @media(max-width: 376px) {
     font-weight: 700;
+    width: 213px;
+    height: 35px;
     font-size: 14px;
     line-height: 17px;
     position: relative;
     top: 36px;
     left: 4px;
   }
+}
+
+.slider__text {
+  font-weight: 900;
+  margin-top: 30px;
+  font-size: 22px;
+  line-height: 27px;
+  
 }
 
 .slider__profile p {
