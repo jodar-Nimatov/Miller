@@ -10,7 +10,7 @@ const Instagram = () => {
     <>
     <div className='instagram'>
         <div className="insta-back">
-        <div className="container">
+        {/* <div className="container"> */}
           <div className="insta-title forDF">
           <h1>Мы в Instagram</h1>
           <img src={instaImg} alt="" />
@@ -28,8 +28,7 @@ const Instagram = () => {
              </div>
           </div>
         </div>
-    <div className="instagram-bottom"></div>
-    </div>
+    {/* </div> */}
     </>
   )
 }
