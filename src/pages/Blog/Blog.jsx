@@ -136,13 +136,13 @@ const Blog = () => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "45px" }}
+                        style={{ marginTop: "45px" }}  
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="post-right">
-                    <h2>
+                  <div className="post-right r">
+                    <h2 className="post-right-h2">
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
                     </h2>

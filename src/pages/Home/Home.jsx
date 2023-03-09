@@ -9,7 +9,6 @@ import CoffeImg from "../../assets/Images/CatalogCoffe.png";
 import CatalogTea from "../../assets/Images/CatalogTea.png";
 import CoffeMachine from "../../assets/Images/CoffeMachine.png";
 import CatalogKasha from "../../assets/Images/CatalogKasha.png";
-import rightVector from '../../assets/Images/Vector.png'
 import leftVector from '../../assets/Images/vectorLeft.png'
 import leftVectorCoffe from '../../assets/Images/leftVectorCoffe.png'
 import AdBackTop from '../../assets/Images/AdBackTop.png'
@@ -23,6 +22,8 @@ import { Link } from 'react-router-dom';
 const Main = () => {
   return (
     <div className="wrapper">
+      <div className="fresh-coffee-catalog-back">
+
       <div className="fresh-coffe-back">
       <div className="fresh-coffe">
         <div className="container">
@@ -35,6 +36,7 @@ const Main = () => {
               </p>
               <br />
               <span>
+                {/* Adaptivka mazafaka */}
                 Мы обжариваем кофе <b>каждые выходные</b>.
               </span>
               <br />
@@ -46,9 +48,8 @@ const Main = () => {
             <div >
             </div>
           </div>
-          <div className="gradient-right">
-            <img className="yellow-gradient-right" src={rightVector} alt="" />  
-          </div>
+          {/* <div className="gradient-right">
+          </div> */}
         </div>
       </div>
     </div>
@@ -106,6 +107,7 @@ const Main = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <div className="sale-items">
         <div className="container">

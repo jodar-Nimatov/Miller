@@ -8,8 +8,8 @@ const HealthyItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
-  const url = "http://localhost:3333/healthy-eatings?";
   useEffect(() => {
+    const url = `http://localhost:3333/healthy-eatings-${type}?`;
     axios
       .get(
         url +
@@ -24,8 +24,20 @@ const HealthyItems = ({ type }) => {
           }`
       )
       .then((resp) => {
-        setCards(resp.data[type]);
-      });
+        setCards(resp.data);
+      })
+      .catch(error => {
+        if(error.resp){
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        }else if(error.request){
+          console.log(error.request)
+        }else {
+          console.log('Error: ', error.messege)
+        }
+        console.log(error.config)
+      })
   }, [sorting, type]);
   const closeSorting = () => {
     document.body.children[1].childNodes[5].addEventListener(

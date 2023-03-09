@@ -147,7 +147,7 @@
 .post-left {
   transform: translateX(10px);
 }
-.post-right {
+.post-right.r {
   padding: 24px 55px 20px 120px;
   width: 1140px;
   height: 283px;
@@ -156,7 +156,7 @@
   border-radius: 14px;
   margin-top: 44px;
 }
-.post-right > h2 {
+.post-right-h2 {
   width: 574px;
   height: 23px;
   margin-bottom: 40px;

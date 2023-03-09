@@ -78,7 +78,7 @@ const CoffeeItems = ({ filters }) => {
             });
   }, [sorting, filters])
   const closeSorting = () => {    
-    document.body.children[1].childNodes[4].addEventListener( 
+    document.body.children[1].childNodes[4].addEventListener(
       "click", 
       showSorting
     );

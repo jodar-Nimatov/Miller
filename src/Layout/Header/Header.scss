@@ -30,6 +30,9 @@
   &__item2 {
     transform: translateX(-20px);
   }
+  &__item1:hover{
+    background-color: white;
+  }
   &__item1 {
     display: flex;
     max-width: fit-content;
@@ -57,8 +60,12 @@
     display: flex;
   }
   span:hover {
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     opacity: 0.7;
+  }
+  .accordion:hover{
+    background-color: white;
   }
   .accordion {
     position: relative;
@@ -222,6 +229,7 @@
   }
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+// ///////////////////////////// RUSLAN ///////////////////////////// RUSLAN ///////////////////////////// RUSLAN ///////////////////////////// //
 * {
   box-sizing: border-box;
   padding: 0;
