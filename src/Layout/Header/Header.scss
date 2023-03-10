@@ -215,6 +215,16 @@
       max-height: 9px;
     }
   }
+  .header-right-count_header-basket{
+    margin-left: -45px;
+    margin-bottom: 25px;
+    border: 6px solid #F9B300;
+    border-radius: 50%;
+    height: 20px;
+    background: #F9B300;
+    display: flex;
+    align-items: center;
+  }
 }
 .white {
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

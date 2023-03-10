@@ -3,6 +3,10 @@
     padding: 0;
     margin: 0;
   }
+  .container{
+    @media (max-width: 376px) {
+    }
+  }
   .back-cart{
     background: linear-gradient(to bottom, #FFF7E1 475px, transparent 229px);
   }
@@ -16,9 +20,16 @@
       transparent 331px
     );
     background-size: 240vh;
+
+    @media(max-width: 376px) {
+      background: white;
+      width: 375px;
+  }
   }
   .Cart-ul{
     display: flex;
+    padding: 30px 0 35px 0;
+    font-size: 12px;
   }
 //карточка товара в корзине
   .Cart-product{
@@ -27,15 +38,22 @@
     border: 0.708508px solid #E4E4E4;
     box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
     background-color: white;
+    @media(max-width: 376px) {
+      width: 345px;
+  }
   }
   .Cart-inside{
     margin-left: 100px;
   }
+  
   .Cart-product-up{
     display: flex;
     padding-top: 80px;
     text-align: center;
     gap: 619px;
+    @media(max-width: 376px) {
+      display: inline-block;
+  }
   }
   .Product-delete{
     width: 106px;
@@ -44,6 +62,7 @@
     border: 1px solid #F9B300;
     border-radius: 4px;
     color: rgba(249, 179, 0, 1);
+    cursor: pointer;
   }
   .Cart-product-middle{
     display: flex;
@@ -56,7 +75,7 @@
   .Cart-product-mid-right{
     display: flex;
     padding-left: 190px;
-    gap: 70px;
+    gap: 63px;
   }
   .Cart-card{
     width: 980px;
@@ -73,7 +92,7 @@
     display: flex;
     align-items: center;
     button{
-      padding-right: 84px;
+      padding-right: 55px;
     }
     img{
       padding-right: 15px;
@@ -91,31 +110,38 @@
   .Card-right{
     display: flex;
     align-items: center;
-    padding-left: 40px;
+    padding-left: 45px;
     gap: 50px;
     font-size: 18px;
   }
+  // .Cart-right-price{
+  //   margin-left: -5px;
+  // }
   .Card-click{
     display: flex;
-    width: 135px;
+    width: 105px;
     height: 30px;
     align-items: center;
     background: #F6F6F6;
     border: 1px solid #D6D6D6;
     border-radius: 5px;
+    margin-left: 15px;
   }
   .Card-click button {
     padding: 5px 15px;
     background: none;
     border: none;
     font-size: 30px;
+    align-items: center;
+    display: flex;
+    text-align: center;
     cursor: pointer;
   }
-  .Card-click p {
-    padding: 0 20px 0 20px;
-  }
   .Card-count{
-    padding: 0 20px 0 20px;
+    padding: 0 5px 0 5px;
+  }
+  .Card-Click-dis{
+    padding: 0 30px 0 10px;
   }
   //карточка доставки
   .Cart-delivery{

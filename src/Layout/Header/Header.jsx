@@ -149,7 +149,7 @@ const Header = () => {
               <img
                 onClick={() => {
                   if (cart.length) {
-                    <Link to='/cart'/>
+                    <a href="/cart"/>
                   } else {
                     setSee(true)
                   }
@@ -158,10 +158,10 @@ const Header = () => {
                 src={basketlogo}
                 alt="header basket"
               />
-              <span className="header-right-count header-basket">
+            </Link>
+              <span className="header-right-count_header-basket">
                 {cart.length}
               </span> 
-            </Link>
             <CartEmpty see={see} setSee={setSee}/>
             <Link to="/Profile">
               <img

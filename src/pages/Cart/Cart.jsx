@@ -20,8 +20,8 @@ const Cart = () => {
             <div className="Cart-inner">
                 <div className="Cart-left">
                     <ul className="Cart-ul">
-                        <li><Link to="/">Главная</Link></li>
-                        <li>Корзина</li>
+                        <li><Link to="/">Главная</Link></li>   
+                        <li>&#x2022;Корзина</li>
                     </ul>
                 </div>
                 {/* Карточка товара в корзине */}
@@ -89,7 +89,7 @@ const Cart = () => {
                             <div className="Cart-card">
                                 <div className="Card-left">
                                     <button type="button" onClick={() => delCart(item.id)} className="Card-close"><img src={DeleteBtn} alt=""/></button>
-                                    <img width="60" height="80" src={item.image} alt="" />
+                                    <img width="90" height="80" src={item.image} alt="" />
                                     <div className="Cart-description">
                                         <h3>{item.title}</h3>
                                         <p>мытая, натуральная, смесь</p>
@@ -97,13 +97,13 @@ const Cart = () => {
                                     </div>
                                 </div>
                                 <div className="Card-right">
-                                <p>{item.price} ₽</p>
+                                <p className="Cart-right-price">{item.price} ₽</p>
                                     <div className="Card-click">
                                         <button type="button" onClick={() => minusOneCart(item.id)}>-</button>
                                         <span className="Card-count">{item.count}</span>
                                         <button type="button" onClick={() => plusOneCart(item.id)}>+</button>
                                     </div>
-                                <p>{item.price * item.count / 100 * 10} ₽</p>
+                                <p className="Card-Click-dis">{item.price * item.count / 100 * 10} ₽</p>
                                 <p>{item.price * item.count - item.price * item.count / 100 * 10} ₽</p>
                             </div> 
                             </div>
