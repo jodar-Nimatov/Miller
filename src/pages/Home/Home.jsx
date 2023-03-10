@@ -35,10 +35,10 @@ const Main = () => {
                 доставкой на дом.
               </p>
               <br />
-              <span>
+              <p>
                 {/* Adaptivka mazafaka */}
                 Мы обжариваем кофе <b>каждые выходные</b>.
-              </span>
+              </p>
               <br />
               <button>Посмотреть каталог</button>
             </div>
@@ -180,7 +180,7 @@ const Main = () => {
                             У нас свой подход к каждой партии зерна.
                         </p>
                         <br />
-                        <span>
+                        <span className="roast-text-gb">
                             Мы раскрываем вкус каждого сорта кофе.
                         </span>
                         <br />
