@@ -29,7 +29,7 @@
   line-height: 24px;
   padding-top: 40px;
 }
-.fresh-coffe-left > span > b {
+.fresh-coffe-left > p > b {
   font-weight: 700;
   font-size: 18px;
 }
@@ -71,6 +71,9 @@
   background-repeat: no-repeat;
   background-position: left 40px;
   background-size: 45vh;
+  @media(max-width: 375px){
+    background-size: 115vh;
+  }
 }
 
 .catalog-products {
@@ -155,6 +158,9 @@
   width: 100%;
   height: 203px;
   transform: translateY(10px);
+  @media (max-width: 375px) {
+    height: 70px;
+  }
 }
 
 .advantages {
@@ -170,6 +176,9 @@
     display: flex;
     position: relative;
     transform: translateX(-140px);
+    @media (max-width: 375px) {
+      display: none;
+    }
   }
   .advantages-left > .img2 {
     position: absolute;
@@ -189,18 +198,35 @@
   }
   .advantages-right {
     transform: translateX(651px);
+    @media (max-width: 375px) {
+      transform: translateX(114px);
+    }
   }
   .advantages-right > h2 {
     font-weight: bold;
     font-size: 35px;
     width: 404px;
     transform: translate(-108px, -65px);
+    @media (max-width: 375px) {
+      font-weight: bold;
+      font-size: 28px;
+      width: 318px;
+      transform: translate(-97px, -1px);
+    }
   }
   .advent-imgs {
     transform: translateX(-110px);
+    @media (max-width: 375px) {
+      max-width: 50px;
+      max-height: 50px;
+      transform: translate(-102px, 115px);
+    }
   }
   .advantages-block > .ad-block-content {
     transform: translateY(-90px);
+    @media (max-width: 375px) {
+      transform: translate(-40px, 40px);
+    }
   }
   .ad-block-content > h3 {
     font-weight: bolder;
@@ -209,6 +235,9 @@
   }
   .ad-block-content > p {
     width: 334px;
+    @media (max-width: 375px) {
+      width: 272px;
+    }
   }
 }
 
@@ -218,6 +247,13 @@
   height: 200px;
   z-index: 1;
   transform: translateY(65px);
+  @media (max-width: 375px) {
+    position: relative;
+    width: 100%;
+    height: 82px;
+    z-index: 1;
+    transform: translateY(167px);
+  }
 }
 
 .roast-coffe {
@@ -228,6 +264,9 @@
   .roast-coffe-inner {
     padding: 70px;
     color: white;
+    @media (max-width: 375px) {
+      padding: 50px 0 0;
+    }
   }
   .roast-coffe-inner > h2 {
     font-family: "Gilroy";
@@ -235,12 +274,25 @@
     font-weight: 900;
     font-size: 35px;
     line-height: 150px;
+    @media (max-width: 375px) {
+      padding-top: 50px;
+      padding-left: 6px;
+      font-size: 24px;
+      line-height: normal;
+      width: 390px;
+    }
   }
   .roast-coffe-inner > p {
     width: 776px;
     line-height: 20px;
-    font-size: 18px;
+    font-size: 14px;
     padding-bottom: 20px;
+    font-family: "Gilroy";
+    @media (max-width: 375px) {
+      width: 341px;
+      padding-top: 58px;
+      padding-left: 36px;
+    }
   }
   .roast-coffe-inner > button {
     margin-top: 80px;
@@ -252,6 +304,19 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;  
+    @media (max-width: 375px) {
+      position: absolute;
+      width: 340px;
+      height: 50px;
+      left: 18px;
+      top: 680px;
+    }
+  }
+  .roast-text-gb{
+    @media (max-width: 375px) {
+      padding-left: 30px;
+      font-size: 14px;
+    }
   }
 }
 
@@ -264,4 +329,96 @@
   background-size: 300vh;
   background-position: center bottom;
   z-index: 1;
+}
+
+@media (max-width: 375px) {
+  //fresh-coffee    
+  .fresh-coffe-left > h1 {
+    height: 54px;
+    font-size: 30px;
+  }
+  .fresh-coffe-inner{
+    padding-top: 57px;
+    transform: translate(-64px, -130px);
+  }
+  .fresh-coffe-left > p {
+    width: 220px;
+    height: 108px;
+    line-height: 24px;
+    padding-top: 40px;
+  }
+  .fresh-coffe-left > button{
+    cursor: pointer;
+    width: 340px;
+    height: 50px;
+    margin-top: 150px;
+  }
+  //catalog
+  .catalog-products .catalog-inner > h2 {
+    font-size: 20px;
+    position: absolute;
+    top: 625px;
+    padding-left: 10px;
+  }
+  .catalog-products .catalog-items {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    gap: 20px;
+    overflow-x: scroll;
+  }
+  .catalog-products  .catalog-card {
+    position: relative;
+    width: 280px;
+    text-align: center;
+    height: 410px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(146, 146, 146, 0.2);
+    border-radius: 35px;
+  }
+  .catalog-products .catalog-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  //sale-items
+  .sale-items {
+    .sale-items-inner {
+      padding-top: 40px;
+      margin-left: 600px;
+    }
+    .sale-items-inner > h1 {
+      position: absolute;
+      width: 194px;
+      height: 25px;
+      left: 177px;
+      top: 1243px;
+      
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 25px;
+      text-align: right;
+    }
+    .sale-items-inner > p {
+      position: absolute;
+      width: 290px;
+      height: 90px;
+      left: 80px;
+      top: 1228px;
+
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      text-align: right;
+      color: #000000;
+    }
+    //    
+  }
 }

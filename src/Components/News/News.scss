@@ -17,15 +17,50 @@
     justify-content: space-between;
     align-items: center;
   }
+  .news-posts-row{
+    @media (max-width: 375px) {
+      min-width: 360px;
+      display: flex;
+      transform: translateX(-77px);
+      overflow: hidden;
+      overflow-x: scroll;
+      gap: 20px;
+    }
+  }
   .news-title > h2 {
     font-size: 34px;
     padding-bottom: 70px;
+    @media (max-width: 375px) {
+      position: absolute;
+      width: 200px;
+      height: 25px;
+      left: -10px;
+      top: 70px;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 25px;
+      padding-bottom: 50px;
+    }
   }
   .news-title > a{
     text-decoration: underline;
+    @media (max-width: 375px) {
+      position: absolute;
+      bottom: 20px;
+      right: 16px;
+    }
   }
   .post-card{
     display: flex;
+    @media (max-width: 375px) {
+      display: inline;
+    }
+  }
+  .post-img > img{
+    @media (max-width: 375px) {
+      width: 340px;
+      height: 140px;
+    }
   }
   .post-left{
     transform: translateX(10px);
@@ -37,14 +72,26 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 21.2553px rgba(146, 146, 146, 0.2);
     border-radius: 14px;
+    @media (max-width: 375px) {
+      width: 350px;
+      height: 400px;
+      padding-top: 50px;
+    }
   }
   .post-right > h2{
     width: 325px;
     margin-bottom: 20px;
     font-size: 18px;
+    @media (max-width: 375px) {
+      width: 275px;
+    }
   }
   .post-right > p{
     width: 325px;
+    @media (max-width: 375px) {
+      width: 280px;
+      padding-bottom: 112px;
+    }
   }
   .post-right > a{
     color: #F9B300;
@@ -75,9 +122,15 @@
     display: flex;
     gap: 20px;
     padding-bottom: 20px;
+    @media (max-width: 375px) {
+      padding-top: 80px;
+    }
   }
   .posts-bellow{
     display: flex;
     gap: 20px;
+    @media (max-width: 375px) {
+      transform: translateY(80px)
+    }
   }
 }

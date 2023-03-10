@@ -4,8 +4,11 @@
     margin-top: 115px;
     position: relative;
     transform: translate(-479px, -14px);
+    @media (max-width: 375px) {
+        margin-top: 5px;
+        transform: translate(-574px, -66px);
+    }
     &__show{
-        // position: absolute;
         width: 950px;
         height: 100%;
         display: flex;
@@ -13,6 +16,10 @@
         text-align: center;
         place-content: center;
         align-items: center;
+        @media (max-width: 375px) {
+            width: 332px;
+            overflow-x: scroll;
+        }
     }
     &__inner{
         max-width: 1680px;
@@ -44,6 +51,9 @@
         &:hover{
             opacity: 0.7;
         }
+        @media (max-width: 375px) {
+            display: none;
+        }
     }
     .slider-card{
         transform: translateY(55px);
@@ -67,6 +77,9 @@
         font-size: 24px;
         &:hover{
             opacity: 0.7;
+        }
+        @media (max-width: 375px) {
+            display: none;
         }
     }
 }
