@@ -26,18 +26,18 @@ const HealthyItems = ({ type }) => {
       .then((resp) => {
         setCards(resp.data);
       })
-      .catch(error => {
-        if(error.resp){
-          console.log(error.response.data)
-          console.log(error.response.status)
-          console.log(error.response.headers)
-        }else if(error.request){
-          console.log(error.request)
-        }else {
-          console.log('Error: ', error.messege)
+      .catch((error) => {
+        if (error.resp) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log("Error: ", error.messege);
         }
-        console.log(error.config)
-      })
+        console.log(error.config);
+      });
   }, [sorting, type]);
   const closeSorting = () => {
     document.body.children[1].childNodes[5].addEventListener(
@@ -50,7 +50,7 @@ const HealthyItems = ({ type }) => {
     setModal("showC");
   };
   return (
-    <>
+    <div className="tea-cards-back">
       <div className="coffee__cards healthy-items-back">
         <div className="container">
           <div className="coffee__cards-inner">
@@ -124,32 +124,48 @@ const HealthyItems = ({ type }) => {
                         className="card-image"
                         height="196px"
                         alt=""
-                      /> 
+                      />
                     </Link>
-                    {item.category.map(cy => <div key={cy.length}>{item.category.includes('Скидки') ? <><div style={{transform: 'translateY(-24px)'}} className="discount">%</div></> : null}</div>)}
+                    {item.category.map((cy) => (
+                      <div key={cy.length}>
+                        {item.category.includes("Скидки") ? (
+                          <>
+                            <div
+                              style={{ transform: "translateY(-24px)" }}
+                              className="discount"
+                            >
+                              %
+                            </div>
+                          </>
+                        ) : null}
+                      </div>
+                    ))}
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
-                    <h4 style={{marginTop: '16px'}}>{item.title}</h4>
-                    <p style={{marginTop: '20px'}}>{item.subtitle}</p>
+                    <h4 style={{ marginTop: "16px" }}>{item.title}</h4>
+                    <p style={{ marginTop: "20px" }}>{item.subtitle}</p>
                     <Link to="" className="treedots">
                       Больше
                     </Link>
                     <>...</>
-                    <div className="coffee__cards-inner-row-card-bottom-bottom forDF" >
-                        <div className="coffee__cards-inner-row-card-bottom-bottom-price">
-                            <></>
-                          <h3 className="card-title-jiest">{item.price} ₽</h3>
-                        </div>
-                        <button>В корзину</button>
+                    <div className="coffee__cards-inner-row-card-bottom-bottom forDF">
+                      <div className="coffee__cards-inner-row-card-bottom-bottom-price">
+                        <></>
+                        <h3 className="card-title-jiest">{item.price} ₽</h3>
                       </div>
+                      <button>В корзину</button>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+            <br />
+            <br />
+            <button>Показать еще</button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
