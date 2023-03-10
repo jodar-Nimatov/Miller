@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, } from "react";
 import kislinkaHigh from "../../../../assets/Catalog/kislinkH.svg";
 import kislinkaLow from "../../../../assets/Catalog/kislinkL.svg";
 import kislinkaMedium from "../../../../assets/Catalog/kislinkM.svg";
@@ -11,8 +11,10 @@ import roast2 from "../../../../assets/Catalog/Coffee/Filters/roast2.svg";
 import roast1 from "../../../../assets/Catalog/Coffee/Filters/roast1.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { CustomContext } from "../../../Cart/Context";
 
 const CoffeeItems = ({ filters }) => {
+  const {addCart} = useContext(CustomContext)
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
@@ -126,7 +128,7 @@ const CoffeeItems = ({ filters }) => {
                 </li>
               </ul>
             </div>
-            <div className="coffee__cards-inner-row">
+            <div className="coffee__cards-inner-row tocenter">
               {/* <BsStar/> */}
               {cards.map((item) => {
                 // Nujno propisat nemnogo logiki dlya cartochek.
@@ -262,16 +264,18 @@ const CoffeeItems = ({ filters }) => {
                         Больше
                       </Link>
                       <>...</>
-                      <div className="coffee__cards-inner-row-card-bottom-bottom">
-                        {item.category.includes("Скидки") ? (
-                          <div className="old-price">
-                            {Math.floor(item.price + (item.price / 100) * 30)} ₽
-                          </div>
-                        ) : (
-                          <></>
-                        )}
-                        <h3>{item.price} ₽</h3>
-                        <button>В корзину</button>
+                      <div className="coffee__cards-inner-row-card-bottom-bottom forDF" >
+                        <div className="coffee__cards-inner-row-card-bottom-bottom-price">
+                          {item.category.includes("Скидки") ? (
+                            <div className="old-price">
+                              {Math.floor(item.price + (item.price / 100) * 30)} ₽
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                          <h3>{item.price} ₽</h3>
+                        </div>
+                        <button type="button" onClick={() => addCart(item)}>В корзину</button>
                       </div>
                     </div>
                   </div>

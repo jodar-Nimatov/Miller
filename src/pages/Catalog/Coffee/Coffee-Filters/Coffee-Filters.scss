@@ -29,6 +29,7 @@
     background: linear-gradient(to bottom, #f9b300 229px, transparent 229px);
   }
 
+
   &-bottom {
     &-blocks {
       @media (max-width: 1032px){
@@ -272,7 +273,7 @@
 .useFilter-btns{
   display: flex;
   text-align: right;
-  padding-right: 50px;
+  padding-right: 46px;
   justify-content: right;
   & .one{
       border-radius:6px;
@@ -280,6 +281,7 @@
       text-transform: uppercase;
       text-align: center;
       font-weight: 900;
+      margin-left: 13px;
       color: #524f4e;
       cursor: pointer;
       padding:3px;
@@ -287,8 +289,8 @@
       background: white;
       box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
       transition: .2s;
-    &:hover {
-      background: #f9b300;
+      &:hover {
+        background: #f9b300;
       box-shadow: 0 5px 13px rgba(46, 229, 157, .4);
       // color: white;
     }
@@ -309,6 +311,7 @@
     background: white;
     box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
     transition: .2s;
+    padding-left: 7px;
   &:hover {
     background: #f9b300;
     box-shadow: 0 5px 13px rgba(46, 229, 157, .4);
