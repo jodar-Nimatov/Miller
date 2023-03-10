@@ -441,8 +441,7 @@
             "image": "https://avatars.mds.yandex.net/get-mpic/5234126/img_id2322291214915335377.jpeg/orig"
         }
     ],
-    "healthy-eatings": [
-        [
+    "healthy-eatings-one": [
             {
                 "id": 1,
                 "title": "Цикорий ULISS классический, ",
@@ -522,7 +521,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/7660527/img_id6827102340375698673.jpeg/orig"
             }
         ],
-        [
+        "healthy-eatings-two": [
             {
                 "id": 1,
                 "title": "Кофейный напиток растворимый 100% натуральный Ячменный колос Кофе без кофеина  ",
@@ -602,7 +601,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/6453326/img_id1540444949122743463.jpeg/orig"
             }
         ],
-        [
+        "healthy-eatings-three": [
             {
                 "id": 1,
                 "title": "Напиток витаминизированный Lifeline Energy лимон,",
@@ -682,7 +681,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/6217624/img_id7673425505821236677.jpeg/orig"
             }
         ],
-        [
+        "healthy-eatings-four": [
             {
                 "id": 1,
                 "title": "Протеин Bombbar Whey Protein, 900 гр.,",
@@ -762,7 +761,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/5234569/img_id8799735472856833868.png/orig"
             }
         ],
-        [
+        "healthy-eatings-five": [
             {
                 "id": 1,
                 "title": "Быстров Без варки. Ассорти. Каша овсяная: лесные ягоды с молоком, клубника с молоком, малина с молоком",
@@ -841,10 +840,8 @@
                 "review": "7",
                 "image": "https://avatars.mds.yandex.net/get-mpic/5172752/img_id6272684950682989912.jpeg/orig"
             }
-        ]
-    ],  
-    "coffe-drinks": [
-        [
+        ],
+    "coffee-drinks-one":[
             {
                 "id": 1,
                 "title": "Плантационный чёрный чай «Кения СTC BP1»(в гранулах).",
@@ -1098,7 +1095,7 @@
                 "image": "https://static.insales-cdn.com/images/products/1/4231/558215303/cuba-serrano-dark-1_kg-700.jpg"
             }
         ],
-        [
+        "coffee-drinks-two":[
             {
                 "id": 1,
                 "title": "Грин ти жи ест",
@@ -1136,7 +1133,7 @@
                     "Зеленый чай"
                 ],
                 "review": "4",
-                "image": "http://www.zdorowie.lov-life.ru/wp-content/uploads/2016/07/162.jpg"
+                "image": "  "
             },
             {
                 "id": 4,
@@ -1308,7 +1305,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/4866352/img_id4698875914516743375.jpeg/orig"
             }
         ],
-        [
+        "coffee-drinks-three":[
             {
                 "id": 1,
                 "title": "Молочный улунг MOГU (500g)",
@@ -1518,7 +1515,7 @@
                 "image": "https://yandex-images.clstorage.net/ntA4t9248/2222fblFW_gY/V3aS7_Uza0dWGfNU0XltkB91JOo7lG_lvxFUqVi8iDTE8URnGnPGR6EtoLkvHn1UTLIebrsRk6UDDqro0Z6JXWYSVkuUlj6TF4yz1OEpTEXLRDUvm9G-QZrU4IytyQ1kpZEBs1-GEuaBePN6nWnqcqshKYnMtuewQ7vfPDVKyCu1woHfgJNbVBJb43QTia2Gz3Q0PKpzXwTb11F4Tl_LYaKiA4A6xoN3lh8Du5_JuJG6Uts4LyT283HrzyzR-OtpZaRT7iLiGybTWHJUccuM1pyFR39poc_H6CUiif6-KNDDYzNAGpVzBMXOkgs_2avwGNMbmP12puHCGv3sIsv4eyTmsY1hgPokU-rjNTHIHIZvFNdtm7Adh4n2Yyusf4hB8sJyIPkHIkXkTqDpDfl5UmkTeAr-x2ZxMCrsb8A6SnkG94C-U0OLF1JLMsQTeX8nzBcGPPhRL4XKFSCbrf25A7FDIyAbZuEl561yGQ-a6xGY0rmJXTQ0AJEZXP4jOkuqdKZSr_NheYbBqqAG8AssZD6GBj_bwv_32qZDyzyPepKxwTJhWgTS90XN8QsOGSlzueN6S0x3JxDw-d7ME8rISHdE0EzhgPukoXrABJB5zyQMNjT-WBD_J6inEMuebIjj06GRoKukA7UVnNLZvHm4EDlw23vsZEbycMgOXxDIqlkXVEMckQF4FfFbUXWxu45k7hfH3VlBj0UrVvLbTTy5IPKwIzDLJVJGxo0hms5pSXPYQtoJXMakcDA4Df4Qu0m5N7UivtFQ6HSASCIEI6v_F59WR8_Z4D-E2tUhCZ_MCjPCkIIhaWShJqQMg6oOeaqzepC6CrzEloJDGuxvgyuIepSkou1TwfslIpkwBqELvITetRc-6mO_J9m2wUmOb0hSspKBggqXcwdWDbBKz0sZUtlyeAiOpDewgXls7BAJiijXd7Ft4yKqFBG5YEaTmQ8kXPW3LLiA7lSqVaELc"
             }
         ],
-        [
+        "coffee-drinks-four":[
             {
                 "id": 1,
                 "title": "Травяной чай типо",
@@ -1728,7 +1725,7 @@
                 "image": "https://avatars.mds.yandex.net/i?id=aadece4945232896875eeb0ac29d59563a7c44ac-5887026-images-thumbs&ref=rim&n=33&w=225&h=225"
             }
         ],
-        [
+        "coffee-drinks-five":[
             {
                 "id": 1,
                 "title": "Моча крч",
@@ -1805,7 +1802,7 @@
                 ],
                 "rating": "3.4",
                 "review": "13",
-                "image": "https://fitolekar.ru/userfiles/shop/shop_product_1000x10/653_sbor-trav-pri-vitiligo.jpg"
+                "image": "https://ecoorganica.ru/wa-data/public/shop/products/56/56/35656/images/27326/27326.970.jpg"
             },
             {
                 "id": 7,
@@ -1938,7 +1935,7 @@
                 "image": "https://avatars.mds.yandex.net/i?id=aadece4945232896875eeb0ac29d59563a7c44ac-5887026-images-thumbs&ref=rim&n=33&w=225&h=225"
             }
         ],
-        [
+        "coffee-drinks-six":[
             {
                 "id": 1,
                 "title": "Чай Улун Да Хун Пао (Da Hong Pao), 100 г",
@@ -2148,7 +2145,7 @@
                 "image": "https://www.zakaz-coffee.ru/wa-data/public/shop/products/36/17/1736/images/2546/2546.970x0.jpg"
             }
         ],
-        [
+        "coffee-drinks-seven":[
             {
                 "id": 1,
                 "title": "Кофе порционный MacCoffee Cappuccino di Torino, 20 пак.по 25,5г.",
@@ -2357,10 +2354,8 @@
                 "review": "2",
                 "image": "https://avatars.mds.yandex.net/get-mpic/1886132/img_id816378738834213468.jpeg/orig"
             }
-        ]
-    ],
-    "Products-for-vending": [
-        [
+        ],
+        "Products-for-vending-one":[
             {
                 "id": 1,
                 "title": "Кофе растворимый Senator Jamaica Blue сублимированный, стеклянная банка, 100 г",
@@ -2490,7 +2485,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/331398/img_id7941251010768411596.jpeg/orig"
             }
         ],
-        [
+        "Products-for-vending-two":[
             {
                 "id": 1,
                 "title": "Цикорий Здоровье гранулированный,",
@@ -2620,7 +2615,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/331398/img_id7941251010768411596.jpeg/orig"
             }
         ],
-        [
+        "Products-for-vending-three":[
             {
                 "id": 1,
                 "title": "Кофе в зернах Egoiste Noir,",
@@ -2750,7 +2745,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/331398/img_id7941251010768411596.jpeg/orig"
             }
         ],
-        [
+        "Products-for-vending-four":[
             {
                 "id": 1,
                 "title": "Белый мишка Какао-напиток растворимый гранулированный,,",
@@ -2880,7 +2875,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/4888456/img_id2569588223286459338.jpeg/orig"
             }
         ],
-        [
+        "Products-for-vending-five":[
             {
                 "id": 1,
                 "title": "Кофе растворимый гранулированный Индия натуральный",
@@ -3010,7 +3005,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/7660527/img_id3188395039960819416.jpeg/orig"
             }
         ],
-        [
+        "Products-for-vending-six":[
             {
                 "id": 1,
                 "title": "Кофе растворимый Bushido Black Katana,",
@@ -3140,7 +3135,7 @@
                 "image": "https://avatars.mds.yandex.net/get-mpic/331398/img_id7941251010768411596.jpeg/orig"
             }
         ],
-        [
+        "Products-for-vending-seven":[
             {
                 "id": 1,
                 "title": "Топпинг гранулированный молокосодержащий,",
@@ -3269,8 +3264,7 @@
                 "review": "6",
                 "image": "https://avatars.mds.yandex.net/get-mpic/331398/img_id7941251010768411596.jpeg/orig"
             }
-        ]
-    ],
+        ],
     "news-posts": [
         {
             "id": 1,

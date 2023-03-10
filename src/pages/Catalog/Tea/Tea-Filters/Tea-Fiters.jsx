@@ -7,7 +7,7 @@ import TeaItems from '../Tea-Items/Tea-Items';
 import { useRef } from 'react';
 
 const TeaFilters = () => {
-  const [types, setTypes] = useState({type: 0})
+  const [types, setTypes] = useState({type: 'one'})
   const ref = useRef(null);
 
   const handleSrcoll = () => {
@@ -45,19 +45,19 @@ const TeaFilters = () => {
             <div className="tea-filters-blocks-top">
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 0})}} className="tea-filters-blocks-item balck-tea">
+                setTypes({type: 'one'})}} className="tea-filters-blocks-item balck-tea">
                 <img width='101px' src={blackTea}  height='141px' alt="" />
                 <p>Черный чай</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 1})}} className="tea-filters-blocks-item green-tea">
+                setTypes({type: 'two'})}} className="tea-filters-blocks-item green-tea">
                 <img width='101px' src={greenTea}  height='141px' alt="" />
                 <p>Зеленый чай</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 2})}} className="tea-filters-blocks-item oolong-milk">
+                setTypes({type: 'three'})}} className="tea-filters-blocks-item oolong-milk">
                 <img width='101px' src={oolongMilk} height='141px'   alt="" />
                 <p>Молочный улунг</p>
               </div>
@@ -65,25 +65,25 @@ const TeaFilters = () => {
             <div className="tea-filters-blocks-bottom">
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 3})}} className="tea-filters-blocks-item balck-tea">
+                setTypes({type: 'four'})}} className="tea-filters-blocks-item balck-tea">
                 <img src='https://avatars.mds.yandex.net/i?id=673e9d6068fbc684646655511a01047657ec01f1-6249527-images-thumbs&ref=rim&n=33&w=225&h=225'  height='141px' alt="" />
                 <p>Травяной чай</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 4})}} className="tea-filters-blocks-item green-tea">
+                setTypes({type: 'five'})}} className="tea-filters-blocks-item green-tea">
                 <img src='https://kn95.ecoorganica.ru/wa-data/public/shop/products/98/60/36098/images/27768/27768.970.jpg'  height='141px' alt="" />
                 <p>Матча</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 5})}} className="tea-filters-blocks-item oolong-milk">
+                setTypes({type: 'six'})}} className="tea-filters-blocks-item oolong-milk">
                 <img src='https://othertea.ru/image/cache/catalog/products/tea/Chinatea/Puer/GunTinpuerkirpich_250_(fab.YUnfa,YUnnanYUnde),2018god-800x800.webp'  height='141px'   alt="" />
                 <p>Пуэр</p>
               </div>
               <div onClick={()=>{
                 handleSrcoll()
-                setTypes({type: 6})}} className="tea-filters-blocks-item green-tea">
+                setTypes({type: 'seven'})}} className="tea-filters-blocks-item green-tea">
                 <img src='https://avatars.mds.yandex.net/get-mpic/4575382/img_id4727551693313545040.jpeg/orig' alt="" height='141px'  />
                 <p>Кофейные напитки</p>
               </div>
