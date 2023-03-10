@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import rating from "../../../../assets/Catalog/Coffee/Filters/rating.svg";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { CustomContext } from "../../../Cart/Context";
 
 const TeaItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
+  const {addCart} = useContext(CustomContext)
   useEffect(() => {
     const url = `http://localhost:3333/coffee-drinks-${type}?`;
     axios
@@ -140,7 +142,7 @@ const TeaItems = ({ type }) => {
                             <></>
                           <h3 className="card-title-jiest">{item.price} ₽</h3>
                         </div>
-                        <button>В корзину</button>
+                        <button type='button' onClick={() => addCart(item)}>В корзину</button>
                       </div>
                   </div>
                 </div>

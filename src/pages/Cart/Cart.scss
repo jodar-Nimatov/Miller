@@ -3,12 +3,33 @@
     padding: 0;
     margin: 0;
   }
-
+  .container{
+    @media (max-width: 376px) {
+    }
+  }
+  .back-cart{
+    background: linear-gradient(to bottom, #FFF7E1 475px, transparent 229px);
+  }
   .Cart{
-    background-color: rgba(255, 247, 225, 1);
+    background-repeat: no-repeat;
+    background-image: url("../../assets/Catalog/cart-back.svg");
+    background-position-y: 460px;
+    background-color: linear-gradient(
+      to bottom,
+      #FFF7E1 331px,
+      transparent 331px
+    );
+    background-size: 240vh;
+
+    @media(max-width: 376px) {
+      background: white;
+      width: 375px;
+  }
   }
   .Cart-ul{
     display: flex;
+    padding: 30px 0 35px 0;
+    font-size: 12px;
   }
 //карточка товара в корзине
   .Cart-product{
@@ -17,15 +38,22 @@
     border: 0.708508px solid #E4E4E4;
     box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
     background-color: white;
+    @media(max-width: 376px) {
+      width: 345px;
+  }
   }
   .Cart-inside{
     margin-left: 100px;
   }
+  
   .Cart-product-up{
     display: flex;
     padding-top: 80px;
     text-align: center;
     gap: 619px;
+    @media(max-width: 376px) {
+      display: inline-block;
+  }
   }
   .Product-delete{
     width: 106px;
@@ -34,6 +62,7 @@
     border: 1px solid #F9B300;
     border-radius: 4px;
     color: rgba(249, 179, 0, 1);
+    cursor: pointer;
   }
   .Cart-product-middle{
     display: flex;
@@ -46,7 +75,7 @@
   .Cart-product-mid-right{
     display: flex;
     padding-left: 190px;
-    gap: 70px;
+    gap: 63px;
   }
   .Cart-card{
     width: 980px;
@@ -63,42 +92,56 @@
     display: flex;
     align-items: center;
     button{
-      padding-right: 84px;
+      padding-right: 55px;
     }
     img{
       padding-right: 15px;
     }
   }
+  .Cart-description{
+    width: 210px;
+  }
   .Card-close{
     border: 0;
     background: rgba(252, 252, 252, 1);
     padding-left: 43px;
+    cursor: pointer;
   }
   .Card-right{
     display: flex;
     align-items: center;
-    padding-left: 85px;
+    padding-left: 45px;
     gap: 50px;
     font-size: 18px;
   }
+  // .Cart-right-price{
+  //   margin-left: -5px;
+  // }
   .Card-click{
     display: flex;
-    width: 170px;
-    height: 50px;
+    width: 105px;
+    height: 30px;
     align-items: center;
     background: #F6F6F6;
     border: 1px solid #D6D6D6;
     border-radius: 5px;
+    margin-left: 15px;
   }
   .Card-click button {
-    padding: 15px 15px;
+    padding: 5px 15px;
     background: none;
     border: none;
     font-size: 30px;
+    align-items: center;
+    display: flex;
+    text-align: center;
     cursor: pointer;
   }
-  .Card-click p {
-    padding: 0 35px 0 35px;
+  .Card-count{
+    padding: 0 5px 0 5px;
+  }
+  .Card-Click-dis{
+    padding: 0 30px 0 10px;
   }
   //карточка доставки
   .Cart-delivery{

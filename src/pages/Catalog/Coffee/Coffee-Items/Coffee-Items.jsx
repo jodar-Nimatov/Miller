@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, } from "react";
 import kislinkaHigh from "../../../../assets/Catalog/kislinkH.svg";
 import kislinkaLow from "../../../../assets/Catalog/kislinkL.svg";
 import kislinkaMedium from "../../../../assets/Catalog/kislinkM.svg";
@@ -11,8 +11,10 @@ import roast2 from "../../../../assets/Catalog/Coffee/Filters/roast2.svg";
 import roast1 from "../../../../assets/Catalog/Coffee/Filters/roast1.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { CustomContext } from "../../../Cart/Context";
 
 const CoffeeItems = ({ filters }) => {
+  const {addCart} = useContext(CustomContext)
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
@@ -273,7 +275,7 @@ const CoffeeItems = ({ filters }) => {
                           )}
                           <h3>{item.price} ₽</h3>
                         </div>
-                        <button>В корзину</button>
+                        <button type="button" onClick={() => addCart(item)}>В корзину</button>
                       </div>
                     </div>
                   </div>
