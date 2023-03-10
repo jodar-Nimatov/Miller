@@ -22,25 +22,32 @@
       font-size: 30px;
     }
   }
-
   &-back {
     background: linear-gradient(to bottom, #f9b300 331px, transparent 331px);
+  }
+  &-back-healthy{
+    background: linear-gradient(to bottom, #f9b300 229px, transparent 229px);
   }
 
   &-bottom {
     &-blocks {
+      @media (max-width: 1032px){
+        text-align: center;
+        justify-content: center;
+      }
       z-index: 4;
       position: relative;
       flex-wrap: wrap;
       @media (min-width: 1210px) {
         display: flex;
       }
-
+      
       &-item:hover {
-        opacity: 0.7;
+        // opacity: 0.7;
+        box-shadow: 0px 0px 21.2553px rgba(23, 23, 23, 0.25);
       }
-
       &-item:active {
+        box-shadow: 0px 0px 21.2553px rgba(147, 147, 147, 0.25);
         cursor: default;
       }
 
@@ -54,7 +61,7 @@
         height: 134px;
         display: flex;
 
-        &-inner > p {
+        &-inner > p{
           padding: 20px 0 15px;
         }
 
@@ -65,11 +72,14 @@
           justify-content: center;
           flex-wrap: wrap;
           align-content: space-between;
+          // &-top{
+          //   justify-content: right;
+          // }
         }
       }
       display: flex;
       margin-top: 15px;
-      gap: 11px;
+      gap: 15px;
     }
   }
   &-coffee {
@@ -100,6 +110,9 @@
     z-index: 3;
   }
   &__left > h1 {
+    @media (max-width: 967px){
+      color: #000000;
+    }
     margin-top: 100px;
     font-weight: 900;
     font-size: 50px;
@@ -116,6 +129,9 @@
   &-nav-item {
     color: white;
     font-size: 12px;
+    @media (max-width: 967px){
+      color: #000000;
+    }
   }
   &-nav {
     margin-top: 30px;
@@ -139,6 +155,7 @@
   &-function-left {
     display: flex;
     width: 280px;
+    z-index: 4;
     border-radius: 14.1702px;
     height: 373px;
     background-color: white;
@@ -225,10 +242,6 @@
       width: 93px;
     }
   }
-  // Вот и вся функция .
-  .white-circle.clicked {
-    background-color: #f9b300;
-  }
   .white-circle:active {
     cursor: default;
   }
@@ -255,8 +268,60 @@
   .fiveCoffees > div > img {
     max-width: 17px;
   }
-  .fiveCoffees > div {
-    gap: 7px;
-    display: flex;
+}
+.useFilter-btns{
+  display: flex;
+  text-align: right;
+  padding-right: 50px;
+  justify-content: right;
+  & .one{
+      border-radius:6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 900;
+      color: #524f4e;
+      cursor: pointer;
+      padding:3px;
+      transform: translateY(-13px);
+      background: white;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+      transition: .2s;
+    &:hover {
+      background: #f9b300;
+      box-shadow: 0 5px 13px rgba(46, 229, 157, .4);
+      // color: white;
+    }
   }
+  & .two{
+    &>img{
+      transform: translateY(3px);
+    }
+    border-radius:6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    color: #524f4e;
+    cursor: pointer;
+    padding:3px;
+    transform: translateY(-13px);
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .2s;
+  &:hover {
+    background: #f9b300;
+    box-shadow: 0 5px 13px rgba(46, 229, 157, .4);
+    // color: white;
+  }
+  }
+}
+.divdn{
+  display: none;
+}
+.divdn.b{
+  margin-left: 14px;
+  display: block;
+  height: 4px;
+  width: 80%;
 }

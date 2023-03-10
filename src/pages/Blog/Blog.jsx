@@ -8,8 +8,17 @@ import newscoffe from "../../assets/blog/image 6.png";
 import { Link } from "react-router-dom";
 import faqimg from "../../assets/blog/coffeFAQ.svg";
 import Accordion from "./Accordion";
+import { useRef } from "react";
 
-const Blog = (props) => {
+const Blog = () => {
+  const ref = useRef(null)
+  const refQA = useRef(null)
+  const scrollToNews = () => {
+    ref.current?.scrollIntoView({'behavor': 'smooth'})
+  }
+  const scrollToQA = () => {
+    refQA.current?.scrollIntoView({'behavor': 'smooth'})
+  }
   return (
     <div className="blog">
       <div className="container">
@@ -21,8 +30,8 @@ const Blog = (props) => {
           <div className="switch_btn">
             <div className="button_switch">
               <button className="btn_switch">Обучение</button>
-              <button className="btn_switchnews">Новости</button>
-              <button className="btn_switchches">Частые вопросы</button>
+              <button onClick={scrollToNews} className="btn_switchnews">Новости</button>
+              <button onClick={scrollToQA} className="btn_switchches">Частые вопросы</button>
             </div>
             <div className="text_center">
               <h1 className="text_centerh1">
@@ -111,6 +120,7 @@ const Blog = (props) => {
             <div className="coffe_logoblog">
               <img className="coffe_logo_blog3" src={img3} alt="" />
             </div>{" "}
+            <div ref={ref} className="forref"></div>
             <div className="coffe_news">
               <h1 style={{ marginTop: "30px" }}>Новости:</h1>
               <div className="button_tag">
@@ -126,13 +136,13 @@ const Blog = (props) => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "45px" }}
+                        style={{ marginTop: "45px" }}  
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="post-right">
-                    <h2>
+                  <div className="post-right r">
+                    <h2 className="post-right-h2">
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
                     </h2>
@@ -229,7 +239,7 @@ const Blog = (props) => {
                 </div>
               </div>
               <div className="full_news">
-                <span>Показать еще</span>
+                <span  ref={refQA}  >Показать еще</span>
               </div>
               <div className="linia_span"></div>
               <div className="FAQ">

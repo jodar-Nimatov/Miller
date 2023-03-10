@@ -8,6 +8,7 @@ import millerlogom from "../../assets/modal/image26.svg";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import { Link } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
+import { AiOutlineClose } from "react-icons/ai";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [text, setText] = useState("");
@@ -29,9 +30,6 @@ const Header = () => {
 
   const handleopenmodal1 = () => {
     setIsOpen(!modalIsOpen);
-  };
-  const closemodal = () => {
-    modalIsOpen(!setIsOpen);
   };
 
   const handleshow = () => {
@@ -139,7 +137,7 @@ const Header = () => {
                 alt="header search"
               />
             </a>
-            <Link to="">
+            <Link to="/cart">
               <img
                 className="header-right-icon header-basket"
                 src={basketlogo}
@@ -175,6 +173,7 @@ const Header = () => {
                           alt=""
                         />
                         <h2>Войти в личный кабинет</h2>
+                        <p className="closemodal">X</p>
                         <form className="login_right_forms">
                           <input
                             className="login_right_inputone"

@@ -1,13 +1,19 @@
-.fresh-right {
-  margin-left: 500px;
+.fresh-coffe-right{
+ position: relative;
+ z-index: 1;
 }
 
 .slider {
-  max-width: 705px;
+  position: absolute;
+  max-width: 210px; 
   margin: 0 auto;
+  right: 1566px;
 }
 .slideshow {
+  position: absolute;
   margin: 0 auto;
+  width: 564px;
+  left: 1300px;
   overflow: hidden;
 }
 .slideshowSlider {
@@ -18,9 +24,9 @@
 
 .slide {
   display: inline-block;
-  background-image: url(../../../assets/Images/SliderCupCoffe.png);
-  height: 600px;
+  background-image: url(../../../assets/Images/coffeBgSlid.png);
+  height: 700px;
   background-repeat: no-repeat;
-  width: 1440px;
+  width: 1150px;
   text-align: right;
 }

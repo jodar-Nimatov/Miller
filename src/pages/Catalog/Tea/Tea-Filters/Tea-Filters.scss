@@ -76,3 +76,20 @@
   height: 633px;
   // margin-left: auto;
 }
+.tea-filters-machine{
+    background-position-y: -30px;
+    position: absolute;
+    width: 650px;
+    @media (max-width: 1043px) {
+      display: none;
+    }
+    transform: translateY(-120px);
+    background-size: 630px;
+    // mix-blend-mode:darken;
+    right: 0;
+    z-index: -0.5;
+    background-image: url("../../../../assets/Catalog/Wending/kisspng-latte-macchiato-espresso-coffee-cappuccino-jura-giga-5-aluminium-kavos-inovai-5bf2913b055f41\ 1.svg");
+    background-repeat: no-repeat;
+    height: 633px;
+    // margin-left: auto;
+}

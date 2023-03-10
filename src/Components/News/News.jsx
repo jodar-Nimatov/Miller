@@ -1,36 +1,63 @@
-import { React, useEffect, useState } from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {BsArrowRightShort} from 'react-icons/bs'
+import postImg from '../../assets/Images/postImg.png'
 
 const News = () => {
-  const [news, setNews] = useState({ data: [] });
-
-  useEffect(() => {
-    fetch(`http://localhost:3333/news-posts`)
-      .then((res) => res.json())
-      .then((res) => console.log(res))
-      .then((res) => {
-        setNews({ data: res });
-      });
-  }, []);
-
-  let posts = news.data;
-
+  
   return (
     <div className="news">
       <div className="news-container">
         <div className="news-inner">
-          <h2>Новости компании</h2>
+          <div className="news-title">
+            <h2>Новости компании</h2>
+            <Link to=''>Читать все</Link>
+          </div>
           <div className="news-posts-row">
-            {posts.map((item) => (
-              <div className="post-item">
-                <div className="post-item-left">
-                  <img className="post-img" src={item.image} alt="" />
-                </div>
-                <div className="post-right">
-                  <h1 className="post-title">{item.title}</h1>
-                  <p className="post-desc">{item.desc}</p>
+            <div className="posts-above">
+            <div className="post-card">
+              <div className="post-left">
+                <div className="post-img">
+                  <img src={postImg} alt="" />
                 </div>
               </div>
-            ))}
+              <div className="post-right">
+                <h2>Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h2>
+                <p className='post-p'>Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.</p>
+                <p>Но наш интерес вызван не столько природными красотами, сколько кофе...</p>
+                <Link to=''><span>Подробнее <div className='arrow-right'><BsArrowRightShort/></div></span></Link>
+              </div>
+            </div>
+            <div className="post-card">
+              <div className="post-second">
+                <h2>Африканский кофе Кения АА</h2>
+                <p>Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики.</p>
+                <Link to=''><span>Подробнее <div className='arrow-right'><BsArrowRightShort/></div></span></Link>
+              </div>
+            </div>
+            </div>
+            <div className="posts-bellow">
+            <div className="post-card">
+              <div className="post-second">
+                <h2>Африканский кофе Кения АА</h2>
+                <p>Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики.</p>
+                <Link to=''><span>Подробнее <div className='arrow-right'><BsArrowRightShort/></div></span></Link>
+              </div>
+            </div>
+            <div className="post-card">
+              <div className="post-left">
+                <div className="post-img">
+                  <img src={postImg} alt="" />
+                </div>
+              </div>
+              <div className="post-right">
+                <h2>Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h2>
+                <p className='post-p'>Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.</p>
+                <p>Но наш интерес вызван не столько природными красотами, сколько кофе...</p>
+                <Link to=''><span>Подробнее <div className='arrow-right'><BsArrowRightShort/></div></span></Link>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const Cards = () => {
       <div className="cards-back">
         <div className="cards">
           <div className="container">
-            <div className="cards_inner" style={{ height: "700px" }}>
+            <div className="cards_inner">
               <ul className="ul_cards">
                 <li>Главная</li>
                 <li>Каталог товаров</li>
