@@ -3,11 +3,29 @@
     margin-top: 77px;
     z-index: 0;
     &-top {
+      @media (max-width: 1210px) {
+        text-align: center;
+        justify-content: center;
+      }
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
     }
+    .f{
+      @media (max-width: 910px) {
+        width: 250px;
+        height: 197px;
+      }
+      @media (max-width: 810px) {
+        width: 220px;
+        height: 210px;
+      }
+    }
     &-bottom {
+      @media (max-width: 1210px) {
+        text-align: center;
+        justify-content: center;
+      }
       margin-top: 21px;
       gap: 20px;
       display: flex;
@@ -76,20 +94,20 @@
   height: 633px;
   // margin-left: auto;
 }
-.tea-filters-machine{
-    background-position-y: -30px;
-    position: absolute;
-    width: 650px;
-    @media (max-width: 1043px) {
-      display: none;
-    }
-    transform: translateY(-120px);
-    background-size: 630px;
-    // mix-blend-mode:darken;
-    right: 0;
-    z-index: -0.5;
-    background-image: url("../../../../assets/Catalog/Wending/kisspng-latte-macchiato-espresso-coffee-cappuccino-jura-giga-5-aluminium-kavos-inovai-5bf2913b055f41\ 1.svg");
-    background-repeat: no-repeat;
-    height: 633px;
-    // margin-left: auto;
+.tea-filters-machine {
+  background-position-y: -30px;
+  position: absolute;
+  width: 650px;
+  @media (max-width: 1043px) {
+    display: none;
+  }
+  transform: translateY(-120px);
+  background-size: 630px;
+  // mix-blend-mode:darken;
+  right: 0;
+  z-index: -0.5;
+  background-image: url("../../../../assets/Catalog/Wending/kisspng-latte-macchiato-espresso-coffee-cappuccino-jura-giga-5-aluminium-kavos-inovai-5bf2913b055f41\ 1.svg");
+  background-repeat: no-repeat;
+  height: 633px;
+  // margin-left: auto;
 }

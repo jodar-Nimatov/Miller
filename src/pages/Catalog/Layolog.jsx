@@ -1,12 +1,12 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Layolog = () => {
   return (
-    <div className='wrapper'>
-      <Outlet/>
+    <div className="wrapper">
+      <Outlet />
     </div>
-  )
-}
+  );
+};
 
-export default Layolog
+export default Layolog;
