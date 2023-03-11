@@ -35,7 +35,7 @@
         display: flex;
         transform: translateX(140px);
         @media (max-width: 375px) {
-            transform: translate(636px, -55px);
+            transform: translateX(-455px);
         }
     }
     .instagram-left > img{
@@ -51,7 +51,7 @@
         transform: translate(-815px, 73px);
         @media (max-width: 375px) {
             max-width: none ;
-            transform: translate(-820px, 78px);
+            transform: translate(266px, -18px);
         }
     }
     .insta-sides{
