@@ -28,18 +28,18 @@ const TeaItems = ({ type }) => {
       .then((resp) => {
         setCards(resp.data);
       })
-      .catch(error => {
-        if(error.resp){
-          console.log(error.response.data)
-          console.log(error.response.status)
-          console.log(error.response.headers)
-        }else if(error.request){
-          console.log(error.request)
-        }else {
-          console.log('Error: ', error.messege)
+      .catch((error) => {
+        if (error.resp) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log("Error: ", error.messege);
         }
-        console.log(error.config)
-      })
+        console.log(error.config);
+      });
   }, [sorting, type]);
   const closeSorting = () => {
     document.body.children[1].childNodes[5].addEventListener(
@@ -52,7 +52,7 @@ const TeaItems = ({ type }) => {
     setModal("showC");
   };
   return (
-    <>
+    <div className="tea-cards-back">
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">
@@ -109,49 +109,52 @@ const TeaItems = ({ type }) => {
                           <small>({item.review} отзыва)</small>
                         </div>
                       </div>
-                    <div className="coffee__cards-inner-row-card-top-right">
-                      <select>
-                        <option value="100g">100г</option>
-                        <option value="300g">300г</option>
-                        <option value="500g">500г</option>
-                        <option value="1000g">1000г</option>
-                      </select>
+                      <div className="coffee__cards-inner-row-card-top-right">
+                        <select>
+                          <option value="100g">100г</option>
+                          <option value="300g">300г</option>
+                          <option value="500g">500г</option>
+                          <option value="1000g">1000г</option>
+                        </select>
                       </div>
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
-                    <Link to="" className="tea-img-block">
+                    <Link to="/cards" className="tea-img-block">
                       <img
                         src={item.image}
                         className="card-image"
                         height="221px"
                         alt=""
-                      /> 
+                      />
                     </Link>
                     <p></p>
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
-                    <h4 style={{marginTop: '16px'}}>{item.title}</h4>
-                    <p style={{marginTop: '20px'}}>{item.subtitle}</p>
+                    <h4 style={{ marginTop: "16px" }}>{item.title}</h4>
+                    <p style={{ marginTop: "20px" }}>{item.subtitle}</p>
                     <Link to="" className="treedots">
                       Больше
                     </Link>
                     <>...</>
-                    <div className="coffee__cards-inner-row-card-bottom-bottom forDF" >
-                        <div className="coffee__cards-inner-row-card-bottom-bottom-price">
-                            <></>
-                          <h3 className="card-title-jiest">{item.price} ₽</h3>
-                        </div>
-                        <button type='button' onClick={() => addCart(item)}>В корзину</button>
+                    <div className="coffee__cards-inner-row-card-bottom-bottom forDF">
+                      <div className="coffee__cards-inner-row-card-bottom-bottom-price">
+                        <></>
+                        <h3 className="card-title-jiest">{item.price} ₽</h3>
                       </div>
+                      <button type='button' onClick={() => addCart(item)}>В корзину</button>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+            <br />
+            <br />
+            <button>Показать еще</button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

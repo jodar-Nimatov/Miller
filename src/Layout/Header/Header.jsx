@@ -173,12 +173,6 @@ const Header = () => {
           </div>
         {/* </div> */}
             {/* <Link to="/Profile"> */}
-            <img
-              className="header-right-icon header-user"
-              src={userlogo}
-              alt="header user"
-              onClick={handleopenmodal1}
-            />
             {modalIsOpen && (
               <div className="overlow">
                 <div className="login">

@@ -8,9 +8,27 @@ const Cards = () => {
         <div className="cards">
           <div className="container">
             <div className="cards_inner">
-              <ul className="ul_cards">
-                <li>Главная</li>
-                <li>Каталог товаров</li>
+              <ul className="filters-nav">
+                <li>
+                  <Link className="filters-nav-first" to="/">
+                    Главная
+                  </Link>
+                </li>
+                <li>
+                  <Link className="filters-nav-item" to="/">
+                    &#x2022;Каталог товаров
+                  </Link>
+                </li>
+                <li>
+                  <Link className="filters-nav-item" to="/catalog/coffee">
+                    &#x2022;Свежеобжаренный кофе
+                  </Link>
+                </li>
+                <li>
+                  <Link className="filters-nav-item" to="/catalog/coffee">
+                    &#x2022;Карточка товара название
+                  </Link>
+                </li>
               </ul>
               <div className="block_cards">
                 <img className="cards_logo" src={cars_logo} alt="" />
