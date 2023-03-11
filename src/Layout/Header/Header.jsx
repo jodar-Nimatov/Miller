@@ -163,22 +163,15 @@ const Header = () => {
                 {cart.length}
               </span> 
             <CartEmpty see={see} setSee={setSee}/>
-            <Link to="/Profile">
               <img
                 className="header-right-icon header-user"
                 src={userlogo}
                 alt="header user"
+                onClick={handleopenmodal1}
               />
-            </Link>
           </div>
         {/* </div> */}
             {/* <Link to="/Profile"> */}
-            <img
-              className="header-right-icon header-user"
-              src={userlogo}
-              alt="header user"
-              onClick={handleopenmodal1}
-            />
             {modalIsOpen && (
               <div className="overlow">
                 <div className="login">

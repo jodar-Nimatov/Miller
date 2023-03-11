@@ -176,7 +176,7 @@ const CoffeeItems = ({ filters }) => {
                     </div>
                     <div className="coffee__cards-inner-row-card-center">
                       <div className="coffee__cards-inner-row-card-center-left">
-                        <Link to="/cards" className="tea-img-block">
+                        <Link to="/catalog/${somethingFromContext}/card-item" className="tea-img-block">
                           <img
                             src={item.image}
                             height="218px"
@@ -277,7 +277,7 @@ const CoffeeItems = ({ filters }) => {
                       <small>{item.geography}</small>
                       <h4>{item.title}</h4>
                       <p>{item.subtitle}</p>
-                      <Link to="/cards" className="treedots">
+                      <Link to={`/catalog/{somethingFromContext}/card-item`} className="treedots">
                         Больше
                       </Link>
                       <>...</>
