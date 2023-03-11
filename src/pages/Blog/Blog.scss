@@ -7,6 +7,9 @@
 //   width: 100%;
 //   border-bottom: 1px solid #b3b3b3;
 // }
+.coffe-news{
+  
+}
 .blog_ul {
   display: flex;
 }
@@ -205,6 +208,26 @@
 }
 .post-card {
   display: flex;
+  @media (max-width: 375px) {
+    display: inline;
+  }
+}
+.post-img > img{
+  @media (max-width: 375px) {
+    width: 333px;
+    height: 140px;
+    transform: translateX(10px);
+    margin-top: 10px;
+  }
+}
+.cards-row-blog{
+  @media (max-width: 375px) {
+    display: flex;
+    gap: 15px;
+    width: 366px;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
 }
 .post-left {
   transform: translateX(10px);
@@ -218,8 +241,10 @@
   border-radius: 14px;
   margin-top: 44px;
   @media (max-width:378px) {
-    width: 340px;
-    height: 403px;
+    width: 328px;
+    height: 400px;
+    padding: 40px;
+    transform: translate(27px, -47px);
   }
 }
 .post-right-h2 {
@@ -236,6 +261,10 @@
 .post-right > p {
   width: 582px;
   height: 73px;
+  @media (max-width: 375px) {
+    width: 280px;
+    padding-bottom: 112px;
+  }
 }
 .post-right > a {
   color: #f9b300;
@@ -283,6 +312,10 @@
   text-align: center;
   align-items: center;
   margin-top: 40px;
+  @media (max-width: 375px) {
+    width: 340px;
+    margin-left: 20px;
+  }
 }
 .linia_span {
   width: 100%;
@@ -290,16 +323,25 @@
   border-bottom: 1px solid black;
   margin-top: 80px;
 }
+.FAQ{
+  height: 500px;
+}
 .faq_ac {
   width: 237px;
   height: 35px;
   font-family: "Gilroy";
   font-size: 28px;
   margin: 70px 1026px 13px 86px;
+  @media (max-width: 375px) {
+    transform: translateX(-74px);
+  }
 }
 .faq_img {
   width: 688px;
   height: 546px;
+  @media (max-width: 375px) {
+    display: none;
+  }
 }
 //////accordion
 // / @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
@@ -324,6 +366,11 @@
   outline: none;
   transition: background-color 0.6s ease;
   border-radius: 14px;
+  @media (max-width: 375px) {
+    margin-left: 320px;
+    width: 340px;
+    height: 80px;
+  }
 }
 
 .accordion:hover,
@@ -362,13 +409,17 @@
   background: #ffffff;
   box-shadow: 0px 0px 21.271px rgba(149, 149, 149, 0.25);
   border-radius: 14px;
+  @media (max-width: 375px) {
+    padding-left: 338px;
+  }
 }
 .accordion_faq {
   display: grid;
   justify-content: right;
   transform: translateY(-452px);
-  // width: 1200px;
-  // height: 21px;
+  @media (max-width: 375px) {
+    padding-top: 50px;
+  }
 }
 .company{
     width: 121px;
