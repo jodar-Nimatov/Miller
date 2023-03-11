@@ -9,11 +9,11 @@ import CoffeImg from "../../assets/Images/CatalogCoffe.png";
 import CatalogTea from "../../assets/Images/CatalogTea.png";
 import CoffeMachine from "../../assets/Images/CoffeMachine.png";
 import CatalogKasha from "../../assets/Images/CatalogKasha.png";
-import rightVector from '../../assets/Images/Vector.png'
 import leftVector from '../../assets/Images/vectorLeft.png'
 import leftVectorCoffe from '../../assets/Images/leftVectorCoffe.png'
 import AdBackTop from '../../assets/Images/AdBackTop.png'
 import adAboveImg from '../../assets/Images/adAboveImg.png'
+import InstaBottomBack from '../../assets/Images/instaBottomBack.png'
 import roactCoffebottom from '../../assets/Images/roastCoffeBottom.png'
 import News from '../../Components/News/News'
 import Instagram from './../../Components/Instagram/instagram';
@@ -23,6 +23,7 @@ import { Link } from 'react-router-dom';
 const Main = () => {
   return (
     <div className="wrapper">
+      <div className="fresh-coffee-catalog-back">
       <div className="fresh-coffe-back">
       <div className="fresh-coffe">
         <div className="container">
@@ -34,10 +35,10 @@ const Main = () => {
                 доставкой на дом.
               </p>
               <br />
-              <span>
+              <p>
                 {/* Adaptivka mazafaka */}
                 Мы обжариваем кофе <b>каждые выходные</b>.
-              </span>
+              </p>
               <br />
               <button>Посмотреть каталог</button>
             </div>
@@ -47,20 +48,20 @@ const Main = () => {
             <div >
             </div>
           </div>
-          <div className="gradient-right">
-            <img className="yellow-gradient-right" src={rightVector} alt="" />  
-          </div>
+          {/* <div className="gradient-right">
+          </div> */}
         </div>
       </div>
     </div>
+        <div className="catalog-sale-items-back">
       <div className="catalog-products">
         <div className="container">
           <div className="catalog-inner">
             <h2>Каталоги нашей продукции</h2>
             <div className="catalog-content">
               <div>
-                <img className="yellow-gradient-left" src={leftVector} alt="" />
-                <img className="gradient-coffe-img" src={leftVectorCoffe} alt="" />
+                {/* <img className="yellow-gradient-left" src={leftVector} alt="" /> */}
+                {/* <img className="gradient-coffe-img" src={leftVectorCoffe} alt="" /> */}
               </div>
             <div className="catalog-items">
               <div className="catalog-card">
@@ -107,6 +108,7 @@ const Main = () => {
             </div>
           </div>
         </div>
+
       </div>
       <div className="sale-items">
         <div className="container">
@@ -123,7 +125,8 @@ const Main = () => {
           </div>
         </div>
       </div>
-      {/* <div className="Advantage-back-top"></div> */}
+      </div>
+      </div>
       <img className="Advantage-back-top" src={AdBackTop} alt="" />
       <div className="advantages"> 
         <div className="container">
@@ -159,11 +162,11 @@ const Main = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-              <img className="advantages-back-bottom" src={adAboveImg} alt="" />
+            <img className="advantages-back-bottom" src={adAboveImg} alt="" />
             </div>
             <div className="roast-coffe">
+            <div className="roast-coffe-back-bottom">
+            <div className="roast-coffe-top">
                 <div className="container">
                     <div className="roast-coffe-inner">
                         <h2>Как мы обжариваем наш кофе:</h2>
@@ -177,7 +180,7 @@ const Main = () => {
                             У нас свой подход к каждой партии зерна.
                         </p>
                         <br />
-                        <span>
+                        <span className="roast-text-gb">
                             Мы раскрываем вкус каждого сорта кофе.
                         </span>
                         <br />
@@ -185,7 +188,8 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-              <img className="roactCoffebottom" src={roactCoffebottom} alt="" />
+            </div>
+          </div>
             <News/>
             <Instagram/>
         </div>

@@ -1,7 +1,8 @@
 .instagram{
     height: 850px;
     padding-top: 50px;
-    transform: translateY(190px);
+    transform: translateY(232px);
+    margin-bottom: 93px;
     .instagram-inner{
         padding: 70px;
         transform: translateY(-222px);
@@ -12,21 +13,24 @@
         gap: 10px;
     }
     .forDF{
-        transform: translate( 65px, -183px);
+        transform: translateY(-170px);
+        padding-left: 200px;
     }
     .instagram-left{
         display: flex;
-        transform: translateX(-105px);
+        transform: translateX(140px);
     }
     .instagram-left > img{
         max-width: 100%;
         height: 100%;
     }
+
     .instagram-left > .iphone2{
         transform: translate(-815px, 73px);
     }
     .insta-sides{
         display: flex;
+        justify-content: space-between;
         transform: translateY(-10px);
     }
     .instagram-right{
@@ -35,13 +39,5 @@
     .insta-back{
         background: linear-gradient(to bottom, #f9b300 549px, transparent 331px);
         background-position-y: 113px;
-    }
-    .instagram-bottom{
-        background-image: url('../../assets/Images/instagram-bottom-back.svg');
-        background-size: cover;
-        transform: translate(0, -180px);
-        margin-bottom: 300px;
-        min-height: 180px;
-        min-width: 100%;
     }
 }
