@@ -16,7 +16,7 @@ const CartEmpty = ({see, setSee}) => {
     <div onClick={exitCart} style={{display: see ? 'flex':'none'}} className='CartEmpty'>
         <div className='CartEmpty-inner'>
             <h2 className='CartEmpty-title'>Корзина пустая</h2>
-             <button type='button' onClick={() => <Link to='/catalog/coffee'/>} className='CartEmpty-btn'>Посмотреть каталог</button>
+             <button type='button' onClick={() => setSee(false)} className='CartEmpty-btn'><Link to='/'>Посмотреть каталог</Link></button>
              <span onClick={() => setSee(false)} className='CartEmpty-close'>
                 <img src={Close} alt="" />
              </span>
