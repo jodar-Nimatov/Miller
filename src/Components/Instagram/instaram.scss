@@ -61,6 +61,9 @@
     }
     .instagram-right{
         position: relative;
+        @media (max-width: 375px) {
+            transform: translateX(-1166px);
+        }
     }
     .insta-back{
         background: linear-gradient(to bottom, #f9b300 549px, transparent 331px);
