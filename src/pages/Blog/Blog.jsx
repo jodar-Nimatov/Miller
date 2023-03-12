@@ -122,10 +122,11 @@ const Blog = () => {
               <div className="button_tag">
                 <button className="button_numb">Тег №1</button>
                 <button className="button_numbtwo">Тег №2</button> 
-                {/* <button className="button_numbtag3">Тег №3</button>
+                <button className="button_numbtag3">Тег №3</button>
                 <button className="button_numbtag4">Тег №4</button>
-                <button className="button_numbtag5">Тег №5</button> */}
+                <button className="button_numbtag5">Тег №5</button>
               </div>
+              <div className="cards-row-blog">
               <div className="posts-above">
                 <div className="post-card">
                   <div className="post-left">
@@ -168,12 +169,12 @@ const Blog = () => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "30px" }}
+                        style={{ marginTop: "45px" }}
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="post-right_two">
+                  <div className="post-right r">
                     <h2>
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
@@ -204,12 +205,12 @@ const Blog = () => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "30px" }}
+                        style={{ marginTop: "45px" }}
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="post-right_three">
+                  <div className="post-right r">
                     <h2>
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
@@ -231,6 +232,7 @@ const Blog = () => {
                         </div>
                       </span>
                     </Link>
+                  </div>
                   </div>
                 </div>
               </div>
