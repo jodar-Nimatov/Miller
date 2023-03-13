@@ -40,7 +40,7 @@ const Main = () => {
                 Мы обжариваем кофе <b>каждые выходные</b>.
               </p>
               <br />
-              <button>Посмотреть каталог</button>
+              <Link to='/catalog/coffee'><button>Посмотреть каталог</button></Link>
             </div>
             <div className="fresh-coffe-right">
               <Slider/>

@@ -293,7 +293,7 @@ const CoffeeItems = ({ filters }) => {
                           )}
                           <h3>{item.price} ₽</h3>
                         </div>
-                        <button type="button" onClick={() => addCart(item)}>В корзину</button>
+                        <button type="button" onClick={() => addCart(item) }>В корзину</button>
                       </div>
                     </div>
                   </div>
