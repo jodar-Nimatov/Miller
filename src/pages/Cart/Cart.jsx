@@ -7,12 +7,27 @@ import Visa from "./Check-photo/Visa.svg"
 import { CustomContext } from "./Context";
 
 const Cart = () => {
-    const { cart, plusOneCart, minusOneCart, delCart } = useContext(CustomContext)
+    const { cart, plusOneCart, minusOneCart, delCart, delTo } = useContext(CustomContext)
     const total = cart.reduce(
         (prev, curr) =>
             prev + curr.price * curr.count - curr.price * curr.count / 100 * 10,
         0
         )
+    const itog = cart.reduce(
+        (prev, curr) =>
+            prev + curr.price * curr.count,
+        0
+    )
+    const skidka = cart.reduce(
+        (prev, curr) => 
+            prev + curr.price * curr.count / 100 * 10,
+        0
+    ).toFixed(1)
+    // const skidk = cart.reduce(
+    //     (item, state) => 
+    //        item  + state.price * state.count / 100 * 10,
+    //         0
+    // ).toFixed(1)
     return (
         <div className="back-cart">
             <div className="Cart">
@@ -29,7 +44,7 @@ const Cart = () => {
                             <div className="Cart-inside">
                                 <div className="Cart-product-up">
                                     <h2>{cart.length} Товара в корзине</h2>
-                                    <button className="Product-delete">Удалить все</button>
+                                    <button type="button" onClick={() => delTo()} className="Product-delete">Удалить все</button>
                                 </div>
                                 <div className="Cart-product-middle">
                                     <ul className="Cart-product-mid-left">
@@ -39,7 +54,7 @@ const Cart = () => {
                                     <ul className="Cart-product-mid-right">
                                         <li>Цена</li>
                                         <li>Количество</li>
-                                        <li>Скидка(%10)</li>
+                                        <li>Скидка(10%)</li>
                                         <li>Итого</li>
                                     </ul>
                                 </div>
@@ -155,29 +170,30 @@ const Cart = () => {
                             <div className="Cart-total">
                                 <div className="Total-inside">
                                     <div className="Total-head">
-                                        {cart.map(() => (
-                                            <h2>{total}</h2>
-                                        ))}
+                                        <h2>{total} ₽</h2>
                                         <img src={Master} alt="" />
                                         <img src={Visa} alt="" />
                                     </div>
                                     <div className="Total-skidka">
-                                        <p>Подытог: 540 ₽</p>
-                                        <p>Скидка: 54 ₽ (10%)</p>
+                                        <p>Подытог: {itog} ₽</p>
+                                        <p>Скидка: {skidka} ₽ (10%)</p>
                                     </div>
                                     <div className="dostavka">
                                         <div className="Dostavka-p">
-                                            <p>Доставка:</p>
+                                            <div className="Dostavka-vid">
+                                                <p>Доставка:</p>
+                                                <button className="Btne" />
+                                                <p>СДЭК - до двери 390 ₽</p>
+                                            </div>
+                                            <div className="Dostavka-vid-block">
+                                                <button className="Btne" />
+                                                <p>Почта России 300 ₽</p>
+                                            </div>
+                                            <div className="Dostavka-vid-block">
+                                                <button className="Btne" />
+                                                <p>DPD - курьер, 3 дн 427 ₽</p>
+                                            </div>
                                         </div>
-                                        <div className="Dostavka-vid">
-                                            <button className="Btne" />
-                                            <p>СДЭК - до двери 390 ₽</p>
-                                            <button className="Btne" />
-                                            <p>Почта России 300 ₽</p>
-                                            <button className="Btne" />
-                                            <p>DPD - курьер, 3 дн 427 ₽</p>
-                                        </div>
-
                                     </div>
                                     <div className="Total-down">
                                         <button className="Total-btn">Оплатить заказ</button>
