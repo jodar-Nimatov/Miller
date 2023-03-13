@@ -191,7 +191,7 @@
 
    @media(max-width: 376px) {
     .discount__inner {
-      margin-left: 14px;
+      margin-left: 21px;
       padding-top: 1px;
     }
    }
@@ -302,14 +302,9 @@
 }
 
 
-
-
-
-
-
 ///////BLOCK----2
 
-.orders__cart {
+.orders__card {
   width: 1180px;
   height: 402px;
   margin-top: 30px;
@@ -317,19 +312,9 @@
   border: 1px solid #e4e4e4;
   box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
   border-radius: 14px;
+  display: block;
 
-.orders__btn {
-  font-family: "Gilroy";
-
-  @media(max-width: 376px) {
-  
-
-  }
-}
-
-
-
-  .info-block {
+  .info__cards {
     width: 980px;
     height: 125px;
     background: #fcfcfc;
@@ -338,15 +323,24 @@
     margin-left: 100px;
     margin-top: 13px;
     display: flex;
-
-    @media(max-width: 376px) {
     
+    @media(max-width: 376px) {
+      display: none;
+      width: 340px;
+      transform: translate(-78px, 37px);
+      height: 206px;
     }
   }
-
-  .info__text {
+.info__text {
     margin-right: 50px;
+
+    @media(max-width: 376px) {
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 12px;
+    }
   }
+  
 
   .info__discount {
     margin-right: 20px;
@@ -362,14 +356,21 @@
 }
 
 @media(max-width: 376px) {
-  .orders__cart {
+  .orders__card {
     box-shadow: none;
     border: none;
     border-radius: 0px;
-  
+    
   }
 }
 
+  .formobile {
+    display: none;
+    
+    @media(max-width: 376px) {
+      display: block;
+    }
+  }
 .profile__Img {
   width: 41px;
   height: 75px;
@@ -378,13 +379,23 @@
 .orders__title {
   margin-left: 100px;
   margin-top: 30px;
-  .orders__p {
-    display: flex;
   
-  }
 }
 
+.orders__p {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 101px;
+    font-weight: 500;
+    font-size: 14px;
+    column-gap: 583px;
+    line-height: 16px;
 
+    @media(max-width: 376px) {
+      display: block;
+      transform: translate(-80px, 3px);
+    }
+  }
 
 .price__info {
   margin-top: 20px;
@@ -408,7 +419,9 @@
   .orders__cart h1 {
     margin-left: -80px;
   }
+
 }
+ 
 
 .orders__title button {
   background: #fff7e1;
@@ -458,6 +471,9 @@
   margin-left: 43px;
   margin-top: 22px;
 
+  @media(margin: 376px) {
+    font-size: 10px;
+  }
 }
 
 .info-block li {
@@ -582,9 +598,3 @@ display: none;
 .info-block.none {
   display: none;
 }
-
-
-
-
-
-
