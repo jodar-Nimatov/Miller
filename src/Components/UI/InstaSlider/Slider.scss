@@ -6,7 +6,7 @@
     top: 25px;
     @media (max-width: 375px) {
         top: 206px;
-        margin-left: -340px;
+        transform: translateX(830px);
     }
 }
 
