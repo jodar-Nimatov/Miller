@@ -1,27 +1,38 @@
 .Insta_Slider{
     position: relative;
     width: 210px; 
-    margin: 0 auto;
+    margin-left: auto;
     right: 530px;
     top: 25px;
+    @media (max-width: 375px) {
+        top: 206px;
+        margin-left: -340px;
+    }
 }
 
 .Insta_Slider_show{
     margin: 0 auto;
-    width: 830px;
+    width: 745px;
     height: 100%;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    transform: translateX(65px);
+    @media (max-width: 375px) {
+        width: 340px;
+    }
 }
 
 .Insta_Slider__inner{
     display: grid;
     grid-template-columns: auto auto auto;
-    // flex-wrap: wrap;
     column-gap: 48px;
     line-height: 50px;
+    @media (max-width: 375px) {
+        display: flex;
+        column-gap: 20px;
+    }
 }
 
 .Slider__btn__next{
@@ -31,8 +42,8 @@
     border: none;
     background: transparent;
     cursor: pointer;
-    left: 760px;
-    top: 282px;
+    left: 745px;
+    top: 230px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,9 +51,13 @@
     &:hover{
         opacity: 0.7;
     }
+    @media (max-width: 375px) {
+        left: 70px;
+        top: 188px;
+    }
 }
 
-.active{
+.active-sl{
     transition: all 1000ms;
 }
 
@@ -54,4 +69,8 @@
     width: 250px;
     height: 250px;
     border-radius: 3px;
+    @media (max-width: 375px) {
+        width: 166px;
+        height: 167px;
+    }
 }

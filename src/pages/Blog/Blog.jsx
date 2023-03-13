@@ -110,11 +110,7 @@ const Blog = () => {
                 обучения кадров способствует подготовки и реализации систем
                 массового участия. Таким образом укрепление и развитие структуры
                 способствует подготовки и реализации направлений прогрессивного
-                развития. <br /> <br /> <br /> Товарищи! реализация намеченных
-                плановых заданий обеспечивает широкому кругу (специалистов)
-                участие в формировании соответствующий условий активизации. С
-                другой стороны реализация намеченных плановых заданий требуют от
-                нас анализа существенных финансовых и административных условий.
+                развития. <br /> <br /> <br /> 
               </p>
             </div>
             <div className="coffe_logoblog">
@@ -122,14 +118,15 @@ const Blog = () => {
             </div>{" "}
             <div ref={ref} className="forref"></div>
             <div className="coffe_news">
-              <h1 style={{ marginTop: "30px" }}>Новости:</h1>
+              <h1 className="company">Новости компании:</h1>
               <div className="button_tag">
                 <button className="button_numb">Тег №1</button>
-                <button className="button_numbtwo">Тег №2</button>
+                <button className="button_numbtwo">Тег №2</button> 
                 <button className="button_numbtag3">Тег №3</button>
                 <button className="button_numbtag4">Тег №4</button>
                 <button className="button_numbtag5">Тег №5</button>
               </div>
+              <div className="cards-row-blog">
               <div className="posts-above">
                 <div className="post-card">
                   <div className="post-left">
@@ -172,12 +169,12 @@ const Blog = () => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "30px" }}
+                        style={{ marginTop: "45px" }}
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="post-right_two">
+                  <div className="post-right r">
                     <h2>
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
@@ -208,12 +205,12 @@ const Blog = () => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "30px" }}
+                        style={{ marginTop: "45px" }}
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="post-right_three">
+                  <div className="post-right r">
                     <h2>
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
@@ -235,6 +232,7 @@ const Blog = () => {
                         </div>
                       </span>
                     </Link>
+                  </div>
                   </div>
                 </div>
               </div>

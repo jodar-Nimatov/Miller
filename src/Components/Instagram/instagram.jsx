@@ -10,7 +10,7 @@ const Instagram = () => {
     <>
     <div className='instagram'>
         <div className="insta-back">
-        <div className="container">
+        {/* <div className="container"> */}
           <div className="insta-title forDF">
           <h1>Мы в Instagram</h1>
           <img src={instaImg} alt="" />
@@ -18,7 +18,7 @@ const Instagram = () => {
             <div className="instagram-inner">
                 <div className="insta-sides">
                         <div className="instagram-left">
-                            <img className='iphone1' src={iphone1} alt="" />
+                            <img className='aiphone' src={iphone1} alt="" />
                             <img className='iphone2' src={iphone2} alt="" />
                         </div> 
                         <div className="instagram-right">
@@ -28,8 +28,7 @@ const Instagram = () => {
              </div>
           </div>
         </div>
-    <div className="instagram-bottom"></div>
-    </div>
+    {/* </div> */}
     </>
   )
 }
