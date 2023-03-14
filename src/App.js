@@ -14,7 +14,7 @@ import VendingFilters from "./pages/Catalog/Vending/Vending-Filters/Vending-Filt
 import HealthyFilters from "./pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters";
 import SignUp from "./pages/SignUp/SignUp";
 import Cart from './pages/Cart/Cart'
-import ProductCard from "./pages/ProductCard/ProductCard";
+// import ProductCard from "./pages/";
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
         <Route path="/catalog/tea" element={<TeaFilters />} />
         <Route path="/catalog/wanding" element={<VendingFilters />} />
         <Route path="/catalog/healthy" element={<HealthyFilters />} />
-        <Route path="/catalog/card-item" element={<ProductCard />} />
+        {/* <Route path="/catalog/card-item" element={<ProductCard />} /> */}
         {/* Каталог товаров */}
         {/* Корзина */}
         <Route path='/cart' element={<Cart/>}/>
