@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import coffee from "../../assets/Profile/coffeeProfile.png";
 import joodar from "../../assets/Profile/Joodar.png";
 import CoffeeImg from "../../assets/Profile/coffeeImgProfile1.svg"
 import { Link } from "react-router-dom";
+import { CustomContext } from "../../pages/Cart/Context";
 
-const Profile = () => {
-  const [show, setShow] = useState(true)
+
+  
+  const Profile  = () => {
+      const [show, setShow] = useState(true)
   const [info, setInfo] = useState(true)
-
+    const { cart, plusOneCart, minusOneCart, delCart, delTo } = useContext(CustomContext)
+    const total = cart.reduce(
+        (prev, curr) =>
+            prev + curr.price * curr.count - curr.price * curr.count / 100 * 10,
+        0
+        )
+    const itog = cart.reduce(
+        (prev, curr) =>
+            prev + curr.price * curr.count,
+        0
+    )
+    const skidka = cart.reduce(
+        (prev, curr) => 
+            prev + curr.price * curr.count / 100 * 10,
+        0
+    ).toFixed(1)
 
   return (
     <div className="profile">
@@ -33,7 +51,7 @@ const Profile = () => {
                 <li className="name__joodar">Ниматов Жоодар, Здраствуйте!</li>
                 <li>nimatov.joodar@gmail.com</li>
                 <li>+996707568734</li>
-                <li>Пароль:********</li>
+                <li>Пароль:*******</li>
               </ul>
 
               {/* </blockquote> */}
@@ -71,40 +89,40 @@ const Profile = () => {
             <div className={`info-block ${info ? 'block' : 'none'}`}>
               <div className="orders__p">
                 <p>31.02.2023 1:24 - Не оплачено</p>
-              </div>
-              <div className="info__cards">
-                <div className="info__text">
-                  <h1>Товаров:</h1>
-                  <ul className="info__title">
-                    <li>2 х Columbia Supremo, 250 г.</li>
-                    <li>2 х Columbia Supremo, 250 г.</li>
-                  </ul>
-                </div>
-                <div>
-                  <h1>Сумма заказа:</h1>
-                  <ul>
-                    <li>250 ₽</li>
-                    <li>250 ₽</li>
-                  </ul>
-                </div>
-                <div className="info__discount">
-                  <h1>Скидка (10%):</h1>
-                  <ul>
-                    <li>48 ₽ </li>
-                    <li>48 ₽ </li>
-                  </ul>
-                </div>
-                <div className="price__two">
-                  <h1>Сумма заказа:</h1>
-                  <ul>
-                    <li>202 ₽ </li>
-                    <li>202 ₽ </li>
-                  </ul>
-                </div>
-              </div>
+              </div> 
+                    <div className="info__cards">
+                      <div className="info__texts">
+                       <ul>
+                          <li className="info__text">Товаров:</li>  
+                          <li className="price__one">Сумма заказа:</li> 
+                          <li>Скидка (10%):</li>   
+                          <li>Сумма заказа:</li>
+                      </ul>
+                    </div>
+                  
+              {cart.map((item) => (
+            <>
+                      <div className="cards__inner">    
+                      <div className="cards__h1">   
+                            <h1 className="cards__text">{item.title}</h1>
+                      </div>                           
+                              <div className="cards__p"> 
+                              <p className="cards__price">{item.price} ₽</p>                      
+                              <p className="cards__discount">{item.price * item.count / 100 * 10} ₽</p>
+                              <p className="cards__price2">{item.price * item.count - item.price * item.count / 100 * 10} ₽</p>
+                              </div>
+                            
+                      </div>
+                        
+                           </>
+                    )
+                  )
+                }
+               
+                 </div>
               <ul className="price__info">
-                <li>Сумма заказа: 404 ₽</li>
-                <li>Доставка: 350 ₽ </li>
+              <li>Сумма заказа:{total} ₽</li>
+              <li>Доставка: 350 ₽ </li>
               </ul>
             </div>
             <div className={`info-block ${info ? 'none' : 'block'}`}>
@@ -113,40 +131,9 @@ const Profile = () => {
                 <p>Дата доставки: 03.03.2023</p>
               </div>
               <div className="info__cards">
-                <div className="info__text">
-                  <h1>Товаров:</h1>
-                  <ul className="info__title">
-                    <li>2 х Ячменный напиток Millor, 100 г.</li>
-                    <li>2 х Ячменный напиток Millor, 100 г.</li>
-                  </ul>
-                </div>
-                <div>
-                  <h1>Сумма заказа:</h1>
-                  <ul>
-                    <li>250 ₽</li>
-                    <li>250 ₽</li>
-                  </ul>
-                </div>
-                <div className="info__discount">
-                  <h1>Скидка (10%):</h1>
-                  <ul>
-                    <li>48 ₽ </li>
-                    <li>48 ₽ </li>
-                  </ul>
-                </div>
-                <div className="price__two">
-                  <h1>Сумма заказа:</h1>
-                  <ul>
-                    <li>202 ₽ </li>
-                    <li>202 ₽ </li>
-                  </ul>
-                </div>
+               
               </div>
             </div>
-          </div>
-          <div className="formobile">
-     
-           
           </div>
           <div className="slider__profile">
             <h1 className="slider__text">Персональные акции</h1>
@@ -176,7 +163,9 @@ const Profile = () => {
         </div>
       </div>
     </div>
+  
   );
+  
 };
 
 export default Profile;

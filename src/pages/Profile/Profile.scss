@@ -313,6 +313,7 @@
   box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
   border-radius: 14px;
   display: block;
+  height: auto;
 
   .info__cards {
     width: 980px;
@@ -322,37 +323,92 @@
     border-radius: 14px;
     margin-left: 100px;
     margin-top: 13px;
-    display: flex;
+    display: block;
     
     @media(max-width: 376px) {
-      display: none;
-      width: 340px;
-      transform: translate(-78px, 37px);
-      height: 206px;
+    transform: translate(-78px, 37px);
+    background-color: white; 
+    
     }
-  }
-.info__text {
-    margin-right: 50px;
+    .cards__inner {
+    margin-top: 22px;
+    display: flex;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px; 
+    color: #747474;
+}
 
-    @media(max-width: 376px) {
-      font-weight: 700;
-      font-size: 10px;
-      line-height: 12px;
-    }
+
+.cards__h1 {
+  max-width: 210px;
+}
+
+.cards__text {
+  margin-left: 58px;
+  margin-right: 26px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #747474;
+
+}
+
+
+.cards__price {
+  position: relative;
+  left: 62px;
+}
+
+.cards__price2 {
+  position: relative;
+  left: 571px;
+  top: -16px;
+}
+
+
+.cards__discount {
+  position: relative;
+  left: 318px;
+}
+
+.cards__title {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
   }
+
+.info__texts li {
+  font-weight: 500;
+  margin-right: 40px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #747474;
+
+  display: flex;
+  margin-top: 12px;
+
+
+
+}
+.info__texts ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+
+  // .info__text {
+  //   // margin-left: 50px;
+  //   // margin-right: 180px;
+  // }
+}
+
+
   
 
-  .info__discount {
-    margin-right: 20px;
-  }
 
-  .price__one {
-    margin-right: 64px;
-  }
 
-  .price__two {
-    margin-right: 0px;
-  }
 }
 
 @media(max-width: 376px) {
@@ -364,13 +420,6 @@
   }
 }
 
-  .formobile {
-    display: none;
-    
-    @media(max-width: 376px) {
-      display: block;
-    }
-  }
 .profile__Img {
   width: 41px;
   height: 75px;
@@ -400,6 +449,7 @@
 .price__info {
   margin-top: 20px;
   margin-left: 882px;
+  margin-bottom: 20px;
 }
 .price__info li {
   font-weight: 500;
@@ -463,28 +513,6 @@
 }
 
 
-.info-block h1 {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  margin-bottom: 20px;
-  margin-left: 43px;
-  margin-top: 22px;
-
-  @media(margin: 376px) {
-    font-size: 10px;
-  }
-}
-
-.info-block li {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: #747474;
-  margin-top: 7px;
-  margin-left: 43px;
-
-}
 
 .slider__profile {
   font-family: 'Gilroy';
