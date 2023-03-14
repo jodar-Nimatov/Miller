@@ -10,6 +10,9 @@ import { Link, Navigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
 import { CustomContext } from "../../pages/Cart/Context";
 import CartEmpty from "../../Components/CartEmpty/CartEmpty";
+import BurgerSD from "./BurgerSD";
+
+
 
 
 const Header = () => {
@@ -20,6 +23,8 @@ const Header = () => {
   const {cart} = useContext(CustomContext)
   const [see, setSee] = useState(false)
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [BurgerMenu, setBurgerMenu] = useState(false)
+
 
   const handleInput = () => {
     setDisplay("none");
@@ -57,8 +62,13 @@ const Header = () => {
         {/* <div className="container"> */}
         <div className="header__inner">
           <div className="header__left">
+            <BurgerSD BurgerMenu={BurgerMenu} setBurgerMenu={setBurgerMenu}/>
             <div className="header-burger-menu">
-              <img src={burger} alt="" />
+              <img onClick={() => 
+                setBurgerMenu(true)
+              } 
+              src={burger} 
+              alt="" />
             </div>
             <Link to="/">
               <img
