@@ -3,10 +3,6 @@
     padding: 0;
     margin: 0;
   }
-  .container{
-    @media (max-width: 376px) {
-    }
-  }
   .back-cart{
     background: linear-gradient(to bottom, #FFF7E1 475px, transparent 229px);
   }
@@ -39,11 +35,14 @@
     box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
     background-color: white;
     @media(max-width: 376px) {
-      width: 345px;
+      max-width: 376px;
   }
   }
   .Cart-inside{
     margin-left: 100px;
+    @media(max-width: 376px) {
+      margin-left: 0
+    }
   }
   
   .Cart-product-up{
@@ -52,7 +51,8 @@
     text-align: center;
     gap: 619px;
     @media(max-width: 376px) {
-      display: inline-block;
+      display: table;
+      padding: 40px 0 0 18px;
   }
   }
   .Product-delete{
@@ -63,10 +63,16 @@
     border-radius: 4px;
     color: rgba(249, 179, 0, 1);
     cursor: pointer;
+    @media(max-width: 376px) {
+      margin: 20px 0 0 -110px;
+    }
   }
   .Cart-product-middle{
     display: flex;
     padding-top: 45px;
+    @media(max-width: 376px) {
+      display: none;
+    }
   }
   .Cart-product-mid-left{
     display: flex;
@@ -75,7 +81,7 @@
   .Cart-product-mid-right{
     display: flex;
     padding-left: 190px;
-    gap: 63px;
+    gap: 60px;
   }
   .Cart-card{
     width: 980px;
@@ -87,6 +93,9 @@
     border: 0.708508px solid #F0F0F0;
     border-radius: 14px;
     gap: 30px;
+    @media(max-width: 376px) {
+      width: 340px;
+    }
   }
   .Card-left{
     display: flex;
@@ -111,7 +120,7 @@
     display: flex;
     align-items: center;
     padding-left: 45px;
-    gap: 50px;
+    gap: 40px;
     font-size: 18px;
   }
   // .Cart-right-price{
@@ -246,7 +255,7 @@
   .Total-head{
     display: flex;
     align-items: center;
-    padding: 40px 0 12px 0;
+    padding-top: 40px;
     h2{
       padding-right: 142px;
     }
@@ -259,17 +268,25 @@
   .Dostavka{
     display: block;
   }
-  .Dostavka-p{
-    display: inline-block;
-  }
   .Dostavka-vid{
-    display: inline-block;
+    display: flex;
   }
-  
+  .Dostavka-vid-block{
+    display: flex;
+    margin: 5px  0 0 69px;
+  }
   .Btne{
-    border-radius: 100px;
-    border: 6px solid rgba(249, 179, 0, 1);
+    margin: 0 8px 0 8px;
+    height: 0px;
+    padding: 2px;
+    background: #E4E4E4;;
+    border-radius: 50%;
+    border: 6px solid #E4E4E4;
     cursor: pointer;
+  }
+  .Btne:active{
+    background: rgba(249, 179, 0, 1);
+    border: 6px solid rgba(249, 179, 0, 1);
   }
   .Total-btn{
     width: 380px;
@@ -285,6 +302,7 @@
     font-family: 'Gilroy'
   }
   .Total-down p {
+    padding-top: 5px;
     width: 368px;
     font-family: 'Gilroy';
     font-size: 10px;

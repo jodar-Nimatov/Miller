@@ -25,13 +25,15 @@ const Blog = () => {
         <div className="blog_inner">
           <div className="blog_ul">
             <li>Главная</li>
-            <li>Блог</li>
+            <li>•Блог</li>
           </div>
           <div className="switch_btn">
             <div className="button_switch">
-              <button className="btn_switch">Обучение</button>
-              <button onClick={scrollToNews} className="btn_switchnews">Новости</button>
-              <button onClick={scrollToQA} className="btn_switchches">Частые вопросы</button>
+                <button className="btn_switch">Обучение</button>
+              <div className="blog-below-btns">
+                <button onClick={scrollToNews} className="btn_switchnews">Новости</button>
+                <button onClick={scrollToQA} className="btn_switchches">Частые вопросы</button>
+              </div>
             </div>
             <div className="text_center">
               <h1 className="text_centerh1">
@@ -119,13 +121,16 @@ const Blog = () => {
             <div ref={ref} className="forref"></div>
             <div className="coffe_news">
               <h1 className="company">Новости компании:</h1>
+              <div className="tag-btns-row-ad">
               <div className="button_tag">
                 <button className="button_numb">Тег №1</button>
                 <button className="button_numbtwo">Тег №2</button> 
-                {/* <button className="button_numbtag3">Тег №3</button>
+                <button className="button_numbtag3">Тег №3</button>
                 <button className="button_numbtag4">Тег №4</button>
-                <button className="button_numbtag5">Тег №5</button> */}
+                <button className="button_numbtag5">Тег №5</button>
               </div>
+              </div>
+              <div className="cards-row-blog">
               <div className="posts-above">
                 <div className="post-card">
                   <div className="post-left">
@@ -168,12 +173,12 @@ const Blog = () => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "30px" }}
+                        style={{ marginTop: "45px" }}
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="post-right_two">
+                  <div className="post-right r">
                     <h2>
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
@@ -204,12 +209,12 @@ const Blog = () => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "30px" }}
+                        style={{ marginTop: "45px" }}
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="post-right_three">
+                  <div className="post-right r">
                     <h2>
                       Танзанийский кофе. Откуда он взялся и почему мы его так
                       любим?
@@ -231,6 +236,7 @@ const Blog = () => {
                         </div>
                       </span>
                     </Link>
+                  </div>
                   </div>
                 </div>
               </div>
