@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Layout from "./Layout/Layout";
@@ -6,24 +6,18 @@ import Contacts from "./pages/Contacts/Contacts";
 import Blog from "./pages/Blog/Blog";
 import "./scss/style.scss";
 import Profile from "./pages/Profile/Profile";
-import Cart from './pages/Cart/Cart'
+import Layolog from "./pages/Catalog/Layolog";
 import Store from "./pages/Contacts/Store";
-import SignUp from "./pages/SignUp/SignUp";
-// catalog
-import VendingFilters from "./pages/Catalog/Vending/Vending-Filters/Vending-Filters";
 import CoffeeFilters from "./pages/Catalog/Coffee/Coffee-Filters/Coffee-Filters";
 import TeaFilters from "./pages/Catalog/Tea/Tea-Filters/Tea-Fiters";
+import VendingFilters from "./pages/Catalog/Vending/Vending-Filters/Vending-Filters";
 import HealthyFilters from "./pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters";
-import ProductCard from "./pages/Catalog/ProductCard/ProductCard";
-import Layolog from "./pages/Catalog/Layolog";
-// import { CustomContext } from "./Context";
-// catalog
+import SignUp from "./pages/SignUp/SignUp";
+import Cart from './pages/Cart/Cart';
+import ProductCard from './pages/Catalog/ProductCard/ProductCard';
 
 
 function App() {
-  // const {cardid} = useContext(CustomContext)
-  // const {carditem} = useContext(CustomContext)
-  // console.log(cardid, carditem)
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -38,11 +32,14 @@ function App() {
         <Route path="/catalog/tea" element={<TeaFilters />} />
         <Route path="/catalog/wanding" element={<VendingFilters />} />
         <Route path="/catalog/healthy" element={<HealthyFilters />} />
-        <Route path={"/catalog/somethingFromContext/"} element={<ProductCard />} />
+        <Route path="/catalog/card-item" element={<ProductCard />} />
+        {/* Каталог товаров */}
         {/* Корзина */}
         <Route path='/cart' element={<Cart/>}/>
+        {/* Корзина */}
         {/* Профиль пользователя */}
         <Route path='/profile' element={<Profile/>}/>
+        {/* Профиль пользователя */}
       </Route>
     </Routes>
   );

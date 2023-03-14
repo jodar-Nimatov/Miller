@@ -58,7 +58,7 @@
 .text_centerh1 {
   width: 559px;
   height: 35px;
-  font-family: "Gilroy";
+  
   font-style: normal;
   font-weight: 900;
   font-size: 28px;
@@ -76,7 +76,7 @@
 .text_infoh1 {
   width: 349px;
   height: 35px;
-  font-family: "Gilroy";
+  
   font-style: normal;
   font-weight: 900;
   font-size: 28px;
@@ -96,7 +96,7 @@
 .text_infop {
   width: 978px;
   height: 272px;
-  font-family: "Gilroy";
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -296,7 +296,7 @@
 .faq_ac {
   width: 237px;
   height: 35px;
-  font-family: "Gilroy";
+  
   font-size: 28px;
   margin: 70px 1026px 13px 86px;
 }
@@ -314,11 +314,12 @@
 }
 
 .accordions {
-  width: 680px;
-  height: 77px;
+  width: 580px;
+  height: 57px;
   // background-color: #eee;
   background: #ffffff;
   color: #444;
+  margin-bottom: 13px;
   cursor: pointer;
   padding: 18px;
   display: flex;
@@ -350,13 +351,15 @@
 }
 
 .accordion_content {
+  width: 580px;
   background-color: white;
+  transform: translateY(-15px);
   overflow: hidden;
   transition: max-height 0.6s ease;
 }
 
 .accordion__text {
-  width: 680px;
+  width: 580px;
   height: 100px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -376,7 +379,7 @@
 .company{
     width: 121px;
     height: 36px;
-    font-family: 'Gilroy';
+    
     font-style: normal;
     font-weight: 900;
     font-size: 28px;

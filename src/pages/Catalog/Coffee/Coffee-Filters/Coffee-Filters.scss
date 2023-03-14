@@ -1,3 +1,13 @@
+.white-circle:active {
+  cursor: default;
+}
+.white-circle {
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+}
 .filters {
   background-repeat: no-repeat;
   background-image: url("../../../../assets/Catalog/filters-back.svg");
@@ -245,16 +255,6 @@
       line-break: anywhere;
       width: 93px;
     }
-  }
-  .white-circle:active {
-    cursor: default;
-  }
-  .white-circle {
-    cursor: pointer;
-    width: 17px;
-    height: 17px;
-    background-color: #e4e4e4;
-    border-radius: 50%;
   }
   .yellow-circle {
     cursor: pointer;

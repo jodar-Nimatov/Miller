@@ -4,7 +4,9 @@ export const CustomContext = createContext()
 
 export const Context = (props) => {
     const [cart, setCart] = useState([])
- 
+    const [id, setId] = useState(1)
+    const chooseId = (item) => 
+    setId(item.id) 
     const addCart = (product) => {
         setCart(prev => [...prev, {
             ...product,
@@ -52,6 +54,8 @@ export const Context = (props) => {
         plusOneCart,
         minusOneCart,
         delCart,
+        id,
+        chooseId
     }
  
     return <CustomContext.Provider value={value}>
