@@ -4,6 +4,9 @@ export const CustomContext = createContext()
 
 export const Context = (props) => {
     const [cart, setCart] = useState([])
+    const [id, setId] = useState(1)
+    const chooseId = (item) => 
+    setId(item.id) 
     const [user, setUser] = useState([])
  
     const addCart = (product) => {
@@ -67,6 +70,8 @@ export const Context = (props) => {
         plusOneCart,
         minusOneCart,
         delCart,
+        id,
+        chooseId,
         delTo,
     }
  

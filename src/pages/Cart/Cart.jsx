@@ -4,7 +4,7 @@ import CheckPhoto from "./Check-photo/Check.svg"
 import DeleteBtn from "./Check-photo/Close.svg"
 import Master from "./Check-photo/MasterCard.svg"
 import Visa from "./Check-photo/Visa.svg"
-import { CustomContext } from "./Context";
+import { CustomContext } from "../../utils/Context";
 
 const Cart = () => {
     const { cart, plusOneCart, minusOneCart, delCart, delTo } = useContext(CustomContext)

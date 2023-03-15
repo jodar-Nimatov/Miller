@@ -52,7 +52,8 @@ body {
 
 // Catalog //
 @import "../pages/Catalog/catalog.scss";
-// Catalog //
+@import "../pages/Catalog/ProductCard/ProductCard.scss";
+// Layout //
 @import "../Layout/Header/Header.scss";
 @import "../Layout/Footer/Footer.scss";
 @import "../pages/Profile/Profile.scss";

@@ -42,7 +42,7 @@ const Blog = () => {
             </div>
             <div className="filters-bottom-blocks">
               {images.map((item) => (
-                <div key={item.id} className="filters-bottom-blocks-item">
+                <div key={item.id} className="filters-bottom-blocks-item pmnsh">
                   <div className="filters-bottom-blocks-item-inner">
                     <p>{item.text}</p>
                     <img src={item.image} alt="" />
