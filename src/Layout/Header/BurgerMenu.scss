@@ -6,7 +6,7 @@
     bottom: 0;
     background-color: white;
     width: 375px;
-    min-height: 100vh;
+    height: 800px;
     &-inner{
         padding-top: 20px;
     }
@@ -28,6 +28,16 @@
     }
     &-nav-list > ul > li{
         font-size: 18px;
+    }
+    &-feedback{
+        padding: 100px;
+        &-icons{
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
     }
     .close-burger-menu{
         position: absolute;
