@@ -317,14 +317,14 @@
 
   .info__cards {
     width: 980px;
-    height: 125px;
     background: #fcfcfc;
     border: 1px solid #f0f0f0;
     border-radius: 14px;
     margin-left: 100px;
     margin-top: 13px;
     display: block;
-    
+    height: auto;
+
     @media(max-width: 376px) {
     transform: translate(-78px, 37px);
     background-color: white; 
@@ -398,10 +398,9 @@
   justify-content: space-around;
   margin-top: 10px;
 
-  // .info__text {
-  //   // margin-left: 50px;
-  //   // margin-right: 180px;
-  // }
+  .info__text {
+    padding-bottom: 30px;
+  }
 }
 
 
