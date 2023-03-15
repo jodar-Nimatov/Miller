@@ -1,32 +1,76 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import millerlogom from "../../assets/modal/image26.svg";
-import axios from "axios";
-
 import "./SignUp.scss";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import firebase from "../../firebase";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  onAuthStateChanged,
+} from "firebase/auth";
+  
 const SignUp = () => {
+  const auth = getAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [number, setNumber] = useState("");
   const [name, setName] = useState("");
-
-  let urlUser = "http://localhost:4444/users";
-
-  let handleSubmit = async (e) => {
-    fetch(urlUser, {
-      method: "POST",
-      body: JSON.stringify({
-        name: e.target[0].value,
-        email: e.target[1].value,
-        password: e.target[2].value,
-        number: e.target[3].value,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  const [err, setError] = useState("");
+  const handleSubmits = () => {
+    if (!name && !email && !password) {
+      setError("Fill the all details!");
+    } else if (!name) {
+      setError("Enter your name!");
+    } else if (!email) {
+      setError("Enter your email!");
+    } else if (!password) {
+      setError("Enter your password!");
+    } else if (password.length < 7) {
+      setError("Password need minimum 8 character!");
+    } else {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: "https://www.w3schools.com/w3images/avatar2.png",
+          }).then(() => {
+            setError("");
+          });
+        })
+        .catch((error) => {
+          console.log(error.code);
+          if (error.code == "auth/email-already-in-use") {
+            setError("Email already in use!");
+          } else {
+            setError("");
+          }
+        });
+    }
   };
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+    }
+  });
+
+  // let urlUser = "http://localhost:4444/users";
+
+  // let handleSubmit = async (e) => {
+  //   fetch(urlUser, {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       name: e.target[0].value,
+  //       email: e.target[1].value,
+  //       password: e.target[2].value,
+  //       number: e.target[3].value,
+  //     }),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+  // };
 
   return (
     <div>
@@ -49,7 +93,7 @@ const SignUp = () => {
                 </li>
               </div>
 
-              <form className="login_right_formik" onSubmit={handleSubmit}>
+              <form className="login_right_formik">
                 <input
                   value={name}
                   className="fio_inputs"
@@ -83,7 +127,12 @@ const SignUp = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <Link to="/profile">
-                  <button className="login_right_buttonlog" type="submit">
+                  <p>{err}</p>
+                  <button
+                    className="login_right_buttonlog"
+                    type="submit"
+                    onClick={handleSubmits}
+                  >
                     Зарегистрироваться
                   </button>
                 </Link>

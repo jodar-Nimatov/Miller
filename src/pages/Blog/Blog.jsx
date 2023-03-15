@@ -11,14 +11,14 @@ import Accordion from "./Accordion";
 import { useRef } from "react";
 
 const Blog = () => {
-  const ref = useRef(null)
-  const refQA = useRef(null)
+  const ref = useRef(null);
+  const refQA = useRef(null);
   const scrollToNews = () => {
-    ref.current?.scrollIntoView({'behavor': 'smooth'})
-  }
+    ref.current?.scrollIntoView({ behavor: "smooth" });
+  };
   const scrollToQA = () => {
-    refQA.current?.scrollIntoView({'behavor': 'smooth'})
-  }
+    refQA.current?.scrollIntoView({ behavor: "smooth" });
+  };
   return (
     <div className="blog">
       <div className="container">
@@ -30,8 +30,12 @@ const Blog = () => {
           <div className="switch_btn">
             <div className="button_switch">
               <button className="btn_switch">Обучение</button>
-              <button onClick={scrollToNews} className="btn_switchnews">Новости</button>
-              <button onClick={scrollToQA} className="btn_switchches">Частые вопросы</button>
+              <button onClick={scrollToNews} className="btn_switchnews">
+                Новости
+              </button>
+              <button onClick={scrollToQA} className="btn_switchches">
+                Частые вопросы
+              </button>
             </div>
             <div className="text_center">
               <h1 className="text_centerh1">
@@ -110,11 +114,7 @@ const Blog = () => {
                 обучения кадров способствует подготовки и реализации систем
                 массового участия. Таким образом укрепление и развитие структуры
                 способствует подготовки и реализации направлений прогрессивного
-                развития. <br /> <br /> <br /> Товарищи! реализация намеченных
-                плановых заданий обеспечивает широкому кругу (специалистов)
-                участие в формировании соответствующий условий активизации. С
-                другой стороны реализация намеченных плановых заданий требуют от
-                нас анализа существенных финансовых и административных условий.
+                развития. <br /> <br /> <br />
               </p>
             </div>
             <div className="coffe_logoblog">
@@ -122,13 +122,13 @@ const Blog = () => {
             </div>{" "}
             <div ref={ref} className="forref"></div>
             <div className="coffe_news">
-              <h1 style={{ marginTop: "30px" }}>Новости:</h1>
+              <h1 className="company">Новости компании:</h1>
               <div className="button_tag">
                 <button className="button_numb">Тег №1</button>
                 <button className="button_numbtwo">Тег №2</button>
-                <button className="button_numbtag3">Тег №3</button>
+                {/* <button className="button_numbtag3">Тег №3</button>
                 <button className="button_numbtag4">Тег №4</button>
-                <button className="button_numbtag5">Тег №5</button>
+                <button className="button_numbtag5">Тег №5</button> */}
               </div>
               <div className="posts-above">
                 <div className="post-card">
@@ -136,7 +136,7 @@ const Blog = () => {
                     <div className="post-img">
                       <img
                         src={newscoffe}
-                        style={{ marginTop: "45px" }}  
+                        style={{ marginTop: "45px" }}
                         alt=""
                       />
                     </div>
@@ -239,7 +239,7 @@ const Blog = () => {
                 </div>
               </div>
               <div className="full_news">
-                <span  ref={refQA}  >Показать еще</span>
+                <span ref={refQA}>Показать еще</span>
               </div>
               <div className="linia_span"></div>
               <div className="FAQ">

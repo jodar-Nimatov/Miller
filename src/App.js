@@ -14,8 +14,7 @@ import VendingFilters from "./pages/Catalog/Vending/Vending-Filters/Vending-Filt
 import HealthyFilters from "./pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters";
 import Cards from "./pages/Cards/Cards";
 import SignUp from "./pages/SignUp/SignUp";
-import Cart from './pages/Cart/Cart'
-
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/store" element={<Store />} />
-        <Route path="/signup" element={<SignUp/>} />
+        <Route path="/signup" element={<SignUp />} />
         {/* Каталог товаров */}
         <Route path="/catalog" element={<Layolog />} />
         <Route path="/catalog/coffee" element={<CoffeeFilters />} />
@@ -35,10 +34,10 @@ function App() {
         <Route path="/cards" element={<Cards />} />
         {/* Каталог товаров */}
         {/* Корзина */}
-        <Route path='/cart' element={<Cart/>}/>
+        <Route path="/cart" element={<Cart />} />
         {/* Корзина */}
         {/* Профиль пользователя */}
-        <Route path='/profile' element={<Profile/>}/>
+        // <Route path="/profile" element={<Profile />} />
         {/* Профиль пользователя */}
       </Route>
     </Routes>

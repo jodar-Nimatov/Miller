@@ -3,6 +3,13 @@
   height: 525px;
   background: #ffffff;
 }
+@media (max-width: 375px) {
+  .login_right {
+    width: 375px;
+    height: 812px;
+    background: #ffffff;
+  }
+}
 .h2registrALo {
   width: 244px;
   height: 50px;

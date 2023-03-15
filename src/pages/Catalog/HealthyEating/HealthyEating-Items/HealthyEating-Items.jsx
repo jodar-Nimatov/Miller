@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import rating from "../../../../assets/Catalog/Coffee/Filters/rating.svg";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { CustomContext } from "./../../../../utils/Context";
 
 const HealthyItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
+  const {addCart} = useContext(CustomContext)
   useEffect(() => {
     const url = `http://localhost:3333/healthy-eatings-${type}?`;
     axios
@@ -26,18 +28,18 @@ const HealthyItems = ({ type }) => {
       .then((resp) => {
         setCards(resp.data);
       })
-      .catch(error => {
-        if(error.resp){
-          console.log(error.response.data)
-          console.log(error.response.status)
-          console.log(error.response.headers)
-        }else if(error.request){
-          console.log(error.request)
-        }else {
-          console.log('Error: ', error.messege)
+      .catch((error) => {
+        if (error.resp) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log("Error: ", error.messege);
         }
-        console.log(error.config)
-      })
+        console.log(error.config);
+      });
   }, [sorting, type]);
   const closeSorting = () => {
     document.body.children[1].childNodes[5].addEventListener(
@@ -50,7 +52,7 @@ const HealthyItems = ({ type }) => {
     setModal("showC");
   };
   return (
-    <>
+    <div className="tea-cards-back">
       <div className="coffee__cards healthy-items-back">
         <div className="container">
           <div className="coffee__cards-inner">
@@ -87,7 +89,7 @@ const HealthyItems = ({ type }) => {
               {cards.map((item) => (
                 <div key={item.id} className="coffee__cards-inner-row-card">
                   <div className="tea__cards-inner-row-card-top">
-                    <div className="tea__cards-inner-row-card-top-right">
+                    <div className="tea__cards-inner-row-card-top-right forDF">
                       <div className="tea__cards-inner-row-card-center-right-rating">
                         <div
                           className="rating"
@@ -102,46 +104,70 @@ const HealthyItems = ({ type }) => {
                             position: "relative",
                           }}
                         ></div>
-                        <h4>{item.rating}</h4>
+                        <div className="forDF kkdwe">
+                          <h4>{item.rating}</h4>
+                          <small>({item.review} отзыва)</small>
+                        </div>
                       </div>
-                      <select>
-                        <option value="100g">100г</option>
-                        <option value="300g">300г</option>
-                        <option value="500g">500г</option>
-                        <option value="1000g">1000г</option>
-                      </select>
+                      <div className="coffee__cards-inner-row-card-top-right">
+                        <select>
+                          <option value="100g">100г</option>
+                          <option value="300g">300г</option>
+                          <option value="500g">500г</option>
+                          <option value="1000g">1000г</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
-                  <div className="coffee__cards-inner-row-card-center">
-                    <Link to="" className="tea-img-block">
+                  <div className="coffee__cards-inner-row-card-center tocenter chtbtipvcntr">
+                    <Link to="/cards" className="tea-img-block">
                       <img
                         src={item.image}
                         className="card-image"
-                        height="221px"
+                        height="196px"
                         alt=""
                       />
                     </Link>
-                    {item.category.map(cy => <div key={cy.length}>{item.category.includes('Скидки') ? <><div className="discount">%</div></> : null}</div>)}
+                    {item.category.map((cy) => (
+                      <div key={cy.length}>
+                        {item.category.includes("Скидки") ? (
+                          <>
+                            <div
+                              style={{ transform: "translateY(-24px)" }}
+                              className="discount"
+                            >
+                              %
+                            </div>
+                          </>
+                        ) : null}
+                      </div>
+                    ))}
                   </div>
                   <div className="coffee__cards-inner-row-card-bottom">
-                    <h4>{item.title}</h4>
-                    <p>{item.subtitle}</p>
+                    <h4 style={{ marginTop: "16px" }}>{item.title}</h4>
+                    <p style={{ marginTop: "20px" }}>{item.subtitle}</p>
                     <Link to="" className="treedots">
                       Больше
                     </Link>
                     <>...</>
-                    <div className="coffee__cards-inner-row-card-bottom-bottom">
-                      <h3>{item.price} ₽</h3>
-                      <button>В корзину</button>
+                    <div className="coffee__cards-inner-row-card-bottom-bottom forDF">
+                      <div className="coffee__cards-inner-row-card-bottom-bottom-price">
+                        <></>
+                        <h3 className="card-title-jiest">{item.price} ₽</h3>
+                      </div>
+                      <button type="button" onClick={() => addCart(item)}>В корзину</button>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+            <br />
+            <br />
+            <button>Показать еще</button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
