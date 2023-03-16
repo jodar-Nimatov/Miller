@@ -5,7 +5,7 @@ export const CustomContext = createContext()
 export const Context = (props) => {
     const [cart, setCart] = useState([])
     const [id, setId] = useState(1)
-    const [isopen, setIsopen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
     const chooseId = (item) => 
     setId(item.id) 
     const [user, setUser] = useState([])
@@ -74,8 +74,8 @@ export const Context = (props) => {
         delCart,
         id,
         chooseId,
-        isopen,
-        setIsopen,
+        isOpen,
+        setIsOpen,
         delTo,
     }
  
