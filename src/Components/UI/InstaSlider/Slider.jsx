@@ -25,7 +25,7 @@ const Slider = () => {
   return (
     <div className='Insta_Slider'>
         <div className="Insta_Slider_show">
-          <div className={`Insta_Slider__inner ${move ? 'active' : 'none-active'}`} style={{transform:`${move ? 'translateX(-180px)' : 'translateX(0)'}`}}>
+          <div className={`Insta_Slider__inner ${move ? 'active-sl' : 'none-active'}`} style={{transform:`${move ? 'translateX(-180px)' : 'translateX(0)'}`}}>
             {
               posts.map((item) => {
                 return (
@@ -37,7 +37,7 @@ const Slider = () => {
             }
           </div>
         </div>
-        <button className='Slider__btn__next' onClick={() => setMove(!move)}><img className={` ${move ? 'active' : 'none-active'}`} style={{transform: `${move ? 'rotate(180deg)' : 'rotate(0)'}`}} src={arrowRight}/></button>
+        <button className='Slider__btn__next' onClick={() => setMove(!move)}><img className={` ${move ? 'active-sl' : 'none-active'}`} style={{transform: `${move ? 'rotate(180deg)' : 'rotate(0)'}`}} src={arrowRight}/></button>
     </div>
   )
 }

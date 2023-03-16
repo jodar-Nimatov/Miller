@@ -33,7 +33,7 @@
   font-weight: 700;
   font-size: 18px;
 }
-.fresh-coffe-left > button {
+.fresh-coffe-left > a >  button {
   margin-top: 50px;
   width: 200px;
   height: 45px;
@@ -276,8 +276,8 @@
     line-height: 150px;
     @media (max-width: 375px) {
       padding-top: 50px;
-      padding-left: 6px;
-      font-size: 24px;
+      padding-left: 38px;
+      font-size: 20px;
       line-height: normal;
       width: 390px;
     }
@@ -364,7 +364,7 @@
     display: flex;
     justify-content: center;
     padding-top: 60px;
-    gap: 20px;
+    gap: 30px;
     overflow-x: scroll;
   }
   .catalog-products  .catalog-card {
@@ -377,8 +377,7 @@
     border-radius: 35px;
   }
   .catalog-products .catalog-content{
-    display: flex;
-    justify-content: center;
+    display: flex;  
     align-items: center;
     place-content: center;
     text-align: center;

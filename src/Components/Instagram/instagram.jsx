@@ -18,7 +18,7 @@ const Instagram = () => {
             <div className="instagram-inner">
                 <div className="insta-sides">
                         <div className="instagram-left">
-                            <img className='iphone1' src={iphone1} alt="" />
+                            <img className='aiphone' src={iphone1} alt="" />
                             <img className='iphone2' src={iphone2} alt="" />
                         </div> 
                         <div className="instagram-right">

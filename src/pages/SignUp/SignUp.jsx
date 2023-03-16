@@ -1,60 +1,95 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import millerlogom from "../../assets/modal/image26.svg";
+import { setEmail, setNum, setPass, setUser } from "../../store/slices/userSlice";
 import "./SignUp.scss";
-import { Link, Navigate } from "react-router-dom";
-import firebase from "../../firebase";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  updateProfile,
-  onAuthStateChanged,
-} from "firebase/auth";
-  
+
+// const initialState = {
+//   name: "",
+//   email: "",
+//   number: "",
+//   password: "",
+// };
+
 const SignUp = () => {
-  const auth = getAuth();
+  const {email, pass, num, user} = useSelector(state => state.user);
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [number, setNumber] = useState("");
-  const [name, setName] = useState("");
-  const [err, setError] = useState("");
-  const handleSubmits = () => {
-    if (!name && !email && !password) {
-      setError("Fill the all details!");
-    } else if (!name) {
-      setError("Enter your name!");
-    } else if (!email) {
-      setError("Enter your email!");
-    } else if (!password) {
-      setError("Enter your password!");
-    } else if (password.length < 7) {
-      setError("Password need minimum 8 character!");
-    } else {
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          updateProfile(auth.currentUser, {
-            displayName: name,
-            photoURL: "https://www.w3schools.com/w3images/avatar2.png",
-          }).then(() => {
-            setError("");
-          });
-        })
-        .catch((error) => {
-          console.log(error.code);
-          if (error.code == "auth/email-already-in-use") {
-            setError("Email already in use!");
-          } else {
-            setError("");
-          }
-        });
-    }
-  };
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-    }
-  });
+    console.log('hahahhahah', email, pass, num, user)
+  // const [state, setState] = useState(initialState);
+  // const [userData, setUserData] = useState({
+  //   name: "",
+  //   email: "",
+  //   number: "",
+  //   password: "",
+  // });
 
+  // let name, value;
+  // const postUserData = (event) => {
+  //   name = event.target.name;
+  //   value = event.target.value;
+
+  //   setUserData({ ...userData, [name]: value });
+  // };
+
+  //conect firebaase
+
+  // const submitdata = async (event) => {
+  //   event.preventDefault();
+  //   const { name, email, number, password } = userData;
+  //   const res = fetch(
+  //     "https://gogletest-1e5f0-default-rtdb.firebaseio.com/userData.json",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         name,
+  //         email,
+  //         number,
+  //         password,
+  //       }),
+  //     }
+  //   );
+  //   if (res) {
+  //     alert("lox molodes");
+  //   } else {
+  //     alert("idi naxyu");
+  //   }
+  // };
+  // const { name, email, number, password } = state;
+  // const navigate = useNavigate();
+
+  // const handlesubmitchange = (e) => {
+  //   const { name, value } = e.target;
+  //   setState({ ...state, [name]: value });
+  //   fetch("https://gogletest-1e5f0-default-rtdb.firebaseio.com", {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       name: e.target[0].value,
+  //       email: e.target[1].value,
+  //       password: e.target[2].value,
+  //       number: e.target[3].value,
+  //     }),
+  //   });
+  // };
+
+  // const handlesubmits = (e) => {
+  //   e.preventDefault();
+  //   if (!name || !email || !number || !password) {
+  //     alert.error("please idi naxyu");
+  //   } else {
+  //     firedb.child("contacts").push(state, (err) => {
+  //       if (err) {
+  //         alert.error(err);
+  //       } else {
+  //         alert.sucsess("contact add");
+  //       }
+  //     });
+  //     setTimeout(() => navigate.push("/"), 500);
+  //   }
+  // };
   // let urlUser = "http://localhost:4444/users";
 
   // let handleSubmit = async (e) => {
@@ -95,47 +130,48 @@ const SignUp = () => {
 
               <form className="login_right_formik">
                 <input
-                  value={name}
                   className="fio_inputs"
                   type="text"
                   placeholder="Имя и фамилия"
-                  required="text"
-                  onChange={(e) => setName(e.target.value)}
+                  // required
+                  // value={user}
+                  onChange={(e) => setUser(e.target.value)}
+
                 />
                 <input
-                  value={email}
                   className="email_reg"
                   type="email"
                   placeholder="email"
-                  required="email"
+                  // required
+                  // value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
-                  value={number}
                   className="number_inputss"
                   type="number"
                   placeholder="Телефон"
-                  required="number"
-                  onChange={(e) => setNumber(e.target.value)}
+                  // required
+                  // value={num}
+                  onChange={(e) => setNum(e.target.value)}
                 />
                 <input
-                  value={password}
                   className="input_passwordd"
                   type="password"
                   placeholder="Придумайте пароль"
-                  required="Придумайте пароль"
-                  onChange={(e) => setPassword(e.target.value)}
+                  // required
+                  onChange={(e) => setPass(e.target.value)}
+                  // value={pass}
                 />
-                <Link to="/profile">
-                  <p>{err}</p>
-                  <button
-                    className="login_right_buttonlog"
-                    type="submit"
-                    onClick={handleSubmits}
-                  >
-                    Зарегистрироваться
-                  </button>
-                </Link>
+                {/* <Link to="/profile"> */}
+                {/* <p>{err}</p> */}
+                <button
+                  className="login_right_buttonlog"
+                  type="submit"
+                  // onClick={submitdata}
+                >
+                  Зарегистрироваться
+                </button>
+                {/* </Link> */}
                 {/* {error && <alert variant="danger">{error}</alert>} */}
               </form>
             </div>

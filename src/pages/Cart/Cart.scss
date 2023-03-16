@@ -20,6 +20,23 @@
     transparent 331px
   );
   background-size: 240vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .back-cart{
+    background: linear-gradient(to bottom, #FFF7E1 475px, transparent 229px);
+  }
+  .Cart{
+    background-repeat: no-repeat;
+    background-image: url("../../assets/Catalog/cart-back.svg");
+    background-position-y: 460px;
+    background-color: linear-gradient(
+      to bottom,
+      #FFF7E1 331px,
+      transparent 331px
+    );
+    background-size: 240vh;
 
   @media (max-width: 376px) {
     background: white;

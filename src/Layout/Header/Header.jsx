@@ -9,17 +9,9 @@ import coffeelogo from "../../assets/modal/Group 245.svg";
 import { Link, Navigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Reg from "../../Components/Reg/Rega";
 import { CustomContext } from "../../utils/Context";
 import CartEmpty from "../../Components/CartEmpty/CartEmpty";
-import {
-  updateProfile,
-  createUserWithEmailAndPassword,
-  signInWithPopup,
-} from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-import { auth, provider } from "../../firebase";
-import { AuthContext } from "../../utils/Reg";
+
 const Header = () => {
   const [show, setShow] = useState(false);
   const [text, setText] = useState("");
@@ -29,76 +21,6 @@ const Header = () => {
   const [see, setSee] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [nav, setNav] = useState(false);
-  const { dispatch } = useContext(AuthContext);
-  const [inputValues, setInputValues] = useState({
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
-  const navigate = useNavigate();
-  const inputs = [
-    {
-      id: 1,
-      name: "username",
-      type: "text",
-      placeholder: "Username",
-      errorMessage:
-        "Username should be 3-16 characters and shouldn't include any special character",
-      pattern: "^[A-Za-z0-9]{3,16}$",
-      required: true,
-    },
-    {
-      id: 2,
-      name: "email",
-      type: "email",
-      placeholder: "Email",
-      errorMessage: "It should be a valid email address",
-      required: true,
-    },
-    {
-      id: 3,
-      name: "password",
-      type: "text",
-      placeholder: "Password",
-      errorMessage:
-        "Password should be 8-20 characters and include at least 1 letter, 1 number, 1 special character",
-      pattern: `(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+])[A-Za-z0-9!@#$%^&*()_+]{8,20}$`,
-      required: true,
-    },
-    {
-      id: 4,
-      name: "confirmPassword",
-      type: "text",
-      placeholder: "Confirm Password",
-      errorMessage: "Passwords don't match",
-      pattern: inputValues.password,
-      required: true,
-    },
-  ];
-
-  const handleChange = (e) => {
-    setInputValues({ ...inputValues, [e.target.name]: e.target.value });
-  };
-
-  const handleRegister = async (e) => {
-    e.preventDefault();
-
-    try {
-      await createUserWithEmailAndPassword(
-        auth,
-        inputValues.email,
-        inputValues.password
-      ).then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        updateProfile(user, {
-          displayName: inputValues.username,
-        });
-        navigate("/login");
-      });
-    } catch (error) {}
-  };
 
   const handleInput = () => {
     setDisplay("none");
@@ -116,7 +38,7 @@ const Header = () => {
     setIsOpen(!modalIsOpen);
   };
   const closemodal = () => {
-    setIsOpen(modalIsOpen);
+    setIsOpen(false);
   };
 
   const handleshow = () => {
@@ -285,7 +207,7 @@ const Header = () => {
                         />
                       ))} */}
                       <p>Получайте скидки первыми!?</p>
-                      <Link to="/SignUp">
+                      <Link to="/SignUp" onClick={closemodal}>
                         <button className="login_left_button">
                           Зарегистрироваться
                         </button>
@@ -319,12 +241,7 @@ const Header = () => {
                           required
                           // onChange={(e) => setPassword(e.target.value)}
                         />
-                        <button
-                          className="login_right_buttonlog"
-                          onClick={handleRegister}
-                        >
-                          Войти
-                        </button>
+                        <button className="login_right_buttonlog">Войти</button>
                         {/* <button className="login_right_reset">Забыли пароль?</button> */}
                       </form>
                     </div>

@@ -21,10 +21,10 @@ const CartEmpty = ({ see, setSee }) => {
         <h2 className="CartEmpty-title">Корзина пустая</h2>
         <button
           type="button"
-          onClick={() => <Link to="/catalog/coffee" />}
+          onClick={() => setSee(false)}
           className="CartEmpty-btn"
         >
-          Посмотреть каталог
+          <Link to="/">Посмотреть каталог</Link>
         </button>
         <span onClick={() => setSee(false)} className="CartEmpty-close">
           <img src={Close} alt="" />

@@ -1,0 +1,96 @@
+.card {
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/Images/card-back.svg");
+  background-position-y: 480px;
+  background-color: linear-gradient(
+    to bottom,
+    #fff7e1 400px,
+    transparent 400px
+  );
+  background-size: 100%;
+  min-height: 777px;
+  &-img{
+    width: 294px;
+    height: 542px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-back {
+    background: linear-gradient(to bottom, #fff7e1 500px, transparent 500px);
+  }
+  &-nav{
+    padding-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    &>li>a:hover{
+      color: gray;
+    }
+    &>li>a{
+      @media (max-width: 425px) {
+        font-size: 10px;
+      }
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #222222;
+    }
+  }
+  &__inner {
+    .card__info_top{
+      border: 1px solid #E4E4E4;
+      box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+      border-radius: 14px;
+      height: 682px;
+      width: 100%;
+      background-color: white;
+      padding: 50px 0 50px 60px;
+      &-left{
+        width: 320px;
+        height: 100%;
+      }
+      &-right{
+       margin-top: 20px;
+       margin-left: 70px; 
+      .title{
+        margin-top: 13px;
+        height: 44px;
+        gap: 140px;
+        &_right{
+          p{
+            color: #F9B300;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+          }
+          .pjest{
+            margin-top: 4px;
+            margin-bottom: 4px;
+          }
+        }
+        h2{
+          font-weight: bolder;
+          font-size: 28px;
+          line-height: 35px;
+        }
+      }
+      }
+      .card__image{
+        position: absolute;
+        &_circle{
+          position: relative;
+          top: -480px;
+          left: 180px;
+          width: 145px;
+          height: 145px;
+          background-color: #222222;
+          border-radius: 69.4338px;
+          background-size: cover;
+          background-position: center center;
+          border: 0px solid rgba(0, 0, 0, 0);
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
