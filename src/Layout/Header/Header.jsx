@@ -8,7 +8,7 @@ import millerlogom from "../../assets/modal/image26.svg";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import { Link, Navigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
-import { CustomContext } from "../../pages/Cart/Context";
+import { CustomContext } from "../../utils/Context";
 import CartEmpty from "../../Components/CartEmpty/CartEmpty";
 import BurgerSD from "./BurgerSD";
 
@@ -173,13 +173,12 @@ const Header = () => {
                 {cart.length}
               </span> 
             <CartEmpty see={see} setSee={setSee}/>
-            <Link to="/Profile">
               <img
                 className="header-right-icon header-user"
                 src={userlogo}
                 alt="header user"
+                onClick={handleopenmodal1}
               />
-            </Link>
           </div>
         {/* </div> */}
             {/* <Link to="/Profile"> */}

@@ -3,7 +3,7 @@ import rating from "../../../../assets/Catalog/Coffee/Filters/rating.svg";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { CustomContext } from "../../../Cart/Context";
+import { CustomContext } from "../../../../utils/Context";
 
 const HealthyItems = ({ type }) => {
   const [cards, setCards] = useState([]);
@@ -120,7 +120,7 @@ const HealthyItems = ({ type }) => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center tocenter chtbtipvcntr">
-                    <Link to="/cards" className="tea-img-block">
+                    <Link to="/catalog/${somethingFromContext}/card-item" className="tea-img-block">
                       <img
                         src={item.image}
                         className="card-image"
@@ -146,7 +146,7 @@ const HealthyItems = ({ type }) => {
                   <div className="coffee__cards-inner-row-card-bottom">
                     <h4 style={{ marginTop: "16px" }}>{item.title}</h4>
                     <p style={{ marginTop: "20px" }}>{item.subtitle}</p>
-                    <Link to="" className="treedots">
+                    <Link to="/catalog/${somethingFromContext}/card-item" className="treedots">
                       Больше
                     </Link>
                     <>...</>

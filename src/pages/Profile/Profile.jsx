@@ -3,7 +3,7 @@ import coffee from "../../assets/Profile/coffeeProfile.png";
 import joodar from "../../assets/Profile/Joodar.png";
 import CoffeeImg from "../../assets/Profile/coffeeImgProfile1.svg"
 import { Link } from "react-router-dom";
-import { CustomContext } from "../../pages/Cart/Context";
+import { CustomContext } from "../../utils/Context";
 
 
   

@@ -11,14 +11,16 @@ import roast2 from "../../../../assets/Catalog/Coffee/Filters/roast2.svg";
 import roast1 from "../../../../assets/Catalog/Coffee/Filters/roast1.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { CustomContext } from "../../../Cart/Context";
+import { CustomContext } from "../../../../utils/Context";
 
 const CoffeeItems = ({ filters }) => {
   const {addCart} = useContext(CustomContext)
   const [cards, setCards] = useState([]);
+  const [product, setProduct] = useState('hide')
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
   const url = "http://localhost:3333/catalog?";
+  const {chooseId} = useContext(CustomContext)
   const filterBase = {
     geographyFilter: "",
     kislinkaFilter: "",
@@ -106,7 +108,8 @@ const CoffeeItems = ({ filters }) => {
     setModal("showC");
   };
   return (
-    <div className="tea-cards-back">
+    <>
+    <div className='tea-cards-back'>
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">
@@ -176,8 +179,9 @@ const CoffeeItems = ({ filters }) => {
                     </div>
                     <div className="coffee__cards-inner-row-card-center">
                       <div className="coffee__cards-inner-row-card-center-left">
-                        <Link to="/cards" className="tea-img-block">
+                        <Link to="/catalog/card-item" className="tea-img-block">
                           <img
+                          onClick={()=>chooseId(item)}
                             src={item.image}
                             height="218px"
                             className="card-image"
@@ -205,7 +209,7 @@ const CoffeeItems = ({ filters }) => {
                             ({item.review} отзыва)
                           </small>
                         </div>
-                        <div className="coffee__cards-inner-row-card-center-right-roasting">
+                        <div className="roasting-level">
                           {item.roast == 5 ? (
                             <img height="13px" src={roast5} alt="" />
                           ) : item.roast == 4 ? (
@@ -277,7 +281,7 @@ const CoffeeItems = ({ filters }) => {
                       <small>{item.geography}</small>
                       <h4>{item.title}</h4>
                       <p>{item.subtitle}</p>
-                      <Link to="/cards" className="treedots">
+                      <Link to={`/catalog/{somethingFromContext}/card-item`} className="treedots">
                         Больше
                       </Link>
                       <>...</>
@@ -308,6 +312,7 @@ const CoffeeItems = ({ filters }) => {
         <div className="grey"></div>
       </div>
     </div>
+    </>
   );
 };
 export default CoffeeItems;
