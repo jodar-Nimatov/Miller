@@ -19,7 +19,7 @@ const Contacts = () => {
                   </Link>
                 </button>
               </div>
-          <div className="contacts-left forDF">
+          <div className="contacts-left.forDF">
             <div className="btn-switch-text">
               <h4 className="store-t">Наши магазины г. Санкт-Петербург</h4>
               <p className="adres-c">Гороховая, 53 Московский, 53</p>
@@ -33,8 +33,8 @@ const Contacts = () => {
             </div>
         <div className="maps">
           <YandexMaps />
-        </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

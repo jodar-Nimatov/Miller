@@ -8,14 +8,13 @@ const Contacts = () => {
       <div className="container">
         <div className="contacts-inner">
             <li className="home-cont">Главная</li>
-            <li className="cont-blog">Контакты</li>
+            <li className="cont-blog">•Контакты</li>
               <div className="switch-click">
                 <button className="switch-contact">Контакты</button>
                 <Link to="/store" className="switch_contacts">
                   <button className="switcр-stores">Наши Магазины</button>
                 </Link>
               </div>
-          <div className="contacts-left forDF">
             <div className="btn-switch-text">
               <h1 className="header-text">Связаться с нами:</h1>
               <p className="number-contact">+7 (401) 237 53 43</p>
@@ -37,7 +36,6 @@ const Contacts = () => {
         <div className="map">
           <YandexMaps />
         </div>
-          </div>
         </div>
       </div>
     </div>

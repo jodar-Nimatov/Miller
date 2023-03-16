@@ -8,7 +8,7 @@
 .home-cont {
   position: relative;
   width: 45px;
-  height: 14px;
+  height: 15px;
   margin-top: 30px;
   font-family: "Gilroy";
   font-style: normal;
@@ -31,18 +31,28 @@
   color: #222222;
   margin-left: 18px;
 }
+.switch-click{
+  // position: relative;
+  @media (max-width: 375px) {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: right;
+    // display: flex;
+    // width: 340px;
+    // flex-direction: column;
+  }
+}
 .switch-contact {
   width: 580px;
   height: 42px;
-  margin-right: 20px;
+  margin-bottom: 16px;
+  margin-left: 15px;
   color: #f9b300;
   background: #fff7e1;
   border: 1px solid #f9b300;
   border-radius: 4px;
   cursor: pointer;
-}
-@media  (min-width:175px) {
-.switch-contact{
+  @media (max-width:375px) {
   width: 340px;
   height: 40px;  
   background: #FFF7E1;
@@ -55,16 +65,13 @@
   width: 580px;
   height: 42px;
   left: 685px;
-  margin-right: -36px;
   color: #f9b300;
   background: #f6f6f6;
   border: 1px solid #c9c9c9;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 18px;
-}
-@media (min-width: 175px) {
-.switcр-stores{
+  margin-left: 16px;
+  @media (max-width: 375px) {
   width: 340px;
   height: 40px;
   margin-top: 10px;
@@ -78,7 +85,7 @@
   border: none;
 }
 .header-text {
-  width: -40px;
+  width: 212px;
   height: 26px;
   margin-top: 64px;
   font-family: "Gilroy";
@@ -87,11 +94,10 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
-  @media (max-width:1135px) {
+  margin-left: 18px;
+  @media (max-width: 375px) {
     width: 164px;
-    font-size: 18px;
-    margin-left: 18px;
-    
+    font-size: 18px;    
   }
 }
 .number-contact {
@@ -104,11 +110,10 @@
   font-size: 14px;
   line-height: 130%;
   color: #222222;
-  @media (max-width:600px) {
+  margin-left: 18px;
+  @media (max-width:375px) {
     width: 150px;
     font-size: 14px;
-    margin-left: 18px;
-    
   }
 }
 .link {
@@ -121,10 +126,10 @@
   font-size: 14px;
   line-height: 130%;
   color: #222222;
-  @media (max-width:590px) {
+  margin-left: 18px;
+  @media (max-width:375px) {
   width: 150px;  
   font-size: 14px;
-  margin-left: 18px;
   }
 }
 .header-texts {
@@ -137,11 +142,11 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
-  @media (max-width:700px) {
+  margin-left: 18px;
+  @media (max-width:375px) {
     width: 190px;  
     height: 20px;
     font-size: 18px;
-    margin-left: 18px;
     }
 
 }
@@ -149,32 +154,37 @@
   margin-left: 30px;
   margin-top: 60px;
   width: 600px;
-  height: 330px;
-  @media (max-width: 1139px) {
-    width: 500px;
-  }
-  @media (max-width: 921px) {
-    width: 400px;
-  }
-  @media (max-width: 647px) {
+  height: 375px;
+  @media (max-width: 375px) {
     width: 300px;
+    // display: block;
   }
+  // @media (max-width: 375px) {
+  //   width: 400px;
+  //   margin-left: 50px;
+
+  // }
+  // @media (max-width: 375px) {
+  //   width: 500px;
+  //   margin-left: 50px;
+
+  // }
 }
 .info {
   width: 347px;
   height: 55px;
-  margin-top: 20px;
+  margin-top: -9px;
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
   color: #222222;
-  @media (max-width:900px) {
+  margin-left: 18px;
+  @media (max-width:375px) {
     width: 330px;  
     height: 30px;
     font-size: 14px;
-    margin-left: 18px;
     }
 }
 .texts-cont {
@@ -187,11 +197,11 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
-  @media (max-width:900px) {
+  margin-left: 18px;
+  @media (max-width:375px) {
     width: 136px;  
     height: 30px;
     font-size: 18px;
-    margin-left: 18px;
     }
 }
 .new-t {
@@ -204,14 +214,14 @@
   font-size: 14px;
   line-height: 130%;
   color: #222222;
-  @media (max-width:900px) {
+  margin-left: 18px;
+  @media (max-width:375px) {
     width: 290px;  
     font-size: 14px;
-    margin-left: 18px;
     }
 }
 .store-t {
-  // width: 421px;
+  width: 421px;
   height: 26px;
   margin-top: 64px;
   font-family: "Gilroy";
@@ -220,10 +230,10 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
-  @media (max-width:647px) {
+  margin-left: 18px;
+  @media (max-width:375px) {
     width: 378px;
     font-size: 18px;
-    margin-left: 18px;
   }
 }
 .adres-c {
@@ -236,10 +246,9 @@
   font-size: 14px;
   line-height: 130%;
   color: #000000;
-  @media (max-width:690px) {
-    width: 102px;
-    margin-left: 18px;
-    
+  margin-left: 18px;
+  @media (max-width:375px) {
+    width: 102px;    
   }
 }
 .t-t {
@@ -252,11 +261,10 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
-  @media (max-width:1113px) {
+  margin-left: 18px;
+  @media (max-width:375px) {
     width: 342px;
     font-size: 18px;
-    margin-left: 18px;
-    
   }
 }
 .adress-store {
@@ -265,30 +273,50 @@
   margin-top: 20px;
   font-family: "Gilroy";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 14px;
   line-height: 130%;
   color: #000000;
-  @media (max-width:549px) {
+  margin-left: 18px; 
+  @media (max-width:375px) {
     width: 174px;
     font-size: 14px;
-    margin-left: 18px;
+  }
+}
+// .aga {
+//   position: relative;
+//     top: 5px;
+//     left:71px
+//     @media (max-width:375px) {
     
-  }
-}
-.aga {
-    // position: relative;
-    // transform: translate(499px, -336px);
-    padding-bottom: 60px;
-    top: -452px;
-    left:437px
-}
-.contacts-left.forDF{
-  @media (max-width: 597px) {
-    display: block;
-  }
-}
-.map{
-//  margin-top: 2px;
-}
+//     }
+  
+
+// }
+// .contacts-left.forDF{
+//   height: 372px;
+//   width: 680px;
+//   left: 585px;
+//   top: 298px;
+//   border-radius: 0px;
+//   @media (max-width: 375px) {
+//     display: inline-block;
+//     // display: inline;
+//     // position: relative;
+//     // height: 317px;
+//     // width: 375px;
+//     // left: 0px;
+//     // top: 652px;
+//     // border-radius: 5px;
+    
+//   }
+  
+// }
+// .map{
+//    top: 5px;
+//    left:124px
+ 
+   
+// }
+
 
