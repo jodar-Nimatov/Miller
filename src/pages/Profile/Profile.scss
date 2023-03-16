@@ -20,7 +20,7 @@
 }
 
 .home li {
-  padding: 5px;
+  padding-top: 5px;
 }
 
 //////BLOCK---1
@@ -469,11 +469,16 @@
   
 }
 
+.orders__p {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
 .orders__p p {
     display: flex;
-    margin-top: 30px;
     margin-left: 101px;
     font-weight: 500;
+    margin-bottom: 10px;
     font-size: 14px;
     column-gap: 583px;
     line-height: 16px;

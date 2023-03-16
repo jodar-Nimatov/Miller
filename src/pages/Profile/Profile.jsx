@@ -36,7 +36,7 @@ import { CustomContext } from "../../pages/Cart/Context";
               <li>Главная</li>
             </Link>
             <Link to="/Profile">
-              <li>Личный кабинет</li>
+              <li>• Личный кабинет</li>
             </Link>
           </ul>
 
