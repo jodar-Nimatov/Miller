@@ -23,9 +23,30 @@
     }
     .CartEmpty-title{
         padding-bottom: 25px;
+        color: rgb(247, 239, 239);
     }
     .CartEmpty-close{
         position: absolute;
         right: 10px;
         top: 10px;
+    }
+    .CartEmpty-logo{
+        width: 50px;
+        height: 50px;
+    }
+    .CartEmpty-btn{
+        padding: 15px;
+        border: 1px solid #F9B300;
+        border-radius: 4px;
+        color: rgba(249, 179, 0, 1);
+        background: #F9B300;
+    }
+    .CartEmpty-btn a{
+        padding: 15px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        color: rgb(247, 239, 239);
     }

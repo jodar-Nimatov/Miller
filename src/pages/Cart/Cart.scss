@@ -34,8 +34,9 @@
     border: 0.708508px solid #E4E4E4;
     box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
     background-color: white;
+    padding-bottom: 30px;
     @media(max-width: 376px) {
-      max-width: 376px;
+      max-width: 375px;
   }
   }
   .Cart-inside{
@@ -95,6 +96,7 @@
     gap: 30px;
     @media(max-width: 376px) {
       width: 340px;
+      margin: 0 0 60px 20px;    
     }
   }
   .Card-left{
@@ -102,19 +104,44 @@
     align-items: center;
     button{
       padding-right: 55px;
+      @media(max-width: 376px){
+        position: relative;
+        margin: 180px 0 0 -45px;
+      }
     }
     img{
       padding-right: 15px;
+      @media(max-width: 376px){
+        position: absolute;
+      } 
     }
   }
   .Cart-description{
     width: 210px;
+    @media(max-width: 376px){
+      margin-left: 23px;
+      font-size: 10px;
+    }
+  }
+  .Cart-des-h3{
+    @media(max-width: 376px){
+      margin-bottom: 10px;
+      width: 140px;
+    } 
+  }
+  .Cart-des-p{
+    @media(max-width: 376px){
+      margin-top: 10px;
+    } 
   }
   .Card-close{
     border: 0;
     background: rgba(252, 252, 252, 1);
     padding-left: 43px;
     cursor: pointer;
+    @media(max-width: 376px){
+
+    }
   }
   .Card-right{
     display: flex;
@@ -126,6 +153,11 @@
   // .Cart-right-price{
   //   margin-left: -5px;
   // }
+  .Cart-right-price{
+    @media(max-width: 376px){
+      display: none;
+    } 
+  }
   .Card-click{
     display: flex;
     width: 105px;
@@ -135,6 +167,12 @@
     border: 1px solid #D6D6D6;
     border-radius: 5px;
     margin-left: 15px;
+    @media(max-width: 376px){
+      margin: 200px 0 0 -215px;
+      width: 160px;
+      height: 60px;
+      padding: 20px;
+    } 
   }
   .Card-click button {
     padding: 5px 15px;
@@ -146,8 +184,28 @@
     text-align: center;
     cursor: pointer;
   }
+  .Card-Click-p{
+    @media(max-width: 376px){
+      width: 80px;
+      margin-left: -110px;
+      font-size: 12px;
+      text-decoration-line: line-through;
+      color: #D6D6D6;
+    }
+  }
+  .Card-total{
+    @media(max-width: 376px){
+      margin-left: -115px;
+      width: 85px;
+      margin-top: -50px;
+      font-size: 14px;
+    }
+  }
   .Card-count{
     padding: 0 5px 0 5px;
+    @media(max-width: 376px){
+      margin: 0 10px;
+    } 
   }
   .Card-Click-dis{
     padding: 0 30px 0 10px;
@@ -161,9 +219,16 @@
     border: 0.708508px solid #E4E4E4;
     box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
     border-radius: 14px;
+    @media(max-width: 376px){
+      width: 375px;
+      height: 855px;
+    }
   }
   .Delivery-inside{
     margin-left: 100px;
+    @media(max-width: 376px){
+      margin-left: 18px;
+    }
   }
   .Delivery-head{
     padding: 50px 0 35px 0;
@@ -177,6 +242,9 @@
     background: #FCFCFC;
     border: 1px solid #F6F6F6;
     border-radius: 4px;
+    @media(max-width: 376px){
+      width: 340px;
+    }
   }
   .Delivery-left{
     display: inline-block;
@@ -184,6 +252,9 @@
   .Delivery-right{
     margin-left: 20px;
     display: inline-block;
+    @media(max-width: 376px){
+      margin: 0;
+    }
   }
   .Delivery-btn{
     width: 980px;
@@ -193,11 +264,17 @@
     border-radius: 4px;
     color: #F9B300;
     font-size: 18px;
+    @media(max-width: 376px){
+      width: 340px;
+    }
   }
   //Карточка промокода
   .Cart-down{
     margin: 20px 0 150px 0;
     display: flex;
+    @media(max-width: 376px){
+      display: block;
+    }
   }
   .Cart-promo{
     width: 730px;
@@ -206,9 +283,16 @@
     border: 1px solid #E4E4E4;
     box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
     border-radius: 14px;
+    @media(max-width: 376px){
+      width: 375px;
+      margin-bottom: 20px;
+    }
   }
   .Promo-inside{
     margin-left: 100px;
+    @media(max-width: 376px){
+      margin-left: 18px;
+    }
   }
   .Promo-head{
     padding-top: 40px;
@@ -217,6 +301,9 @@
     width: 380px;
     font-size: 14px;
     font-family: Gilroy;
+    @media(max-width: 376px){
+      width: 320px;
+    }
   }
   }
   .Promo-inp{
@@ -226,6 +313,9 @@
     border: 1px solid #F6F6F6;
     border-radius: 4px;
     text-indent: 40px;
+    @media(max-width: 376px){
+      width: 340px;
+    }
   }
   .Promo-inp::placeholder{
     color: rgba(196, 196, 196, 1);
@@ -238,6 +328,9 @@
     border: 1px solid #F9B300;
     border-radius: 4px;
     color: rgba(249, 179, 0, 1);
+    @media(max-width: 376px){
+      width: 340px;
+    }
   }
   //карточка итога
   .Cart-total{
@@ -248,9 +341,16 @@
     border: 1px solid #E4E4E4;
     box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
     border-radius: 14px;
+    @media(max-width: 376px){
+      width: 375px;
+      margin-left: 0;
+    }
   }
   .Total-inside{
     margin-left: 50px;
+    @media(max-width: 376px){
+      margin-left: 18px;
+    }
   }
   .Total-head{
     display: flex;
@@ -299,7 +399,10 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    font-family: 'Gilroy'
+    font-family: 'Gilroy';
+    @media(max-width: 376px){
+      width: 340px;
+    }
   }
   .Total-down p {
     padding-top: 5px;
@@ -307,4 +410,7 @@
     font-family: 'Gilroy';
     font-size: 10px;
     color: #747474;
+    @media(max-width: 376px){
+      width: 340px;
+    }
   }
