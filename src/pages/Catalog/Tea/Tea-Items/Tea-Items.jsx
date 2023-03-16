@@ -9,7 +9,7 @@ const TeaItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
-  const { addCart, chooseId } = useContext(CustomContext);
+  const { addCart, chooseId, category } = useContext(CustomContext);
   useEffect(() => {
     const url = `http://localhost:3333/coffee-drinks-${type}?`;
     axios
@@ -121,7 +121,7 @@ const TeaItems = ({ type }) => {
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
                     <Link
-                      to="/catalog/card-item"
+                      to={`/catalog/${category}/card-item`}
                       className="tea-img-block"
                     >
                       <img

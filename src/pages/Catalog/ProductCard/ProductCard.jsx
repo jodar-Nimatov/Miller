@@ -16,12 +16,12 @@ import Blog from "../../Blog/Blog";
 const ProductCard = () => {
   const [card, setCard] = useState({});
   const [check, setCheck] = useState(Object.keys(card));
-  const { id, category } = useContext(CustomContext);
+  const { id, category, types } = useContext(CustomContext);
   const [count, setCount] = useState(1);
   const obj = {one: false, two: false}
   useEffect(() => {
     axios
-      .get(`http://localhost:3333/${category}?id=${id}`)
+      .get(`http://localhost:3333/${category}${category !== 'catalog' ? "-" + types.type : ''}?id=${id}`)
       .then((res) => setCard(res.data[0]));
   }, [id, category]);
   return (

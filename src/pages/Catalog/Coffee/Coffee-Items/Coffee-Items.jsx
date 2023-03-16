@@ -14,7 +14,7 @@ import axios from "axios";
 import { CustomContext } from "../../../../utils/Context";
 
 const CoffeeItems = ({ filters }) => {
-  const {addCart, chooseId} = useContext(CustomContext)
+  const {addCart, chooseId, category} = useContext(CustomContext)
   const [cards, setCards] = useState([]);
   const [product, setProduct] = useState('hide')
   const [modal, setModal] = useState("showC");
@@ -178,7 +178,7 @@ const CoffeeItems = ({ filters }) => {
                     </div>
                     <div className="coffee__cards-inner-row-card-center">
                       <div className="coffee__cards-inner-row-card-center-left">
-                        <Link to="/catalog/card-item" className="tea-img-block">
+                        <Link to={`/catalog/${category}/card-item`} className="tea-img-block">
                           <img
                           onClick={()=>chooseId(item)}
                             src={item.image}

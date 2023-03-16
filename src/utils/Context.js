@@ -3,18 +3,18 @@ import React, { createContext, useState} from 'react'
 export const CustomContext = createContext()
 
 export const Context = (props) => {
+    const [types, setTypes] = useState({ type: "one" });
     const [cart, setCart] = useState([])
     const [id, setId] = useState(1)
-    const [category, setCategory] = useState('coffee')
+    const [category, setCategory] = useState('catalog')
     const chooseId = (item) => {
         if(item.kislinka != undefined){
             setCategory('catalog')
         }
         if(item.place == 'healthy'){
             setCategory('healthy-eatings')
-        }
-        if(item.kislinka == undefined && item.place == 'tea'){
-            setCategory('tea')
+        }if(item.kislinka == undefined && item.place == 'tea'){
+            setCategory('coffee-drinks')
         }
         setId(item.id)
     }
@@ -78,6 +78,8 @@ export const Context = (props) => {
     
     const value = {
         cart,
+        types,
+        setTypes,
         addCart,
         plusOneCart,
         minusOneCart,

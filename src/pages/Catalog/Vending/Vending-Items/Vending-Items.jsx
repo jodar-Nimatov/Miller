@@ -115,7 +115,7 @@ const VendingItems = ({ type }) => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center tocenter chtbtipvcntr">
-                    <Link to="/catalog/${somethingFromContext}/card-item" className="tea-img-block">
+                    <Link to="/catalog/wanding" className="tea-img-block">
                       <img
                         src={item.image}
                         className="card-image"

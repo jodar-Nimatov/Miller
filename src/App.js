@@ -18,6 +18,7 @@ import ProductCard from './pages/Catalog/ProductCard/ProductCard';
 import { CustomContext } from "./utils/Context";
 
 function App() {
+  const {category} = useContext(CustomContext)
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -32,7 +33,9 @@ function App() {
         <Route path="/catalog/tea" element={<TeaFilters />} />
         <Route path="/catalog/wanding" element={<VendingFilters />} />
         <Route path="/catalog/healthy" element={<HealthyFilters />} />
-        <Route path={`/catalog/card-item`} element={<ProductCard />} />
+        <Route path={`/catalog/tea/card-item`} element={<ProductCard />} />
+        <Route path={`/catalog/catalog/card-item`} element={<ProductCard />} />
+        <Route path={`/catalog/healthy-eatings/card-item`} element={<ProductCard />} />
         {/* Каталог товаров */}
         {/* Корзина */}
         <Route path='/cart' element={<Cart/>}/>
