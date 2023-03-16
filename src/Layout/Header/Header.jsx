@@ -10,7 +10,7 @@ import { Link, Navigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { CustomContext } from "../../utils/Context";
-import CartEmpty from "../../Components/CartEmpty/CartEmpty";
+import CartEmpty from './../../Components/CartEmpty/CartEmpty';
 
 const Header = () => {
   const [show, setShow] = useState(false);
