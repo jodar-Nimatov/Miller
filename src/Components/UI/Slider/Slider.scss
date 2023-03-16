@@ -14,6 +14,9 @@
   max-width: 210px; 
   margin: 0 auto;
   right: 1566px;
+  @media (max-width: 375px) {
+   right: 892px; 
+  }
 }
 .slideshow {
   position: absolute;
