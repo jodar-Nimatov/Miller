@@ -58,7 +58,7 @@ const Cart = () => {
                                     </ul>
                                 </div>
                                 {cart.map((item) => (
-                                    <div className="Cart-card">
+                                    <div className="Cart-card" key={item.id}>
                                         <div className="Card-left">
                                             <button type="button" onClick={() => delCart(item.id)} className="Card-close"><img src={DeleteBtn} alt="" /></button>
                                             <img width="90" height="80" src={item.image} alt="" />

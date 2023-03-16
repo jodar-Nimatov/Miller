@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
-import { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CustomContext } from "../../../../utils/Context";
 import HealthyItems from "./../HealthyEating-Items/HealthyEating-Items";
 
 const HealthyFilters = () => {
-  const [types, setTypes] = useState({ type: "one" });
+  const {types, setTypes} = useContext(CustomContext)
   const ref = useRef(null);
 
   const handleSrcoll = () => {

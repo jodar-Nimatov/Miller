@@ -151,7 +151,7 @@ const HealthyItems = ({ type }) => {
                     <h4 style={{ marginTop: "16px" }}>{item.title}</h4>
                     <p style={{ marginTop: "20px" }}>{item.subtitle}</p>
                     <Link
-                      to={`catalog/${category}/card-item`}
+                      to={`/catalog/${category}/card-item`}
                       className="treedots"
                     >
                       Больше
