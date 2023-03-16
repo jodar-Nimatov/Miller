@@ -4,6 +4,9 @@ export const CustomContext = createContext();
 
 export const Context = (props) => {
   const [cart, setCart] = useState([]);
+  const [id, setId] = useState(1);
+  const chooseId = (item) => setId(item.id);
+  const [user, setUser] = useState([]);
 
   const addCart = (product) => {
     setCart((prev) => [
@@ -24,10 +27,12 @@ export const Context = (props) => {
         return item;
       })
     );
+    localStorage.setItem("cart", JSON.stringify(cart));
   };
 
   const delCart = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
+    localStorage.setItem("cart", JSON.stringify(cart));
   };
 
   const minusOneCart = (id) => {
@@ -45,7 +50,22 @@ export const Context = (props) => {
         })
       );
     }
+    localStorage.setItem("cart", JSON.stringify(cart));
   };
+  const delTo = (id) => {
+    setCart((prev) => prev.slice(100));
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+
+  // useEffect(() => {
+  //     if (localStorage.getItem('user') === null){
+  //         setUser(JSON.parse(localStorage.getItem('user')))
+  //     }
+
+  //     if (localStorage.getItem('cart') === null){
+  //         setCart(JSON.parse(localStorage.getItem('cart')))
+  //     }
+  // }, [])
 
   const value = {
     cart,
@@ -53,6 +73,9 @@ export const Context = (props) => {
     plusOneCart,
     minusOneCart,
     delCart,
+    id,
+    chooseId,
+    delTo,
   };
 
   return (
