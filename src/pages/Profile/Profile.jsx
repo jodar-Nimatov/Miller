@@ -36,7 +36,7 @@ import { CustomContext } from "../../utils/Context";
               <li>Главная</li>
             </Link>
             <Link to="/Profile">
-              <li>Личный кабинет</li>
+              <li>• Личный кабинет</li>
             </Link>
           </ul>
 
@@ -86,9 +86,10 @@ import { CustomContext } from "../../utils/Context";
                 <button onClick={() => setInfo(false)}>Завершенные</button>
               </div>
             </div>
+            
             <div className={`info-block ${info ? 'block' : 'none'}`}>
               <div className="orders__p">
-                <p>31.02.2023 1:24 - Не оплачено</p>
+                <p>20.03.2023 - Не оплачено</p>
               </div> 
                     <div className="info__cards">
                       <div className="info__texts">
@@ -98,40 +99,49 @@ import { CustomContext } from "../../utils/Context";
                           <li>Скидка (10%):</li>   
                           <li>Сумма заказа:</li>
                       </ul>
-                    </div>
-                  
+                    </div>             
               {cart.map((item) => (
             <>
                       <div className="cards__inner">    
                       <div className="cards__h1">   
                             <h1 className="cards__text">{item.title}</h1>
+                            <p className="product__info">мытая, натуральная, смесь</p>
                       </div>                           
                               <div className="cards__p"> 
                               <p className="cards__price">{item.price} ₽</p>                      
-                              <p className="cards__discount">{item.price * item.count / 100 * 10} ₽</p>
+                              <p className="cards__discount">{item.price * item.count / 100 * 10} ₽ (-10%)</p>
                               <p className="cards__price2">{item.price * item.count - item.price * item.count / 100 * 10} ₽</p>
-                              </div>
-                            
+                              </div>                         
                       </div>
-                        
                            </>
                     )
                   )
                 }
                
                  </div>
-              <ul className="price__info">
-              <li>Сумма заказа:{total} ₽</li>
-              <li>Доставка: 350 ₽ </li>
-              </ul>
+              <div className="price__info">
+                <ul>
+                <li className="price__itog">Итого:</li>
+                 <li className="itog__number">{total} ₽</li>
+                </ul>
+                <ul>
+                <li className="price__podytog">Подытог:</li>
+                <li className="price__number1">{itog} ₽</li>
+                </ul>
+                <ul>
+                <li className="price__skidka">Скидка:</li>
+                <li className="price__number2">{skidka} ₽ (-10%)</li>
+                </ul>
+                <ul>
+                  <li className="dostavka">Доставка: </li>
+                  <li className="dostavka__number">350 ₽</li>
+                </ul>
+              </div>
             </div>
             <div className={`info-block ${info ? 'none' : 'block'}`}>
               <div className="orders__p">
-                <p>3.03.2023 1:24 - оплачено</p>
-                <p>Дата доставки: 03.03.2023</p>
-              </div>
-              <div className="info__cards">
-               
+                <p>20.03.2023 - оплачено</p>
+                <p>Дата доставки: 20.03.2023</p>
               </div>
             </div>
           </div>
@@ -141,7 +151,7 @@ import { CustomContext } from "../../utils/Context";
               <div className="coffee__profile">
                 <img src={coffee} alt="" />
                 <h1>Купи 3 пачки кофе и получи 4-ую в подарок!</h1>
-                <p>Срок акции: до 1.03.2023</p>
+                <p>Срок акции: до 10.03.2023</p>
               </div>
               <div className="coffee__profile">
                 <img src={coffee} alt="" />
@@ -151,12 +161,12 @@ import { CustomContext } from "../../utils/Context";
               <div className="coffee__profile">
                 <img src={coffee} alt="" />
                 <h1>Активным покупателям скидки!</h1>
-                <p>Срок акции: до 23.03.2023</p>
+                <p>Срок акции: до 19.03.2023</p>
               </div>
               <div className="coffee__profile">
                 <img src={coffee} alt="" />
                 <h1>За первую покупку можно получить скидку!</h1>
-                <p>Срок акции: до 31.03.2023</p>
+                <p>Срок акции: до 1.03.2023</p>
               </div>
             </div>
           </div>

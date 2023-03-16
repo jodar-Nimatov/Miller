@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react'
+import React, { createContext, useState} from 'react'
 
 export const CustomContext = createContext()
 
@@ -63,6 +63,7 @@ export const Context = (props) => {
     //         setCart(JSON.parse(localStorage.getItem('cart')))
     //     }
     // }, [])
+    
     
     const value = {
         cart,

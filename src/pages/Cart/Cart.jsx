@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import CheckPhoto from "./Check-photo/Check.svg"
 import DeleteBtn from "./Check-photo/Close.svg"
 import Master from "./Check-photo/MasterCard.svg"
 import Visa from "./Check-photo/Visa.svg"
@@ -12,21 +11,21 @@ const Cart = () => {
         (prev, curr) =>
             prev + curr.price * curr.count - curr.price * curr.count / 100 * 10,
         0
-        )
+    )
     const itog = cart.reduce(
         (prev, curr) =>
             prev + curr.price * curr.count,
         0
     )
     const skidka = cart.reduce(
-        (prev, curr) => 
+        (prev, curr) =>
             prev + curr.price * curr.count / 100 * 10,
         0
     ).toFixed(1)
     // const skidk = cart.reduce(
-    //     (item, state) => 
-    //        item  + state.price * state.count / 100 * 10,
-    //         0
+    //     (item, state) =>
+    //         item + state.price * state.count / 100 * 10,
+    //     0
     // ).toFixed(1)
     return (
         <div className="back-cart">
@@ -58,68 +57,32 @@ const Cart = () => {
                                         <li>Итого</li>
                                     </ul>
                                 </div>
-                                {/* <div className="Cart-card">                
-                            <div className="Card-left">
-                                <button className="Card-close"><img src={DeleteBtn} alt=""/></button>
-                                <img src={CheckPhoto} alt="" />
-                                    <div className="Cart-description">
-                                        <h3>Columbia Supremo</h3>
-                                        <p>мытая, натуральная, смесь</p>
-                                        <p>250 г.</p>
-                                    </div>
-                            </div>       
-                            <div className="Card-right">
-                                <p>270 ₽</p>
-                                    <div className="Card-click">
-                                        <button>-</button>
-                                        <p>1</p>
-                                        <button>+</button>
-                                    </div>
-                                <p>27 ₽</p>
-                                <p>243 ₽</p>
-                            </div> 
-                        </div>                                  
-                        <div className="Cart-card">                
-                            <div className="Card-left">
-                                <button className="Card-close"><img src={DeleteBtn} alt=""/></button>
-                                <img src={CheckPhoto} alt="" />
-                                    <div className="Cart-description">
-                                        <h3>Columbia Supremo</h3>
-                                        <p>мытая, натуральная, смесь</p>
-                                        <p>250 г.</p>
-                                    </div>
-                            </div>       
-                            <div className="Card-right">
-                                <p>270 ₽</p>
-                                    <div className="Card-click">
-                                        <button>-</button>
-                                        <p>1</p>
-                                        <button>+</button>
-                                    </div>
-                                <p>27 ₽</p>
-                                <p>243 ₽</p>
-                            </div> 
-                        </div>        */}
                                 {cart.map((item) => (
                                     <div className="Cart-card">
                                         <div className="Card-left">
                                             <button type="button" onClick={() => delCart(item.id)} className="Card-close"><img src={DeleteBtn} alt="" /></button>
                                             <img width="90" height="80" src={item.image} alt="" />
                                             <div className="Cart-description">
-                                                <h3>{item.title}</h3>
+                                                <h3 className="Cart-des-h3">{item.title}</h3>
                                                 <p>мытая, натуральная, смесь</p>
-                                                <p>250 г.</p>
+                                                <p className="Cart-des-p">250 г.</p>
                                             </div>
                                         </div>
                                         <div className="Card-right">
-                                            <p className="Cart-right-price">{item.price} ₽</p>
+                                            <div>
+                                                <p className="Cart-right-price">{item.price} ₽</p>
+                                            </div>
                                             <div className="Card-click">
                                                 <button type="button" onClick={() => minusOneCart(item.id)}>-</button>
                                                 <span className="Card-count">{item.count}</span>
                                                 <button type="button" onClick={() => plusOneCart(item.id)}>+</button>
                                             </div>
-                                            <p className="Card-Click-dis">{item.price * item.count / 100 * 10} ₽</p>
-                                            <p>{item.price * item.count - item.price * item.count / 100 * 10} ₽</p>
+                                            <div className="Card-Click-p">
+                                                <p className="Card-Click-dis">{item.price * item.count / 100 * 10} ₽</p>
+                                            </div>
+                                            <div className="Card-total">
+                                                <p>{item.price * item.count - item.price * item.count / 100 * 10} ₽</p>
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
