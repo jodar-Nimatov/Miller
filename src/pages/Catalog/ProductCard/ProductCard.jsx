@@ -16,13 +16,14 @@ import Blog from "../../Blog/Blog";
 const ProductCard = () => {
   const [card, setCard] = useState({});
   const [check, setCheck] = useState(Object.keys(card));
-  const { id } = useContext(CustomContext);
-  const [count, setCount] = useState(0)
+  const { id, category, types } = useContext(CustomContext);
+  const [count, setCount] = useState(1);
+  const obj = {one: false, two: false}
   useEffect(() => {
     axios
-      .get(`http://localhost:3333/catalog?id=${id}`)
+      .get(`http://localhost:3333/${category}${category !== 'catalog' ? "-" + types.type : ''}?id=${id}`)
       .then((res) => setCard(res.data[0]));
-  }, [id]);
+  }, [id, category]);
   return (
     <div className="wrapper">
       <div className="card-back">
@@ -86,24 +87,25 @@ const ProductCard = () => {
                         {card.category !== undefined ? card.category[1] : ""}
                       </p>
                     </div>
+                    <p></p>
                   </div>
+                  
                   <p className="pmethod">{card["processing method"]}</p>
-                  {/* <div
-                    className="rating"
-                    style={{
-                      backgroundImage: `url(${rating})`,
-                      height: "12px",
-                      width: `${Math.floor(card.rating[0]) + card.rating[2]}px`,
-                      backgroundSize: "50px",
-                      backgroundRepeat: "no-repeat",
-                      position: "relative",
-                    }}
-                  ></div> */}
-                  <p>({card.review} отзыва)</p>
+                  
+                  <div className="das forDF">
+                    <div
+                      className="rating"
+                      style={{backgroundImage: `url(${rating})`,}}
+                      ></div>
+                      <h3>{card.rating}</h3>
+                    <small>({card.review} отзыва)</small>
+                  </div>
+                  
                   {/* --- */}
                   <p className="card--desc">{card.subtitle}</p>
+                  
                   {/* --- */}
-                  <div className="coffee__cards-inner-row-card-center-right-filters forDF">
+                  <div className="coffee__cards-inner-row-card-center-right-filters filts forDF">
                     <div className="coffee__cards-inner-row-card-center-right-filters-item">
                       <p>Кислинка</p>
                       <div className="kislinka">
@@ -156,28 +158,40 @@ const ProductCard = () => {
                       </div>
                     </div>
                   </div>
+                  
+                  
                   {/* --- */}
                   <div className="grams forDF">
-                    <div className="white-circle"></div>
-                    250 г.
-                    <div className="white-circle"></div>
-                    1000 г.
+                    <div>
+                      <div className="white-circle"></div>
+                      250 г.
+                    </div>
+                    <div>
+                      <div className="white-circle"></div>
+                      1000 г.
+                    </div>
                   </div>
                   {/* --- */}
-                  <div className="Card-click">
-                    <button type="button">
-                      -
-                    </button>
-                    <span className="Card-count">{count}</span>
-                    <button type="button">
-                      +
-                    </button>
+                  
+                  
+                  <div className="forDF">
+                    <div className="card_clicker">
+                      <span type="button" className="plusorminus">
+                        -
+                      </span>
+                      <span className="Card-count">{count}</span>
+                      <span type="button" className="plusorminus">
+                        +
+                      </span>
+                    </div>
+                    {/* --- */}
+                    <button>Купить за {card.price}</button>
                   </div>
-                  {/* --- */}
-                  <button>Купить за //price</button>
                 </div>
               </div>
+              <div className={`blogg ${card.kislinka !== undefined ? 'show' : 'hide'}`}>
               <Blog />
+              </div>
             </div>
           </div>
         </div>

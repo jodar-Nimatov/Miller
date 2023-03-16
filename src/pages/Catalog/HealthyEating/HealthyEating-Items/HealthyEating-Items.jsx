@@ -9,7 +9,7 @@ const HealthyItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
-  const {addCart} = useContext(CustomContext)
+  const { addCart, chooseId, category } = useContext(CustomContext);
   useEffect(() => {
     const url = `http://localhost:3333/healthy-eatings-${type}?`;
     axios
@@ -120,8 +120,12 @@ const HealthyItems = ({ type }) => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center tocenter chtbtipvcntr">
-                    <Link to="/catalog/${somethingFromContext}/card-item" className="tea-img-block">
+                    <Link
+                      to={`/catalog/${category}/card-item`}
+                      className="tea-img-block"
+                    >
                       <img
+                        onClick={() => chooseId(item)}
                         src={item.image}
                         className="card-image"
                         height="196px"
@@ -146,7 +150,10 @@ const HealthyItems = ({ type }) => {
                   <div className="coffee__cards-inner-row-card-bottom">
                     <h4 style={{ marginTop: "16px" }}>{item.title}</h4>
                     <p style={{ marginTop: "20px" }}>{item.subtitle}</p>
-                    <Link to="/catalog/${somethingFromContext}/card-item" className="treedots">
+                    <Link
+                      to={`catalog/${category}/card-item`}
+                      className="treedots"
+                    >
                       Больше
                     </Link>
                     <>...</>
@@ -155,7 +162,9 @@ const HealthyItems = ({ type }) => {
                         <></>
                         <h3 className="card-title-jiest">{item.price} ₽</h3>
                       </div>
-                      <button type="button" onClick={() => addCart(item)}>В корзину</button>
+                      <button type="button" onClick={() => addCart(item)}>
+                        В корзину
+                      </button>
                     </div>
                   </div>
                 </div>
