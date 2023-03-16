@@ -15,8 +15,7 @@ import rating from "../../../assets/Catalog/Coffee/Filters/rating.svg";
 import Blog from "../../Blog/Blog";
 const ProductCard = () => {
   const [card, setCard] = useState({});
-  const [check, setCheck] = useState(Object.keys(card));
-  const { id, category, types } = useContext(CustomContext);
+  const { id, category, types, addCart } = useContext(CustomContext);
   const [count, setCount] = useState(1);
   const obj = {one: false, two: false}
   useEffect(() => {
@@ -27,7 +26,7 @@ const ProductCard = () => {
   return (
     <div className="wrapper">
       <div className="card-back">
-        <div className="card">
+        <div className="card" key={card.id}>
           <div className="container">
             <div className="card__inner">
               <ul className="filters-nav card-nav">
@@ -47,7 +46,7 @@ const ProductCard = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="filters-nav-item" to="/catalog/card-item">
+                  <Link className="filters-nav-item" to={`/catalog/${category}/card-item`}>
                     &#x2022;{card.title}
                   </Link>
                 </li>
@@ -58,7 +57,7 @@ const ProductCard = () => {
                     className="card-img"
                     style={{ backgroundImage: `url(${card.image})` }}
                   ></div>
-                  <div
+                  <div hidden={card.kislinka !== undefined ? false : true}
                     className="card__image_circle"
                     style={{ backgroundImage: `url(${card.in})` }}
                   ></div>
@@ -176,16 +175,16 @@ const ProductCard = () => {
                   
                   <div className="forDF">
                     <div className="card_clicker">
-                      <span type="button" className="plusorminus">
+                      <span type="button" className="plusorminus" onClick={()=>setCount(count - 1)}>
                         -
                       </span>
                       <span className="Card-count">{count}</span>
-                      <span type="button" className="plusorminus">
+                      <span type="button" className="plusorminus" onClick={()=>setCount(count + 1)}>
                         +
                       </span>
                     </div>
                     {/* --- */}
-                    <button>Купить за {card.price}</button>
+                    <button onClick={(item = card)=>addCart(item)}>Купить за {card.price * count} ₽</button>
                   </div>
                 </div>
               </div>
