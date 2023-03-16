@@ -246,6 +246,13 @@
   margin: 0;
 }
 .login {
+  position: relative;
+  .close-modal{
+    position: absolute;
+    top: 15px;
+    right: 31px;
+    cursor: pointer;
+  }
   &_left {
     width: 283px;
     height: 525px;

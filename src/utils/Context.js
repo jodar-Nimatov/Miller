@@ -18,6 +18,7 @@ export const Context = (props) => {
         }
         setId(item.id)
     }
+    const [isopen, setIsopen] = useState(false)
     const [user, setUser] = useState([])
  
     const addCart = (product) => {
@@ -87,6 +88,8 @@ export const Context = (props) => {
         id,
         chooseId,
         category,
+        isopen,
+        setIsopen,
         delTo,
     }
  

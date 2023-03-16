@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import millerlogom from "../../assets/modal/image26.svg";
 import axios from "axios";
-
 import "./SignUp.scss";
 import { Link } from "react-router-dom";
+import { CustomContext } from "../../utils/Context";
 const SignUp = () => {
+  const {setIsopen} = useContext(CustomContext)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [number, setNumber] = useState("");
@@ -37,7 +38,7 @@ const SignUp = () => {
               <img className="login_logo" src={coffeelogo} alt="" />
               <h1>Добро пожаловать!</h1>
               <p>Уже есть аккаунт?</p>
-              <button className="login_left_button">Войти</button>
+              <button className="login_left_button"><Link to='/' onClick={() => setIsopen(true)}>Войти</Link></button>
             </div>
             <div className="login_right">
               <img className="login_right_logo" src={millerlogom} alt="" />
