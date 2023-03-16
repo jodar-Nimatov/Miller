@@ -8,7 +8,7 @@ const Contacts = () => {
       <div className="container">
         <div className="contacts-inner">
             <li className="home-cont">Главная</li>
-            <li className="cont-blog">Контакты</li>
+            <li className="cont-blog">•Контакты</li>
               <div className="switch-click">
                 <Link to="/contacts">
                   <button className="switch-contact">Контакты</button>
