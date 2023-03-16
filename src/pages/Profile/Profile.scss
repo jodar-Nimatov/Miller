@@ -2,12 +2,13 @@
 
   max-width: 100%;
   background: #e5e5e5;
-  font-family: "Gilroy";
+ 
   
   @media(max-width: 376px) {
     background: white;
     max-width: 375px;
     overflow: hidden;
+    max-width: 100%;
 }
 }
 
@@ -327,8 +328,9 @@
 
     @media(max-width: 376px) {
     transform: translate(-78px, 37px);
-    background-color: white; 
-    
+    width: 340px;
+    height: auto;
+
     }
     .cards__inner {
     margin-top: 22px;
@@ -341,37 +343,69 @@
 }
 
 
-.cards__h1 {
-  max-width: 210px;
-}
+
 
 .cards__text {
-  margin-left: 58px;
-  margin-right: 26px;
+  margin-left: 59px;
+  text-align: center;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1px;
   line-height: 16px;
   color: #747474;
+  @media(max-width: 376px) {
+    font-weight: 700;
+    font-size: 10px;
+    transform: translate(-31px, 9px);
+    line-height: 12px;
+  }
 
+}
+
+.product__img {
+  display: none;
+  width: 73px;
+  margin-left: 10px;
+  height: 75px;
+  @media(max-width: 376px) {
+    display: block;
+
+  }
+}
+
+.product__info {
+  display: none;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  @media(max-width: 376px) {
+    display: block;
+    transform: translate(28px, 21px);
+  }
 }
 
 
 .cards__price {
-  position: relative;
-  left: 62px;
+  transform: translate(60px, 7px);
+  font-size: 1px;
+  text-align: center;
+
+}
+
+.cards__discount {
+  transform: translate(329px, -10px);
+  font-size: 1px;
+
+  @media(max-width: 376px) {
+    transform: translate(39px, 16px);
+  }
 }
 
 .cards__price2 {
-  position: relative;
-  left: 571px;
-  top: -16px;
+  transform: translate(579px, -28px)
+
 }
 
 
-.cards__discount {
-  position: relative;
-  left: 318px;
-}
 
 .cards__title {
   margin-left: 20px;
@@ -386,7 +420,7 @@
   font-size: 14px;
   line-height: 16px;
   color: #747474;
-
+  text-align: center;
   display: flex;
   margin-top: 12px;
 
@@ -398,8 +432,13 @@
   justify-content: space-around;
   margin-top: 10px;
 
+  @media(max-width: 376px) {
+    display: none;
+  }
+
   .info__text {
     padding-bottom: 30px;
+
   }
 }
 
@@ -430,7 +469,7 @@
   
 }
 
-.orders__p {
+.orders__p p {
     display: flex;
     margin-top: 30px;
     margin-left: 101px;
@@ -446,17 +485,124 @@
   }
 
 .price__info {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 882px;
   margin-bottom: 20px;
+
+  @media(max-width: 376px) {
+     transform: translate(-862px, 10px);
+  }
+  
+  .price__itog {
+    font-family: 'Gilroy';
+    
+    @media(max-width: 376px) {
+      font-weight: 700;
+      color: #222222;
+      font-size: 16px;
+      line-height: 17px;
+      margin-bottom: 10px;
+    
+    }
+  }
+
+.price__number1 {
+    display: none;
+
+    @media(max-width: 376px) {
+      display: block;
+      transform: translate(261px, 0px)
+
+    }
+  }
+  .price__number2 {
+    display: none;
+
+    @media(max-width: 376px) {
+      display: block;
+      transform: translate(226px, 0px);
+
+    }
+  }
+  
+
+  .itog__number {
+    font-family: 'Gilroy';
+    
+    @media(max-width: 376px) {
+      position: fixed;
+      font-weight: 700;
+      color: #222222;
+      font-size: 16px;
+      line-height: 17px;
+      transform: translate(303px, 0px);
+      margin-bottom: 10px;
+    }
+  }
+
+  .dostavka {
+    font-family: 'Gilroy';
+
+    @media(max-width: 376px) {
+
+    }
+  }
+
+  .dostavka__number {
+    font-size: 12px; 
+
+    @media(max-width: 376px) {
+      transform: translate(249px, 0px);
+    }
+  }
+
+  .price__podytog {
+    display: none;
+
+    @media(max-width: 376px) {
+      display: block;
+  
+    }
+  }
+  
+  .price__skidka {
+    display: none;
+
+    @media(max-width: 376px) {
+      display: block;
+      
+    }
+  }
+
+ ul {
+  display: flex;
+ 
+
 }
-.price__info li {
+ li {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #747474;
+  margin: 2px 2px;
+  padding-top: 5px;
+}
+
+p {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   color: #747474;
   padding-top: 5px;
 }
+
+
+}
+
+
+
+
 
 .orders__title h1 {
   font-weight: 900;
