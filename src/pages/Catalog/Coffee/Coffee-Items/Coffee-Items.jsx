@@ -14,13 +14,12 @@ import axios from "axios";
 import { CustomContext } from "../../../../utils/Context";
 
 const CoffeeItems = ({ filters }) => {
-  const {addCart} = useContext(CustomContext)
+  const {addCart, chooseId} = useContext(CustomContext)
   const [cards, setCards] = useState([]);
   const [product, setProduct] = useState('hide')
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
   const url = "http://localhost:3333/catalog?";
-  const {chooseId} = useContext(CustomContext)
   const filterBase = {
     geographyFilter: "",
     kislinkaFilter: "",
