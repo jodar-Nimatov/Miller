@@ -15,6 +15,7 @@ const Contacts = () => {
                   <button className="switcр-stores">Наши Магазины</button>
                 </Link>
               </div>
+              <div className="contact-content">
             <div className="btn-switch-text">
               <h1 className="header-text">Связаться с нами:</h1>
               <p className="number-contact">+7 (401) 237 53 43</p>
@@ -35,6 +36,7 @@ const Contacts = () => {
             </div>
         <div className="map">
           <YandexMaps />
+        </div>
         </div>
         </div>
       </div>
