@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import blackTea from "../../../../assets/Catalog/Tea/Filters/image 22.png";
 import greenTea from "../../../../assets/Catalog/Tea/Filters/image 16.png";
 import oolongMilk from "../../../../assets/Catalog/Tea/Filters/image 27.png";
 import TeaItems from "../Tea-Items/Tea-Items";
 import { useRef } from "react";
+import { CustomContext } from "../../../../utils/Context";
 
 const TeaFilters = () => {
-  const [types, setTypes] = useState({ type: "one" });
+  const {types, setTypes} = useContext(CustomContext)
   const ref = useRef(null);
 
   const handleSrcoll = () => {

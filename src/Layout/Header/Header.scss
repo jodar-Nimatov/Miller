@@ -122,7 +122,7 @@
     font-size: 16px;
   }
   &__input.none {
-    transition: all 20s;
+    // transition: all 20s;
     display: block;
   }
   .header-search-InInput.none {
@@ -173,6 +173,9 @@
     }
     @media (max-width: 677px) {
       width: 160px;
+    }
+    @media (max-width: 440px) {
+      width: 130px;
     }
     @media (max-width: 575px) {
       display: none;
