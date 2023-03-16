@@ -14,7 +14,7 @@ import axios from "axios";
 import { CustomContext } from "../../../../utils/Context";
 
 const CoffeeItems = ({ filters }) => {
-  const {addCart, chooseId, category} = useContext(CustomContext)
+  const {addCart, chooseId, category, search} = useContext(CustomContext)
   const [cards, setCards] = useState([]);
   const [product, setProduct] = useState('hide')
   const [modal, setModal] = useState("showC");
@@ -83,7 +83,7 @@ const CoffeeItems = ({ filters }) => {
               ? "_sort=kislinka&_order=desc"
               : ""
           }` +
-          "&" +
+          "&" + `${search !== '' ? 'title_like=' + search + '&' : ''}` +
           filterBase.geographyFilter +
           filterBase.kislinkaFilter +
           filterBase.coftypeFilter +

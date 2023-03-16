@@ -8,6 +8,8 @@ import roast1 from "../../../../assets/Catalog/Coffee/Filters/roast1.svg";
 import searchicon from "../../../../assets/Header/search.svg";
 import { Link } from "react-router-dom";
 import CoffeeItems from "./../Coffee-Items/Coffee-Items";
+import { useContext } from "react";
+import { CustomContext } from './../../../../utils/Context';
 
 const CoffeeFilters = () => {
   const [filters, setFilters] = useState({
@@ -20,7 +22,7 @@ const CoffeeFilters = () => {
     cmethod: [],
     coffeelevel: [],
   });
-  const [key, setKey] = useState(0);
+  const {key, setKey} = useContext(CustomContext) 
   const [tum, setTum] = useState(false);
   const oBack = tum ? "#f9b300" : "#e4e4e4";
   const filterFun = (e, filt) => {
