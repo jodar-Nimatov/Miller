@@ -12,6 +12,7 @@ import { CustomContext } from "../../utils/Context";
 import { TfiClose } from "react-icons/tfi";
 import CartEmpty from "../../Components/CartEmpty/CartEmpty";
 import BurgerSD from "./BurgerSD";
+import CartEmpty from './../../Components/CartEmpty/CartEmpty';
 
 const Header = () => {
   const [show, setShow] = useState(false);
