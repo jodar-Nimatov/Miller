@@ -36,7 +36,11 @@ const Header = () => {
   };
 
   const handleopenmodal1 = () => {
-    setIsOpen(!modalIsOpen);
+    if(user){
+      navigate('/profile')
+    }else{
+      setIsOpen(!modalIsOpen);
+    }
   };
   const closemodal = () => {
     modalIsOpen(!setIsOpen);
