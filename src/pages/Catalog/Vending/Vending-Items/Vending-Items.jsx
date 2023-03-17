@@ -128,7 +128,7 @@ const VendingItems = ({ type }) => {
                   <div className="coffee__cards-inner-row-card-bottom">
                     <h4>{item.title}</h4>
                     <p>{item.subtitle}</p>
-                    <Link to="/catalog/${somethingFromContext}/card-item" className="treedots">
+                    <Link to="/catalog/wanding" className="treedots">
                       Больше
                     </Link>
                     <>...</>

@@ -116,6 +116,11 @@
     }
     justify-content: space-between;
   }
+  .title > h2{
+    height: 60px;
+    overflow-y: scroll;
+    line-height: normal; 
+  }
   &__inner {
     .card__info_top {
       border: 1px solid #e4e4e4;
