@@ -1,31 +1,44 @@
-import React, { useState, useEffect } from "react";
-import coffeelogo from "../../assets/modal/Group 245.svg";
-import millerlogom from "../../assets/modal/image26.svg";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import coffeelogo from '../../assets/modal/Group 245.svg';
+import millerlogom from '../../assets/modal/image26.svg';
+import axios from 'axios';
+import { UserAuth } from '../../utils/authContext';
 
-import "./SignUp.scss";
-import { Link } from "react-router-dom";
+import './SignUp.scss';
+import { Link, useNavigate } from 'react-router-dom';
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [number, setNumber] = useState("");
-  const [name, setName] = useState("");
+  const { signUp, setName, setNumber, name, number, user } = UserAuth();
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-  let urlUser = "http://localhost:4444/users";
+  let urlUser = 'http://localhost:4444/users';
 
-  let handleSubmit = async (e) => {
-    fetch(urlUser, {
-      method: "POST",
-      body: JSON.stringify({
-        name: e.target[0].value,
-        email: e.target[1].value,
-        password: e.target[2].value,
-        number: e.target[3].value,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  // let handleSubmit = async (e) => {
+  //   fetch(urlUser, {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       name: e.target[0].value,
+  //       email: e.target[1].value,
+  //       password: e.target[2].value,
+  //       number: e.target[3].value,
+  //     }),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //   });
+  // };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    try {
+      await signUp(email, password);
+      navigate('/profile');
+    } catch (e) {
+      setError(e.message);
+      console.log(e);
+    }
   };
 
   return (
@@ -44,11 +57,11 @@ const SignUp = () => {
               <div className="text_cnt">
                 <h2 className="h2registrALo">Регистрация</h2>
                 <li className="loshara">
-                  Зарегистрируйтесь на сайте, чтобы первым получать скидки и
-                  узнавать акционные предложения!
+                  Зарегистрируйтесь на сайте, чтобы первым получать скидки и узнавать акционные
+                  предложения!
                 </li>
               </div>
-
+              {error ? <p style={{ fontSize: '19px', color: 'red' }}>{error}</p> : null}
               <form className="login_right_formik" onSubmit={handleSubmit}>
                 <input
                   value={name}
@@ -82,8 +95,8 @@ const SignUp = () => {
                   required="Придумайте пароль"
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <Link to="/profile">
-                  <button className="login_right_buttonlog" type="submit">
+                <Link to={user ? '/profile' : '/signup'}>
+                  <button className="login_right_buttonlog" type="submit" onClick={handleSubmit}>
                     Зарегистрироваться
                   </button>
                 </Link>
