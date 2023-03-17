@@ -8,19 +8,20 @@ import millerlogom from "../../assets/modal/image26.svg";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import { Link, Navigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { CustomContext } from "../../utils/Context";
+import { TfiClose } from "react-icons/tfi";
 import CartEmpty from "../../Components/CartEmpty/CartEmpty";
+import BurgerSD from "./BurgerSD";
 
 const Header = () => {
   const [show, setShow] = useState(false);
   const [text, setText] = useState("");
   const [title, setTitle] = useState("Каталог товаров");
   const [display, setDisplay] = useState("block");
-  const { cart } = useContext(CustomContext);
+  const { cart, setSearch, setKey, key } = useContext(CustomContext);
   const [see, setSee] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [nav, setNav] = useState(false);
+  const [BurgerMenu, setBurgerMenu] = useState(false);
 
   const handleInput = () => {
     setDisplay("none");
@@ -38,7 +39,7 @@ const Header = () => {
     setIsOpen(!modalIsOpen);
   };
   const closemodal = () => {
-    setIsOpen(false);
+    modalIsOpen(!setIsOpen);
   };
 
   const handleshow = () => {
@@ -51,7 +52,6 @@ const Header = () => {
   useEffect(() => {
     handleInputClose();
   }, [display]);
-
   return (
     <>
       <div className="white"></div>
@@ -59,23 +59,10 @@ const Header = () => {
         {/* <div className="container"> */}
         <div className="header__inner">
           <div className="header__left">
-            {/* <div className="header-burger-menu"> */}
-            {/* <div className="header__burger">
-              <div className="box"></div>
-              <ul className={nav ? "menu" : ["menu", "active"]}>
-                <li>CATOlog</li>
-              </ul>
-              <div onClick={() => setNav(!nav)} className="mobile_btn">
-                {nav ? (
-                  <AiOutlineClose size={25} />
-                ) : (
-                  <AiOutlineMenu size={25} />
-                )}
-              </div>
-            </div> */}
-
-            {/* <img src={burger} alt="" /> */}
-            {/* </div> */}
+            <BurgerSD BurgerMenu={BurgerMenu} setBurgerMenu={setBurgerMenu} />
+            <div className="header-burger-menu">
+              <img onClick={() => setBurgerMenu(true)} src={burger} alt="" />
+            </div>
             <Link to="/">
               <img
                 className="millerLogo"
@@ -144,13 +131,23 @@ const Header = () => {
             </ul>
           </div>
           <div className={`header__input-block ${display}`}>
-            <input
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              type="search"
-              placeholder="Поиск по товарам"
-              className={`header__input ${display}`}
-            />
+            <Link to="/catalog/coffee">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setSearch(text);
+                  setKey(key + 1);
+                }}
+              >
+                <input
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                  type="text"
+                  placeholder="Поиск по товарам"
+                  className={`header__input ${display}`}
+                />
+              </form>
+            </Link>
           </div>
           <div className="header__right">
             <a href="#">
@@ -179,14 +176,12 @@ const Header = () => {
               {cart.length}
             </span>
             <CartEmpty see={see} setSee={setSee} />
-            {/* <Link to="/Profile"> */}
             <img
               className="header-right-icon header-user"
               src={userlogo}
               alt="header user"
               onClick={handleopenmodal1}
             />
-            {/* </Link> */}
           </div>
           {/* </div> */}
           {/* <Link to="/Profile"> */}
@@ -198,16 +193,8 @@ const Header = () => {
                     <div className="login_left">
                       <img className="login_logo" src={coffeelogo} alt="" />
                       <h1>Регистрация</h1>
-                      {/* {inputs.map((input) => (
-                        <Reg
-                          key={input.id}
-                          {...input}
-                          value={inputValues[input.name]}
-                          onChange={handleChange}
-                        />
-                      ))} */}
                       <p>Получайте скидки первыми!?</p>
-                      <Link to="/SignUp" onClick={closemodal}>
+                      <Link onClick={closemodal} to="/SignUp">
                         <button className="login_left_button">
                           Зарегистрироваться
                         </button>
@@ -219,19 +206,19 @@ const Header = () => {
                         src={millerlogom}
                         alt=""
                       />
-                      <h2>Войти в личный кабинет</h2>
-                      <span
-                        X
+                      <div
                         onClick={() => setIsOpen(false)}
-                        className="closemodal"
-                      ></span>
+                        className="close-modal"
+                      >
+                        <TfiClose />
+                      </div>
+                      <h2>Войти в личный кабинет</h2>
                       <form className="login_right_forms">
                         <input
                           className="login_right_inputone"
                           type="email"
                           placeholder="email"
                           required
-                          // onChange={(e) => setEmail(e.target.value)}
                         />
                         <input
                           className="login_right_inputtwo"
@@ -239,7 +226,6 @@ const Header = () => {
                           type="password"
                           placeholder="password"
                           required
-                          // onChange={(e) => setPassword(e.target.value)}
                         />
                         <button className="login_right_buttonlog">Войти</button>
                         {/* <button className="login_right_reset">Забыли пароль?</button> */}

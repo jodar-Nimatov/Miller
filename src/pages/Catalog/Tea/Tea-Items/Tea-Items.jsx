@@ -9,7 +9,11 @@ const TeaItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
+<<<<<<< HEAD
   const { addCart } = useContext(CustomContext);
+=======
+  const { addCart, chooseId, category } = useContext(CustomContext);
+>>>>>>> 0f9036a625cb0c1cff9ad23c433d607b58f7d17f
   useEffect(() => {
     const url = `http://localhost:3333/coffee-drinks-${type}?`;
     axios
@@ -120,8 +124,12 @@ const TeaItems = ({ type }) => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center">
-                    <Link to="/catalog/${somethingFromContext}/card-item" className="tea-img-block">
+                    <Link
+                      to={`/catalog/${category}/card-item`}
+                      className="tea-img-block"
+                    >
                       <img
+                        onClick={() => chooseId(item)}
                         src={item.image}
                         className="card-image"
                         height="221px"
@@ -133,7 +141,10 @@ const TeaItems = ({ type }) => {
                   <div className="coffee__cards-inner-row-card-bottom">
                     <h4 style={{ marginTop: "16px" }}>{item.title}</h4>
                     <p style={{ marginTop: "20px" }}>{item.subtitle}</p>
-                    <Link to="/catalog/${somethingFromContext}/card-item" className="treedots">
+                    <Link
+                      to={`/catalog/${category}/card-item`}
+                      className="treedots"
+                    >
                       Больше
                     </Link>
                     <>...</>

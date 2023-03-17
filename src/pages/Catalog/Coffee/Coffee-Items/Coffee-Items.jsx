@@ -14,13 +14,12 @@ import axios from "axios";
 import { CustomContext } from "../../../../utils/Context";
 
 const CoffeeItems = ({ filters }) => {
-  const {addCart} = useContext(CustomContext)
+  const {addCart, chooseId, category, search} = useContext(CustomContext)
   const [cards, setCards] = useState([]);
   const [product, setProduct] = useState('hide')
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
   const url = "http://localhost:3333/catalog?";
-  const {chooseId} = useContext(CustomContext)
   const filterBase = {
     geographyFilter: "",
     kislinkaFilter: "",
@@ -84,7 +83,7 @@ const CoffeeItems = ({ filters }) => {
               ? "_sort=kislinka&_order=desc"
               : ""
           }` +
-          "&" +
+          "&" + `${search !== '' ? 'title_like=' + search + '&' : ''}` +
           filterBase.geographyFilter +
           filterBase.kislinkaFilter +
           filterBase.coftypeFilter +
@@ -179,7 +178,7 @@ const CoffeeItems = ({ filters }) => {
                     </div>
                     <div className="coffee__cards-inner-row-card-center">
                       <div className="coffee__cards-inner-row-card-center-left">
-                        <Link to="/catalog/card-item" className="tea-img-block">
+                        <Link to={`/catalog/${category}/card-item`} className="tea-img-block">
                           <img
                           onClick={()=>chooseId(item)}
                             src={item.image}

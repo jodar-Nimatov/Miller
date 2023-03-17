@@ -9,7 +9,7 @@ const HealthyItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
-  const { addCart } = useContext(CustomContext);
+  const { addCart, chooseId, category } = useContext(CustomContext);
   useEffect(() => {
     const url = `http://localhost:3333/healthy-eatings-${type}?`;
     axios
@@ -125,6 +125,7 @@ const HealthyItems = ({ type }) => {
                       className="tea-img-block"
                     >
                       <img
+                        onClick={() => chooseId(item)}
                         src={item.image}
                         className="card-image"
                         height="196px"
