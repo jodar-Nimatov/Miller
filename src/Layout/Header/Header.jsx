@@ -9,6 +9,7 @@ import coffeelogo from "../../assets/modal/Group 245.svg";
 import { Link, Navigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
 import { CustomContext } from "../../utils/Context";
+import {TfiClose} from "react-icons/tfi"
 import CartEmpty from "../../Components/CartEmpty/CartEmpty";
 import BurgerSD from "./BurgerSD";
 
@@ -191,7 +192,7 @@ const Header = () => {
                         <img className="login_logo" src={coffeelogo} alt="" />
                         <h1>Регистрация</h1>
                         <p>Получайте скидки первыми!?</p>
-                        <Link to="/SignUp">
+                        <Link onClick={closemodal} to="/SignUp">
                           <button className="login_left_button">
                             Зарегистрироваться
                           </button>
@@ -203,6 +204,9 @@ const Header = () => {
                           src={millerlogom}
                           alt=""
                         />
+                        <div onClick={() => setIsOpen(false)} className="close-modal">
+                          <TfiClose/>
+                        </div>
                         <h2>Войти в личный кабинет</h2>
                         <form className="login_right_forms">
                           <input
