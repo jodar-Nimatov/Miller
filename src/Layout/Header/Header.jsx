@@ -131,6 +131,7 @@ const Header = () => {
             </ul>
           </div>
           <div className={`header__input-block ${display}`}>
+          <Link to='/catalog/coffee'>
             <form onSubmit={(e) => {
               e.preventDefault()
               setSearch(text)
@@ -144,6 +145,7 @@ const Header = () => {
                 className={`header__input ${display}`}
               />
             </form>
+              </Link>
           </div>
           <div className="header__right">
             <a href="#">
