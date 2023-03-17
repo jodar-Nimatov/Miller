@@ -85,7 +85,7 @@ const SignUp = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <Link to="/profile">
-                  <button className="login_right_buttonlog" type="submit">
+                  <button className="login_right_buttonlogg" type="submit">
                     Зарегистрироваться
                   </button>
                 </Link>

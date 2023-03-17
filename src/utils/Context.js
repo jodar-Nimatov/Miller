@@ -5,6 +5,8 @@ export const CustomContext = createContext()
 export const Context = (props) => {
     const [types, setTypes] = useState({ type: "one" });
     const [cart, setCart] = useState([])
+    const [key, setKey] = useState(0)
+    const [search, setSearch] = useState('')
     const [id, setId] = useState(1)
     const [category, setCategory] = useState('catalog')
     const chooseId = (item) => {
@@ -18,6 +20,7 @@ export const Context = (props) => {
         }
         setId(item.id)
     }
+    const [isOpen, setIsOpen] = useState(false)
     const [user, setUser] = useState([])
  
     const addCart = (product) => {
@@ -84,10 +87,16 @@ export const Context = (props) => {
         plusOneCart,
         minusOneCart,
         delCart,
+        search,
         id,
+        setSearch,
         chooseId,
         category,
+        isOpen,
+        setIsOpen,
         delTo,
+        key,
+        setKey
     }
  
     return <CustomContext.Provider value={value}>

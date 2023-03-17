@@ -255,6 +255,9 @@
     top: 15px;
     right: 31px;
     cursor: pointer;
+    @media (max-width: 375px) {
+      top: 30px;
+    }
   }
   &_left {
     width: 283px;
@@ -300,9 +303,12 @@
     width: 109px;
     height: 51px;
     margin: 30px 293px 30px 292px;
+    @media (max-width: 375px) {
+      display: none;
+    }
   }
   & h2 {
-    width: 325px;
+    width: 330px;
     height: 35px;
     font-family: "Gilroy";
     font-style: normal;
@@ -310,6 +316,10 @@
     font-size: 28px;
     color: #000000;
     margin: 30px 185px 40px 184px;
+    @media (max-width: 375px) {
+      margin: 109px 185px 40px 30px;
+      font-size: 24px;
+    }
   }
 
   &_right_inputone {
@@ -320,8 +330,16 @@
     border-radius: 10px;
     margin: 40px 97px 15px 117px;
     padding: 15px;
+    position: absolute;
+    top: 200px;
+    @media (max-width: 375px) {
+      width: 310px;
+      margin: 28px 97px 15px 28px;
+    }
   }
   &_right_inputtwo {
+    position: absolute;
+    top: 305px;
     width: 480px;
     height: 49px;
     background: #f6f6f6;
@@ -329,8 +347,14 @@
     border-radius: 4px;
     margin: 15px 97px 15px 117px;
     padding: 15px;
+    @media (max-width: 375px) {
+      width: 310px;
+      margin: -1px 97px 15px 28px;
+    }
   }
   &_right_buttonlog {
+    position: absolute;
+    top: 430px;
     width: 480px;
     height: 49px;
     background: #f9b300;
@@ -338,6 +362,10 @@
     border-radius: 4px;
     margin: 15px 97px 162px 117px;
     color: #ffffff;
+    @media (max-width: 375px) {
+      width: 310px;
+      margin: -30px 97px 15px 28px;
+    }
   }
   &_right_reset {
     color: red;
@@ -353,11 +381,22 @@
   align-items: center;
   justify-content: center;
   background: rgb(20, 20, 20, 0.5);
+  @media (max-width: 375px) {
+    margin-top: 290px;
+  }
+}
+.login_left{
+  @media (max-width: 375px ) {
+    display: none;
+  }
 }
 .login_right {
-  width: 694px;
   height: 525px;
   background: #ffffff;
+  @media (max-width: 375px) {
+    width: 378px;
+    height: 544px;
+  }
 }
 .h2registrALo {
   width: 244px;
@@ -372,6 +411,21 @@
   text-align: center;
   margin-top: -30px;
 }
+.link_to_register{
+  display: none;
+  @media (max-width: 375px) {
+    display: inline;
+    position: absolute;
+    top: 500px;
+    left: 50px;
+  }
+}
+.link_to_register > a{
+  color: blue;
+  &:hover{
+    color: yellow;
+  }
+}
 .text_cnt {
   transform: translateY(-62px);
 }
@@ -381,42 +435,6 @@
   height: 49px;
   background: #f6f6f6;
   border-radius: 4px;
-}
-.fio_inputs {
-  width: 480px;
-  height: 49px;
-  background: #f6f6f6;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin: 5px 97px 15px 117px;
-}
-.email_reg {
-  width: 480px;
-  height: 49px;
-  background: #f6f6f6;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin: 5px 0px 15px 117px;
-}
-.number_inputss {
-  width: 480px;
-  height: 49px;
-  background: #f6f6f6;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin: 5px 97px 15px 117px;
-}
-.input_passwordd {
-  width: 480px;
-  height: 49px;
-  background: #f6f6f6;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin: 5px 97px 15px 117px;
-}
-
-.login_right_formik {
-  transform: translateY(-66px);
 }
 .login_right_logoss {
   width: 109px;
@@ -442,4 +460,8 @@
   text-align: center;
   color: #000000;
   margin: 14px 0px 3px 139px;
+  @media (max-width: 375px) {
+    width: 357px;
+    margin: -25px 0px 3px 11px;
+  }
 }
