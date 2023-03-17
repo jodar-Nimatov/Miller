@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import millerlogom from "../../assets/modal/image26.svg";
-import { setEmail, setNum, setPass, setUser } from "../../store/slices/userSlice";
+import {
+  setEmail,
+  setNum,
+  setPass,
+  setUser,
+} from "../../store/slices/userSlice";
 import "./SignUp.scss";
 
 // const initialState = {
@@ -13,9 +18,9 @@ import "./SignUp.scss";
 // };
 
 const SignUp = () => {
-  const {email, pass, num, user} = useSelector(state => state.user);
+  const { email, pass, num, user } = useSelector((state) => state.user);
 
-    console.log('hahahhahah', email, pass, num, user)
+  console.log("hahahhahah", email, pass, num, user);
   // const [state, setState] = useState(initialState);
   // const [userData, setUserData] = useState({
   //   name: "",
@@ -116,7 +121,11 @@ const SignUp = () => {
               <img className="login_logo" src={coffeelogo} alt="" />
               <h1>Добро пожаловать!</h1>
               <p>Уже есть аккаунт?</p>
-              <button className="login_left_button"><Link to='/' onClick={() => setIsOpen(true)}>Войти</Link></button>
+              <button className="login_left_button">
+                <Link to="/" onClick={() => setIsOpen(true)}>
+                  Войти
+                </Link>
+              </button>
             </div>
             <div className="login_right">
               <img className="login_right_logo" src={millerlogom} alt="" />
@@ -136,7 +145,6 @@ const SignUp = () => {
                   // required
                   // value={user}
                   onChange={(e) => setUser(e.target.value)}
-
                 />
                 <input
                   className="email_reg"
