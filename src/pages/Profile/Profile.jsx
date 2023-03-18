@@ -11,7 +11,7 @@ import { CustomContext } from "../../utils/Context";
 
     const [show, setShow] = useState(true)
     const [info, setInfo] = useState(true)
-    const { cart } = useContext(CustomContext)
+    const { cart, adds } = useContext(CustomContext)
     const total = cart.reduce(
         (prev, curr) =>
             prev + curr.price * curr.count - curr.price * curr.count / 100 * 10,
@@ -85,6 +85,7 @@ import { CustomContext } from "../../utils/Context";
               <div className="orders__btn">
                 <button onClick={() => setInfo(true)}>Текущие заказы</button>
                 <button onClick={() => setInfo(false)}>Завершенные</button>
+       
               </div>
             </div>
             
@@ -157,7 +158,8 @@ import { CustomContext } from "../../utils/Context";
                </div>
                {cart.map((item) => (
                 
-            <>
+            <div className={`addComp-block ${adds ? 'none' : 'block'}`} >
+
                       <div className="cards__inner">    
                       <div className="cards__h1">   
                             <h1 className="cards__text">{item.title}</h1>
@@ -169,7 +171,9 @@ import { CustomContext } from "../../utils/Context";
                               <p className="cards__price2">{item.price * item.count - item.price * item.count / 100 * 10} ₽</p>
                               </div>                         
                       </div>
-                           </>
+
+                           </div>
+                           
                     )
                   )
                 }

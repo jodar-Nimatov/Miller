@@ -9,8 +9,9 @@ export const Context = (props) => {
     const [key, setKey] = useState(0)
     const [search, setSearch] = useState('')
     const [id, setId] = useState(1)
-    const [is, setIs] = useState(false)
     const [category, setCategory] = useState('catalog')
+    const [adds, setAdds] = useState(true)
+
     const chooseId = (item) => {
         if(item.kislinka != undefined){
             setCategory('catalog')
@@ -104,8 +105,8 @@ export const Context = (props) => {
         key,
         setKey,
         addCompleted,
-        setIs,
-        is,
+        adds, 
+        setAdds
     }
  
     return <CustomContext.Provider value={value}>
