@@ -13,12 +13,12 @@ import TeaFilters from "./pages/Catalog/Tea/Tea-Filters/Tea-Fiters";
 import VendingFilters from "./pages/Catalog/Vending/Vending-Filters/Vending-Filters";
 import HealthyFilters from "./pages/Catalog/HealthyEating/HealthyEating-Filters/HealthyEating-Filters";
 import SignUp from "./pages/SignUp/SignUp";
-import Cart from './pages/Cart/Cart';
-import ProductCard from './pages/Catalog/ProductCard/ProductCard';
+import Cart from "./pages/Cart/Cart";
+import ProductCard from "./pages/Catalog/ProductCard/ProductCard";
 import { CustomContext } from "./utils/Context";
 
 function App() {
-  const {category} = useContext(CustomContext)
+  const { category } = useContext(CustomContext);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -33,9 +33,15 @@ function App() {
         <Route path="/catalog/tea" element={<TeaFilters />} />
         <Route path="/catalog/wanding" element={<VendingFilters />} />
         <Route path="/catalog/healthy" element={<HealthyFilters />} />
-        <Route path={`/catalog/coffee-drinks/card-item`} element={<ProductCard />} />
+        <Route
+          path={`/catalog/coffee-drinks/card-item`}
+          element={<ProductCard />}
+        />
         <Route path={`/catalog/catalog/card-item`} element={<ProductCard />} />
-        <Route path={`/catalog/healthy-eatings/card-item`} element={<ProductCard />} />
+        <Route
+          path={`/catalog/healthy-eatings/card-item`}
+          element={<ProductCard />}
+        />
         {/* Каталог товаров */}
         {/* Корзина */}
         <Route path="/cart" element={<Cart />} />

@@ -1,105 +1,23 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
 import coffeelogo from "../../assets/modal/Group 245.svg";
 import millerlogom from "../../assets/modal/image26.svg";
-import {
-  setEmail,
-  setNum,
-  setPass,
-  setUser,
-} from "../../store/slices/userSlice";
+import axios from "axios";
+import { UserAuth } from "../../utils/authContext";
 import "./SignUp.scss";
-
-// const initialState = {
-//   name: "",
-//   email: "",
-//   number: "",
-//   password: "",
-// };
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const { email, pass, num, user } = useSelector((state) => state.user);
+  const { signUp, setName, setNumber, name, number, user } = UserAuth();
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  console.log("hahahhahah", email, pass, num, user);
-  // const [state, setState] = useState(initialState);
-  // const [userData, setUserData] = useState({
-  //   name: "",
-  //   email: "",
-  //   number: "",
-  //   password: "",
-  // });
-
-  // let name, value;
-  // const postUserData = (event) => {
-  //   name = event.target.name;
-  //   value = event.target.value;
-
-  //   setUserData({ ...userData, [name]: value });
-  // };
-
-  //conect firebaase
-
-  // const submitdata = async (event) => {
-  //   event.preventDefault();
-  //   const { name, email, number, password } = userData;
-  //   const res = fetch(
-  //     "https://gogletest-1e5f0-default-rtdb.firebaseio.com/userData.json",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         name,
-  //         email,
-  //         number,
-  //         password,
-  //       }),
-  //     }
-  //   );
-  //   if (res) {
-  //     alert("lox molodes");
-  //   } else {
-  //     alert("idi naxyu");
-  //   }
-  // };
-  // const { name, email, number, password } = state;
-  // const navigate = useNavigate();
-
-  // const handlesubmitchange = (e) => {
-  //   const { name, value } = e.target;
-  //   setState({ ...state, [name]: value });
-  //   fetch("https://gogletest-1e5f0-default-rtdb.firebaseio.com", {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       name: e.target[0].value,
-  //       email: e.target[1].value,
-  //       password: e.target[2].value,
-  //       number: e.target[3].value,
-  //     }),
-  //   });
-  // };
-
-  // const handlesubmits = (e) => {
-  //   e.preventDefault();
-  //   if (!name || !email || !number || !password) {
-  //     alert.error("please idi naxyu");
-  //   } else {
-  //     firedb.child("contacts").push(state, (err) => {
-  //       if (err) {
-  //         alert.error(err);
-  //       } else {
-  //         alert.sucsess("contact add");
-  //       }
-  //     });
-  //     setTimeout(() => navigate.push("/"), 500);
-  //   }
-  // };
-  // let urlUser = "http://localhost:4444/users";
+  let urlUser = "http://localhost:4444/users";
 
   // let handleSubmit = async (e) => {
   //   fetch(urlUser, {
-  //     method: "POST",
+  //     method: 'POST',
   //     body: JSON.stringify({
   //       name: e.target[0].value,
   //       email: e.target[1].value,
@@ -107,10 +25,21 @@ const SignUp = () => {
   //       number: e.target[3].value,
   //     }),
   //     headers: {
-  //       "Content-Type": "application/json",
+  //       'Content-Type': 'application/json',
   //     },
   //   });
   // };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await signUp(email, password);
+      navigate("/profile");
+    } catch (e) {
+      setError(e.message);
+      console.log(e);
+    }
+  };
 
   return (
     <div>
@@ -122,9 +51,7 @@ const SignUp = () => {
               <h1>Добро пожаловать!</h1>
               <p>Уже есть аккаунт?</p>
               <button className="login_left_button">
-                <Link to="/" onClick={() => setIsOpen(true)}>
-                  Войти
-                </Link>
+                <Link to="/">Войти</Link>
               </button>
             </div>
             <div className="login_right">
@@ -136,50 +63,51 @@ const SignUp = () => {
                   узнавать акционные предложения!
                 </li>
               </div>
-
-              <form className="login_right_formik">
+              {error ? (
+                <p style={{ fontSize: "19px", color: "red" }}>{error}</p>
+              ) : null}
+              <form className="login_right_formik" onSubmit={handleSubmit}>
                 <input
+                  value={name}
                   className="fio_inputs"
                   type="text"
                   placeholder="Имя и фамилия"
-                  // required
-                  // value={user}
-                  onChange={(e) => setUser(e.target.value)}
+                  required="text"
+                  onChange={(e) => setName(e.target.value)}
                 />
                 <input
+                  value={email}
                   className="email_reg"
                   type="email"
                   placeholder="email"
-                  // required
-                  // value={email}
+                  required="email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
+                  value={number}
                   className="number_inputss"
                   type="number"
                   placeholder="Телефон"
-                  // required
-                  // value={num}
-                  onChange={(e) => setNum(e.target.value)}
+                  required="number"
+                  onChange={(e) => setNumber(e.target.value)}
                 />
                 <input
+                  value={password}
                   className="input_passwordd"
                   type="password"
                   placeholder="Придумайте пароль"
-                  // required
-                  onChange={(e) => setPass(e.target.value)}
-                  // value={pass}
+                  required="Придумайте пароль"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
-                {/* <Link to="/profile"> */}
-                {/* <p>{err}</p> */}
-                <button
-                  className="login_right_buttonlog"
-                  type="submit"
-                  // onClick={submitdata}
-                >
-                  Зарегистрироваться
-                </button>
-                {/* </Link> */}
+                <Link to={user ? "/profile" : "/signup"}>
+                  <button
+                    className="login_right_buttonlogg"
+                    type="submit"
+                    onClick={handleSubmit}
+                  >
+                    Зарегистрироваться
+                  </button>
+                </Link>
                 {/* {error && <alert variant="danger">{error}</alert>} */}
               </form>
             </div>

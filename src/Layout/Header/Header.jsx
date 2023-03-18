@@ -6,17 +6,20 @@ import userlogo from "../../assets/Header/user.svg";
 import burger from "../../assets/Header/Group 165.svg";
 import millerlogom from "../../assets/modal/image26.svg";
 import coffeelogo from "../../assets/modal/Group 245.svg";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import arrow from "../../assets/Header/arrow.svg";
 import { CustomContext } from "../../utils/Context";
-import { TfiClose } from "react-icons/tfi";
 import CartEmpty from "../../Components/CartEmpty/CartEmpty";
 import BurgerSD from "./BurgerSD";
-import CartEmpty from './../../Components/CartEmpty/CartEmpty';
+import { TfiClose } from "react-icons/tfi";
+import { UserAuth } from "../../utils/authContext";
 
 const Header = () => {
   const [show, setShow] = useState(false);
   const [text, setText] = useState("");
+
+  const { logout, name, user, number, signIn, getData } = UserAuth();
+  const navigate = useNavigate();
   const [title, setTitle] = useState("Каталог товаров");
   const [display, setDisplay] = useState("block");
   const { cart, setSearch, setKey, key } = useContext(CustomContext);
@@ -53,6 +56,29 @@ const Header = () => {
   useEffect(() => {
     handleInputClose();
   }, [display]);
+
+  const handleSignOut = async () => {
+    try {
+      await logout();
+      navigate("/signup");
+    } catch (error) {}
+  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await signIn(email, password);
+      setIsOpen(!modalIsOpen);
+      navigate("/profile");
+    } catch (e) {
+      setError(e.message);
+      console.log(e);
+    }
+  };
   return (
     <>
       <div className="white"></div>
@@ -184,6 +210,11 @@ const Header = () => {
               onClick={handleopenmodal1}
             />
           </div>
+          {user && (
+            <Link to={user ? "/signUp" : "/"}>
+              <button onClick={handleSignOut}>Выйти</button>
+            </Link>
+          )}
           {/* </div> */}
           {/* <Link to="/Profile"> */}
           {modalIsOpen && (
@@ -195,8 +226,11 @@ const Header = () => {
                       <img className="login_logo" src={coffeelogo} alt="" />
                       <h1>Регистрация</h1>
                       <p>Получайте скидки первыми!?</p>
-                      <Link onClick={closemodal} to="/SignUp">
-                        <button className="login_left_button">
+                      <Link to="/SignUp">
+                        <button
+                          onClick={(e) => setIsOpen(!modalIsOpen)}
+                          className="login_left_button"
+                        >
                           Зарегистрироваться
                         </button>
                       </Link>
@@ -208,18 +242,23 @@ const Header = () => {
                         alt=""
                       />
                       <div
-                        onClick={() => setIsOpen(false)}
                         className="close-modal"
+                        onClick={() => setIsOpen(false)}
                       >
                         <TfiClose />
                       </div>
                       <h2>Войти в личный кабинет</h2>
-                      <form className="login_right_forms">
+                      <form
+                        onSubmit={handleSubmit}
+                        className="login_right_forms"
+                      >
                         <input
                           className="login_right_inputone"
                           type="email"
                           placeholder="email"
                           required
+                          value={error ? error.message : email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                         <input
                           className="login_right_inputtwo"
@@ -227,9 +266,16 @@ const Header = () => {
                           type="password"
                           placeholder="password"
                           required
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                         <button className="login_right_buttonlog">Войти</button>
-                        {/* <button className="login_right_reset">Забыли пароль?</button> */}
+                        <p className="link_to_register">
+                          Еще нет аккаунта?{" "}
+                          <Link to="/SignUp" onClick={() => setIsOpen(false)}>
+                            Зарегистрироваться
+                          </Link>
+                        </p>
                       </form>
                     </div>
                   </div>

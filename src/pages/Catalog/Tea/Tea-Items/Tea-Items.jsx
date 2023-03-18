@@ -9,11 +9,7 @@ const TeaItems = ({ type }) => {
   const [cards, setCards] = useState([]);
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
-<<<<<<< HEAD
-  const { addCart } = useContext(CustomContext);
-=======
   const { addCart, chooseId, category } = useContext(CustomContext);
->>>>>>> 0f9036a625cb0c1cff9ad23c433d607b58f7d17f
   useEffect(() => {
     const url = `http://localhost:3333/coffee-drinks-${type}?`;
     axios
