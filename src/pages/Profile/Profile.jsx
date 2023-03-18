@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import coffee from '../../assets/Profile/coffeeProfile.png';
-import joodar from '../../assets/Profile/Joodar.png';
-import CoffeeImg from '../../assets/Profile/coffeeImgProfile1.svg';
+import joodar from '../../assets/Profile/UserLogoProfile.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { CustomContext } from '../../utils/Context';
 import { UserAuth } from '../../utils/authContext';
@@ -44,8 +43,8 @@ const Profile = () => {
               {/* <blockquote contenteditable="true"> */}
               <ul>
                 <li className="name__joodar">{name}, Здраствуйте!</li>
-                <li>{user?.email}</li>
-                <li>{number}</li>
+                <li>Ваш email:{user?.email}</li>
+                <li>Номер: {number}</li>
                 <li>Пароль:*******</li>
               </ul>
 
