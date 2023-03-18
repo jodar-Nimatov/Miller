@@ -245,7 +245,7 @@ const Blog = () => {
                 </div>
               </div>
               <div className="full_news">
-                <span ref={refQA}>Показать еще</span>
+                <span style={{cursor: "pointer"}} ref={refQA}>Показать еще</span>
               </div>
               <div className="linia_span"></div>
               <div className="FAQ">
