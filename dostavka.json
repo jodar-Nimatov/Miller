@@ -1,0 +1,37 @@
+{
+  "dostavka": [
+    {
+      "id": 1,
+      "name": "maks",
+      "surname": "maksonovich",
+      "number": "055052212",
+      "email": "maksonovich@gmail.com",
+      "nameCompany": "geeks",
+      "country": "Kyrgystan",
+      "city": "Bishkek",
+      "house": "12",
+      "postcode": "722030",
+      "comment": "Spasibo"
+    },
+    {
+      "name": "dasdjhasjdhg",
+      "mobileNumber": "jghdasjhgdjh",
+      "data": "8972139817982",
+      "message": "kjdaskjdhkas@gmai.com",
+      "id": 2
+    },
+    {
+      "name": "rusya",
+      "surname": "buralkiev",
+      "number": "0550520666",
+      "email": "rusya@gmail.com",
+      "nameCompany": "geeks",
+      "country": "london",
+      "city": "bishhkek",
+      "house": "ssdf",
+      "postcode": "124229",
+      "comment": "123safsa",
+      "id": 3
+    }
+  ]
+}

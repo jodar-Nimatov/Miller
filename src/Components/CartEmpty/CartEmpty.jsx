@@ -24,7 +24,7 @@ const CartEmpty = ({ see, setSee }) => {
           onClick={() => setSee(false)}
           className="CartEmpty-btn"
         >
-          <Link to="/">Посмотреть каталог</Link>
+          <Link to="/catalog/coffee">Посмотреть каталог</Link>
         </button>
         <span onClick={() => setSee(false)} className="CartEmpty-close">
           <img src={Close} alt="" />

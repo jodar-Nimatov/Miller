@@ -1,19 +1,78 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import CheckPhoto from "./Check-photo/Check.svg";
 import DeleteBtn from "./Check-photo/Close.svg";
 import Master from "./Check-photo/MasterCard.svg";
 import Visa from "./Check-photo/Visa.svg";
 import { CustomContext } from "../../utils/Context";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cart = () => {
-  const { cart, plusOneCart, minusOneCart, delCart } =
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [nameCompany, setnameCompany] = useState("");
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("");
+  const [house, setHouse] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [comment, setComment] = useState("");
+
+  const notify = (e) => {
+    e.preventDefault();
+    toast.warn("ПОЗДРАВЛЯЮ ВЫ УСПЕШНО ЗАКАЗАЛИ!", {
+      position: "bottom-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      icon: false,
+    });
+  };
+
+  const { cart, plusOneCart, minusOneCart, delCart, delTo } =
     useContext(CustomContext);
-  // const total = cart.reduce(
-  //     (prev, curr) =>
-  //     prev + curr.count * curr.price,
+  const total = cart.reduce(
+    (prev, curr) =>
+      prev + curr.price * curr.count - ((curr.price * curr.count) / 100) * 10,
+    0
+  );
+  const itog = Math.ceil((prev, curr) => prev + curr.price * curr.count, 0);
+
+  const skidka = cart
+    .reduce((prev, curr) => prev + ((curr.price * curr.count) / 100) * 10, 0)
+    .toFixed(1);
+  // const skidk = cart.reduce(
+  //     (item, state) =>
+  //         item + state.price * state.count / 100 * 10,
   //     0
-  // )
+  // ).toFixed(1)
+  let url = "http://localhost:7777/dostavka";
+
+  let handlesubmitdos = async (e) => {
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify({
+        name: e.target[0].value,
+        surname: e.target[1].value,
+        number: e.target[2].value,
+        email: e.target[3].value,
+        nameCompany: e.target[4].value,
+        country: e.target[5].value,
+        city: e.target[6].value,
+        house: e.target[7].value,
+        postcode: e.target[8].value,
+        comment: e.target[9].value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
   return (
     <div className="back-cart">
       <div className="Cart">
@@ -21,16 +80,24 @@ const Cart = () => {
           <div className="Cart-inner">
             <div className="Cart-left">
               <ul className="Cart-ul">
-                <li>Главная</li>
-                <li>Корзина</li>
+                <li>
+                  <Link to="/">Главная</Link>
+                </li>
+                <li>&#x2022;Корзина</li>
               </ul>
             </div>
             {/* Карточка товара в корзине */}
             <div className="Cart-product">
               <div className="Cart-inside">
                 <div className="Cart-product-up">
-                  <h2>Товара в корзине</h2>
-                  <button className="Product-delete">Удалить все</button>
+                  <h2>{cart.length} Товара в корзине</h2>
+                  <button
+                    type="button"
+                    onClick={() => delTo()}
+                    className="Product-delete"
+                  >
+                    Удалить все
+                  </button>
                 </div>
                 <div className="Cart-product-middle">
                   <ul className="Cart-product-mid-left">
@@ -40,55 +107,61 @@ const Cart = () => {
                   <ul className="Cart-product-mid-right">
                     <li>Цена</li>
                     <li>Количество</li>
-                    <li>Скидка(%10)</li>
+                    <li>Скидка(10%)</li>
                     <li>Итого</li>
                   </ul>
                 </div>
-                <div className="Cart-card">
-                  <div className="Card-left">
-                    <button className="Card-close">
-                      <img src={DeleteBtn} alt="" />
-                    </button>
-                    <img src={CheckPhoto} alt="" />
-                    <div className="columbia">
-                      <h3>Columbia Supremo</h3>
-                      <p>мытая, натуральная, смесь</p>
-                      <p>250 г.</p>
+                {cart.map((item) => (
+                  <div className="Cart-card">
+                    <div className="Card-left">
+                      <button
+                        type="button"
+                        onClick={() => delCart(item.id)}
+                        className="Card-close"
+                      >
+                        <img src={DeleteBtn} alt="" />
+                      </button>
+                      <img width="90" height="80" src={item.image} alt="" />
+                      <div className="Cart-description">
+                        <h3 className="Cart-des-h3">{item.title}</h3>
+                        <p>мытая, натуральная, смесь</p>
+                        <p className="Cart-des-p">250 г.</p>
+                      </div>
+                    </div>
+                    <div className="Card-right">
+                      <div>
+                        <p className="Cart-right-price">{item.price} ₽</p>
+                      </div>
+                      <div className="Card-click">
+                        <button
+                          type="button"
+                          onClick={() => minusOneCart(item.id)}
+                        >
+                          -
+                        </button>
+                        <span className="Card-count">{item.count}</span>
+                        <button
+                          type="button"
+                          onClick={() => plusOneCart(item.id)}
+                        >
+                          +
+                        </button>
+                      </div>
+                      <div className="Card-Click-p">
+                        <p className="Card-Click-dis">
+                          {Math.ceil(((item.price * item.count) / 100) * 10)}₽
+                        </p>
+                      </div>
+                      <div className="Card-total">
+                        <p>
+                          {item.price * item.count -
+                            ((item.price * item.count) / 100) * 10}{" "}
+                          ₽
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div className="Card-right">
-                    <p>270 ₽</p>
-                    <div className="Card-click">
-                      <button>-</button>
-                      <p>1</p>
-                      <button>+</button>
-                    </div>
-                    <p>27 ₽</p>
-                    <p>243 ₽</p>
-                  </div>
-                </div>
-                <div className="Cart-card">
-                  <div className="Card-left">
-                    <button className="Card-close">
-                      <img src={DeleteBtn} alt="" />
-                    </button>
-                    <img src={CheckPhoto} alt="" />
-                    <div className="columbia">
-                      <h3>Columbia Supremo</h3>
-                      <p>мытая, натуральная, смесь</p>
-                      <p>250 г.</p>
-                    </div>
-                  </div>
-                  <div className="Card-right">
-                    <p>270 ₽</p>
-                    <div className="Card-click">
-                      <button>-</button>8<p>1</p>
-                      <button>+</button>
-                    </div>
-                    <p>27 ₽</p>
-                    <p>243 ₽</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
             {/* Карточка товара в корзине */}
@@ -99,27 +172,78 @@ const Cart = () => {
                   <h2>Доставка</h2>
                 </div>
                 <div className="Delivery-input">
-                  <div className="Delivery-left">
-                    <input type="text" placeholder="Имя"></input>
-                    <input type="text" placeholder="Фамилия"></input>
-                    <input type="number" placeholder="Телефон"></input>
-                    <input type="email" placeholder="Email"></input>
-                    <input type="text" placeholder="Название компании"></input>
-                  </div>
-                  <div className="Delivery-right">
-                    <input type="text" placeholder="Страна"></input>
-                    <input type="text" placeholder="Город"></input>
-                    <input type="text" placeholder="Улица, дом"></input>
-                    <input type="number" placeholder="Почтовый индекс"></input>
-                    <input
-                      type="text"
-                      placeholder="Комментарий к заказу (необязательно)"
-                    ></input>
-                  </div>
+                  <form onSubmit={handlesubmitdos}>
+                    <div className="Delivery-left">
+                      <input
+                        value={name}
+                        type="text"
+                        placeholder="Имя"
+                        onChange={(e) => setName(e.target.value)}
+                      ></input>
+                      <input
+                        value={surname}
+                        type="text"
+                        placeholder="Фамилия"
+                        onChange={(e) => setSurname(e.target.value)}
+                      ></input>
+                      <input
+                        value={number}
+                        type="number"
+                        placeholder="Телефон"
+                        onChange={(e) => setNumber(e.target.value)}
+                      ></input>
+                      <input
+                        value={email}
+                        type="email"
+                        placeholder="Email"
+                        onChange={(e) => setEmail(e.target.value)}
+                      ></input>
+                      <input
+                        value={nameCompany}
+                        type="text"
+                        placeholder="Название компании"
+                        onChange={(e) => setnameCompany(e.target.value)}
+                      ></input>
+                    </div>
+                    <div className="Delivery-right">
+                      <input
+                        value={country}
+                        type="text"
+                        placeholder="Страна"
+                        onChange={(e) => setCountry(e.target.value)}
+                      ></input>
+                      <input
+                        value={city}
+                        type="text"
+                        placeholder="Город"
+                        onChange={(e) => setCity(e.target.value)}
+                      ></input>
+                      <input
+                        value={house}
+                        type="text"
+                        placeholder="Улица, дом"
+                        onChange={(e) => setHouse(e.target.value)}
+                      ></input>
+                      <input
+                        value={postcode}
+                        type="number"
+                        placeholder="Почтовый индекс"
+                        onChange={(e) => setPostcode(e.target.value)}
+                      ></input>
+                      <input
+                        value={comment}
+                        type="text"
+                        placeholder="Комментарий к заказу (необязательно)"
+                        onChange={(e) => setComment(e.target.value)}
+                      ></input>
+                    </div>
+                    <button className="Delivery-btn" onClick={notify}>
+                      Рассчитать доставку
+                    </button>
+                    <ToastContainer />
+                  </form>
                 </div>
-                <div>
-                  <button className="Delivery-btn">Рассчитать доставку</button>
-                </div>
+                <div></div>
               </div>
             </div>
             {/* Карточка доставки */}
@@ -140,30 +264,35 @@ const Cart = () => {
                     placeholder="Введите промокод"
                   ></input>
                   <button className="Promo-btn">Ввести промокод</button>
+                  {/* {alert("")} */}
                 </div>
               </div>
               <div className="Cart-total">
                 <div className="Total-inside">
                   <div className="Total-head">
-                    <h2>Итог: 486 ₽</h2>
+                    <h2>{total} ₽</h2>
                     <img src={Master} alt="" />
                     <img src={Visa} alt="" />
                   </div>
                   <div className="Total-skidka">
-                    <p>Подытог: 540 ₽</p>
-                    <p>Скидка: 54 ₽ (10%)</p>
+                    <p>Под итог: {itog} ₽</p>
+                    <p>Скидка: {skidka} ₽ (10%)</p>
                   </div>
                   <div className="dostavka">
                     <div className="Dostavka-p">
-                      <p>Доставка:</p>
-                    </div>
-                    <div className="Dostavka-vid">
-                      <button className="Btne" />
-                      <p>СДЭК - до двери 390 ₽</p>
-                      <button className="Btne" />
-                      <p>Почта России 300 ₽</p>
-                      <button className="Btne" />
-                      <p>DPD - курьер, 3 дн 427 ₽</p>
+                      <div className="Dostavka-vid">
+                        <p>Доставка:</p>
+                        <button className="Btne" />
+                        <p>СДЭК - до двери 390 ₽</p>
+                      </div>
+                      <div className="Dostavka-vid-block">
+                        <button className="Btne" />
+                        <p>Почта России 300 ₽</p>
+                      </div>
+                      <div className="Dostavka-vid-block">
+                        <button className="Btne" />
+                        <p>DPD - курьер, 3 дн 427 ₽</p>
+                      </div>
                     </div>
                   </div>
                   <div className="Total-down">
