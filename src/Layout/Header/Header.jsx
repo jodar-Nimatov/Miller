@@ -207,12 +207,14 @@ const Header = () => {
               {cart.length}
             </span>
             <CartEmpty see={see} setSee={setSee} />
-            <img
+
+             <img
               className="header-right-icon header-user"
               src={userlogo}
               alt="header user"
               onClick={handleopenmodal1}
-            />
+            /> 
+        
           </div>
           {user && (
             <Link to={user ? "/signUp" : "/"}>
@@ -220,7 +222,7 @@ const Header = () => {
             </Link>
           )}
           {/* </div> */}
-          {/* <Link to="/Profile"> */}
+         
           {modalIsOpen && (
             <div className="overlow">
               <div className="login">

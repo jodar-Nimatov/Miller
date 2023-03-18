@@ -34,8 +34,17 @@ const Cart = () => {
     });
   };
 
-  const { cart, plusOneCart, minusOneCart, delCart, delTo } =
-    useContext(CustomContext);
+  const {
+    cart,
+    addComplite,
+    plusOneCart,
+    minusOneCart,
+    delCart,
+    delTo,
+    setIs,
+    is,
+    setAdds,
+  } = useContext(CustomContext);
   const total = cart.reduce(
     (prev, curr) =>
       prev + curr.price * curr.count - ((curr.price * curr.count) / 100) * 10,
@@ -296,7 +305,12 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className="Total-down">
-                    <button className="Total-btn">Оплатить заказ</button>
+                    <button
+                      className="Total-btn"
+                      onClick={() => setAdds(false)}
+                    >
+                      Оплатить заказ
+                    </button>
                     <p>
                       Ваши персональные данные будут использоваться для
                       управления доступом к вашей учетной записи и для других

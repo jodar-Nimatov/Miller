@@ -9,6 +9,8 @@ export const Context = (props) => {
   const [search, setSearch] = useState("");
   const [id, setId] = useState(1);
   const [category, setCategory] = useState("catalog");
+  const [adds, setAdds] = useState(true);
+
   const chooseId = (item) => {
     if (item.kislinka != undefined) {
       setCategory("catalog");
@@ -21,7 +23,6 @@ export const Context = (props) => {
     }
     setId(item.id);
   };
-  const [isOpen, setIsOpen] = useState(false);
   const [user, setUser] = useState([]);
 
   const addCart = (product) => {
@@ -30,6 +31,15 @@ export const Context = (props) => {
       {
         ...product,
         count: 1,
+      },
+    ]);
+  };
+
+  const addCompleted = (product) => {
+    setCart((prev) => [
+      ...prev,
+      {
+        ...product,
       },
     ]);
   };
@@ -96,11 +106,12 @@ export const Context = (props) => {
     setSearch,
     chooseId,
     category,
-    isOpen,
-    setIsOpen,
     delTo,
     key,
     setKey,
+    addCompleted,
+    adds,
+    setAdds,
   };
 
   return (
