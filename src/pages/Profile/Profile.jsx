@@ -12,7 +12,7 @@ const Profile = () => {
   const [info, setInfo] = useState(true);
   const { logout, name, user, number } = UserAuth();
   const navigate = useNavigate();
-  const { cart, plusOneCart, minusOneCart, delCart, delTo } = useContext(CustomContext);
+  const { cart, plusOneCart, minusOneCart, delCart, delTo, adds } = useContext(CustomContext);
   const total = cart.reduce(
     (prev, curr) => prev + curr.price * curr.count - ((curr.price * curr.count) / 100) * 10,
     0,
@@ -44,8 +44,8 @@ const Profile = () => {
               {/* <blockquote contenteditable="true"> */}
               <ul>
                 <li className="name__joodar">{name}, Здраствуйте!</li>
-                <li>{user?.email}</li>
-                <li>{number}</li>
+                <li>Ваш email:{user?.email}</li>
+                <li>Номер: {number}</li>
                 <li>Пароль:*******</li>
               </ul>
 

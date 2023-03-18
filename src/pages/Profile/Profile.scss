@@ -115,7 +115,7 @@
        font-weight: 900;
        font-size: 20px;
        line-height: 25px;
-       transform: translate(-90px, 20px);
+       transform: translate(-90px, 6px);
         
     }
    
@@ -350,11 +350,15 @@
   margin-left: 59px;
   text-align: center;
   font-weight: 500;
-  font-size: 1px;
+  font-size: 14px;
   line-height: 16px;
+  transition: transform 1s ease-in-out;
+  transform-origin: 0 0 0;
+  max-width: 166px;
   color: #747474;
   @media(max-width: 376px) {
     font-weight: 700;
+    max-width: 146px;
     font-size: 10px;
     transform: translate(-31px, 9px);
     line-height: 12px;
@@ -386,24 +390,26 @@
 
 
 .cards__price {
-  transform: translate(60px, 0px);
-  font-size: 1px;
+  font-size: 14px;
   text-align: center;
+  transform: translate(51px, 0px);
 
+  @media(max-width: 376px) {
+    transform: translate(61px, 8px);
+  }
 }
 
 .cards__discount {
-  transform: translate(329px, -18px);
-  font-size: 1px;
-
+  font-size: 14px;
+  transform: translate(230px, 0px);
   @media(max-width: 376px) {
-    transform: translate(39px, 16px);
+    transform: translate(39px, 28px);
   }
 }
 
 .cards__price2 {
-  transform: translate(579px, -36px)
-
+  transform: translate(359px, -1px);
+  font-size: 14px;
 }
 
 
@@ -412,7 +418,14 @@
   margin-left: 20px;
   margin-right: 10px;
 }
+.cards__p {
+  display: flex;
+  column-gap: 40px;
 
+  @media(max-width: 376px) {
+    display: block;
+  }
+}
   }
 
 .info__texts li {
