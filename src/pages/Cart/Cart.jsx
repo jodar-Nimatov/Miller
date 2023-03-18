@@ -6,7 +6,8 @@ import Visa from "./Check-photo/Visa.svg"
 import { CustomContext } from "../../utils/Context";
 
 const Cart = () => {
-    const { cart, plusOneCart, minusOneCart, delCart, delTo } = useContext(CustomContext)
+
+    const { cart, addComplite, plusOneCart, minusOneCart, delCart, delTo, setIs, is, setAdds} = useContext(CustomContext)
     const total = cart.reduce(
         (prev, curr) =>
             prev + curr.price * curr.count - curr.price * curr.count / 100 * 10,
@@ -22,11 +23,14 @@ const Cart = () => {
             prev + curr.price * curr.count / 100 * 10,
         0
     ).toFixed(1)
-    // const skidk = cart.reduce(
-    //     (item, state) =>
-    //         item + state.price * state.count / 100 * 10,
-    //     0
-    // ).toFixed(1)
+    
+    // const k = () => addComplite(ite)
+    // // const skidk = cart.reduce(
+    // //     (item, state) =>
+    // //         item + state.price * state.count / 100 * 10,
+    // //     0
+    // // ).toFixed(1)
+    // k()
     return (
         <div className="back-cart">
             <div className="Cart">
@@ -159,7 +163,7 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div className="Total-down">
-                                        <button className="Total-btn">Оплатить заказ</button>
+                                        <button className="Total-btn" onClick={() => setAdds(false)} >Оплатить заказ</button>
                                         <p>Ваши персональные данные будут использоваться для управления доступом к вашей учетной записи и для других целей, описанных в нашем документе политика конфиденциальности.</p>
                                     </div>
                                 </div>

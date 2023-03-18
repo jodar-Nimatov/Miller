@@ -80,6 +80,7 @@ const Profile = () => {
               <div className="orders__btn">
                 <button onClick={() => setInfo(true)}>Текущие заказы</button>
                 <button onClick={() => setInfo(false)}>Завершенные</button>
+       
               </div>
             </div>
 
@@ -140,6 +141,39 @@ const Profile = () => {
                 <p>20.03.2023 - оплачено</p>
                 <p>Дата доставки: 20.03.2023</p>
               </div>
+             
+              <div className="info__cards">
+                 <div className="info__texts">
+
+                       <ul>
+                          <li className="info__text">Товаров:</li>  
+                          <li className="price__one">Сумма заказа:</li> 
+                          <li>Скидка (10%):</li>   
+                          <li>Сумма заказа:</li>
+                      </ul>
+               </div>
+               {cart.map((item) => (
+                
+            <div className={`addComp-block ${adds ? 'none' : 'block'}`} >
+
+                      <div className="cards__inner">    
+                      <div className="cards__h1">   
+                            <h1 className="cards__text">{item.title}</h1>
+                            <p className="product__info">мытая, натуральная, смесь</p>
+                      </div>                           
+                              <div className="cards__p"> 
+                              <p className="cards__price">{item.price} ₽</p>                      
+                              <p className="cards__discount">{item.price * item.count / 100 * 10} ₽ (-10%)</p>
+                              <p className="cards__price2">{item.price * item.count - item.price * item.count / 100 * 10} ₽</p>
+                              </div>                         
+                      </div>
+
+                           </div>
+                           
+                    )
+                  )
+                }
+             </div> 
             </div>
           </div>
           <div className="slider__profile">

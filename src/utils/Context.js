@@ -2,6 +2,7 @@ import React, { createContext, useState} from 'react'
 
 export const CustomContext = createContext()
 
+
 export const Context = (props) => {
     const [types, setTypes] = useState({ type: "one" });
     const [cart, setCart] = useState([])
@@ -9,6 +10,8 @@ export const Context = (props) => {
     const [search, setSearch] = useState('')
     const [id, setId] = useState(1)
     const [category, setCategory] = useState('catalog')
+    const [adds, setAdds] = useState(true)
+
     const chooseId = (item) => {
         if(item.kislinka != undefined){
             setCategory('catalog')
@@ -20,7 +23,6 @@ export const Context = (props) => {
         }
         setId(item.id)
     }
-    const [isOpen, setIsOpen] = useState(false)
     const [user, setUser] = useState([])
  
     const addCart = (product) => {
@@ -28,7 +30,14 @@ export const Context = (props) => {
             ...product,
         count: 1
     }])
+}
+
+    const addCompleted = (product) => {
+            setCart(prev => [...prev, {
+                ...product,
+        }])
     }
+   
 
     const plusOneCart = (id) => {
         setCart(prev => prev.map(item => {
@@ -92,11 +101,12 @@ export const Context = (props) => {
         setSearch,
         chooseId,
         category,
-        isOpen,
-        setIsOpen,
         delTo,
         key,
-        setKey
+        setKey,
+        addCompleted,
+        adds, 
+        setAdds
     }
  
     return <CustomContext.Provider value={value}>
