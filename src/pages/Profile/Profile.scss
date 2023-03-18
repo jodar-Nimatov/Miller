@@ -325,6 +325,7 @@
     margin-top: 13px;
     display: block;
     height: auto;
+    margin-bottom: 30px;
 
     @media(max-width: 376px) {
     transform: translate(-78px, 37px);
@@ -385,14 +386,14 @@
 
 
 .cards__price {
-  transform: translate(60px, 7px);
+  transform: translate(60px, 0px);
   font-size: 1px;
   text-align: center;
 
 }
 
 .cards__discount {
-  transform: translate(329px, -10px);
+  transform: translate(329px, -18px);
   font-size: 1px;
 
   @media(max-width: 376px) {
@@ -401,7 +402,7 @@
 }
 
 .cards__price2 {
-  transform: translate(579px, -28px)
+  transform: translate(579px, -36px)
 
 }
 

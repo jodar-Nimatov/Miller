@@ -3,14 +3,15 @@ import coffee from "../../assets/Profile/coffeeProfile.png";
 import joodar from "../../assets/Profile/Joodar.png";
 import CoffeeImg from "../../assets/Profile/coffeeImgProfile1.svg"
 import { Link } from "react-router-dom";
-import { CustomContext } from "../../pages/Cart/Context";
+import { CustomContext } from "../../utils/Context";
 
 
   
   const Profile  = () => {
-      const [show, setShow] = useState(true)
-  const [info, setInfo] = useState(true)
-    const { cart, plusOneCart, minusOneCart, delCart, delTo } = useContext(CustomContext)
+
+    const [show, setShow] = useState(true)
+    const [info, setInfo] = useState(true)
+    const { cart } = useContext(CustomContext)
     const total = cart.reduce(
         (prev, curr) =>
             prev + curr.price * curr.count - curr.price * curr.count / 100 * 10,
@@ -19,7 +20,7 @@ import { CustomContext } from "../../pages/Cart/Context";
     const itog = cart.reduce(
         (prev, curr) =>
             prev + curr.price * curr.count,
-        0
+        0 
     )
     const skidka = cart.reduce(
         (prev, curr) => 
@@ -143,6 +144,36 @@ import { CustomContext } from "../../pages/Cart/Context";
                 <p>20.03.2023 - оплачено</p>
                 <p>Дата доставки: 20.03.2023</p>
               </div>
+             
+              <div className="info__cards">
+                 <div className="info__texts">
+
+                       <ul>
+                          <li className="info__text">Товаров:</li>  
+                          <li className="price__one">Сумма заказа:</li> 
+                          <li>Скидка (10%):</li>   
+                          <li>Сумма заказа:</li>
+                      </ul>
+               </div>
+               {cart.map((item) => (
+                
+            <>
+                      <div className="cards__inner">    
+                      <div className="cards__h1">   
+                            <h1 className="cards__text">{item.title}</h1>
+                            <p className="product__info">мытая, натуральная, смесь</p>
+                      </div>                           
+                              <div className="cards__p"> 
+                              <p className="cards__price">{item.price} ₽</p>                      
+                              <p className="cards__discount">{item.price * item.count / 100 * 10} ₽ (-10%)</p>
+                              <p className="cards__price2">{item.price * item.count - item.price * item.count / 100 * 10} ₽</p>
+                              </div>                         
+                      </div>
+                           </>
+                    )
+                  )
+                }
+             </div> 
             </div>
           </div>
           <div className="slider__profile">

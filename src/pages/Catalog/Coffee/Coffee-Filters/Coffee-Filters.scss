@@ -1,3 +1,13 @@
+.white-circle:active {
+  cursor: default;
+}
+.white-circle {
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+}
 .filters {
   background-repeat: no-repeat;
   background-image: url("../../../../assets/Catalog/filters-back.svg");
@@ -219,6 +229,9 @@
       display: flex;
       flex-wrap: wrap;
       margin-left: 66px;
+      @media (max-width: 625px) {
+        justify-content: start;
+      }
       @media (max-width: 470px) {
         margin-left: 10px;
       }
@@ -242,16 +255,6 @@
       line-break: anywhere;
       width: 93px;
     }
-  }
-  .white-circle:active {
-    cursor: default;
-  }
-  .white-circle {
-    cursor: pointer;
-    width: 17px;
-    height: 17px;
-    background-color: #e4e4e4;
-    border-radius: 50%;
   }
   .yellow-circle {
     cursor: pointer;

@@ -1,0 +1,194 @@
+.card {
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/Images/card-back.svg");
+  background-position-y: 480px;
+  background-color: linear-gradient(
+    to bottom,
+    #fff7e1 400px,
+    transparent 400px
+  );
+  .blogg.show{
+    display: block;
+  }
+  .blogg.hide{
+    display: none;
+  }
+  background-size: 100%;
+  min-height: 777px;
+  .filts{
+    margin-bottom: 50px;
+  }
+  &-img {
+    width: 294px;
+    height: 542px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-back {
+    background: linear-gradient(to bottom, #fff7e1 500px, transparent 500px);
+  }
+  &-nav {
+    padding-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    & > li > a:hover {
+      color: gray;
+    }
+    & > li > a {
+      @media (max-width: 425px) {
+        font-size: 10px;
+      }
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #222222;
+    }
+  }
+  .pmethod {
+    margin: 16px 0 24px;
+  }
+  .rating {
+    margin-right: 15px;
+  }
+  .das{
+    align-items: flex-end;
+  }
+  small {
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration-line: underline;
+    color: #5b5b5b;
+  }
+  .card_clicker {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 184px;
+    font-size: 18px;
+    height: 49px;
+    background: #f6f6f6;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    margin-right: 15px;
+    & + button {
+      padding: 14px 24px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 21px;
+      background-color: #f9b300;
+      color: #fff;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .plusorminus {
+    cursor: pointer;
+  }
+  .filters-nav {
+    flex-wrap: wrap;
+  }
+  .rating {
+    height: 25px;
+    width: 110px;
+    background-size: 133px;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  &--desc{
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 461px;
+    margin-bottom: 29px;
+  }
+  .grams {
+    margin-bottom: 50px;
+    width: 216px;
+    div {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    justify-content: space-between;
+  }
+  .title > h2{
+    height: 60px;
+    overflow-y: scroll;
+    line-height: normal; 
+  }
+  &__inner {
+    .card__info_top {
+      border: 1px solid #e4e4e4;
+      box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+      border-radius: 14px;
+      @media (max-width: 875px) {
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        justify-content: left;
+        max-width: 100%;
+      }
+      background-color: white;
+      padding: 50px 0 50px 60px;
+      &-left {
+        width: 320px;
+        height: 100%;
+        @media (max-width: 875px) {
+        max-width: 100%;
+        max-height: 580px;
+        }
+      }
+      &-right {
+        margin-top: 20px;
+        margin-left: 70px;
+        @media (max-width: 875px) {
+        margin: 10px 10px;
+        }
+        .title {
+          margin-top: 13px;
+          height: 44px;
+          justify-content: space-between;
+          &_right {
+            p {
+              color: #f9b300;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 17px;
+            }
+            .pjest {
+              margin-top: 4px;
+              margin-bottom: 4px;
+            }
+          }
+          h2 {
+            font-weight: bolder;
+            font-size: 26px;
+            line-height: 35px;
+          }
+        }
+      }
+      .card__image {
+        position: absolute;
+        &_circle {
+          position: relative;
+          top: -480px;
+          left: 180px;
+          width: 145px;
+          height: 145px;
+          background-color: #222222;
+          border-radius: 69.4338px;
+          background-size: cover;
+          background-position: center center;
+          border: 0px solid rgba(0, 0, 0, 0);
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

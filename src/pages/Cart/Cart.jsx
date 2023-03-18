@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import DeleteBtn from "./Check-photo/Close.svg"
 import Master from "./Check-photo/MasterCard.svg"
 import Visa from "./Check-photo/Visa.svg"
-import { CustomContext } from "./Context";
+import { CustomContext } from "../../utils/Context";
 
 const Cart = () => {
-    const { cart, plusOneCart, minusOneCart, delCart, delTo } = useContext(CustomContext)
+    const { cart, addComplite, plusOneCart, minusOneCart, delCart, delTo, setIs, is} = useContext(CustomContext)
     const total = cart.reduce(
         (prev, curr) =>
             prev + curr.price * curr.count - curr.price * curr.count / 100 * 10,
@@ -22,11 +22,13 @@ const Cart = () => {
             prev + curr.price * curr.count / 100 * 10,
         0
     ).toFixed(1)
-    // const skidk = cart.reduce(
-    //     (item, state) =>
-    //         item + state.price * state.count / 100 * 10,
-    //     0
-    // ).toFixed(1)
+    // const k = () => addComplite(ite)
+    // // const skidk = cart.reduce(
+    // //     (item, state) =>
+    // //         item + state.price * state.count / 100 * 10,
+    // //     0
+    // // ).toFixed(1)
+    // k()
     return (
         <div className="back-cart">
             <div className="Cart">
@@ -58,7 +60,7 @@ const Cart = () => {
                                     </ul>
                                 </div>
                                 {cart.map((item) => (
-                                    <div className="Cart-card">
+                                    <div className="Cart-card" key={item.id}>
                                         <div className="Card-left">
                                             <button type="button" onClick={() => delCart(item.id)} className="Card-close"><img src={DeleteBtn} alt="" /></button>
                                             <img width="90" height="80" src={item.image} alt="" />
@@ -159,7 +161,7 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div className="Total-down">
-                                        <button className="Total-btn">Оплатить заказ</button>
+                                        <button className="Total-btn" onMouseDown={()=> setIs(true)} onMouseUp={()=> is ? addComplite(cart.map(item=>item)) : null} >Оплатить заказ</button>
                                         <p>Ваши персональные данные будут использоваться для управления доступом к вашей учетной записи и для других целей, описанных в нашем документе политика конфиденциальности.</p>
                                     </div>
                                 </div>

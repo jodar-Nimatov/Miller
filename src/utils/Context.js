@@ -2,15 +2,41 @@ import React, { createContext, useState} from 'react'
 
 export const CustomContext = createContext()
 
+
 export const Context = (props) => {
+    const [types, setTypes] = useState({ type: "one" });
     const [cart, setCart] = useState([])
+    const [key, setKey] = useState(0)
+    const [search, setSearch] = useState('')
+    const [id, setId] = useState(1)
+    const [is, setIs] = useState(false)
+    const [category, setCategory] = useState('catalog')
+    const chooseId = (item) => {
+        if(item.kislinka != undefined){
+            setCategory('catalog')
+        }
+        if(item.place == 'healthy'){
+            setCategory('healthy-eatings')
+        }if(item.kislinka == undefined && item.place == 'tea'){
+            setCategory('coffee-drinks')
+        }
+        setId(item.id)
+    }
+    const [user, setUser] = useState([])
  
     const addCart = (product) => {
         setCart(prev => [...prev, {
             ...product,
         count: 1
     }])
+}
+
+    const addCompleted = (product) => {
+            setCart(prev => [...prev, {
+                ...product,
+        }])
     }
+   
 
     const plusOneCart = (id) => {
         setCart(prev => prev.map(item => {
@@ -63,11 +89,23 @@ export const Context = (props) => {
     
     const value = {
         cart,
+        types,
+        setTypes,
         addCart,
         plusOneCart,
         minusOneCart,
         delCart,
+        search,
+        id,
+        setSearch,
+        chooseId,
+        category,
         delTo,
+        key,
+        setKey,
+        addCompleted,
+        setIs,
+        is,
     }
  
     return <CustomContext.Provider value={value}>

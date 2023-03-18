@@ -115,7 +115,7 @@ const VendingItems = ({ type }) => {
                     </div>
                   </div>
                   <div className="coffee__cards-inner-row-card-center tocenter chtbtipvcntr">
-                    <Link to="/cards" className="tea-img-block">
+                    <Link to="/catalog/wanding" className="tea-img-block">
                       <img
                         src={item.image}
                         className="card-image"
@@ -128,7 +128,7 @@ const VendingItems = ({ type }) => {
                   <div className="coffee__cards-inner-row-card-bottom">
                     <h4>{item.title}</h4>
                     <p>{item.subtitle}</p>
-                    <Link to="" className="treedots">
+                    <Link to="/catalog/wanding" className="treedots">
                       Больше
                     </Link>
                     <>...</>
