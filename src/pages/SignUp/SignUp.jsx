@@ -50,7 +50,7 @@ const SignUp = () => {
             <div className="login_left">
               <img className="login_logo" src={coffeelogo} alt="" />
               <h1>Добро пожаловать!</h1>
-              <p>Уже есть аккаунт?</p>
+              <p>Уже есть аккаунт?</p>            
               <button className="login_left_button"><Link to='/'>Войти</Link></button>
             </div>
             <div className="login_right">
