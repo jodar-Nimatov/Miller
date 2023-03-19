@@ -33,7 +33,18 @@ const Cart = () => {
       icon: false,
     });
   };
-
+  const notfifycompleted = (e) => {
+    toast.success("ПОЗДРАВЛЯЮ ВЫ УСПЕШНО ОПЛАТИЛИ ЗАКАЗ!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
   const {
     cart,
     addComplite,
@@ -50,8 +61,12 @@ const Cart = () => {
       prev + curr.price * curr.count - ((curr.price * curr.count) / 100) * 10,
     0
   );
-  const itog = Math.ceil((prev, curr) => prev + curr.price * curr.count, 0);
-
+  const podItog = cart.reduce(
+    (prev, curr) =>
+      prev + curr.price * curr.count - ((curr.price * curr.count) / 100) * 10,
+    0
+  );
+  const itog = cart.reduce((prev, curr) => prev + curr.price * curr.count, 0);
   const skidka = cart
     .reduce((prev, curr) => prev + ((curr.price * curr.count) / 100) * 10, 0)
     .toFixed(1);
@@ -284,7 +299,7 @@ const Cart = () => {
                     <img src={Visa} alt="" />
                   </div>
                   <div className="Total-skidka">
-                    <p>Под итог: {itog} ₽</p>
+                    <p>Под итог: {podItog} ₽</p>
                     <p>Скидка: {skidka} ₽ (10%)</p>
                   </div>
                   <div className="dostavka">
@@ -310,7 +325,9 @@ const Cart = () => {
                       onClick={() => setAdds(false)}
                     >
                       Оплатить заказ
+                      
                     </button>
+
                     <p>
                       Ваши персональные данные будут использоваться для
                       управления доступом к вашей учетной записи и для других
