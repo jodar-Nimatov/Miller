@@ -351,9 +351,10 @@
   text-align: center;
   font-weight: 500;
   font-size: 14px;
+  transform: translate(-19px, -3px);
+  margin-right: 6px;
+  min-width: 165px;
   line-height: 16px;
-  transition: transform 1s ease-in-out;
-  transform-origin: 0 0 0;
   max-width: 166px;
   color: #747474;
   @media(max-width: 376px) {
@@ -795,3 +796,4 @@ display: none;
 .addComp-block.none {
   display: none;
 }
+

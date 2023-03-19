@@ -9,6 +9,7 @@ const Profile = () => {
   const [data, setData] = useState({});
   const [show, setShow] = useState(true);
   const [info, setInfo] = useState(true);
+  // const [change, setChange] = useState(true)
   const { logout, name, user, number } = UserAuth();
   const navigate = useNavigate();
   const { cart, plusOneCart, minusOneCart, delCart, delTo, adds } = useContext(CustomContext);
@@ -46,6 +47,14 @@ const Profile = () => {
                 <li>Ваш email:{user?.email}</li>
                 <li>Номер: {number}</li>
                 <li>Пароль:*******</li>
+            
+        {/* <div className={`change-block ${change ? 'none' : 'block'}`}>
+          <blockquote contenteditable="true">
+             <li>Ваш email:{user?.email}</li>
+             <li>Номер: {number}</li>
+             <li>Пароль:*******</li>
+            </blockquote>
+        </div>   */}
               </ul>
 
               {/* </blockquote> */}
