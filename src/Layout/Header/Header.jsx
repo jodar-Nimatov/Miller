@@ -218,7 +218,7 @@ const Header = () => {
           </div>
           {user && (
             <Link to={user ? "/signUp" : "/"}>
-              <button onClick={handleSignOut}>Выйти</button>
+              <button  onClick={handleSignOut}>Выйти</button>
             </Link>
           )}
           {/* </div> */}
