@@ -45,6 +45,9 @@ body {
 }
 .wrapper {
   min-height: 100%;
+  @media (max-width: 375px) {
+    overflow-x: hidden;
+  }
 }
 .forDF {
   display: flex;
