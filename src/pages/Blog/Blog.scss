@@ -86,7 +86,7 @@
   line-height: 35px;
   color: #000000;
   margin: 60px 705px 30px 0px;
-  @media (max-width: 376px) {
+  @media (max-width: 375px) {
     width: 186px;
     height: 44px;
     font-size: 18px;
@@ -111,9 +111,9 @@
     margin-top: 6px;
   }
 }
-.forref {
-  transform: translateY(-100px);
-}
+// .forref {
+//   transform: translateY(-100px);
+// }
 .text_infop {
   width: 978px;
   height: 272px;
@@ -355,9 +355,9 @@
   border-bottom: 1px solid black;
   margin-top: 80px;
 }
-.FAQ {
-  height: 500px;
-}
+// .FAQ {
+//   height: 500px;
+// }
 .faq_ac {
   width: 237px;
   height: 35px;
@@ -448,7 +448,9 @@
 .accordion_faq {
   display: grid;
   justify-content: right;
-  transform: translateY(-452px);
+  position: relative;
+  top: -450px;
+  // transform: translateY(-452px);
   @media (max-width: 375px) {
     padding-top: 50px;
   }

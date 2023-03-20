@@ -33,10 +33,12 @@ const Cart = () => {
       icon: false,
     });
   };
-  const notfifycompleted = (e) => {
-    toast.success("ПОЗДРАВЛЯЮ ВЫ УСПЕШНО ОПЛАТИЛИ ЗАКАЗ!", {
-      position: "top-right",
-      autoClose: 5000,
+
+  const notifypromo = (e) => {
+    e.preventDefault();
+    toast.warn("ТАКОГО ПРОМОКОДА НЕ СУЩЕСТВУЕТ!!!", {
+      position: "bottom-center",
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -45,6 +47,7 @@ const Cart = () => {
       theme: "light",
     });
   };
+
   const {
     cart,
     addComplite,
@@ -66,6 +69,7 @@ const Cart = () => {
       prev + curr.price * curr.count - ((curr.price * curr.count) / 100) * 10,
     0
   );
+
   const itog = cart.reduce((prev, curr) => prev + curr.price * curr.count, 0);
   const skidka = cart
     .reduce((prev, curr) => prev + ((curr.price * curr.count) / 100) * 10, 0)
@@ -287,14 +291,17 @@ const Cart = () => {
                     className="Promo-inp"
                     placeholder="Введите промокод"
                   ></input>
-                  <button className="Promo-btn">Ввести промокод</button>
+                  <button onClick={notifypromo} className="Promo-btn">
+                    Ввести промокод
+                  </button>
+
                   {/* {alert("")} */}
                 </div>
               </div>
               <div className="Cart-total">
                 <div className="Total-inside">
                   <div className="Total-head">
-                    <h2>{total} ₽</h2>
+                    <h2>{total}₽</h2>
                     <img src={Master} alt="" />
                     <img src={Visa} alt="" />
                   </div>
@@ -325,7 +332,6 @@ const Cart = () => {
                       onClick={() => setAdds(false)}
                     >
                       Оплатить заказ
-                      
                     </button>
 
                     <p>
