@@ -13,6 +13,7 @@ import CartEmpty from "../../Components/CartEmpty/CartEmpty";
 import BurgerSD from "./BurgerSD";
 import { TfiClose } from "react-icons/tfi";
 import { UserAuth } from "../../utils/authContext";
+import { MdExitToApp } from "react-icons/md";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -208,21 +209,25 @@ const Header = () => {
             </span>
             <CartEmpty see={see} setSee={setSee} />
 
-             <img
+            <img
               className="header-right-icon header-user"
               src={userlogo}
               alt="header user"
               onClick={handleopenmodal1}
-            /> 
-        
+            />
           </div>
           {user && (
             <Link to={user ? "/signUp" : "/"}>
-              <button  onClick={handleSignOut}>Выйти</button>
+              <MdExitToApp
+                style={{ fontSize: "30px", marginTop:"15px" }}
+                className="exitIcon"
+                onClick={handleSignOut}
+              >
+                Выйти
+              </MdExitToApp>
             </Link>
           )}
-          {/* </div> */}
-         
+
           {modalIsOpen && (
             <div className="overlow">
               <div className="login">

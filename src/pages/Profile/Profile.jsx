@@ -45,8 +45,8 @@ const Profile = () => {
               {/* <blockquote contenteditable="true"> */}
               <ul>
                 <li className="name__joodar">{name}, Здраствуйте!</li>
-                <li>Ваш email:{user?.email}</li>
-                <li>Номер: {number}</li>
+                <li>{user?.email}</li>
+                <li>{number}</li>
                 <li>Пароль:*******</li>
               </ul>
 
