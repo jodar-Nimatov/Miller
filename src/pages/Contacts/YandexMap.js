@@ -18,7 +18,7 @@ const Yandexmaps = () => {
             center: [42.875969, 74.603701],
             zoom: 7,
           }}
-          className='maptip-yandex'
+          className="maptip-yandex"
         >
           <Placemark geometry={[42.875969, 74.603701]} />
 
