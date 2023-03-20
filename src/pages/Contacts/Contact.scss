@@ -1,9 +1,9 @@
-.contacts{
+.contacts {
   height: max-content;
   font-family: "Gilroy";
-.contacts-inner{
-  margin-right: 100px;
-}
+  .contacts-inner {
+    margin-right: 100px;
+  }
 }
 
 .home-cont {
@@ -18,7 +18,6 @@
   line-height: 14px;
   color: #222222;
   margin-left: 22px;
-  
 }
 .cont-blog {
   width: 54px;
@@ -32,9 +31,9 @@
   color: #222222;
   margin-left: 12px;
 }
-.switch-click{
+.switch-click {
   display: flex;
-  @media (max-width: 375px){
+  @media (max-width: 375px) {
     display: inline;
   }
 }
@@ -48,22 +47,22 @@
   border: 1px solid #f9b300;
   border-radius: 4px;
   cursor: pointer;
-  @media (max-width:375px) {
-  width: 340px;
-  height: 40px;  
-  background: #FFF7E1;
-  border: 1px solid #F9B300;
-  border-radius: 5px;
-  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 340px;
+    height: 40px;
+    background: #fff7e1;
+    border: 1px solid #f9b300;
+    border-radius: 5px;
+    margin-left: 18px;
+  }
 }
-}
-.contact-content{
+.contact-content {
   display: flex;
   @media (max-width: 375px) {
     display: inline;
   }
 }
-.contacts-left{
+.contacts-left {
   display: flex;
   @media (max-width: 375px) {
     display: inline;
@@ -80,13 +79,13 @@
   cursor: pointer;
   margin-left: 16px;
   @media (max-width: 375px) {
-  width: 340px;
-  height: 40px;
-  margin-top: 10px;
-  background: #FFF7E1;
-  border: 1px solid #F9B300;
-  border-radius: 5px;
-}
+    width: 340px;
+    height: 40px;
+    margin-top: 10px;
+    background: #fff7e1;
+    border: 1px solid #f9b300;
+    border-radius: 5px;
+  }
 }
 .switcр-stores:focus {
   background: #fff7e1;
@@ -105,7 +104,7 @@
   margin-left: 18px;
   @media (max-width: 375px) {
     width: 164px;
-    font-size: 18px;    
+    font-size: 18px;
   }
 }
 .number-contact {
@@ -119,7 +118,7 @@
   line-height: 130%;
   color: #222222;
   margin-left: 18px;
-  @media (max-width:375px) {
+  @media (max-width: 375px) {
     width: 150px;
     font-size: 14px;
   }
@@ -135,9 +134,9 @@
   line-height: 130%;
   color: #222222;
   margin-left: 18px;
-  @media (max-width:375px) {
-  width: 150px;  
-  font-size: 14px;
+  @media (max-width: 375px) {
+    width: 150px;
+    font-size: 14px;
   }
 }
 .header-texts {
@@ -151,14 +150,13 @@
   line-height: 27px;
   color: #000000;
   margin-left: 18px;
-  @media (max-width:375px) {
-    width: 190px;  
+  @media (max-width: 375px) {
+    width: 190px;
     height: 70px;
     font-size: 18px;
-    }
-
+  }
 }
-.maptip-yandex{
+.maptip-yandex {
   margin-left: 30px;
   margin-top: 60px;
   width: 600px;
@@ -189,11 +187,11 @@
   line-height: 130%;
   color: #222222;
   margin-left: 18px;
-  @media (max-width:375px) {
-    width: 330px;  
+  @media (max-width: 375px) {
+    width: 330px;
     height: 30px;
     font-size: 14px;
-    }
+  }
 }
 .texts-cont {
   width: 154px;
@@ -206,11 +204,11 @@
   line-height: 27px;
   color: #000000;
   margin-left: 18px;
-  @media (max-width:375px) {
-    width: 136px;  
+  @media (max-width: 375px) {
+    width: 136px;
     height: 30px;
     font-size: 18px;
-    }
+  }
 }
 .new-t {
   width: 300px;
@@ -223,10 +221,10 @@
   line-height: 130%;
   color: #222222;
   margin-left: 18px;
-  @media (max-width:375px) {
-    width: 290px;  
+  @media (max-width: 375px) {
+    width: 290px;
     font-size: 14px;
-    }
+  }
 }
 .store-t {
   width: 421px;
@@ -239,7 +237,7 @@
   line-height: 27px;
   color: #000000;
   margin-left: 18px;
-  @media (max-width:375px) {
+  @media (max-width: 375px) {
     width: 378px;
     font-size: 18px;
   }
@@ -255,8 +253,8 @@
   line-height: 130%;
   color: #000000;
   margin-left: 18px;
-  @media (max-width:375px) {
-    width: 102px;    
+  @media (max-width: 375px) {
+    width: 102px;
   }
 }
 .t-t {
@@ -270,7 +268,7 @@
   line-height: 27px;
   color: #000000;
   margin-left: 18px;
-  @media (max-width:375px) {
+  @media (max-width: 375px) {
     width: 342px;
     font-size: 18px;
   }
@@ -285,8 +283,8 @@
   font-size: 14px;
   line-height: 130%;
   color: #000000;
-  margin-left: 18px; 
-  @media (max-width:375px) {
+  margin-left: 18px;
+  @media (max-width: 375px) {
     width: 174px;
     font-size: 14px;
   }
@@ -296,9 +294,8 @@
 //     top: 5px;
 //     left:71px
 //     @media (max-width:375px) {
-    
+
 //     }
-  
 
 // }
 // .contacts-left.forDF{
@@ -316,14 +313,32 @@
 //     // left: 0px;
 //     // top: 652px;
 //     // border-radius: 5px;
-    
+
 //   }
-  
+
 // }
 // .map{
 //    top: 5px;
 //    left:124px
- 
-   
+
 // }
 
+.switch-contacts {
+  width: 580px;
+  height: 42px;
+  margin-bottom: 16px;
+  margin-left: 15px;
+  color: #f9b300;
+  background: #fff7e1;
+  border: 1px solid #f9b300;
+  border-radius: 4px;
+  cursor: pointer;
+  @media (max-width: 375px) {
+    width: 340px;
+    height: 40px;
+    background: #fff7e1;
+    border: 1px solid #f9b300;
+    border-radius: 5px;
+    margin-left: 18px;
+  }
+}
