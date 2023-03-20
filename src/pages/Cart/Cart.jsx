@@ -22,11 +22,11 @@ const Cart = () => {
             prev + curr.price * curr.count / 100 * 10,
         0
     ).toFixed(1)
-    // const skidk = cart.reduce(
-    //     (item, state) =>
-    //         item + state.price * state.count / 100 * 10,
-    //     0
-    // ).toFixed(1)
+    const skidk = cart.reduce(
+        (prev, curr) =>
+            prev + curr.price * curr.count / 100 * 10,
+        0
+    ).toFixed(1)
     return (
         <div className="back-cart">
             <div className="Cart">
