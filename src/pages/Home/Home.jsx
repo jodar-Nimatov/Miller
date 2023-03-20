@@ -208,9 +208,10 @@ const Main = () => {
                   Мы раскрываем вкус каждого сорта кофе.
                 </span>
                 <br />
-                <Link to="/catalog/coffee">
-                  <button>Перейти в каталог</button>
-                </Link>
+
+                <button>
+                  <Link to="catalog/coffee">Перейти в каталог</Link>
+                </button>
               </div>
             </div>
           </div>
