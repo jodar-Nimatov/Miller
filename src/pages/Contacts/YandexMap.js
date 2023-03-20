@@ -18,7 +18,7 @@ const Yandexmaps = () => {
             center: [42.875969, 74.603701],
             zoom: 7,
           }}
-          style={{ width: "680px", height: "372px" }}
+          className="maptip-yandex"
         >
           <Placemark geometry={[42.875969, 74.603701]} />
 

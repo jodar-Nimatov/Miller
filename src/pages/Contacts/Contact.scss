@@ -1,7 +1,15 @@
+.contacts {
+  height: max-content;
+  font-family: "Gilroy";
+  .contacts-inner {
+    margin-right: 100px;
+  }
+}
+
 .home-cont {
   position: relative;
   width: 45px;
-  height: 14px;
+  height: 15px;
   margin-top: 30px;
   font-family: "Gilroy";
   font-style: normal;
@@ -9,10 +17,11 @@
   font-size: 12px;
   line-height: 14px;
   color: #222222;
+  margin-left: 22px;
 }
 .cont-blog {
   width: 54px;
-  height: 14px;
+  height: 15px;
   transform: translate(55px, -15px);
   font-family: "Gilroy";
   font-style: normal;
@@ -20,34 +29,70 @@
   font-size: 12px;
   line-height: 14px;
   color: #222222;
+  margin-left: 12px;
+}
+.switch-click {
+  display: flex;
+  @media (max-width: 375px) {
+    display: inline;
+  }
 }
 .switch-contact {
   width: 580px;
   height: 42px;
-  margin-right: 20px;
+  margin-bottom: 16px;
+  margin-left: 15px;
   color: #f9b300;
   background: #fff7e1;
   border: 1px solid #f9b300;
   border-radius: 4px;
   cursor: pointer;
+  @media (max-width: 375px) {
+    width: 340px;
+    height: 40px;
+    background: #fff7e1;
+    border: 1px solid #f9b300;
+    border-radius: 5px;
+    margin-left: 18px;
+  }
+}
+.contact-content {
+  display: flex;
+  @media (max-width: 375px) {
+    display: inline;
+  }
+}
+.contacts-left {
+  display: flex;
+  @media (max-width: 375px) {
+    display: inline;
+  }
 }
 .switcр-stores {
-  width: 580px;
+  width: 526px;
   height: 42px;
   left: 685px;
-  margin-right: -36px;
   color: #f9b300;
   background: #f6f6f6;
   border: 1px solid #c9c9c9;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 16px;
+  @media (max-width: 375px) {
+    width: 340px;
+    height: 40px;
+    margin-top: 10px;
+    background: #fff7e1;
+    border: 1px solid #f9b300;
+    border-radius: 5px;
+  }
 }
 .switcр-stores:focus {
   background: #fff7e1;
   border: none;
 }
 .header-text {
-  width: -40px;
+  width: 212px;
   height: 26px;
   margin-top: 64px;
   font-family: "Gilroy";
@@ -56,6 +101,11 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 164px;
+    font-size: 18px;
+  }
 }
 .number-contact {
   width: 111px;
@@ -67,6 +117,11 @@
   font-size: 14px;
   line-height: 130%;
   color: #222222;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 150px;
+    font-size: 14px;
+  }
 }
 .link {
   width: 141px;
@@ -78,10 +133,15 @@
   font-size: 14px;
   line-height: 130%;
   color: #222222;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 150px;
+    font-size: 14px;
+  }
 }
 .header-texts {
   width: 227px;
-  height: 26px;
+  height: 65px;
   margin-top: 50px;
   font-family: "Gilroy";
   font-style: normal;
@@ -89,17 +149,49 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 190px;
+    height: 70px;
+    font-size: 18px;
+  }
+}
+.maptip-yandex {
+  margin-left: 30px;
+  margin-top: 60px;
+  width: 600px;
+  height: 375px;
+  @media (max-width: 375px) {
+    width: 300px;
+    // display: block;
+  }
+  // @media (max-width: 375px) {
+  //   width: 400px;
+  //   margin-left: 50px;
+
+  // }
+  // @media (max-width: 375px) {
+  //   width: 500px;
+  //   margin-left: 50px;
+
+  // }
 }
 .info {
   width: 347px;
   height: 55px;
-  margin-top: 20px;
+  margin-top: -9px;
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
   color: #222222;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 330px;
+    height: 30px;
+    font-size: 14px;
+  }
 }
 .texts-cont {
   width: 154px;
@@ -111,6 +203,12 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 136px;
+    height: 30px;
+    font-size: 18px;
+  }
 }
 .new-t {
   width: 300px;
@@ -122,6 +220,11 @@
   font-size: 14px;
   line-height: 130%;
   color: #222222;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 290px;
+    font-size: 14px;
+  }
 }
 .store-t {
   width: 421px;
@@ -133,6 +236,11 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 378px;
+    font-size: 18px;
+  }
 }
 .adres-c {
   width: 102px;
@@ -144,9 +252,13 @@
   font-size: 14px;
   line-height: 130%;
   color: #000000;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 102px;
+  }
 }
 .t-t {
-  width: 444px;
+  // width: 444px;
   height: 27px;
   margin-top: 25px;
   font-family: "Gilroy";
@@ -155,6 +267,11 @@
   font-size: 22px;
   line-height: 27px;
   color: #000000;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 342px;
+    font-size: 18px;
+  }
 }
 .adress-store {
   width: 180px;
@@ -162,18 +279,46 @@
   margin-top: 20px;
   font-family: "Gilroy";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 14px;
   line-height: 130%;
   color: #000000;
+  margin-left: 18px;
+  @media (max-width: 375px) {
+    width: 174px;
+    font-size: 14px;
+  }
 }
-.aga {
-    position: relative;
-    transform: translate(499px, -336px);
+// .aga {
+//   position: relative;
+//     top: 5px;
+//     left:71px
+//     @media (max-width:375px) {
 
-}
+//     }
 
-.map{
-    margin-top: -76px;
-}
+// }
+// .contacts-left.forDF{
+//   height: 372px;
+//   width: 680px;
+//   left: 585px;
+//   top: 298px;
+//   border-radius: 0px;
+//   @media (max-width: 375px) {
+//     display: inline-block;
+//     // display: inline;
+//     // position: relative;
+//     // height: 317px;
+//     // width: 375px;
+//     // left: 0px;
+//     // top: 652px;
+//     // border-radius: 5px;
 
+//   }
+
+// }
+// .map{
+//    top: 5px;
+//    left:124px
+
+// }

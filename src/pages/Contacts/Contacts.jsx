@@ -7,19 +7,16 @@ const Contacts = () => {
     <div className="contacts">
       <div className="container">
         <div className="contacts-inner">
-          <div className="contacts-left">
-            <li className="home-cont">Главная</li>
-            <li className="cont-blog">Контакты</li>
-
+          <li className="home-cont">Главная</li>
+          <li className="cont-blog">•Контакты</li>
+          <div className="switch-click">
+            <button className="switch-contact">Контакты</button>
+            <Link to="/store" className="switch_contacts">
+              <button className="switcр-stores">Наши Магазины</button>
+            </Link>
+          </div>
+          <div className="contact-content">
             <div className="btn-switch-text">
-              <div className="switch-click">
-                <button className="switch-contact">Контакты</button>
-                <button className="switcр-stores">
-                  <Link to="/store" className="switch_contacts">
-                    Наши Магазины
-                  </Link>
-                </button>
-              </div>
               <h1 className="header-text">Связаться с нами:</h1>
               <p className="number-contact">+7 (401) 237 53 43</p>
               <ul className="link">Import@kldrefine.com</ul>
@@ -37,10 +34,10 @@ const Contacts = () => {
               </p>
               <br />
             </div>
+            <div className="map">
+              <YandexMaps />
+            </div>
           </div>
-        </div>
-        <div className="map">
-          <YandexMaps />
         </div>
       </div>
     </div>

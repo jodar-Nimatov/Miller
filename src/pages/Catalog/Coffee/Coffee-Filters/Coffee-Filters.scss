@@ -1,3 +1,13 @@
+.white-circle:active {
+  cursor: default;
+}
+.white-circle {
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+}
 .filters {
   background-repeat: no-repeat;
   background-image: url("../../../../assets/Catalog/filters-back.svg");
@@ -14,26 +24,41 @@
     display: flex;
   }
 
-  &-title {
-    max-width: 100%;
+  .filters__title {
+    @media (max-width: 443px) {
+      font-size: 30px;
+    }
+    @media (max-width: 360px) {
+      font-size: 30px;
+    }
   }
-
   &-back {
     background: linear-gradient(to bottom, #f9b300 331px, transparent 331px);
   }
+  &-back-healthy {
+    background: linear-gradient(to bottom, #f9b300 229px, transparent 229px);
+  }
+
 
   &-bottom {
     &-blocks {
+      @media (max-width: 1032px) {
+        text-align: center;
+        justify-content: center;
+      }
+      z-index: 4;
+      position: relative;
       flex-wrap: wrap;
-      @media (min-width: 1211px) {
+      @media (min-width: 1210px) {
         display: flex;
       }
 
       &-item:hover {
-        opacity: 0.7;
+        // opacity: 0.7;
+        box-shadow: 0px 0px 21.2553px rgba(23, 23, 23, 0.25);
       }
-
       &-item:active {
+        box-shadow: 0px 0px 21.2553px rgba(147, 147, 147, 0.25);
         cursor: default;
       }
 
@@ -58,11 +83,17 @@
           justify-content: center;
           flex-wrap: wrap;
           align-content: space-between;
+          // &-top{
+          //   justify-content: right;
+          // }
+        }
+        &:hover {
+          background: #f9b300;
         }
       }
       display: flex;
       margin-top: 15px;
-      gap: 11px;
+      gap: 15px;
     }
   }
   &-coffee {
@@ -93,13 +124,13 @@
     z-index: 3;
   }
   &__left > h1 {
+    @media (max-width: 967px) {
+      color: #000000;
+    }
     margin-top: 100px;
     font-weight: 900;
     font-size: 50px;
     line-height: 62px;
-    @media (max-width: 542px) {
-      width: 442px;
-    }
     color: #ffffff;
   }
   &-nav-first {
@@ -112,11 +143,12 @@
   &-nav-item {
     color: white;
     font-size: 12px;
+    @media (max-width: 967px) {
+      color: #000000;
+    }
   }
   &-nav {
     margin-top: 30px;
-    width: 277px;
-    justify-content: space-between;
     display: flex;
     color: white;
   }
@@ -137,6 +169,7 @@
   &-function-left {
     display: flex;
     width: 280px;
+    z-index: 4;
     border-radius: 14.1702px;
     height: 373px;
     background-color: white;
@@ -151,6 +184,7 @@
     }
   }
   &-functions-right {
+    z-index: 100;
     background-color: white;
     box-shadow: 0px 0px 21.2553px rgba(149, 149, 149, 0.25);
     min-height: 373px;
@@ -163,6 +197,15 @@
     &-line {
       height: 10px;
       width: 770px;
+      @media (max-width: 1210px) {
+        width: 670px;
+      }
+      @media (max-width: 1110px) {
+        width: 570px;
+      }
+      @media (max-width: 1010px) {
+        width: 470px;
+      }
       @media (max-width: 911px) {
         width: 670px;
       }
@@ -176,6 +219,7 @@
         width: 370px;
       }
       @media (max-width: 475px) {
+        margin-left: 10px;
         width: 270px;
       }
       background-color: #f9b300;
@@ -188,8 +232,14 @@
       display: flex;
       flex-wrap: wrap;
       margin-left: 66px;
+      @media (max-width: 625px) {
+        justify-content: start;
+      }
+      @media (max-width: 470px) {
+        margin-left: 10px;
+      }
       margin-top: 21px;
-      max-width: 880px;
+      max-width: 712px;
       justify-content: space-between;
     }
     &-column {
@@ -209,20 +259,6 @@
       width: 93px;
     }
   }
-  // Вот и вся функция .
-  .white-circle.clicked {
-    background-color: #f9b300;
-  }
-  .white-circle:active {
-    cursor: default;
-  }
-  .white-circle {
-    cursor: pointer;
-    width: 17px;
-    height: 17px;
-    background-color: #e4e4e4;
-    border-radius: 50%;
-  }
   .yellow-circle {
     cursor: pointer;
     width: 17px;
@@ -239,8 +275,62 @@
   .fiveCoffees > div > img {
     max-width: 17px;
   }
-  .fiveCoffees > div {
-    gap: 7px;
-    display: flex;
+}
+.useFilter-btns {
+  display: flex;
+  text-align: right;
+  padding-right: 46px;
+  justify-content: right;
+  & .one {
+    border-radius: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    margin-left: 13px;
+    color: #524f4e;
+    cursor: pointer;
+    padding: 3px;
+    transform: translateY(-13px);
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+    &:hover {
+      background: #f9b300;
+      box-shadow: 0 5px 13px rgba(46, 229, 157, 0.4);
+      // color: white;
+    }
   }
+  & .two {
+    & > img {
+      transform: translateY(3px);
+    }
+    border-radius: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    color: #524f4e;
+    cursor: pointer;
+    padding: 3px;
+    transform: translateY(-13px);
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+    padding-left: 7px;
+    &:hover {
+      background: #f9b300;
+      box-shadow: 0 5px 13px rgba(46, 229, 157, 0.4);
+      // color: white;
+    }
+  }
+}
+.divdn {
+  display: none;
+}
+.divdn.b {
+  margin-left: 14px;
+  display: block;
+  height: 4px;
+  width: 80%;
 }

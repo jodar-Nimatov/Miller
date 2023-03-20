@@ -1,14 +1,32 @@
-.fresh-right {
-  margin-left: 500px;
+.fresh-coffe-right{
+ position: relative;
+ z-index: 1;
+ @media (max-width: 375px) {
+  position: relative;
+  left: -767px;
+  top: 50px;
+  z-index: -1;
+ }
 }
 
 .slider {
-  max-width: 705px;
+  position: absolute;
+  max-width: 210px; 
   margin: 0 auto;
+  right: 1566px;
+  @media (max-width: 375px) {
+   right: 892px; 
+  }
 }
 .slideshow {
+  position: absolute;
   margin: 0 auto;
+  width: 564px;
+  left: 1300px;
   overflow: hidden;
+  @media (max-width: 375px) {
+    width: 442px;
+  }
 }
 .slideshowSlider {
   margin: 0 auto;
@@ -18,9 +36,13 @@
 
 .slide {
   display: inline-block;
-  background-image: url(../../../assets/Images/SliderCupCoffe.png);
-  height: 600px;
+  background-image: url(../../../assets/Images/coffeBgSlid.png);
+  height: 700px;
   background-repeat: no-repeat;
-  width: 1440px;
+  width: 1150px;
   text-align: right;
+  @media (max-width: 375px) {
+    height: 450px;
+    width: 860px;
+  }
 }

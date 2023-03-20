@@ -1,0 +1,108 @@
+.login_right {
+  height: 525px;
+  background: #ffffff;
+}
+@media (max-width: 375px) {
+  .login_right {
+    width: 375px;
+    height: 812px;
+    background: #ffffff;
+  }
+}
+.h2registrALo {
+  width: 244px;
+  height: 50px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 50px;
+  color: #000000;
+  align-items: center;
+  text-align: center;
+  margin-top: -30px;
+}
+.text_cnt {
+  transform: translateY(-62px);
+  @media (max-width: 375px) {
+    transform: translateY(-105px);
+  }
+}
+.login_right_buttonlogg {
+  position: absolute;
+  // top: 430px;
+  width: 480px;
+  height: 49px;
+  background: #f9b300;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  margin: 73px 97px 162px -574px;
+  color: #ffffff;
+  @media (max-width: 375px) {
+    width: 310px;
+    margin: 75px 97px 15px -314px;
+  }
+}
+
+.login_right_inputonea {
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border-radius: 4px;
+}
+.fio_inputs {
+  padding: 15px;
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px 97px 15px 117px;
+  @media (max-width: 375px) {
+    width: 332px;
+    margin: 5px -3px 15px 20px;
+  }
+}
+.email_reg {
+  padding: 15px;
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px 0px 15px 117px;
+  @media (max-width: 375px) {
+    width: 332px;
+    margin: 5px -3px 15px 20px;
+  }
+}
+.number_inputss {
+  padding: 15px;
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px 97px 15px 117px;
+  @media (max-width: 375px) {
+    width: 332px;
+    margin: 5px -3px 15px 20px;
+  }
+}
+.input_passwordd {
+  padding: 15px;
+  width: 480px;
+  height: 49px;
+  background: #f6f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px 97px 15px 117px;
+  @media (max-width: 375px) {
+    width: 332px;
+    margin: 5px -3px 15px 20px;
+  }
+}
+
+.login_right_formik {
+  transform: translateY(-66px);
+}
