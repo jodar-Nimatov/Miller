@@ -124,7 +124,7 @@
   &__center > ul {
     display: flex;
     align-items: center;
-    padding: 10px 5px 0 ;
+    padding: 10px 5px 0;
   }
   &__right > a > img {
     max-width: 22px;
@@ -278,7 +278,7 @@
 }
 .login {
   position: relative;
-  .close-modal{
+  .close-modal {
     position: absolute;
     top: 15px;
     right: 31px;
@@ -416,8 +416,8 @@
     margin-top: 290px;
   }
 }
-.login_left{
-  @media (max-width: 375px ) {
+.login_left {
+  @media (max-width: 375px) {
     display: none;
   }
 }
@@ -443,7 +443,7 @@
   text-align: center;
   margin-top: -30px;
 }
-.link_to_register{
+.link_to_register {
   display: none;
   @media (max-width: 375px) {
     display: inline;
@@ -452,9 +452,9 @@
     left: 50px;
   }
 }
-.link_to_register > a{
+.link_to_register > a {
   color: blue;
-  &:hover{
+  &:hover {
     color: yellow;
   }
 }
@@ -495,5 +495,12 @@
   @media (max-width: 375px) {
     width: 357px;
     margin: -25px 0px 3px 11px;
+  }
+}
+.exitIcon {
+  font-size: 30px;
+  margin-top: 15px;
+  @media (max-width: 375px) {
+    font-size: 15px;
   }
 }

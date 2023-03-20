@@ -218,11 +218,7 @@ const Header = () => {
           </div>
           {user && (
             <Link to={user ? "/signUp" : "/"}>
-              <MdExitToApp
-                style={{ fontSize: "30px", marginTop:"15px" }}
-                className="exitIcon"
-                onClick={handleSignOut}
-              >
+              <MdExitToApp className="exitIcon" onClick={handleSignOut}>
                 Выйти
               </MdExitToApp>
             </Link>
