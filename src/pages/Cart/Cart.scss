@@ -1,416 +1,416 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.back-cart{
+  background: linear-gradient(to bottom, #FFF7E1 475px, transparent 229px);
+}
+.Cart{
+  background-repeat: no-repeat;
+  background-image: url("../../assets/Catalog/cart-back.svg");
+  background-position-y: 460px;
+  background-color: linear-gradient(
+    to bottom,
+    #FFF7E1 331px,
+    transparent 331px
+  );
+  background-size: 240vh;
+
+  @media(max-width: 376px) {
+    background: white;
+    width: 375px;
+}
+}
+.Cart-ul{
+  display: flex;
+  padding: 30px 0 35px 0;
+  font-size: 12px;
+}
+//карточка товара в корзине
+.Cart-product{
+  width: 1180px;
+  border-radius: 14px;
+  border: 0.708508px solid #E4E4E4;
+  box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+  background-color: white;
+  padding-bottom: 30px;
+  @media(max-width: 376px) {
+    max-width: 375px;
+}
+}
+.Cart-inside{
+  margin-left: 100px;
+  @media(max-width: 376px) {
+    margin-left: 0
+  }
+}
+
+.Cart-product-up{
+  display: flex;
+  padding-top: 80px;
+  text-align: center;
+  gap: 619px;
+  @media(max-width: 376px) {
+    display: table;
+    padding: 40px 0 0 18px;
+}
+}
+.Product-delete{
+  width: 106px;
+  height: 32px;
+  background: rgba(255, 247, 225, 1);
+  border: 1px solid #F9B300;
+  border-radius: 4px;
+  color: rgba(249, 179, 0, 1);
+  cursor: pointer;
+  @media(max-width: 376px) {
+    margin: 20px 0 0 -110px;
+  }
+}
+.Cart-product-middle{
+  display: flex;
+  padding-top: 45px;
+  @media(max-width: 376px) {
+    display: none;
+  }
+}
+.Cart-product-mid-left{
+  display: flex;
+  gap: 60px;
+}
+.Cart-product-mid-right{
+  display: flex;
+  padding-left: 190px;
+  gap: 60px;
+}
+.Cart-card{
+  width: 980px;
+  height: 122px;
+  margin: 15px 0 15px 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(252, 252, 252, 1);
+  border: 0.708508px solid #F0F0F0;
+  border-radius: 14px;
+  gap: 30px;
+  @media(max-width: 376px) {
+    width: 340px;
+    margin: 0 0 85px 20px;    
+  }
+}
+.Card-left{
+  display: flex;
+  align-items: center;
+  button{
+    padding-right: 55px;
+    @media(max-width: 376px){
+      position: relative;
+      margin: 180px 0 0 -45px;
+    }
+  }
+  img{
+    padding-right: 15px;
+    @media(max-width: 376px){
+      position: absolute;
+    } 
+  }
+}
+.Cart-description{
+  width: 210px;
+  @media(max-width: 376px){
+    margin-left: 23px;
+    font-size: 10px;
+  }
+}
+.Cart-des-h3{
+  @media(max-width: 376px){
+    margin-bottom: 10px;
+    width: 140px;
+  } 
+}
+.Cart-des-p{
+  @media(max-width: 376px){
+    margin-top: 10px;
+  } 
+}
+.Card-close{
+  border: 0;
+  background: rgba(252, 252, 252, 1);
+  padding-left: 43px;
+  cursor: pointer;
+  @media(max-width: 376px){
+
+  }
+}
+.Card-right{
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  gap: 40px;
+  font-size: 18px;
+}
+// .Cart-right-price{
+//   margin-left: -5px;
+// }
+.Cart-right-price{
+  @media(max-width: 376px){
+    display: none;
+  } 
+}
+.Card-click{
+  display: flex;
+  width: 105px;
+  height: 30px;
+  align-items: center;
+  background: #F6F6F6;
+  border: 1px solid #D6D6D6;
+  border-radius: 5px;
+  margin-left: 15px;
+  @media(max-width: 376px){
+    margin: 200px 0 0 -215px;
+    width: 160px;
+    height: 60px;
+    padding: 20px;
+  } 
+}
+.Card-click button {
+  padding: 5px 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
+.Card-Click-p{
+  @media(max-width: 376px){
+    width: 80px;
+    margin-left: -110px;
+    font-size: 12px;
+    text-decoration-line: line-through;
+    color: #D6D6D6;
+  }
+}
+.Card-total{
+  @media(max-width: 376px){
+    margin-left: -115px;
+    width: 85px;
+    margin-top: -50px;
+    font-size: 14px;
+  }
+}
+.Card-count{
+  padding: 0 5px 0 5px;
+  @media(max-width: 376px){
+    margin: 0 10px;
+  } 
+}
+.Card-Click-dis{
+  padding: 0 30px 0 10px;
+}
+//карточка доставки
+.Cart-delivery{
+  width: 1180px;
+  height: 543px;
+  margin-top: 20px;
+  background: #FFFFFF;
+  border: 0.708508px solid #E4E4E4;
+  box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+  border-radius: 14px;
+  @media(max-width: 376px){
+    width: 375px;
+    height: 855px;
+  }
+}
+.Delivery-inside{
+  margin-left: 100px;
+  @media(max-width: 376px){
+    margin-left: 18px;
+  }
+}
+.Delivery-head{
+  padding: 50px 0 35px 0;
+}
+.Delivery-input input{
+  display: block;
+  width: 480px;
+  height: 49px;
+  margin-bottom: 15px;
+  text-indent: 40px;
+  background: #FCFCFC;
+  border: 1px solid #F6F6F6;
+  border-radius: 4px;
+  @media(max-width: 376px){
+    width: 340px;
+  }
+}
+.Delivery-left{
+  display: inline-block;
+}
+.Delivery-right{
+  margin-left: 20px;
+  display: inline-block;
+  @media(max-width: 376px){
     margin: 0;
   }
-  .back-cart{
-    background: linear-gradient(to bottom, #FFF7E1 475px, transparent 229px);
+}
+.Delivery-btn{
+  width: 980px;
+  height: 49px;
+  background: #FFF7E1;
+  border: 0.708508px solid #F9B300;
+  border-radius: 4px;
+  color: #F9B300;
+  font-size: 18px;
+  @media(max-width: 376px){
+    width: 340px;
   }
-  .Cart{
-    background-repeat: no-repeat;
-    background-image: url("../../assets/Catalog/cart-back.svg");
-    background-position-y: 460px;
-    background-color: linear-gradient(
-      to bottom,
-      #FFF7E1 331px,
-      transparent 331px
-    );
-    background-size: 240vh;
-
-    @media(max-width: 376px) {
-      background: white;
-      width: 375px;
-  }
-  }
-  .Cart-ul{
-    display: flex;
-    padding: 30px 0 35px 0;
-    font-size: 12px;
-  }
-//карточка товара в корзине
-  .Cart-product{
-    width: 1180px;
-    border-radius: 14px;
-    border: 0.708508px solid #E4E4E4;
-    box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
-    background-color: white;
-    padding-bottom: 30px;
-    @media(max-width: 376px) {
-      max-width: 375px;
-  }
-  }
-  .Cart-inside{
-    margin-left: 100px;
-    @media(max-width: 376px) {
-      margin-left: 0
-    }
-  }
-  
-  .Cart-product-up{
-    display: flex;
-    padding-top: 80px;
-    text-align: center;
-    gap: 619px;
-    @media(max-width: 376px) {
-      display: table;
-      padding: 40px 0 0 18px;
-  }
-  }
-  .Product-delete{
-    width: 106px;
-    height: 32px;
-    background: rgba(255, 247, 225, 1);
-    border: 1px solid #F9B300;
-    border-radius: 4px;
-    color: rgba(249, 179, 0, 1);
-    cursor: pointer;
-    @media(max-width: 376px) {
-      margin: 20px 0 0 -110px;
-    }
-  }
-  .Cart-product-middle{
-    display: flex;
-    padding-top: 45px;
-    @media(max-width: 376px) {
-      display: none;
-    }
-  }
-  .Cart-product-mid-left{
-    display: flex;
-    gap: 60px;
-  }
-  .Cart-product-mid-right{
-    display: flex;
-    padding-left: 190px;
-    gap: 60px;
-  }
-  .Cart-card{
-    width: 980px;
-    height: 122px;
-    margin: 15px 0 15px 0;
-    display: flex;
-    align-items: center;
-    background-color: rgba(252, 252, 252, 1);
-    border: 0.708508px solid #F0F0F0;
-    border-radius: 14px;
-    gap: 30px;
-    @media(max-width: 376px) {
-      width: 340px;
-      margin: 0 0 85px 20px;    
-    }
-  }
-  .Card-left{
-    display: flex;
-    align-items: center;
-    button{
-      padding-right: 55px;
-      @media(max-width: 376px){
-        position: relative;
-        margin: 180px 0 0 -45px;
-      }
-    }
-    img{
-      padding-right: 15px;
-      @media(max-width: 376px){
-        position: absolute;
-      } 
-    }
-  }
-  .Cart-description{
-    width: 210px;
-    @media(max-width: 376px){
-      margin-left: 23px;
-      font-size: 10px;
-    }
-  }
-  .Cart-des-h3{
-    @media(max-width: 376px){
-      margin-bottom: 10px;
-      width: 140px;
-    } 
-  }
-  .Cart-des-p{
-    @media(max-width: 376px){
-      margin-top: 10px;
-    } 
-  }
-  .Card-close{
-    border: 0;
-    background: rgba(252, 252, 252, 1);
-    padding-left: 43px;
-    cursor: pointer;
-    @media(max-width: 376px){
-
-    }
-  }
-  .Card-right{
-    display: flex;
-    align-items: center;
-    padding-left: 45px;
-    gap: 40px;
-    font-size: 18px;
-  }
-  // .Cart-right-price{
-  //   margin-left: -5px;
-  // }
-  .Cart-right-price{
-    @media(max-width: 376px){
-      display: none;
-    } 
-  }
-  .Card-click{
-    display: flex;
-    width: 105px;
-    height: 30px;
-    align-items: center;
-    background: #F6F6F6;
-    border: 1px solid #D6D6D6;
-    border-radius: 5px;
-    margin-left: 15px;
-    @media(max-width: 376px){
-      margin: 200px 0 0 -215px;
-      width: 160px;
-      height: 60px;
-      padding: 20px;
-    } 
-  }
-  .Card-click button {
-    padding: 5px 15px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    cursor: pointer;
-  }
-  .Card-Click-p{
-    @media(max-width: 376px){
-      width: 80px;
-      margin-left: -110px;
-      font-size: 12px;
-      text-decoration-line: line-through;
-      color: #D6D6D6;
-    }
-  }
-  .Card-total{
-    @media(max-width: 376px){
-      margin-left: -115px;
-      width: 85px;
-      margin-top: -50px;
-      font-size: 14px;
-    }
-  }
-  .Card-count{
-    padding: 0 5px 0 5px;
-    @media(max-width: 376px){
-      margin: 0 10px;
-    } 
-  }
-  .Card-Click-dis{
-    padding: 0 30px 0 10px;
-  }
-  //карточка доставки
-  .Cart-delivery{
-    width: 1180px;
-    height: 543px;
-    margin-top: 20px;
-    background: #FFFFFF;
-    border: 0.708508px solid #E4E4E4;
-    box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
-    border-radius: 14px;
-    @media(max-width: 376px){
-      width: 375px;
-      height: 855px;
-    }
-  }
-  .Delivery-inside{
-    margin-left: 100px;
-    @media(max-width: 376px){
-      margin-left: 18px;
-    }
-  }
-  .Delivery-head{
-    padding: 50px 0 35px 0;
-  }
-  .Delivery-input input{
-    display: block;
-    width: 480px;
-    height: 49px;
-    margin-bottom: 15px;
-    text-indent: 40px;
-    background: #FCFCFC;
-    border: 1px solid #F6F6F6;
-    border-radius: 4px;
-    @media(max-width: 376px){
-      width: 340px;
-    }
-  }
-  .Delivery-left{
-    display: inline-block;
-  }
-  .Delivery-right{
-    margin-left: 20px;
-    display: inline-block;
-    @media(max-width: 376px){
-      margin: 0;
-    }
-  }
-  .Delivery-btn{
-    width: 980px;
-    height: 49px;
-    background: #FFF7E1;
-    border: 0.708508px solid #F9B300;
-    border-radius: 4px;
-    color: #F9B300;
-    font-size: 18px;
-    @media(max-width: 376px){
-      width: 340px;
-    }
-  }
-  //Карточка промокода
-  .Cart-down{
-    margin: 20px 0 150px 0;
-    display: flex;
-    @media(max-width: 376px){
-      display: block;
-    }
-  }
-  .Cart-promo{
-    width: 730px;
-    height: 317px;
-    background: #FFFFFF;
-    border: 1px solid #E4E4E4;
-    box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
-    border-radius: 14px;
-    @media(max-width: 376px){
-      width: 375px;
-      margin-bottom: 20px;
-    }
-  }
-  .Promo-inside{
-    margin-left: 100px;
-    @media(max-width: 376px){
-      margin-left: 18px;
-    }
-  }
-  .Promo-head{
-    padding-top: 40px;
-  p{
-    padding: 20px 0 30px 0;
-    width: 380px;
-    font-size: 14px;
-    font-family: Gilroy;
-    @media(max-width: 376px){
-      width: 320px;
-    }
-  }
-  }
-  .Promo-inp{
-    width: 480px;
-    height: 49px;
-    background: #FCFCFC;
-    border: 1px solid #F6F6F6;
-    border-radius: 4px;
-    text-indent: 40px;
-    @media(max-width: 376px){
-      width: 340px;
-    }
-  }
-  .Promo-inp::placeholder{
-    color: rgba(196, 196, 196, 1);
-  }
-  .Promo-btn{
-    width: 480px;
-    height: 49px;
-    margin-top: 25px;
-    background: #FFF7E1;
-    border: 1px solid #F9B300;
-    border-radius: 4px;
-    color: rgba(249, 179, 0, 1);
-    @media(max-width: 376px){
-      width: 340px;
-    }
-  }
-  //карточка итога
-  .Cart-total{
-    width: 480px;
-    height: 317px;
-    margin-left: 20px;
-    background: #FFFFFF;
-    border: 1px solid #E4E4E4;
-    box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
-    border-radius: 14px;
-    @media(max-width: 376px){
-      width: 375px;
-      margin-left: 0;
-    }
-  }
-  .Total-inside{
-    margin-left: 50px;
-    @media(max-width: 376px){
-      margin-left: 18px;
-    }
-  }
-  .Total-head{
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    h2{
-      padding-right: 142px;
-    }
-  }
-  .Total-skidka{
-    color: #747474;
-    font-size: 14px;
-    padding-bottom: 7px;
-  }
-  .Dostavka{
+}
+//Карточка промокода
+.Cart-down{
+  margin: 20px 0 150px 0;
+  display: flex;
+  @media(max-width: 376px){
     display: block;
   }
-  .Dostavka-vid{
-    display: flex;
+}
+.Cart-promo{
+  width: 730px;
+  height: 317px;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+  border-radius: 14px;
+  @media(max-width: 376px){
+    width: 375px;
+    margin-bottom: 20px;
   }
-  .Dostavka-vid-block{
-    display: flex;
-    margin: 5px  0 0 69px;
+}
+.Promo-inside{
+  margin-left: 100px;
+  @media(max-width: 376px){
+    margin-left: 18px;
   }
-  .Btne{
-    margin: 0 8px 0 8px;
-    height: 0px;
-    padding: 2px;
-    background: #E4E4E4;;
-    border-radius: 50%;
-    border: 6px solid #E4E4E4;
-    cursor: pointer;
+}
+.Promo-head{
+  padding-top: 40px;
+p{
+  padding: 20px 0 30px 0;
+  width: 380px;
+  font-size: 14px;
+  font-family: Gilroy;
+  @media(max-width: 376px){
+    width: 320px;
   }
-  .Btne:active{
-    background: rgba(249, 179, 0, 1);
-    border: 6px solid rgba(249, 179, 0, 1);
+}
+}
+.Promo-inp{
+  width: 480px;
+  height: 49px;
+  background: #FCFCFC;
+  border: 1px solid #F6F6F6;
+  border-radius: 4px;
+  text-indent: 40px;
+  @media(max-width: 376px){
+    width: 340px;
   }
-  .Total-btn{
-    width: 380px;
-    height: 49px;
-    margin-top: 21px;
-    background: rgba(249, 179, 0, 1);
-    border: none;
-    border-radius: 4px;
-    color: rgba(255, 255, 255, 1);
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    font-family: 'Gilroy';
-    @media(max-width: 376px){
-      width: 340px;
-    }
+}
+.Promo-inp::placeholder{
+  color: rgba(196, 196, 196, 1);
+}
+.Promo-btn{
+  width: 480px;
+  height: 49px;
+  margin-top: 25px;
+  background: #FFF7E1;
+  border: 1px solid #F9B300;
+  border-radius: 4px;
+  color: rgba(249, 179, 0, 1);
+  @media(max-width: 376px){
+    width: 340px;
   }
-  .Total-down p {
-    padding-top: 5px;
-    width: 368px;
-    font-family: 'Gilroy';
-    font-size: 10px;
-    color: #747474;
-    @media(max-width: 376px){
-      width: 340px;
-    }
+}
+//карточка итога
+.Cart-total{
+  width: 480px;
+  height: 317px;
+  margin-left: 20px;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  box-shadow: 0px 0px 35.4254px rgba(163, 163, 163, 0.25);
+  border-radius: 14px;
+  @media(max-width: 376px){
+    width: 375px;
+    margin-left: 0;
   }
+}
+.Total-inside{
+  margin-left: 50px;
+  @media(max-width: 376px){
+    margin-left: 18px;
+  }
+}
+.Total-head{
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  h2{
+    padding-right: 142px;
+  }
+}
+.Total-skidka{
+  color: #747474;
+  font-size: 14px;
+  padding-bottom: 7px;
+}
+.Dostavka{
+  display: block;
+}
+.Dostavka-vid{
+  display: flex;
+}
+.Dostavka-vid-block{
+  display: flex;
+  margin: 5px  0 0 69px;
+}
+.Btne{
+  margin: 0 8px 0 8px;
+  height: 0px;
+  padding: 2px;
+  background: #E4E4E4;;
+  border-radius: 50%;
+  border: 6px solid #E4E4E4;
+  cursor: pointer;
+}
+.Btne:active{
+  background: rgba(249, 179, 0, 1);
+  border: 6px solid rgba(249, 179, 0, 1);
+}
+.Total-btn{
+  width: 380px;
+  height: 49px;
+  margin-top: 21px;
+  background: rgba(249, 179, 0, 1);
+  border: none;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  font-family: 'Gilroy';
+  @media(max-width: 376px){
+    width: 340px;
+  }
+}
+.Total-down p {
+  padding-top: 5px;
+  width: 368px;
+  font-family: 'Gilroy';
+  font-size: 10px;
+  color: #747474;
+  @media(max-width: 376px){
+    width: 340px;
+  }
+}

@@ -17,6 +17,34 @@
       display: block;
       width: 29px;
     }
+    .mobile_btn {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 27px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+    .menu {
+      display: flex;
+      opacity: 0.8;
+      filter: alpha(opacity=40);
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      left: -80%;
+      right: 0;
+      height: 80vh;
+      background-color: #f8f8f8;
+      transition: left 1s;
+    }
+    .active {
+      transform: scale(1) translateY(0);
+    }
+    .active {
+      left: 0;
+    }
     & {
       height: 95px;
       transform: translateY(-30px);
@@ -30,7 +58,7 @@
   &__item2 {
     transform: translateX(-20px);
   }
-  &__item1:hover{
+  &__item1:hover {
     background-color: white;
   }
   &__item1 {
@@ -64,7 +92,7 @@
     border-bottom: 1px solid black;
     opacity: 0.7;
   }
-  .accordion:hover{
+  .accordion:hover {
     background-color: white;
   }
   .accordion {
@@ -96,7 +124,7 @@
   &__center > ul {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 5px 0 ;
   }
   &__right > a > img {
     max-width: 22px;
@@ -122,7 +150,7 @@
     font-size: 16px;
   }
   &__input.none {
-    transition: all 20s;
+    // transition: all 20s;
     display: block;
   }
   .header-search-InInput.none {
@@ -174,6 +202,9 @@
     @media (max-width: 677px) {
       width: 160px;
     }
+    @media (max-width: 440px) {
+      width: 130px;
+    }
     @media (max-width: 575px) {
       display: none;
     }
@@ -219,13 +250,13 @@
       max-height: 9px;
     }
   }
-  .header-right-count_header-basket{
+  .header-right-count_header-basket {
     margin-left: -45px;
     margin-bottom: 25px;
-    border: 6px solid #F9B300;
+    border: 6px solid #f9b300;
     border-radius: 50%;
     height: 20px;
-    background: #F9B300;
+    background: #f9b300;
     display: flex;
     align-items: center;
   }
@@ -246,6 +277,16 @@
   margin: 0;
 }
 .login {
+  position: relative;
+  .close-modal{
+    position: absolute;
+    top: 15px;
+    right: 31px;
+    cursor: pointer;
+    @media (max-width: 375px) {
+      top: 30px;
+    }
+  }
   &_left {
     width: 283px;
     height: 525px;
@@ -285,14 +326,20 @@
     width: 460px;
     height: 306px;
     margin-top: -30px;
+    @media (max-width: 375px) {
+      display: none;
+    }
   }
   &_right_logo {
     width: 109px;
     height: 51px;
     margin: 30px 293px 30px 292px;
+    @media (max-width: 375px) {
+      display: none;
+    }
   }
   & h2 {
-    width: 325px;
+    width: 330px;
     height: 35px;
     font-family: "Gilroy";
     font-style: normal;
@@ -300,6 +347,10 @@
     font-size: 28px;
     color: #000000;
     margin: 30px 185px 40px 184px;
+    @media (max-width: 375px) {
+      margin: 109px 185px 40px 30px;
+      font-size: 24px;
+    }
   }
 
   &_right_inputone {
@@ -310,8 +361,16 @@
     border-radius: 10px;
     margin: 40px 97px 15px 117px;
     padding: 15px;
+    position: absolute;
+    top: 200px;
+    @media (max-width: 375px) {
+      width: 310px;
+      margin: 28px 97px 15px 28px;
+    }
   }
   &_right_inputtwo {
+    position: absolute;
+    top: 305px;
     width: 480px;
     height: 49px;
     background: #f6f6f6;
@@ -319,8 +378,14 @@
     border-radius: 4px;
     margin: 15px 97px 15px 117px;
     padding: 15px;
+    @media (max-width: 375px) {
+      width: 310px;
+      margin: -1px 97px 15px 28px;
+    }
   }
   &_right_buttonlog {
+    position: absolute;
+    top: 430px;
     width: 480px;
     height: 49px;
     background: #f9b300;
@@ -328,6 +393,10 @@
     border-radius: 4px;
     margin: 15px 97px 162px 117px;
     color: #ffffff;
+    @media (max-width: 375px) {
+      width: 310px;
+      margin: -30px 97px 15px 28px;
+    }
   }
   &_right_reset {
     color: red;
@@ -343,11 +412,23 @@
   align-items: center;
   justify-content: center;
   background: rgb(20, 20, 20, 0.5);
+  @media (max-width: 375px) {
+    margin-top: 290px;
+  }
 }
+.login_left{
+  @media (max-width: 375px ) {
+    display: none;
+  }
+}
+
 .login_right {
-  width: 694px;
   height: 525px;
   background: #ffffff;
+  @media (max-width: 375px) {
+    width: 378px;
+    height: 544px;
+  }
 }
 .h2registrALo {
   width: 244px;
@@ -362,6 +443,21 @@
   text-align: center;
   margin-top: -30px;
 }
+.link_to_register{
+  display: none;
+  @media (max-width: 375px) {
+    display: inline;
+    position: absolute;
+    top: 500px;
+    left: 50px;
+  }
+}
+.link_to_register > a{
+  color: blue;
+  &:hover{
+    color: yellow;
+  }
+}
 .text_cnt {
   transform: translateY(-62px);
 }
@@ -371,42 +467,6 @@
   height: 49px;
   background: #f6f6f6;
   border-radius: 4px;
-}
-.fio_inputs {
-  width: 480px;
-  height: 49px;
-  background: #f6f6f6;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin: 5px 97px 15px 117px;
-}
-.email_reg {
-  width: 480px;
-  height: 49px;
-  background: #f6f6f6;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin: 5px 0px 15px 117px;
-}
-.number_inputss {
-  width: 480px;
-  height: 49px;
-  background: #f6f6f6;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin: 5px 97px 15px 117px;
-}
-.input_passwordd {
-  width: 480px;
-  height: 49px;
-  background: #f6f6f6;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin: 5px 97px 15px 117px;
-}
-
-.login_right_formik {
-  transform: translateY(-66px);
 }
 .login_right_logoss {
   width: 109px;
@@ -432,4 +492,9 @@
   text-align: center;
   color: #000000;
   margin: 14px 0px 3px 139px;
+  @media (max-width: 375px) {
+    width: 357px;
+    margin: -25px 0px 3px 11px;
+  }
 }
+

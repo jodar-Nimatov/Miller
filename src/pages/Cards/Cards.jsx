@@ -33,7 +33,7 @@ const Cards = () => {
               <div className="block_cards">
                 <img className="cards_logo" src={cars_logo} alt="" />
                 <div className="text-t">
-                  <h1 className="text_h1">Colombia Supremo</h1>
+                  ‰<h1 className="text_h1">Colombia Supremo</h1>
                 </div>
                 <p className="text_p">Мытая, натуральная, смесь</p>
               </div>

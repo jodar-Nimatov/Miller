@@ -7,10 +7,6 @@ function Accordion(props) {
   const content = useRef(null);
   const [height, setHeight] = useState("0px");
 
-  useEffect(() => {
-    console.log("Height for ", props.title, ": ", height);
-  }, [height]);
-
   function toggleAccordion() {
     setActive(!active);
     setHeight(active ? "0px" : `${content.current.scrollHeight}px`);

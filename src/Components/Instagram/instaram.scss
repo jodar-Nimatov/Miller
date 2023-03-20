@@ -6,27 +6,53 @@
     .instagram-inner{
         padding: 70px;
         transform: translateY(-222px);
+        @media (max-width: 375px) {
+            transform: translateY(-99px);
+        }
     }
     .insta-title{
         display: flex;
         align-items: center;
         gap: 10px;
     }
+    .insta-title > img{
+        @media (max-width: 375px) {
+            width: 50px;
+            height: 50px;
+            transform: translate(-187px, 56px);
+        }
+    }
     .forDF{
         transform: translateY(-170px);
         padding-left: 200px;
+        @media (max-width: 375px) {
+            padding-left: 15px;
+            font-size: 12px;
+            transform: translateY(-110px);
+        }
     }
     .instagram-left{
         display: flex;
         transform: translateX(140px);
+        @media (max-width: 375px) {
+            transform: translateX(-455px);
+        }
     }
     .instagram-left > img{
         max-width: 100%;
         height: 100%;
     }
-
+    .aiphone{
+        @media (max-width: 375px) {
+            display: none;
+        }
+    }
     .instagram-left > .iphone2{
         transform: translate(-815px, 73px);
+        @media (max-width: 375px) {
+            max-width: none ;
+            transform: translate(266px, -18px);
+        }
     }
     .insta-sides{
         display: flex;
@@ -35,6 +61,9 @@
     }
     .instagram-right{
         position: relative;
+        @media (max-width: 375px) {
+            transform: translateX(-1166px);
+        }
     }
     .insta-back{
         background: linear-gradient(to bottom, #f9b300 549px, transparent 331px);

@@ -1,31 +1,25 @@
-// {
-//     "uid": "7b719d70-cfac-4a46-a112-0ceff3aac81c",
-//     "token": {
-//       "sub": "7b719d70-cfac-4a46-a112-0ceff3aac81c",
-//       "authFields": {
-//         "email": "",
-//         "email_verified": false,
-//         "phone_number": "",
-//         "name": ""
-//       },
-//       "firebase": {
-//         "sign_in_provider": "google.com"
-//       }
-//     }
-
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBSK0r1Ix834EMV2VqQUCm28MdUxuS86A8",
-  authDomain: "coffee-website-441ca.firebaseapp.com",
-  databaseURL: "https://coffee-website-441ca-default-rtdb.firebaseio.com",
-  projectId: "coffee-website-441ca",
-  storageBucket: "coffee-website-441ca.appspot.com",
-  messagingSenderId: "1084779597603",
-  appId: "1:1084779597603:web:1a7baad6a8bdf0edf5c696",
+  apiKey: "AIzaSyBx7CX3m51KSBpAkpeKgfD1qq-PC7Z6YVQ",
+
+  authDomain: "coffee-website-cb1f9.firebaseapp.com",
+
+  projectId: "coffee-website-cb1f9",
+
+  storageBucket: "coffee-website-cb1f9.appspot.com",
+
+  messagingSenderId: "484163325361",
+
+  appId: "1:484163325361:web:fab6facb4855ab03854190",
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 export const auth = getAuth(app);
+export const db = getFirestore(app);
+
+export default app;
