@@ -99,7 +99,7 @@ const SignUp = () => {
                   required="Придумайте пароль"
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <Link to={user ? "/profile" : "/signup"}>
+                <Link to={user ? "/profile" : "/signUp"}>
                   <button
                     className="login_right_buttonlogg"
                     type="submit"
