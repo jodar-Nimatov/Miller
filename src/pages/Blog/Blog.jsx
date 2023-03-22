@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import faqimg from "../../assets/blog/coffeFAQ.svg";
 import Accordion from "./Accordion";
 import { useRef } from "react";
+import "./Blog.scss"
 
 const Blog = () => {
   const ref = useRef(null);

@@ -2,6 +2,24 @@ import React from "react";
 import millerLogo from "../../assets/Header/millerLofo.svg";
 import footerImg1 from "../../assets/Footer/footer-coffee.png";
 import footerImg2 from "../../assets/Footer/footer-cup.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
+
+const notifyras = (e) => {
+  e.preventDefault();
+  toast.warn("ПОЗДРАВЛЯЮ ВЫ УСПЕШНО ПОДПИСАЛИСЬ НА РАССЫЛКУ!", {
+    position: "bottom-center",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    icon: false
+  });
+};
 
 const Footer = () => {
   return (
@@ -26,9 +44,14 @@ const Footer = () => {
                       className="footer-input"
                       placeholder="Ваш email"
                     />
-                    <button type="submit" className="footer-button">
+                    <button
+                      onClick={notifyras}
+                      type="submit"
+                      className="footer-button"
+                    >
                       Подписаться
                     </button>
+                    <ToastContainer />
                     <p className="subscription-description">
                       Нажимая на кнопку “Подписаться”, вы принимаете правила{" "}
                       <a href="#" className="subLink">
@@ -57,13 +80,13 @@ const Footer = () => {
             <div className="footer__bottom-right">
               <ul className="footer__list">
                 <li className="footer__item">
-                  <a href="#">Каталог товаров</a>
+                  <Link to="catalog/coffee">Каталог товаров</Link>
                 </li>
                 <li className="footer__item">
-                  <a href="#">Блог</a>
+                  <Link to="blog">Блог</Link>
                 </li>
                 <li className="footer__item">
-                  <a href="#">Контакты</a>
+                  <Link to="contacts">Контакты</Link>
                 </li>
               </ul>
             </div>
