@@ -10,7 +10,6 @@ import Modal from "../../Components/ModalCart/Modal";
 import "react-credit-cards-2/lib/styles.scss";
 import Cards from "react-credit-cards-2";
 import InputMask from "react-input-mask";
-import { TextField } from "@mui/material";
 
 const Cart = () => {
   const [modalactive, setModalactive] = useState();
@@ -362,49 +361,23 @@ const Cart = () => {
                           focused={focused}
                           callback={console.log}
                         />
+                        <div className="inp2">
+                          <InputMask
+                            mask="9999 9999 9999 9999"
+                            value={numbercard}
+                            onChange={(e) => setNumbercard(e.target.value)}
+                            disabled={false}
+                            maskChar=" "
+                          ></InputMask>
 
-                        <InputMask
-                          mask="9999 9999 9999 9999"
-                          value={numbercard}
-                          onChange={(e) => setNumbercard(e.target.value)}
-                          disabled={false}
-                          maskChar=" "
-                        >
-                          {() => (
-                            <TextField
-                              id="number"
-                              fullWidth
-                              label="Número"
-                              onFocusCapture={handleInputFocus}
-                            />
-                          )}
-                        </InputMask>
-
-                        <TextField
-                          id="name"
-                          fullWidth
-                          label="Nome"
-                          value={namecard}
-                          onChange={(e) => setNamecard(e.target.value)}
-                          onFocusCapture={handleInputFocus}
-                        />
-
-                        <InputMask
-                          mask="99/99"
-                          value={expiry}
-                          onChange={(e) => setExpiry(e.target.value)}
-                          disabled={false}
-                          maskChar=" "
-                        >
-                          {() => (
-                            <TextField
-                              id="expiry"
-                              fullWidth
-                              label="Validade"
-                              onFocusCapture={handleInputFocus}
-                            />
-                          )}
-                        </InputMask>
+                          <InputMask
+                            mask="99/99"
+                            value={expiry}
+                            onChange={(e) => setExpiry(e.target.value)}
+                            disabled={false}
+                            maskChar=" "
+                          ></InputMask>
+                        </div>
 
                         <InputMask
                           mask="999"
@@ -412,21 +385,13 @@ const Cart = () => {
                           onChange={(e) => setCvc(e.target.value)}
                           disabled={false}
                           maskChar=""
-                        >
-                          {() => (
-                            <TextField
-                              id="cvc"
-                              fullWidth
-                              label="CVC"
-                              onFocusCapture={handleInputFocus}
-                            />
-                          )}
-                        </InputMask>
+                          className="inpname"
+                        ></InputMask>
                         <button
                           onClick={(e) => {
-                            setAdds(false)
-                            e.preventDefault()
-                            setModalactive(false)
+                            setAdds(false);
+                            e.preventDefault();
+                            setModalactive(false);
                           }}
                           className="oformlenie"
                         >

@@ -426,10 +426,16 @@
   line-height: 21px;
   text-align: center;
   font-family: "Gilroy";
+  transform: translate(-62px);
   @media (max-width: 375px) {
     width: 200px;
     font-size: 14px;
-    transform: translateX(64px
-    );
+    transform: translateX(64px);
   }
+}
+.inpname {
+  transform: translate(187px, -36px);
+}
+.inp2 {
+  transform: translateX(119px);
 }
