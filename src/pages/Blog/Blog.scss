@@ -9,6 +9,9 @@
 // }
 .coffe_news {
   height: 1860px;
+  @media (max-width: 375px) {
+    height: 1500px;
+  }
 }
 .blog_ul {
   display: flex;
@@ -453,7 +456,7 @@
   top: -450px;
   // transform: translateY(-452px);
   @media (max-width: 375px) {
-    padding-top: 50px;
+    padding-top: 500px;
   }
 }
 .company {
