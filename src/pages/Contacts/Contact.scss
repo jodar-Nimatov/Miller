@@ -39,7 +39,7 @@
   }
 }
 .switch-contact {
-  width: 580px;
+  width: 526px;
   height: 42px;
   margin-bottom: 16px;
   margin-left: 15px;
@@ -153,12 +153,13 @@
 
 }
 .maptip-yandex{
-  margin-left: 30px;
-  margin-top: 60px;
+  // margin-left: 30px;
+  // margin-top: 60px;
   width: 600px;
+  // display: flex;
   height: 375px;
   @media (max-width: 375px) {
-    width: 300px;
+    // width: 300px;
     // display: block;
   }
   // @media (max-width: 375px) {
@@ -286,15 +287,12 @@
   }
 }
 // .aga {
-//   position: relative;
-//     top: 5px;
-//     left:71px
-//     @media (max-width:375px) {
-    
-//     }
+//   margin-left: -362px;
+//   margin-top: 398px;
+// }
   
 
-// }
+
 // .contacts-left.forDF{
 //   height: 372px;
 //   width: 680px;
@@ -314,10 +312,23 @@
 //   }
   
 // }
-// .map{
-//    top: 5px;
-//    left:124px
- 
-   
-// }
+.map{
+  // position: relative;
+  display: flex;
+  margin-left: 117px;
+  margin-top: 71px;
+  @media (max-width:375px) {
+     display: contents;    
+  }
+}
+.maps{
+  // position: relative;
+  display: flex;
+  margin-left: 476px;
+  margin-top: -342px;
+  @media (max-width:375px) {
+    display: contents;
+
+  }
+}
 
