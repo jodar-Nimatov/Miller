@@ -13,12 +13,12 @@ import roast2 from "../../../assets/Catalog/Coffee/Filters/roast2.svg";
 import roast1 from "../../../assets/Catalog/Coffee/Filters/roast1.svg";
 import rating from "../../../assets/Catalog/Coffee/Filters/rating.svg";
 import Blog from "../../Blog/Blog";
-import Rewievs from "../../Rewievs/Rewievs";
 const ProductCard = () => {
   const [card, setCard] = useState({});
   const { id, category, types, addCart } = useContext(CustomContext);
   const [count, setCount] = useState(1);
   const obj = { one: false, two: false };
+  let comments = null;
   useEffect(() => {
     axios
       .get(
@@ -28,6 +28,9 @@ const ProductCard = () => {
       )
       .then((res) => setCard(res.data[0]));
   }, [id, category]);
+  if (card.comments != undefined) {
+    comments = card.comments;
+  }
   return (
     <div className="wrapper">
       <div className="card-back">
@@ -211,7 +214,49 @@ const ProductCard = () => {
                 }`}
               >
                 <Blog />
-                <Rewievs/>
+              </div>
+              <div className="Rewievs">
+                <div className="container">
+                  <div className="Rewievs__inner">
+                    <div className="Rewievs__inner__title">
+                      <h2>Отзывы</h2>
+                    </div>
+                    <div className="Rewievs__row">
+                      {comments !== null
+                        ? comments.map((item) => (
+                            <div className="Rewievs__block" key={item.id}>
+                              <div className="Rewievs__block__inner">
+                                <div className="Rewievs__block__inner__above">
+                                  <h1>{item.title}</h1>
+                                  <img src={rating} alt="rate" />
+                                  <p>
+                                    {item.comment}
+                                  </p>
+                                  <hr />
+                                </div>
+                                <div className="Rewievs__block__inner__bellow">
+                                  <div className="Rewievs__block__inner__bellow__inner">
+                                    <div>
+                                      <img
+                                        width="50px"
+                                        height="50px"
+                                        src={item.avatar}
+                                        alt=""
+                                      />
+                                    </div>
+                                    <div className="bellow__inner_right">
+                                      <h3>{item.name}</h3>
+                                      <h4>Г. {item.geo}</h4>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          ))
+                        : ""}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
