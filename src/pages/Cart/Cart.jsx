@@ -349,10 +349,10 @@ const Cart = () => {
                       <form action="">
                         <Cards
                           locale={{
-                            valid: "Valido até",
+                            valid: "Date",
                           }}
                           placeholders={{
-                            name: "Seu nome aqui",
+                            name: "Your name",
                           }}
                           number={numbercard}
                           name={namecard}
@@ -361,13 +361,15 @@ const Cart = () => {
                           focused={focused}
                           callback={console.log}
                         />
-                        <div className="inp2">
+                        <div className="inpts">
                           <InputMask
                             mask="9999 9999 9999 9999"
                             value={numbercard}
                             onChange={(e) => setNumbercard(e.target.value)}
                             disabled={false}
-                            maskChar=" "
+                            maskChar=""
+                            placeholder="number"
+                            style={{ width: "250px", height: "25px" }}
                           ></InputMask>
 
                           <InputMask
@@ -375,18 +377,21 @@ const Cart = () => {
                             value={expiry}
                             onChange={(e) => setExpiry(e.target.value)}
                             disabled={false}
-                            maskChar=" "
+                            maskChar=""
+                            placeholder="expiry"
+                            style={{ width: "250px", height: "25px" }}
+                          ></InputMask>
+
+                          <InputMask
+                            mask="999"
+                            value={cvc}
+                            onChange={(e) => setCvc(e.target.value)}
+                            disabled={false}
+                            placeholder="cvc"
+                            maskChar=""
+                            style={{ width: "250px", height: "25px" }}
                           ></InputMask>
                         </div>
-
-                        <InputMask
-                          mask="999"
-                          value={cvc}
-                          onChange={(e) => setCvc(e.target.value)}
-                          disabled={false}
-                          maskChar=""
-                          className="inpname"
-                        ></InputMask>
                         <button
                           onClick={(e) => {
                             setAdds(false);
