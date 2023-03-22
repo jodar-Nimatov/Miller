@@ -45,6 +45,7 @@ body {
 }
 .wrapper {
   min-height: 100%;
+  overflow: hidden;
   @media (max-width: 375px) {
     overflow-x: hidden;
   }
@@ -72,3 +73,4 @@ body {
 @import "../pages/Cart/Cart.scss";
 @import "../pages/Cart/CartEmpty.scss";
 @import "../Layout/Header/BurgerMenu.scss";
+@import "../pages/Rewievs/Rewievs.scss";

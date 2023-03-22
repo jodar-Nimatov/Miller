@@ -13,6 +13,7 @@ import roast2 from "../../../assets/Catalog/Coffee/Filters/roast2.svg";
 import roast1 from "../../../assets/Catalog/Coffee/Filters/roast1.svg";
 import rating from "../../../assets/Catalog/Coffee/Filters/rating.svg";
 import Blog from "../../Blog/Blog";
+import Rewievs from "../../Rewievs/Rewievs";
 const ProductCard = () => {
   const [card, setCard] = useState({});
   const { id, category, types, addCart } = useContext(CustomContext);
@@ -210,6 +211,7 @@ const ProductCard = () => {
                 }`}
               >
                 <Blog />
+                <Rewievs/>
               </div>
             </div>
           </div>

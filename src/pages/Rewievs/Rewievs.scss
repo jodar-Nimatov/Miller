@@ -1,0 +1,48 @@
+.Rewievs{
+    height: 1250px;
+    &__inner__title{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 35px;
+        padding-bottom: 50px;
+    }
+    &__block{
+        width: 1180px;
+        height: 332px;
+        box-shadow: 0 0 10px black;
+        border-radius: 12px;
+        margin-top: 40px;
+        &__inner{
+            padding: 15px 0 0 55px;
+            &__above{
+                padding-bottom: 170px;
+                transform: translateY(50px);
+            }
+            &__above > h1{
+                font-size: 18px;
+                padding-bottom: 10px;
+            }
+            &__above > img{
+                padding-bottom: 10px;
+            }
+            &__above > p{
+                width: 782px;
+            }
+            &__above > hr{
+                transform: translate(-55px, 85px);
+                width: 1180px;
+            }
+            &__bellow{
+                transform: translateY(-20px);
+                &__inner{
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                }
+            }
+
+        }
+    }
+}
