@@ -6,8 +6,13 @@ import Visa from "./Check-photo/Visa.svg";
 import { CustomContext } from "../../utils/Context";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Modal from "../../Components/ModalCart/Modal";
+import "react-credit-cards-2/lib/styles.scss";
+import Cards from "react-credit-cards-2";
+import InputMask from "react-input-mask";
 
 const Cart = () => {
+  const [modalactive, setModalactive] = useState();
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [number, setNumber] = useState("");
@@ -18,6 +23,16 @@ const Cart = () => {
   const [house, setHouse] = useState("");
   const [postcode, setPostcode] = useState("");
   const [comment, setComment] = useState("");
+  /////
+  const [cvc, setCvc] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [focused, setFocused] = useState("");
+  const [namecard, setNamecard] = useState("");
+  const [numbercard, setNumbercard] = useState("");
+
+  const handleInputFocus = ({ target }) => {
+    setFocused(target.id);
+  };
 
   const notify = (e) => {
     e.preventDefault();
@@ -216,7 +231,7 @@ const Cart = () => {
                       ></input>
                       <input
                         value={number}
-                        type="number"
+                        type="tel"
                         placeholder="Телефон"
                         onChange={(e) => setNumber(e.target.value)}
                       ></input>
@@ -327,13 +342,68 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className="Total-down">
-                    <button
-                      className="Total-btn"
-                      onClick={() => setAdds(false)}
-                    >
+                    <button className="Total-btn" onClick={setModalactive}>
                       Оплатить заказ
                     </button>
+                    <Modal active={modalactive} setActive={setModalactive}>
+                      <form action="">
+                        <Cards
+                          locale={{
+                            valid: "Date",
+                          }}
+                          placeholders={{
+                            name: "Your name",
+                          }}
+                          number={numbercard}
+                          name={namecard}
+                          expiry={expiry}
+                          cvc={cvc}
+                          focused={focused}
+                          callback={console.log}
+                        />
+                        <div className="inpts">
+                          <InputMask
+                            mask="9999 9999 9999 9999"
+                            value={numbercard}
+                            onChange={(e) => setNumbercard(e.target.value)}
+                            disabled={false}
+                            maskChar=""
+                            placeholder="number"
+                            style={{ width: "250px", height: "25px" }}
+                          ></InputMask>
 
+                          <InputMask
+                            mask="99/99"
+                            value={expiry}
+                            onChange={(e) => setExpiry(e.target.value)}
+                            disabled={false}
+                            maskChar=""
+                            placeholder="expiry"
+                            style={{ width: "250px", height: "25px" }}
+                          ></InputMask>
+
+                          <InputMask
+                            mask="999"
+                            value={cvc}
+                            onChange={(e) => setCvc(e.target.value)}
+                            disabled={false}
+                            placeholder="cvc"
+                            maskChar=""
+                            style={{ width: "250px", height: "25px" }}
+                          ></InputMask>
+                        </div>
+                        <button
+                          onClick={(e) => {
+                            setAdds(false);
+                            e.preventDefault();
+                            setModalactive(false);
+                          }}
+                          className="oformlenie"
+                        >
+                          ОФОРМИТЬ ЗАКАЗ
+                        </button>
+                      </form>
+                    </Modal>
                     <p>
                       Ваши персональные данные будут использоваться для
                       управления доступом к вашей учетной записи и для других
