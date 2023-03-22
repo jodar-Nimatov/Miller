@@ -429,7 +429,14 @@
   @media (max-width: 375px) {
     width: 200px;
     font-size: 14px;
-    transform: translateX(64px
-    );
+    transform: translateX(64px);
   }
+}
+.inpts {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 62px;
+
 }

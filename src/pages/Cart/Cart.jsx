@@ -10,7 +10,6 @@ import Modal from "../../Components/ModalCart/Modal";
 import "react-credit-cards-2/lib/styles.scss";
 import Cards from "react-credit-cards-2";
 import InputMask from "react-input-mask";
-import { TextField } from "@mui/material";
 
 const Cart = () => {
   const [modalactive, setModalactive] = useState();
@@ -350,10 +349,10 @@ const Cart = () => {
                       <form action="">
                         <Cards
                           locale={{
-                            valid: "Valido até",
+                            valid: "Date",
                           }}
                           placeholders={{
-                            name: "Seu nome aqui",
+                            name: "Your name",
                           }}
                           number={numbercard}
                           name={namecard}
@@ -362,71 +361,42 @@ const Cart = () => {
                           focused={focused}
                           callback={console.log}
                         />
+                        <div className="inpts">
+                          <InputMask
+                            mask="9999 9999 9999 9999"
+                            value={numbercard}
+                            onChange={(e) => setNumbercard(e.target.value)}
+                            disabled={false}
+                            maskChar=""
+                            placeholder="number"
+                            style={{ width: "250px", height: "25px" }}
+                          ></InputMask>
 
-                        <InputMask
-                          mask="9999 9999 9999 9999"
-                          value={numbercard}
-                          onChange={(e) => setNumbercard(e.target.value)}
-                          disabled={false}
-                          maskChar=" "
-                        >
-                          {() => (
-                            <TextField
-                              id="number"
-                              fullWidth
-                              label="Número"
-                              onFocusCapture={handleInputFocus}
-                            />
-                          )}
-                        </InputMask>
+                          <InputMask
+                            mask="99/99"
+                            value={expiry}
+                            onChange={(e) => setExpiry(e.target.value)}
+                            disabled={false}
+                            maskChar=""
+                            placeholder="expiry"
+                            style={{ width: "250px", height: "25px" }}
+                          ></InputMask>
 
-                        <TextField
-                          id="name"
-                          fullWidth
-                          label="Nome"
-                          value={namecard}
-                          onChange={(e) => setNamecard(e.target.value)}
-                          onFocusCapture={handleInputFocus}
-                        />
-
-                        <InputMask
-                          mask="99/99"
-                          value={expiry}
-                          onChange={(e) => setExpiry(e.target.value)}
-                          disabled={false}
-                          maskChar=" "
-                        >
-                          {() => (
-                            <TextField
-                              id="expiry"
-                              fullWidth
-                              label="Validade"
-                              onFocusCapture={handleInputFocus}
-                            />
-                          )}
-                        </InputMask>
-
-                        <InputMask
-                          mask="999"
-                          value={cvc}
-                          onChange={(e) => setCvc(e.target.value)}
-                          disabled={false}
-                          maskChar=""
-                        >
-                          {() => (
-                            <TextField
-                              id="cvc"
-                              fullWidth
-                              label="CVC"
-                              onFocusCapture={handleInputFocus}
-                            />
-                          )}
-                        </InputMask>
+                          <InputMask
+                            mask="999"
+                            value={cvc}
+                            onChange={(e) => setCvc(e.target.value)}
+                            disabled={false}
+                            placeholder="cvc"
+                            maskChar=""
+                            style={{ width: "250px", height: "25px" }}
+                          ></InputMask>
+                        </div>
                         <button
                           onClick={(e) => {
-                            setAdds(false)
-                            e.preventDefault()
-                            setModalactive(false)
+                            setAdds(false);
+                            e.preventDefault();
+                            setModalactive(false);
                           }}
                           className="oformlenie"
                         >
