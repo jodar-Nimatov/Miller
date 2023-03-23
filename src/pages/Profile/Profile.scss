@@ -1,13 +1,15 @@
 .profile {
+
   max-width: 100%;
   background: #e5e5e5;
-
-  @media (max-width: 376px) {
+ 
+  
+  @media(max-width: 376px) {
     background: white;
     max-width: 375px;
     overflow: hidden;
     max-width: 100%;
-  }
+}
 }
 
 .home {
@@ -28,11 +30,14 @@
   width: 1180px;
   height: 168px;
 
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     display: inline-block;
     max-width: 376px;
-  }
+
 }
+}
+
+
 
 .profile__name {
   display: flex;
@@ -42,15 +47,17 @@
   height: 168px;
   background: #ffffff;
   box-shadow: 0px 0px 50px rgba(163, 163, 163, 0.25);
-
-  @media (max-width: 376px) {
+  
+  @media(max-width: 376px) {
     width: 375px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height: 242px;
     border-radius: 10px 10px 0px 0px;
-  }
 }
+}
+
+
 
 .profile__name li {
   list-style: none;
@@ -58,13 +65,14 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-
-  @media (max-width: 376px) {
+  
+@media(max-width: 376px) {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 30px;
-  }
+  
+}
 }
 
 .profile__name ul {
@@ -83,7 +91,7 @@
     margin-top: 30px;
   }
 
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     .joodar {
       width: 70px;
       height: 70px;
@@ -91,6 +99,7 @@
       margin-right: 1px;
       margin-left: 1px;
       margin-top: 85px;
+      
     }
   }
   .name__joodar {
@@ -101,13 +110,15 @@
     line-height: 44px;
   }
 
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     .name__joodar {
-      font-weight: 900;
-      font-size: 20px;
-      line-height: 25px;
-      transform: translate(-90px, 6px);
+       font-weight: 900;
+       font-size: 20px;
+       line-height: 25px;
+       transform: translate(-90px, -16px);
+        
     }
+   
   }
 
   .btn__joodar {
@@ -125,7 +136,7 @@
     margin-bottom: 21px;
   }
 
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     .btn__joodar {
       margin-left: 1px;
       margin-right: 1px;
@@ -143,18 +154,20 @@
     max-width: 200px;
   }
 
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     .profile__joodar {
       margin-left: 18px;
       margin-right: 20px;
       margin-bottom: 33px;
     }
   }
+
 }
 
-@media (max-width: 376px) {
+@media(max-width: 376px) {
   .profile__name {
     align-items: center;
+  
   }
 }
 
@@ -168,18 +181,22 @@
   width: 441px;
   height: 168px;
 
+
   .discount__inner {
     margin-top: 13px;
     margin-left: 30px;
     margin-bottom: 0px;
   }
 
-  @media (max-width: 376px) {
+ 
+
+   @media(max-width: 376px) {
     .discount__inner {
       margin-left: 21px;
       padding-top: 1px;
     }
-  }
+   }
+ 
 
   .discount__btn {
     width: 23px;
@@ -192,7 +209,7 @@
     transform: translate(338px, -4px);
   }
 
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     .discount__btn {
       width: 33px;
       position: absolute;
@@ -203,15 +220,18 @@
   }
 }
 
-@media (max-width: 376px) {
-  .discount__profile {
-    width: 374px;
-    height: 156px;
-    border-radius: 0px 0px 10px 10px;
-    top: -35px;
-    right: -1px;
+  @media(max-width: 376px) {
+    .discount__profile {
+      width: 374px;
+      height: 156px;
+      border-radius: 0px 0px 10px 10px;
+      top: -35px;
+      right: -1px;
+ 
+    }
   }
-}
+  
+
 
 .discount__profile li {
   color: #ffffff;
@@ -220,11 +240,13 @@
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 30px;
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-  }
+
+}
+
 }
 
 .discount__text {
@@ -233,43 +255,53 @@
   font-size: 22px;
   line-height: 27px;
 
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     font-weight: 900;
     font-size: 20px;
     line-height: 25px;
-    color: #ffffff;
+    color: #FFFFFF;
     margin-bottom: 20px;
     margin-top: 30px;
-  }
+
+  
+}
 }
 
+
+
 .discount__title {
-  font-family: "Gilroy";
+  font-family: 'Gilroy';
   font-style: normal;
   font-weight: 700;
   margin-bottom: 30px;
   font-size: 12px;
   line-height: 14px;
-
-  @media (max-width: 376px) {
+  
+@media(max-width: 376px) {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     margin-right: 30px;
     margin-top: 20px;
-  }
+  
 }
+}
+
+
 
 .discount__profile p {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   margin-bottom: 7px;
-
-  @media (max-width: 376px) {
+  
+  @media(max-width: 376px) {
     margin-bottom: 10px;
-  }
+
 }
+
+}
+
 
 ///////BLOCK----2
 
@@ -295,128 +327,149 @@
     height: auto;
     margin-bottom: 30px;
 
-    @media (max-width: 376px) {
-      transform: translate(-78px, 37px);
-      width: 340px;
-      height: auto;
+    @media(max-width: 376px) {
+    transform: translate(-78px, 37px);
+    width: 340px;
+    height: auto;
+
     }
     .cards__inner {
-      margin-top: 22px;
-      display: flex;
-      margin-bottom: 20px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
-      color: #747474;
-    }
-
-    .cards__text {
-      margin-left: 59px;
-      text-align: center;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
-      transition: transform 1s ease-in-out;
-      transform-origin: 0 0 0;
-      max-width: 166px;
-      color: #747474;
-      @media (max-width: 376px) {
-        font-weight: 700;
-        max-width: 146px;
-        font-size: 10px;
-        transform: translate(-31px, 9px);
-        line-height: 12px;
-      }
-    }
-
-    .product__img {
-      display: none;
-      width: 73px;
-      margin-left: 10px;
-      height: 75px;
-      @media (max-width: 376px) {
-        display: block;
-      }
-    }
-
-    .product__info {
-      display: none;
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 12px;
-      @media (max-width: 376px) {
-        display: block;
-        transform: translate(28px, 21px);
-      }
-    }
-
-    .cards__price {
-      font-size: 14px;
-      text-align: center;
-      transform: translate(51px, 0px);
-
-      @media (max-width: 376px) {
-        transform: translate(61px, 8px);
-      }
-    }
-
-    .cards__discount {
-      font-size: 14px;
-      transform: translate(230px, 0px);
-      @media (max-width: 376px) {
-        transform: translate(39px, 28px);
-      }
-    }
-
-    .cards__price2 {
-      transform: translate(359px, -1px);
-      font-size: 14px;
-    }
-
-    .cards__title {
-      margin-left: 20px;
-      margin-right: 10px;
-    }
-    .cards__p {
-      display: flex;
-      column-gap: 40px;
-
-      @media (max-width: 376px) {
-        display: block;
-      }
-    }
-  }
-
-  .info__texts li {
+    margin-top: 22px;
+    display: flex;
+    margin-bottom: 20px;
     font-weight: 500;
-    margin-right: 40px;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 16px; 
     color: #747474;
-    text-align: center;
-    display: flex;
-    margin-top: 12px;
+}
+
+
+
+
+.cards__text {
+  margin-left: 59px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  transform: translate(-19px, -3px);
+  margin-right: 6px;
+  min-width: 165px;
+  line-height: 16px;
+  max-width: 166px;
+  color: #747474;
+  @media(max-width: 376px) {
+    font-weight: 700;
+    max-width: 146px;
+    font-size: 10px;
+    transform: translate(-31px, 9px);
+    line-height: 12px;
   }
-  .info__texts ul {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
 
-    @media (max-width: 376px) {
-      display: none;
-    }
+}
 
-    .info__text {
-      padding-bottom: 30px;
-    }
+.product__img {
+  display: none;
+  width: 73px;
+  margin-left: 10px;
+  height: 75px;
+  @media(max-width: 376px) {
+    display: block;
+
   }
 }
 
-@media (max-width: 376px) {
+.product__info {
+  display: none;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  @media(max-width: 376px) {
+    display: block;
+    transform: translate(28px, 21px);
+  }
+}
+
+
+.cards__price {
+  font-size: 14px;
+  text-align: center;
+  transform: translate(51px, 0px);
+
+  @media(max-width: 376px) {
+    transform: translate(61px, 8px);
+  }
+}
+
+.cards__discount {
+  font-size: 14px;
+  transform: translate(230px, 0px);
+  @media(max-width: 376px) {
+    transform: translate(39px, 28px);
+  }
+}
+
+.cards__price2 {
+  transform: translate(359px, -1px);
+  font-size: 14px;
+}
+
+
+
+.cards__title {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.cards__p {
+  display: flex;
+  column-gap: 40px;
+
+  @media(max-width: 376px) {
+    display: block;
+  }
+}
+  }
+
+.info__texts li {
+  font-weight: 500;
+  margin-right: 40px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #747474;
+  text-align: center;
+  display: flex;
+  margin-top: 12px;
+
+
+
+}
+.info__texts ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+
+  @media(max-width: 376px) {
+    display: none;
+  }
+
+  .info__text {
+    padding-bottom: 30px;
+
+  }
+}
+
+
+  
+
+
+
+}
+
+@media(max-width: 376px) {
   .orders__card {
     box-shadow: none;
     border: none;
     border-radius: 0px;
+    
   }
 }
 
@@ -428,6 +481,7 @@
 .orders__title {
   margin-left: 100px;
   margin-top: 30px;
+  
 }
 
 .orders__p {
@@ -436,62 +490,66 @@
 }
 
 .orders__p p {
-  display: flex;
-  margin-left: 101px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  font-size: 14px;
-  column-gap: 583px;
-  line-height: 16px;
+    display: flex;
+    margin-left: 101px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 14px;
+    column-gap: 583px;
+    line-height: 16px;
 
-  @media (max-width: 376px) {
-    display: block;
-    transform: translate(-80px, 3px);
+    @media(max-width: 376px) {
+      display: block;
+      transform: translate(-80px, 3px);
+    }
   }
-}
 
 .price__info {
   margin-top: 40px;
   margin-left: 882px;
   margin-bottom: 20px;
 
-  @media (max-width: 376px) {
-    transform: translate(-862px, 10px);
+  @media(max-width: 376px) {
+     transform: translate(-862px, 10px);
   }
-
+  
   .price__itog {
-    font-family: "Gilroy";
-
-    @media (max-width: 376px) {
+    font-family: 'Gilroy';
+    
+    @media(max-width: 376px) {
       font-weight: 700;
       color: #222222;
       font-size: 16px;
       line-height: 17px;
       margin-bottom: 10px;
+    
     }
   }
 
-  .price__number1 {
+.price__number1 {
     display: none;
 
-    @media (max-width: 376px) {
+    @media(max-width: 376px) {
       display: block;
-      transform: translate(261px, 0px);
+      transform: translate(261px, 0px)
+
     }
   }
   .price__number2 {
     display: none;
 
-    @media (max-width: 376px) {
+    @media(max-width: 376px) {
       display: block;
       transform: translate(226px, 0px);
+
     }
   }
+  
 
   .itog__number {
-    font-family: "Gilroy";
-
-    @media (max-width: 376px) {
+    font-family: 'Gilroy';
+    
+    @media(max-width: 376px) {
       position: fixed;
       font-weight: 700;
       color: #222222;
@@ -503,16 +561,17 @@
   }
 
   .dostavka {
-    font-family: "Gilroy";
+    font-family: 'Gilroy';
 
-    @media (max-width: 376px) {
+    @media(max-width: 376px) {
+
     }
   }
 
   .dostavka__number {
-    font-size: 12px;
+    font-size: 12px; 
 
-    @media (max-width: 376px) {
+    @media(max-width: 376px) {
       transform: translate(249px, 0px);
     }
   }
@@ -520,40 +579,50 @@
   .price__podytog {
     display: none;
 
-    @media (max-width: 376px) {
+    @media(max-width: 376px) {
       display: block;
+  
     }
   }
-
+  
   .price__skidka {
     display: none;
 
-    @media (max-width: 376px) {
+    @media(max-width: 376px) {
       display: block;
+      
     }
   }
 
-  ul {
-    display: flex;
-  }
-  li {
-    margin-bottom: 5px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: #747474;
-    margin: 2px 2px;
-    padding-top: 5px;
-  }
+ ul {
+  display: flex;
+ 
 
-  p {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: #747474;
-    padding-top: 5px;
-  }
 }
+ li {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #747474;
+  margin: 2px 2px;
+  padding-top: 5px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #747474;
+  padding-top: 5px;
+}
+
+
+}
+
+
+
+
 
 .orders__title h1 {
   font-weight: 900;
@@ -561,11 +630,13 @@
   line-height: 37px;
 }
 
-@media (max-width: 376px) {
+@media(max-width: 376px) {
   .orders__cart h1 {
     margin-left: -80px;
   }
+
 }
+ 
 
 .orders__title button {
   background: #fff7e1;
@@ -581,13 +652,15 @@
   color: #f9b300;
   margin-top: 20px;
 
-  @media (max-width: 376px) {
-    width: 340px;
-    height: 40px;
-    display: block;
-    transform: translate(-78px, 10px);
+  @media(max-width: 376px) {
+      width: 340px;
+      height: 40px;
+      display: block;
+      transform: translate(-78px, 10px);
   }
 }
+
+
 
 .orders__title button:focus {
   background: #f6f6f6;
@@ -601,18 +674,21 @@
   color: #222222;
   margin-top: 30px;
   margin-right: 105px;
+
 }
 
-.slider__profile {
-  font-family: "Gilroy";
 
-  @media (max-width: 376px) {
-    width: 100%;
-    max-width: 376px;
-    height: 400px;
-    margin: 20px;
-    border-radius: 20px;
-    position: relative;
+
+.slider__profile {
+  font-family: 'Gilroy';
+  
+  @media(max-width: 376px) {
+  width: 100%;
+  max-width: 376px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 20px;
+  position: relative;
   }
 }
 
@@ -620,16 +696,17 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 376px) {
-    overflow-x: scroll;
+  @media(max-width: 376px) {
+      overflow-x:scroll ;
+    
   }
 }
 
 .slides__inner img {
   padding-top: 40px;
   padding-right: 20px;
-
-  @media (max-width: 376px) {
+  
+  @media(max-width: 376px) {
     width: 250px;
     height: 273px;
   }
@@ -641,6 +718,7 @@
   line-height: 27px;
   color: #222222;
   padding-top: 40px;
+
 }
 
 .coffee__profile h1 {
@@ -651,7 +729,8 @@
   line-height: 24px;
   color: #ffffff;
 
-  @media (max-width: 376px) {
+
+  @media(max-width: 376px) {
     font-weight: 700;
     width: 213px;
     height: 35px;
@@ -668,6 +747,7 @@
   margin-top: 30px;
   font-size: 22px;
   line-height: 27px;
+  
 }
 
 .slider__profile p {
@@ -677,13 +757,14 @@
   line-height: 16px;
   color: #ffffff;
 
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     position: relative;
     top: -10px;
     left: 1px;
+
   }
 }
 
@@ -692,15 +773,15 @@
   font-size: 22px;
   line-height: 27px;
   margin-top: 40px;
-  @media (max-width: 376px) {
+  @media(max-width: 376px) {
     font-weight: 900;
     font-size: 20px;
     line-height: 25px;
   }
 }
 
-.discount-block.none {
-  display: none;
+.discount-block.none{
+display: none;
 }
 
 .discount-block {
@@ -710,6 +791,7 @@
 .info-block.none {
   display: none;
 }
+
 
 .addComp-block.none {
   display: none;

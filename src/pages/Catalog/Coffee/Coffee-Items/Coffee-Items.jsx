@@ -280,7 +280,7 @@ const CoffeeItems = ({ filters }) => {
                       <small>{item.geography}</small>
                       <h4>{item.title}</h4>
                       <p>{item.subtitle}</p>
-                      <Link to={`/catalog/{somethingFromContext}/card-item`} className="treedots">
+                      <Link to={`/catalog/${category}/card-item`} className="treedots">
                         Больше
                       </Link>
                       <>...</>
