@@ -12,7 +12,6 @@ const Rewievs = () => {
           </div>
           <div className="Rewievs__row">
             <div className="Rewievs__block">
-              Z{" "}
               <div className="Rewievs__block__inner">
                 <div className="Rewievs__block__inner__above">
                   <h1>Отличный вкус!</h1>
