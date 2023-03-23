@@ -86,7 +86,7 @@ const SignUp = () => {
                 <input
                   value={number}
                   className="number_inputss"
-                  type="number"
+                  type='tel'
                   placeholder="Телефон"
                   required="number"
                   onChange={(e) => setNumber(e.target.value)}
