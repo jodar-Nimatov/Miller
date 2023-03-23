@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, } from "react";
+import React, { useContext, useEffect } from "react";
 import kislinkaHigh from "../../../../assets/Catalog/kislinkH.svg";
 import kislinkaLow from "../../../../assets/Catalog/kislinkL.svg";
 import kislinkaMedium from "../../../../assets/Catalog/kislinkM.svg";
@@ -14,12 +14,12 @@ import axios from "axios";
 import { CustomContext } from "../../../../utils/Context";
 
 const CoffeeItems = ({ filters }) => {
-  const {addCart, chooseId, category, search} = useContext(CustomContext)
+  const { addCart, chooseId, category, search } = useContext(CustomContext);
   const [cards, setCards] = useState([]);
-  const [product, setProduct] = useState('hide')
+  const [product, setProduct] = useState("hide");
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
-  const url = "http://localhost:3333/catalog?";
+  const url = "https://gospodin-rusan.onrender.com/catalog?";
   const filterBase = {
     geographyFilter: "",
     kislinkaFilter: "",
@@ -83,7 +83,8 @@ const CoffeeItems = ({ filters }) => {
               ? "_sort=kislinka&_order=desc"
               : ""
           }` +
-          "&" + `${search !== '' ? 'title_like=' + search + '&' : ''}` +
+          "&" +
+          `${search !== "" ? "title_like=" + search + "&" : ""}` +
           filterBase.geographyFilter +
           filterBase.kislinkaFilter +
           filterBase.coftypeFilter +
@@ -108,209 +109,219 @@ const CoffeeItems = ({ filters }) => {
   };
   return (
     <>
-    <div className='tea-cards-back'>
-      <div className="coffee__cards">
-        <div className="container">
-          <div className="coffee__cards-inner">
-            <h4 className={`cortirovka siuu ${modal}`}>Тебе с пенкой?</h4>
-            <h4 className={`cortirovka ${modal}`} onClick={closeSorting}>
-              {sorting}
-            </h4>
-            <div className={`c-sorting-modal-window ${modal}`}>
-              <ul>
-                <div className="sorting-title">
-                  {sorting} <span>&times;</span>
-                </div>
-                <li
-                  className="sorting-item"
-                  onClick={(e) => setSorting(e.target.innerHTML)}
-                >
-                  По возрастанию цены
-                </li>
-                <li
-                  className="sorting-item"
-                  onClick={(e) => setSorting(e.target.innerHTML)}
-                >
-                  По убыванию цены
-                </li>
-                <li
-                  className="sorting-item"
-                  onClick={(e) => setSorting(e.target.innerHTML)}
-                >
-                  По рейтингу
-                </li>
-                <li
-                  className="sorting-item"
-                  onClick={(e) => setSorting(e.target.innerHTML)}
-                >
-                  По кислотности
-                </li>
-              </ul>
-            </div>
-            <div className="coffee__cards-inner-row tocenter">
-              {/* <BsStar/> */}
-              {cards.map((item) => {
-                // Nujno propisat nemnogo logiki dlya cartochek.
-                return (
-                  <div key={item.id} className="coffee__cards-inner-row-card">
-                    <div className="coffee__cards-inner-row-card-top">
-                      <div className="coffee__cards-inner-row-card-top-left">
-                        {item.category.map((cy) => (
-                          <p key={cy.length}>
-                            {cy == "Скидки" ? (
-                              <>
-                                <span className="discount">%</span>
-                                {cy}
-                              </>
-                            ) : (
-                              cy
-                            )}
-                          </p>
-                        ))}
-                      </div>
-                      <div className="coffee__cards-inner-row-card-top-right">
-                        <select>
-                          <option value="250g">250 г.</option>
-                          <option value="500g">500 г.</option>
-                          <option value="1000g">1000 г.</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="coffee__cards-inner-row-card-center">
-                      <div className="coffee__cards-inner-row-card-center-left">
-                        <Link to={`/catalog/${category}/card-item`} className="tea-img-block">
-                          <img
-                          onClick={()=>chooseId(item)}
-                            src={item.image}
-                            height="218px"
-                            className="card-image"
-                            alt=""
-                          />
-                        </Link>
-                      </div>
-                      <div className="coffee__cards-inner-row-card-center-right">
-                        <div className="coffee__cards-inner-row-card-center-right-rating">
-                          <div
-                            className="rating"
-                            style={{
-                              backgroundImage: `url(${rating})`,
-                              height: "12px",
-                              width: `${
-                                Math.floor(item.rating[0]) + item.rating[2]
-                              }px`,
-                              backgroundSize: "50px",
-                              backgroundRepeat: "no-repeat",
-                              position: "relative",
-                            }}
-                          ></div>
-                          <h4>{item.rating}</h4>
-                          <small className="coffee__cards-inner-row-card-center-right-rating-review">
-                            ({item.review} отзыва)
-                          </small>
-                        </div>
-                        <div className="roasting-level">
-                          {item.roast == 5 ? (
-                            <img height="13px" src={roast5} alt="" />
-                          ) : item.roast == 4 ? (
-                            <img height="13px" src={roast4} alt="" />
-                          ) : item.roast == 3 ? (
-                            <img height="13px" src={roast3} alt="" />
-                          ) : item.roast == 2 ? (
-                            <img height="13px" src={roast2} alt="" />
-                          ) : item.roast == 1 ? (
-                            <img height="13px" src={roast1} alt="" />
-                          ) : null}
-                        </div>
-                        <div className="coffee__cards-inner-row-card-center-right-filters">
-                          <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                            <p>Кислинка</p>
-                            <div className="kislinka">
-                              <img
-                                src={
-                                  item.kislinka == "Высокая"
-                                    ? kislinkaHigh
-                                    : item.kislinka == "Средняя"
-                                    ? kislinkaMedium
-                                    : item.kislinka == "Низкая"
-                                    ? kislinkaLow
-                                    : null
-                                }
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                          <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                            <p>Горчинка</p>
-                            <div className="kislinka">
-                              <img
-                                src={
-                                  item.gorchinka > 7
-                                    ? kislinkaHigh
-                                    : item.gorchinka > 3
-                                    ? kislinkaMedium
-                                    : item.gorchinka > 0
-                                    ? kislinkaLow
-                                    : null
-                                }
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                          <div className="coffee__cards-inner-row-card-center-right-filters-item">
-                            <p>Носыщенность</p>
-                            <div className="kislinka">
-                              <img
-                                src={
-                                  item.nasyshennost > 7
-                                    ? kislinkaHigh
-                                    : item.nasyshennost > 3
-                                    ? kislinkaMedium
-                                    : item.nasyshennost > 0
-                                    ? kislinkaLow
-                                    : null
-                                }
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="coffee__cards-inner-row-card-bottom">
-                      <small>{item.geography}</small>
-                      <h4>{item.title}</h4>
-                      <p>{item.subtitle}</p>
-                      <Link to={`/catalog/${category}/card-item`} className="treedots">
-                        Больше
-                      </Link>
-                      <>...</>
-                      <div className="coffee__cards-inner-row-card-bottom-bottom forDF">
-                        <div className="coffee__cards-inner-row-card-bottom-bottom-price">
-                          {item.category.includes("Скидки") ? (
-                            <div className="old-price">
-                              {Math.floor(item.price + (item.price / 100) * 30)}{" "}
-                              ₽
-                            </div>
-                          ) : (
-                            <></>
-                          )}
-                          <h3>{item.price} ₽</h3>
-                        </div>
-                        <button type="button" onClick={() => addCart(item) }>В корзину</button>
-                      </div>
-                    </div>
+      <div className="tea-cards-back">
+        <div className="coffee__cards">
+          <div className="container">
+            <div className="coffee__cards-inner">
+              <h4 className={`cortirovka siuu ${modal}`}>Тебе с пенкой?</h4>
+              <h4 className={`cortirovka ${modal}`} onClick={closeSorting}>
+                {sorting}
+              </h4>
+              <div className={`c-sorting-modal-window ${modal}`}>
+                <ul>
+                  <div className="sorting-title">
+                    {sorting} <span>&times;</span>
                   </div>
-                );
-              })}
+                  <li
+                    className="sorting-item"
+                    onClick={(e) => setSorting(e.target.innerHTML)}
+                  >
+                    По возрастанию цены
+                  </li>
+                  <li
+                    className="sorting-item"
+                    onClick={(e) => setSorting(e.target.innerHTML)}
+                  >
+                    По убыванию цены
+                  </li>
+                  <li
+                    className="sorting-item"
+                    onClick={(e) => setSorting(e.target.innerHTML)}
+                  >
+                    По рейтингу
+                  </li>
+                  <li
+                    className="sorting-item"
+                    onClick={(e) => setSorting(e.target.innerHTML)}
+                  >
+                    По кислотности
+                  </li>
+                </ul>
+              </div>
+              <div className="coffee__cards-inner-row tocenter">
+                {/* <BsStar/> */}
+                {cards.map((item) => {
+                  // Nujno propisat nemnogo logiki dlya cartochek.
+                  return (
+                    <div key={item.id} className="coffee__cards-inner-row-card">
+                      <div className="coffee__cards-inner-row-card-top">
+                        <div className="coffee__cards-inner-row-card-top-left">
+                          {item.category.map((cy) => (
+                            <p key={cy.length}>
+                              {cy == "Скидки" ? (
+                                <>
+                                  <span className="discount">%</span>
+                                  {cy}
+                                </>
+                              ) : (
+                                cy
+                              )}
+                            </p>
+                          ))}
+                        </div>
+                        <div className="coffee__cards-inner-row-card-top-right">
+                          <select>
+                            <option value="250g">250 г.</option>
+                            <option value="500g">500 г.</option>
+                            <option value="1000g">1000 г.</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div className="coffee__cards-inner-row-card-center">
+                        <div className="coffee__cards-inner-row-card-center-left">
+                          <Link
+                            to={`/catalog/${category}/card-item`}
+                            className="tea-img-block"
+                          >
+                            <img
+                              onClick={() => chooseId(item)}
+                              src={item.image}
+                              height="218px"
+                              className="card-image"
+                              alt=""
+                            />
+                          </Link>
+                        </div>
+                        <div className="coffee__cards-inner-row-card-center-right">
+                          <div className="coffee__cards-inner-row-card-center-right-rating">
+                            <div
+                              className="rating"
+                              style={{
+                                backgroundImage: `url(${rating})`,
+                                height: "12px",
+                                width: `${
+                                  Math.floor(item.rating[0]) + item.rating[2]
+                                }px`,
+                                backgroundSize: "50px",
+                                backgroundRepeat: "no-repeat",
+                                position: "relative",
+                              }}
+                            ></div>
+                            <h4>{item.rating}</h4>
+                            <small className="coffee__cards-inner-row-card-center-right-rating-review">
+                              ({item.review} отзыва)
+                            </small>
+                          </div>
+                          <div className="roasting-level">
+                            {item.roast == 5 ? (
+                              <img height="13px" src={roast5} alt="" />
+                            ) : item.roast == 4 ? (
+                              <img height="13px" src={roast4} alt="" />
+                            ) : item.roast == 3 ? (
+                              <img height="13px" src={roast3} alt="" />
+                            ) : item.roast == 2 ? (
+                              <img height="13px" src={roast2} alt="" />
+                            ) : item.roast == 1 ? (
+                              <img height="13px" src={roast1} alt="" />
+                            ) : null}
+                          </div>
+                          <div className="coffee__cards-inner-row-card-center-right-filters">
+                            <div className="coffee__cards-inner-row-card-center-right-filters-item">
+                              <p>Кислинка</p>
+                              <div className="kislinka">
+                                <img
+                                  src={
+                                    item.kislinka == "Высокая"
+                                      ? kislinkaHigh
+                                      : item.kislinka == "Средняя"
+                                      ? kislinkaMedium
+                                      : item.kislinka == "Низкая"
+                                      ? kislinkaLow
+                                      : null
+                                  }
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <div className="coffee__cards-inner-row-card-center-right-filters-item">
+                              <p>Горчинка</p>
+                              <div className="kislinka">
+                                <img
+                                  src={
+                                    item.gorchinka > 7
+                                      ? kislinkaHigh
+                                      : item.gorchinka > 3
+                                      ? kislinkaMedium
+                                      : item.gorchinka > 0
+                                      ? kislinkaLow
+                                      : null
+                                  }
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <div className="coffee__cards-inner-row-card-center-right-filters-item">
+                              <p>Носыщенность</p>
+                              <div className="kislinka">
+                                <img
+                                  src={
+                                    item.nasyshennost > 7
+                                      ? kislinkaHigh
+                                      : item.nasyshennost > 3
+                                      ? kislinkaMedium
+                                      : item.nasyshennost > 0
+                                      ? kislinkaLow
+                                      : null
+                                  }
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="coffee__cards-inner-row-card-bottom">
+                        <small>{item.geography}</small>
+                        <h4>{item.title}</h4>
+                        <p>{item.subtitle}</p>
+                        <Link
+                          to={`/catalog/${category}/card-item`}
+                          className="treedots"
+                        >
+                          Больше
+                        </Link>
+                        <>...</>
+                        <div className="coffee__cards-inner-row-card-bottom-bottom forDF">
+                          <div className="coffee__cards-inner-row-card-bottom-bottom-price">
+                            {item.category.includes("Скидки") ? (
+                              <div className="old-price">
+                                {Math.floor(
+                                  item.price + (item.price / 100) * 30
+                                )}{" "}
+                                ₽
+                              </div>
+                            ) : (
+                              <></>
+                            )}
+                            <h3>{item.price} ₽</h3>
+                          </div>
+                          <button type="button" onClick={() => addCart(item)}>
+                            В корзину
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <br />
+              <br />
+              <button>Показать еще</button>
             </div>
-            <br />
-            <br />
-            <button>Показать еще</button>
           </div>
+          <div className="grey"></div>
         </div>
-        <div className="grey"></div>
       </div>
-    </div>
     </>
   );
 };

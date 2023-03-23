@@ -28,6 +28,9 @@ const ProductCard = () => {
       )
       .then((res) => setCard(res.data[0]));
   }, [id, category]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (card.comments != undefined) {
     comments = card.comments;
   }
@@ -229,9 +232,7 @@ const ProductCard = () => {
                                 <div className="Rewievs__block__inner__above">
                                   <h1>{item.title}</h1>
                                   <img src={rating} alt="rate" />
-                                  <p>
-                                    {item.comment}
-                                  </p>
+                                  <p>{item.comment}</p>
                                   <hr />
                                 </div>
                                 <div className="Rewievs__block__inner__bellow">

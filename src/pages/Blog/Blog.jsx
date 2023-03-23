@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import images from "./FilterIMages";
 import coffeblog from "../../assets/blog/6VhPY27jdps.svg";
 import img2 from "../../assets/blog/pnmRtTHWqDM.svg";
@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import faqimg from "../../assets/blog/coffeFAQ.svg";
 import Accordion from "./Accordion";
 import { useRef } from "react";
-import "./Blog.scss"
+import "./Blog.scss";
 
 const Blog = () => {
   const ref = useRef(null);
@@ -20,6 +20,9 @@ const Blog = () => {
   const scrollToQA = () => {
     refQA.current?.scrollIntoView({ behavor: "smooth" });
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="blog">
       <div className="container">
