@@ -103,10 +103,11 @@
 
   @media (max-width: 376px) {
     .name__joodar {
-      font-weight: 900;
-      font-size: 20px;
-      line-height: 25px;
-      transform: translate(-90px, 6px);
+       font-weight: 900;
+       font-size: 20px;
+       line-height: 25px;
+       transform: translate(-90px, -16px);
+        
     }
   }
 
@@ -393,9 +394,28 @@
     font-size: 14px;
     line-height: 16px;
     color: #747474;
-    text-align: center;
-    display: flex;
-    margin-top: 12px;
+}
+
+
+
+
+.cards__text {
+  margin-left: 59px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  transform: translate(-19px, -3px);
+  margin-right: 6px;
+  min-width: 165px;
+  line-height: 16px;
+  max-width: 166px;
+  color: #747474;
+  @media(max-width: 376px) {
+    font-weight: 700;
+    max-width: 146px;
+    font-size: 10px;
+    transform: translate(-31px, 9px);
+    line-height: 12px;
   }
   .info__texts ul {
     display: flex;
@@ -713,4 +733,5 @@
 
 .addComp-block.none {
   display: none;
+}
 }
