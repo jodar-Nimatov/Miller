@@ -8,9 +8,30 @@ import { UserAuth } from '../../utils/authContext';
 const Profile = () => {
   const [data, setData] = useState({});
   const [show, setShow] = useState(true);
-  const [info, setInfo] = useState(true);
-  // const [change, setChange] = useState(true)
-  const { logout, name, user, number } = UserAuth();
+  const [info, setInfo] = useState(true); 
+  const { logout, user, setName, setEmail, setNumber, setLocalStorage } = UserAuth();
+  const [userdata, setUserdata] = useState({
+    name: '',
+    number: '',
+    email: ''
+  })
+  if (localStorage.getItem('name') !== null) {
+    userdata.name = JSON.parse(localStorage.getItem('name'))
+  }
+  if (localStorage.getItem('number') !== null) {
+    userdata.number = JSON.parse(localStorage.getItem('number'))
+  }
+  if (localStorage.getItem('email') !== null) {
+    userdata.email = JSON.parse(localStorage.getItem('email'))
+  }
+  const btn = document.querySelectorAll('.btn__joodar > span');
+  for (let i = 0; i < btn.length; i++) {
+
+  btn[i].addEventListener('click', function() {
+    this.innerHTML =
+      (this.innerHTML === 'Изменить') ? this.innerHTML = 'Сохранить' : this.innerHTML = 'Изменить';
+  })}
+  
   const navigate = useNavigate();
   const { cart, plusOneCart, minusOneCart, delCart, delTo, adds } = useContext(CustomContext);
   const total = cart.reduce(
@@ -21,7 +42,7 @@ const Profile = () => {
   const skidka = cart
     .reduce((prev, curr) => prev + ((curr.price * curr.count) / 100) * 10, 0)
     .toFixed(1);
-
+console.log(userdata)
   return (
     <div className="profile">
       <div className="container">
@@ -39,25 +60,21 @@ const Profile = () => {
             <div className="profile__name">
               <div className="profile__joodar">
                 <img className="joodar" src={joodar} alt="" />
-                <button className="btn__joodar">Изменить</button>
+                <button className="btn__joodar" data-toggle="collapse" onClick={()=>{
+                  setLocalStorage()
+                  userdata.name = "fdsafsa"
+                  // console.log(userdata)
+                  }}><span>Изменить</span></button>
+                
               </div>
-              {/* <blockquote contenteditable="true"> */}
               <ul>
-                <li className="name__joodar">{name}, Здраствуйте!</li>
-                <li>Ваш email:{user?.email}</li>
-                <li>Номер: {number}</li>
+                <li className="name__joodar">{userdata.name}, Здраствуйте!</li>   
+                <li>{userdata.email}</li>
+                <li>{userdata.number}</li>
                 <li>Пароль:*******</li>
             
-        {/* <div className={`change-block ${change ? 'none' : 'block'}`}>
-          <blockquote contenteditable="true">
-             <li>Ваш email:{user?.email}</li>
-             <li>Номер: {number}</li>
-             <li>Пароль:*******</li>
-            </blockquote>
-        </div>   */}
               </ul>
 
-              {/* </blockquote> */}
             </div>
             <div className="discount__profile">
               <div className="discount__inner">

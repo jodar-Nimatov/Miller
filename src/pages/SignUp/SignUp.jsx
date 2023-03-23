@@ -8,12 +8,10 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
-  const { signUp, setName, setNumber, name, number, user } = UserAuth();
+  const { signUp, setName, setNumber, name, number, user, setLocalStorage, email, setEmail } = UserAuth();
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
   let urlUser = 'http://localhost:4444/users';
 
   // let handleSubmit = async (e) => {
@@ -32,6 +30,7 @@ const SignUp = () => {
   // };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLocalStorage()
     setError('');
     try {
       await signUp(email, password);
@@ -41,7 +40,7 @@ const SignUp = () => {
       console.log(e);
     }
   };
-
+console.log(user)
   return (
     <div>
       <div className="login">
