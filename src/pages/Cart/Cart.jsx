@@ -93,7 +93,7 @@ const Cart = () => {
   //     (item, state) =>
   //         item + state.price * state.count / 100 * 10,
   //     0
-  // ).toFixed(1)
+  // ).toFixed(1);
   let url = "http://localhost:7777/dostavka";
 
   let handlesubmitdos = async (e) => {
@@ -328,15 +328,15 @@ const Cart = () => {
                     <div className="Dostavka-p">
                       <div className="Dostavka-vid">
                         <p>Доставка:</p>
-                        <button className="Btne" />
+                        <div className="white-circle"onClick={e=>e.target.style.background = 'orange'}></div>
                         <p>СДЭК - до двери 390 ₽</p>
                       </div>
                       <div className="Dostavka-vid-block">
-                        <button className="Btne" />
+                        <div onClick={e=>e.target.style.background = 'orange'} className="white-circle"></div>
                         <p>Почта России 300 ₽</p>
                       </div>
                       <div className="Dostavka-vid-block">
-                        <button className="Btne" />
+                        <div className="white-circle" onClick={e=>e.target.style.background = 'orange'}></div>
                         <p>DPD - курьер, 3 дн 427 ₽</p>
                       </div>
                     </div>
