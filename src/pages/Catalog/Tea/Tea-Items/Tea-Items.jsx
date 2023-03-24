@@ -11,7 +11,10 @@ const TeaItems = ({ type }) => {
   const [sorting, setSorting] = useState("Сортировка");
   const { addCart, chooseId, category } = useContext(CustomContext);
   useEffect(() => {
-    const url = `http://localhost:3333/coffee-drinks-${type}?`;
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
+    const url = `https://gospodin-rusan.onrender.com/coffee-drinks-one?`;
     axios
       .get(
         url +

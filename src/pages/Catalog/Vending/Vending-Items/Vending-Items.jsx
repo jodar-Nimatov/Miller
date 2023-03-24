@@ -9,7 +9,10 @@ const VendingItems = ({ type }) => {
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
   useEffect(() => {
-    const url = `http://localhost:3333/Products-for-vending-${type}?`;
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
+    const url = `https://gospodin-rusan.onrender.com/Products-for-vending-one?`;
     axios
       .get(
         url +

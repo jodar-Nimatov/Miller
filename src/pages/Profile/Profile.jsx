@@ -8,30 +8,36 @@ import { UserAuth } from "../../utils/authContext";
 const Profile = () => {
   const [data, setData] = useState({});
   const [show, setShow] = useState(true);
-  const [info, setInfo] = useState(true); 
-  const { logout, user, setName, setEmail, setNumber, setLocalStorage } = UserAuth();
+  const [info, setInfo] = useState(true);
+  const { logout, user, setName, setEmail, setNumber, setLocalStorage } =
+    UserAuth();
   const [userdata, setUserdata] = useState({
-    name: '',
-    number: '',
-    email: ''
-  })
-  if (localStorage.getItem('name') !== null) {
-    userdata.name = JSON.parse(localStorage.getItem('name'))
+    name: "",
+    number: "",
+    email: "",
+  });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  if (localStorage.getItem("name") !== null) {
+    userdata.name = JSON.parse(localStorage.getItem("name"));
   }
-  if (localStorage.getItem('number') !== null) {
-    userdata.number = JSON.parse(localStorage.getItem('number'))
+  if (localStorage.getItem("number") !== null) {
+    userdata.number = JSON.parse(localStorage.getItem("number"));
   }
-  if (localStorage.getItem('email') !== null) {
-    userdata.email = JSON.parse(localStorage.getItem('email'))
+  if (localStorage.getItem("email") !== null) {
+    userdata.email = JSON.parse(localStorage.getItem("email"));
   }
-  const btn = document.querySelectorAll('.btn__joodar > span');
+  const btn = document.querySelectorAll(".btn__joodar > span");
   for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", function () {
+      this.innerHTML =
+        this.innerHTML === "Изменить"
+          ? (this.innerHTML = "Сохранить")
+          : (this.innerHTML = "Изменить");
+    });
+  }
 
-  btn[i].addEventListener('click', function() {
-    this.innerHTML =
-      (this.innerHTML === 'Изменить') ? this.innerHTML = 'Сохранить' : this.innerHTML = 'Изменить';
-  })}
-  
   const navigate = useNavigate();
   const { cart, plusOneCart, minusOneCart, delCart, delTo, adds } =
     useContext(CustomContext);
@@ -44,7 +50,7 @@ const Profile = () => {
   const skidka = cart
     .reduce((prev, curr) => prev + ((curr.price * curr.count) / 100) * 10, 0)
     .toFixed(1);
-console.log(userdata)
+  console.log(userdata);
   return (
     <div className="profile">
       <div className="container">
@@ -62,21 +68,24 @@ console.log(userdata)
             <div className="profile__name">
               <div className="profile__joodar">
                 <img className="joodar" src={joodar} alt="" />
-                <button className="btn__joodar" data-toggle="collapse" onClick={()=>{
-                  setLocalStorage()
-                  userdata.name = "fdsafsa"
-                  // console.log(userdata)
-                  }}><span>Изменить</span></button>
-                
+                <button
+                  className="btn__joodar"
+                  data-toggle="collapse"
+                  onClick={() => {
+                    setLocalStorage();
+                    userdata.name = "fdsafsa";
+                    // console.log(userdata)
+                  }}
+                >
+                  <span>Изменить</span>
+                </button>
               </div>
               <ul>
-                <li className="name__joodar">{userdata.name}, Здраствуйте!</li>   
+                <li className="name__joodar">{userdata.name}, Здраствуйте!</li>
                 <li>{userdata.email}</li>
                 <li>{userdata.number}</li>
                 <li>Пароль:*******</li>
-            
               </ul>
-
             </div>
             <div className="discount__profile">
               <div className="discount__inner">

@@ -20,6 +20,7 @@ const CoffeeItems = ({ filters }) => {
   const [modal, setModal] = useState("showC");
   const [sorting, setSorting] = useState("Сортировка");
   const url = "https://gospodin-rusan.onrender.com/catalog?";
+  console.log(url, "hello");
   const filterBase = {
     geographyFilter: "",
     kislinkaFilter: "",
@@ -29,6 +30,10 @@ const CoffeeItems = ({ filters }) => {
     coffeelevelFilter: "",
     cmethodFilter: "",
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Esly budet vremya, poprobuyu sokratit kod !
   const filtering = () => {
     if (filters.coffeefrom !== []) {

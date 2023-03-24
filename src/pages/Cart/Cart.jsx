@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DeleteBtn from "./Check-photo/Close.svg";
 import Master from "./Check-photo/MasterCard.svg";
@@ -85,6 +85,9 @@ const Cart = () => {
     0
   );
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const itog = cart.reduce((prev, curr) => prev + curr.price * curr.count, 0);
   const skidka = cart
     .reduce((prev, curr) => prev + ((curr.price * curr.count) / 100) * 10, 0)
@@ -328,15 +331,30 @@ const Cart = () => {
                     <div className="Dostavka-p">
                       <div className="Dostavka-vid">
                         <p>Доставка:</p>
-                        <div className="white-circle"onClick={e=>e.target.style.background = 'orange'}></div>
+                        <div
+                          className="white-circle"
+                          onClick={(e) =>
+                            (e.target.style.background = "orange")
+                          }
+                        ></div>
                         <p>СДЭК - до двери 390 ₽</p>
                       </div>
                       <div className="Dostavka-vid-block">
-                        <div onClick={e=>e.target.style.background = 'orange'} className="white-circle"></div>
+                        <div
+                          onClick={(e) =>
+                            (e.target.style.background = "orange")
+                          }
+                          className="white-circle"
+                        ></div>
                         <p>Почта России 300 ₽</p>
                       </div>
                       <div className="Dostavka-vid-block">
-                        <div className="white-circle" onClick={e=>e.target.style.background = 'orange'}></div>
+                        <div
+                          className="white-circle"
+                          onClick={(e) =>
+                            (e.target.style.background = "orange")
+                          }
+                        ></div>
                         <p>DPD - курьер, 3 дн 427 ₽</p>
                       </div>
                     </div>

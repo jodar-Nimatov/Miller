@@ -44,15 +44,14 @@ const Slider = () => {
         </div>
         <div className="slideshowDots">
           {colors.map((_, idx) => {
-            (
             <div
               key={idx}
               className={`slideshowDot${index === idx ? " active" : ""}`}
               onClick={() => {
                 setIndex(idx);
               }}
-            ></div>
-          )})}
+            ></div>;
+          })}
         </div>
       </div>
     </div>

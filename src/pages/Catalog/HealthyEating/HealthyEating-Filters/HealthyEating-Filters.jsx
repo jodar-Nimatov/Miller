@@ -5,7 +5,7 @@ import { CustomContext } from "../../../../utils/Context";
 import HealthyItems from "./../HealthyEating-Items/HealthyEating-Items";
 
 const HealthyFilters = () => {
-  const {types, setTypes} = useContext(CustomContext)
+  const { types, setTypes } = useContext(CustomContext);
   const ref = useRef(null);
 
   const handleSrcoll = () => {
