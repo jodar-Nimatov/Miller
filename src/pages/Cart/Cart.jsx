@@ -36,7 +36,7 @@ const Cart = () => {
 
   const notify = (e) => {
     e.preventDefault();
-    toast.warn("ПОЗДРАВЛЯЮ ВЫ УСПЕШНО ЗАКАЗАЛИ!", {
+    toast.warn("Ваш заказ был успешно расчитан!", {
       position: "bottom-center",
       autoClose: 2000,
       hideProgressBar: false,
@@ -51,7 +51,7 @@ const Cart = () => {
 
   const notifypromo = (e) => {
     e.preventDefault();
-    toast.warn("ТАКОГО ПРОМОКОДА НЕ СУЩЕСТВУЕТ!!!", {
+    toast.warn("Данный промокод уже просрочен!", {
       position: "bottom-center",
       autoClose: 2000,
       hideProgressBar: false,

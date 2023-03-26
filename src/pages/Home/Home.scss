@@ -41,6 +41,7 @@
   font-size: 15px;
   font-weight: 700;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -293,12 +294,14 @@
       padding-left: 36px;
     }
   }
+  .roast-coffe-inner > button > a{
+    color: white;
+  }
   .roast-coffe-inner > button {
     margin-top: 80px;
     width: 230px;
     height: 45px;
     background-color: #f9b300;
-    color: #fff;
     font-size: 15px;
     border: none;
     cursor: pointer;

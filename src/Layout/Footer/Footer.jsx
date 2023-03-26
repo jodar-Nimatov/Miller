@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const notifyras = (e) => {
   e.preventDefault();
-  toast.warn("ПОЗДРАВЛЯЮ ВЫ УСПЕШНО ПОДПИСАЛИСЬ НА РАССЫЛКУ!", {
+  toast.warn("Вы успешно подписалсиь на рассылку!", {
     position: "bottom-center",
     autoClose: 2000,
     hideProgressBar: false,
