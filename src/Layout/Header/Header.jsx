@@ -18,7 +18,6 @@ import { MdExitToApp } from "react-icons/md";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [text, setText] = useState("");
-
   const { logout, name, user, number, signIn, getData } = UserAuth();
   const navigate = useNavigate();
   const [title, setTitle] = useState("Каталог товаров");
@@ -28,7 +27,10 @@ const Header = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [BurgerMenu, setBurgerMenu] = useState(false);
   if(document.querySelector('.cun') !== null){
-    document.querySelector('.cun').addEventListener('click', ()=>setShow(false))
+    document.querySelector('.cun').addEventListener('click', ()=>{
+      setDisplay('block')
+      setShow(false)
+    })
   }
   const handleInput = () => {
     setDisplay("none");
@@ -166,9 +168,9 @@ const Header = () => {
             </ul>
           </div>
           <div className={`header__input-block ${display}`}>
-            <Link to="/catalog/coffee">
               <form
                 onSubmit={(e) => {
+                  navigate('/catalog/coffee')
                   e.preventDefault();
                   setSearch(text);
                   setKey(key + 1);
@@ -182,7 +184,6 @@ const Header = () => {
                   className={`header__input ${display}`}
                 />
               </form>
-            </Link>
           </div>
           <div className="header__right" onClick={()=>setShow(false)}>
             <a href="#">
