@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const Layolog = () => {
   return (
-    <div className="wrapper">
+    <div className="wrapper cun">
       <Outlet />
     </div>
   );

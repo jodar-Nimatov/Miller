@@ -55,9 +55,9 @@ const TeaItems = ({ type }) => {
     setModal("showC");
   };
   return (
-    <div className="tea-cards-back">
+    <div className="tea-cards-back cun">
       <div className="coffee__cards">
-        <div className="container">
+        <div className="container"> 
           <div className="coffee__cards-inner">
             <h4 className={`cortirovka siuu ${modal}`}>Тебе с пенкой?</h4>
             <h4 className={`cortirovka ${modal}`} onClick={closeSorting}>

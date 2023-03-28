@@ -4,7 +4,7 @@ import YandexMaps from "./YandexMap";
 
 const Contacts = () => {
   return (
-    <div className="contacts">
+    <div className="contacts cun">
       <div className="container">
         <div className="contacts-inner">
           <li className="home-cont">Главная</li>

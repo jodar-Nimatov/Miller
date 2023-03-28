@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer-back-top"></div>
-      <footer className="footer">
+      <footer className="footer cun">
         <div className="footer-back">
           <div className="footer__content">
             <div className="footer__container">

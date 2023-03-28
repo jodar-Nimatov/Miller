@@ -27,7 +27,9 @@ const Header = () => {
   const [see, setSee] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [BurgerMenu, setBurgerMenu] = useState(false);
-
+  if(document.querySelector('.cun') !== null){
+    document.querySelector('.cun').addEventListener('click', ()=>setShow(false))
+  }
   const handleInput = () => {
     setDisplay("none");
   };
@@ -102,6 +104,7 @@ const Header = () => {
                 onClick={() => {
                   setTitle("Каталог Товаров");
                   setDisplay("block");
+                  setShow(false)
                 }}
                 alt="header logo"
               />
@@ -152,12 +155,12 @@ const Header = () => {
                   </div>
                 )}
               </div>
-              <li className="header__item2">
+              <li onClick={()=>setShow(false)} className="header__item2">
                 <Link className="blog" to="/blog">
                   Блог
                 </Link>
               </li>
-              <li className="header__item">
+              <li onClick={()=>setShow(false)} className="header__item">
                 <Link to="/contacts">Контакты</Link>
               </li>
             </ul>
@@ -181,7 +184,7 @@ const Header = () => {
               </form>
             </Link>
           </div>
-          <div className="header__right">
+          <div className="header__right" onClick={()=>setShow(false)}>
             <a href="#">
               <img
                 onClick={handleInput}

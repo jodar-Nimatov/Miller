@@ -4,7 +4,7 @@ import UserIcon from "../../assets/Images/RWuserIcon.png";
 
 const Rewievs = () => {
   return (
-    <div className="Rewievs">
+    <div className="Rewievs cun">
       <div className="container">
         <div className="Rewievs__inner">
           <div className="Rewievs__inner__title">

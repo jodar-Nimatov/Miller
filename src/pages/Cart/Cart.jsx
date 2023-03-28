@@ -120,7 +120,7 @@ const Cart = () => {
     });
   };
   return (
-    <div className="back-cart">
+    <div className="back-cart cun">
       <div className="Cart">
         <div className="container">
           <div className="Cart-inner">

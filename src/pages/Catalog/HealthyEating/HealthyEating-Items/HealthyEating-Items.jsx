@@ -55,7 +55,7 @@ const HealthyItems = ({ type }) => {
     setModal("showC");
   };
   return (
-    <div className="tea-cards-back">
+    <div className="tea-cards-back cun">
       <div className="coffee__cards healthy-items-back">
         <div className="container">
           <div className="coffee__cards-inner">
