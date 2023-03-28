@@ -226,7 +226,6 @@ const Header = () => {
               </MdExitToApp>
             </Link>
           )}
-
           {modalIsOpen && (
             <div className="overlow">
               <div className="login">
