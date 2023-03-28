@@ -35,7 +35,7 @@ const ProductCard = () => {
     comments = card.comments;
   }
   return (
-    <div className="wrapper">
+    <div className="wrapper cun">
       <div className="card-back">
         <div className="card" key={card.id}>
           <div className="container">

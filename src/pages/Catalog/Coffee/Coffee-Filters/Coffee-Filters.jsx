@@ -69,7 +69,7 @@ const CoffeeFilters = () => {
   };
   return (
     <>
-      <div className="filters-back">
+      <div className="filters-back cun">
         <div className="filters">
           <div className="container">
             <div className="filters__inner">

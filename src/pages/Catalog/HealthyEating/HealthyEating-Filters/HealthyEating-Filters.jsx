@@ -13,7 +13,7 @@ const HealthyFilters = () => {
   };
   return (
     <>
-      <div className="filters-back-healthy">
+      <div className="filters-back-healthy cun">
         <div className="healthy">
           <div className="container">
             <div className="tea-filters__inner">

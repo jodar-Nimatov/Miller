@@ -41,7 +41,7 @@ const SignUp = () => {
   };
 console.log(user)
   return (
-    <div>
+    <div className="cun">
       <div className="login">
         <div className="container">
           <div className="login_inner">

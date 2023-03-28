@@ -52,7 +52,7 @@ const Profile = () => {
     .toFixed(1);
   console.log(userdata);
   return (
-    <div className="profile">
+    <div className="profile cun">
       <div className="container">
         <div className="profile__inner">
           <ul className="home">

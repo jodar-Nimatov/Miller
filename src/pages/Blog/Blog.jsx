@@ -24,7 +24,7 @@ const Blog = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="blog">
+    <div className="blog cun">
       <div className="container">
         <div className="blog_inner">
           <div className="blog_ul">

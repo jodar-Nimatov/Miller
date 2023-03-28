@@ -114,7 +114,7 @@ const CoffeeItems = ({ filters }) => {
   };
   return (
     <>
-      <div className="tea-cards-back">
+      <div className="tea-cards-back cun">
         <div className="coffee__cards">
           <div className="container">
             <div className="coffee__cards-inner">
@@ -157,6 +157,7 @@ const CoffeeItems = ({ filters }) => {
                 {/* <BsStar/> */}
                 {cards.map((item) => {
                   // Nujno propisat nemnogo logiki dlya cartochek.
+                  let price = item.price;
                   return (
                     <div key={item.id} className="coffee__cards-inner-row-card">
                       <div className="coffee__cards-inner-row-card-top">
@@ -175,10 +176,18 @@ const CoffeeItems = ({ filters }) => {
                           ))}
                         </div>
                         <div className="coffee__cards-inner-row-card-top-right">
-                          <select>
-                            <option value="250g">250 г.</option>
-                            <option value="500g">500 г.</option>
-                            <option value="1000g">1000 г.</option>
+                          <select
+                            onChange={(e) => {
+                              if (e.target.value > 300) {
+                                price =
+                                  +item.price + (+e.target.value / 100) * 40;
+                              }
+                            }}
+                            // Mojno poprobovat porabotat s obiektom ili horoshenko Zaguglit
+                          >
+                            <option value="250">250 г.</option>
+                            <option value="500">500 г.</option>
+                            <option value="1000">1000 г.</option>
                           </select>
                         </div>
                       </div>
@@ -308,7 +317,7 @@ const CoffeeItems = ({ filters }) => {
                             ) : (
                               <></>
                             )}
-                            <h3>{item.price} ₽</h3>
+                            <h3>{price} ₽</h3>
                           </div>
                           <button type="button" onClick={() => addCart(item)}>
                             В корзину

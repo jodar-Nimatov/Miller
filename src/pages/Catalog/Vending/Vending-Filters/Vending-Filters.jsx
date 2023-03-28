@@ -12,7 +12,7 @@ const VendingFilters = () => {
   };
   return (
     <>
-      <div className="filters-back">
+      <div className="filters-back cun">
         <div className="filters">
           <div className="container">
             <div className="tea-filters__inner">

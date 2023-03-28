@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import cars_logo from "../../assets/cards/image 5.svg";
 const Cards = () => {
   return (
-    <div className="wrapper">
+    <div className="wrapper cun">
       <div className="cards-back">
         <div className="cards">
           <div className="container">

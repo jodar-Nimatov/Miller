@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
-    <div className="wrapper">
+    <div className="wrapper cun">
       <div className="fresh-coffee-catalog-back">
         <div className="fresh-coffe-back">
           <div className="fresh-coffe">

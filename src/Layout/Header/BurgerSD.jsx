@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const BurgerSD = ({BurgerMenu, setBurgerMenu}) => {
     return (
-            <div className="burger-menu" style={{display: BurgerMenu ? 'flex':'none'}}>
+            <div className="burger-menuv" style={{display: BurgerMenu ? 'flex':'none'}}>
             <div className="burger-menu-inner">
               <div className="burger-menu-above">
                 <Link onClick={() => setBurgerMenu(false)} to=''>

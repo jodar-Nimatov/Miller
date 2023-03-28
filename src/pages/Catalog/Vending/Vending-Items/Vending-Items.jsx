@@ -53,7 +53,7 @@ const VendingItems = ({ type }) => {
     setModal("showC");
   };
   return (
-    <div className="tea-cards-back">
+    <div className="tea-cards-back cun">
       <div className="coffee__cards">
         <div className="container">
           <div className="coffee__cards-inner">
