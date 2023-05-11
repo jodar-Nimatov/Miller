@@ -240,14 +240,15 @@
     max-height: 70px;
     padding-top: 6px;
   }
+  }
   .header-right-icon {
     @media (max-width: 550px) {
       max-width: 12px;
       max-height: 12px;
     }
     @media (max-width: 400px) {
-      max-width: 9px;
-      max-height: 9px;
+      max-width: 25px;
+      max-height: 20px;
     }
   }
   .header-right-count_header-basket {
@@ -260,7 +261,7 @@
     display: flex;
     align-items: center;
   }
-}
+
 .white {
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   z-index: 7;
@@ -501,6 +502,13 @@
   font-size: 30px;
   margin-top: 15px;
   @media (max-width: 375px) {
-    font-size: 15px;
+    display: none;
+  }
+}
+
+.header__right{
+  @media (max-width: 375px) {
+    transform: translateX(55px);
+    margin-right: 60px;
   }
 }

@@ -7,6 +7,7 @@
     background-color: white;
     width: 375px;
     height: 800px;
+    z-index: 100;
     &-inner{
         padding-top: 20px;
     }
@@ -44,5 +45,14 @@
         left: 331px;
         top: 65px;
         z-index: 1;
+    }
+    .bg-so{
+        @media (max-width: 375px) {
+            display: inline;
+            font-size: 32px;
+            position: absolute;
+            left: 105px;
+            top: 353px;
+        }
     }
 }

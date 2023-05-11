@@ -6,10 +6,11 @@ import BGtellIcon from "../../assets/Images/BGtellIcon.png"
 import BGinstaIcon from "../../assets/Images/InstagramIcon.png"
 import {TfiClose} from "react-icons/tfi"
 import { Link } from 'react-router-dom';
+import { MdExitToApp } from "react-icons/md";
 
-const BurgerSD = ({BurgerMenu, setBurgerMenu}) => {
+const BurgerSD = ({BurgerMenu, setBurgerMenu, handleSignOut}) => {
     return (
-            <div className="burger-menuv" style={{display: BurgerMenu ? 'flex':'none'}}>
+            <div className="burger-menu" style={{display: BurgerMenu ? 'flex':'none'}}>
             <div className="burger-menu-inner">
               <div className="burger-menu-above">
                 <Link onClick={() => setBurgerMenu(false)} to=''>
@@ -30,6 +31,7 @@ const BurgerSD = ({BurgerMenu, setBurgerMenu}) => {
                 <div className="burger-menu-icons">
                   <Link onClick={() => setBurgerMenu(false)} to='/cart'><img src={basketlogo} alt="" /></Link>
                   <Link onClick={() => setBurgerMenu(false)} to='/profile'><img src={userlogo} alt="" /></Link>
+                  <MdExitToApp className="exitIcon bg-so" onClick={handleSignOut}></MdExitToApp>
                 </div>
                 <div className="burger-menu-feedback">
                   <p>import@miller.com</p>

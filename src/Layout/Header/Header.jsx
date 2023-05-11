@@ -95,7 +95,7 @@ const Header = () => {
         {/* <div className="container"> */}
         <div className="header__inner">
           <div className="header__left">
-            <BurgerSD BurgerMenu={BurgerMenu} setBurgerMenu={setBurgerMenu} />
+            <BurgerSD handleSignOut={handleSignOut} BurgerMenu={BurgerMenu} setBurgerMenu={setBurgerMenu} />
             <div className="header-burger-menu">
               <img onClick={() => setBurgerMenu(true)} src={burger} alt="" />
             </div>
@@ -222,9 +222,7 @@ const Header = () => {
           </div>
           {user && (
             <Link to={user ? "/signUp" : "/"}>
-              <MdExitToApp className="exitIcon" onClick={handleSignOut}>
-                Выйти
-              </MdExitToApp>
+              <MdExitToApp className="exitIcon" onClick={handleSignOut}></MdExitToApp>
             </Link>
           )}
           {modalIsOpen && (
