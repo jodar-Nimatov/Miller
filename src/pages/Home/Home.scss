@@ -78,16 +78,22 @@
 
 .catalog-products {
   height: 700px;
+  margin: 0 20%;
+  width: 900px !important;
+  min-width: 800px;
   .catalog-inner > h2 {
     font-size: 35px;
   }
   .catalog-content {
     display: flex;
+    overflow: hidden;
+    cursor: grab;
   }
   .catalog-items {
     display: flex;
     justify-content: center;
     padding-top: 60px;
+    margin: auto;
     gap: 20px;
   }
   .catalog-card {
@@ -299,7 +305,7 @@
       padding-left: 36px;
     }
   }
-  .roast-coffe-inner > button > a{
+  .roast-coffe-inner > button > a {
     color: white;
   }
   .roast-coffe-inner > button {
