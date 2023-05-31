@@ -20,13 +20,12 @@ import Instagram from "./../../Components/Instagram/instagram";
 import SliderItems from "../../Components/UI/SliderItems/SliderItems";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Main = () => {
-  const [width, setWidth] = useState(0);
-  const corousel = useRef();
-  useEffect(() => {
-    setWidth(corousel.current.scrollWidth - corousel.current.offsetWidth);
-  }, []);
   return (
     <div className="wrapper cun">
       <div className="fresh-coffee-catalog-back">
@@ -64,16 +63,13 @@ const Main = () => {
             <div className="container">
               <div className="catalog-inner">
                 <h2>Каталоги нашей продукции</h2>
-                <motion.div ref={corousel} className="catalog-content">
+                <div className="catalog-content">
                   <div>
                     {/* <img className="yellow-gradient-left" src={leftVector} alt="" /> */}
                     {/* <img className="gradient-coffe-img" src={leftVectorCoffe} alt="" /> */}
                   </div>
-                  <motion.div
-                    drag="x"
-                    dragConstraints={{ right: 0, left: -width }}
-                    className="catalog-items">
-                    <motion.div className="catalog-card">
+                  <div className="catalog-items">
+                    <div className="catalog-card">
                       <div className="catalog-card_img">
                         <img src={CoffeImg} alt="" />
                       </div>
@@ -84,8 +80,8 @@ const Main = () => {
                       <button className="catalog-card_button">
                         <Link to="/catalog/coffee">Купить</Link>
                       </button>
-                    </motion.div>
-                    <motion.div className="catalog-card">
+                    </div>
+                    <div className="catalog-card">
                       <div className="catalog-card_img">
                         <img className="ct-tea-img" src={CatalogTea} alt="" />
                       </div>
@@ -96,8 +92,8 @@ const Main = () => {
                       <button className="catalog-card_button">
                         <Link to="/catalog/tea">Купить</Link>
                       </button>
-                    </motion.div>
-                    <motion.div className="catalog-card">
+                    </div>
+                    <div className="catalog-card">
                       <div className="catalog-card_img">
                         <img src={CoffeMachine} alt="" />
                       </div>
@@ -108,8 +104,8 @@ const Main = () => {
                       <button className="catalog-card_button">
                         <Link to="/catalog/wanding">Купить</Link>
                       </button>
-                    </motion.div>
-                    <motion.div className="catalog-card">
+                    </div>
+                    <div className="catalog-card">
                       <div className="catalog-card_img">
                         <img src={CatalogKasha} alt="" />
                       </div>
@@ -120,9 +116,59 @@ const Main = () => {
                       <button className="catalog-card_button">
                         <Link to="/catalog/healthy">Купить</Link>
                       </button>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
+                    </div>
+                  </div>
+                  <Swiper className="my-swiper" navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>
+                      <div className="catalog-card_img">
+                        <img src={CoffeImg} alt="" />
+                      </div>
+                      <div className="catalog-card_title">
+                        <p>Свежеобжаренный кофе</p>
+                      </div>
+                      <br />
+                      <button className="catalog-card_button">
+                        <Link to="/catalog/coffee">Купить</Link>
+                      </button>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="catalog-card_img">
+                        <img className="ct-tea-img" src={CatalogTea} alt="" />
+                      </div>
+                      <div className="catalog-card_title">
+                        <p>Чай и кофейные напитки</p>
+                      </div>
+                      <br />
+                      <button className="catalog-card_button">
+                        <Link to="/catalog/tea">Купить</Link>
+                      </button>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="catalog-card_img">
+                        <img src={CoffeMachine} alt="" />
+                      </div>
+                      <div className="catalog-card_title">
+                        <p>Продукция для вендинга</p>
+                      </div>
+                      <br />
+                      <button className="catalog-card_button">
+                        <Link to="/catalog/wanding">Купить</Link>
+                      </button>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="catalog-card_img">
+                        <img src={CatalogKasha} alt="" />
+                      </div>
+                      <div className="catalog-card_title">
+                        <p>Здоровое питание</p>
+                      </div>
+                      <br />
+                      <button className="catalog-card_button">
+                        <Link to="/catalog/healthy">Купить</Link>
+                      </button>
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
               </div>
             </div>
           </div>
